@@ -1098,7 +1098,7 @@ Test_00_Level_9	156	3	4
 Test_00_Level_9	156	4	4
 Test_00_Level_9	156	5	2
 Test_00_Level_9	156	6	2
-Test_00_Level_9	157	0	2
+Test_00_Level_9	157	0	4
 Test_00_Level_9	157	1	1
 Test_00_Level_9	157	2	4
 Test_00_Level_9	157	3	4
@@ -1187,7 +1187,7 @@ Test_00_Level_9	169	1	4
 Test_00_Level_9	169	2	4
 Test_00_Level_9	169	3	4
 Test_00_Level_9	169	4	4
-Test_00_Level_9	169	5	2
+Test_00_Level_9	169	5	1
 Test_00_Level_9	169	6	2
 Test_00_Level_9	170	0	4
 Test_00_Level_9	170	1	4
@@ -1210,12 +1210,12 @@ Test_00_Level_9	172	3	4
 Test_00_Level_9	172	4	4
 Test_00_Level_9	172	5	1
 Test_00_Level_9	172	6	4
-Test_00_Level_9	173	0	4
+Test_00_Level_9	173	0	2
 Test_00_Level_9	173	1	4
 Test_00_Level_9	173	2	4
 Test_00_Level_9	173	3	4
 Test_00_Level_9	173	4	4
-Test_00_Level_9	173	5	1
+Test_00_Level_9	173	5	2
 Test_00_Level_9	173	6	4
 Test_00_Level_9	174	0	2
 Test_00_Level_9	174	1	4
@@ -1271,7 +1271,7 @@ Test_00_Level_9	181	1	4
 Test_00_Level_9	181	2	4
 Test_00_Level_9	181	3	4
 Test_00_Level_9	181	4	4
-Test_00_Level_9	181	5	2
+Test_00_Level_9	181	5	1
 Test_00_Level_9	181	6	4
 Test_00_Level_9	182	0	2
 Test_00_Level_9	182	1	4
@@ -1299,7 +1299,7 @@ Test_00_Level_9	185	1	4
 Test_00_Level_9	185	2	4
 Test_00_Level_9	185	3	4
 Test_00_Level_9	185	4	4
-Test_00_Level_9	185	5	1
+Test_00_Level_9	185	5	2
 Test_00_Level_9	185	6	4
 Test_00_Level_9	186	0	2
 Test_00_Level_9	186	1	4
@@ -1327,7 +1327,7 @@ Test_00_Level_9	189	1	4
 Test_00_Level_9	189	2	4
 Test_00_Level_9	189	3	4
 Test_00_Level_9	189	4	4
-Test_00_Level_9	189	5	2
+Test_00_Level_9	189	5	4
 Test_00_Level_9	189	6	4
 Test_00_Level_9	190	0	2
 Test_00_Level_9	190	1	4
@@ -1343,10 +1343,3 @@ Test_00_Level_9	191	3	4
 Test_00_Level_9	191	4	4
 Test_00_Level_9	191	5	4
 Test_00_Level_9	191	6	4
-Test_00_Level_9	192	0	2
-Test_00_Level_9	192	1	4
-Test_00_Level_9	192	2	4
-Test_00_Level_9	192	3	4
-Test_00_Level_9	192	4	4
-Test_00_Level_9	192	5	4
-Test_00_Level_9	192	6	4
