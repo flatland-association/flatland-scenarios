@@ -4,11 +4,18 @@ Collection of scenarios for [Flatland](https://github.com/flatland-association/f
 
 ## Scenario Olten
 
+![flatland_frame_0586.png](scenario_olten/data/outputs/flatland_frame_0586.png)
+![map_grid.jpg](scenario_olten/img/map_grid.jpg)
+
 This scenario provides a real-world railway network and timetable centering around the train station hub Olten (Switzerland).
 In addition to being a projection of a real setting, this scenario enables the exploration of maximum capacity, tighter schedules and other optimizations around
 the hub.
 
 The scenario also includes a disrupted version of the network where one line is blocked.
+
+The scenario also shows how integrate with [InteractiveAI](https://github.com/AI4REALNET/InteractiveAI), which allows to visualize context and events of the
+scenario:
+![map.jpg](scenario_olten/img/map.jpg)
 
 ## Trajectories
 
