@@ -17,11 +17,9 @@ The scenario also shows how integrate with [InteractiveAI](https://github.com/AI
 scenario:
 ![map.jpg](scenario_olten/img/map.jpg)
 
-🎞️ Have a look a the video:
+🎞️ Have a look a the [video](scenario_olten/img/olten_thumb.mp4):
 
-<video width="320" height="240" controls>
-  <source src="./scenario_olten/img/olten_thumb.mp4" type="video/mp4">
-</video>
+<video width="320" height="240" controls src="./scenario_olten/img/olten_thumb.mp4" type="video/mp4"/>
 
 ## Trajectories
 
