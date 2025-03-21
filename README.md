@@ -19,7 +19,8 @@ scenario:
 
 🎞️ Have a look a the [video](scenario_olten/img/olten_thumb.mp4):
 
-<video width="320" height="240" controls src="./scenario_olten/img/olten_thumb.mp4" type="video/mp4"/>
+<video src="./scenario_olten/img/olten_thumb.mp4" controls="controls" style="max-width: 730px;">
+</video>
 
 ## Trajectories
 
