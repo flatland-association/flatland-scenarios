@@ -19,7 +19,7 @@ scenario:
 
 🎞️ Have a look a the [video](scenario_olten/img/olten_thumb.mp4):
 
-<video src="./scenario_olten/img/olten_thumb.mp4" controls="controls" style="max-width: 730px;">
+<video src="https://raw.githubusercontent.com/flatland-association/flatland-scenarios/5084a93e37283903e552c19d81577cfbab7c47f1/scenario_olten/img/olten_thumb.mp4" controls="controls" style="max-width: 730px;">
 </video>
 
 ## Trajectories
