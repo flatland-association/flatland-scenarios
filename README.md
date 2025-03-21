@@ -17,6 +17,12 @@ The scenario also shows how integrate with [InteractiveAI](https://github.com/AI
 scenario:
 ![map.jpg](scenario_olten/img/map.jpg)
 
+🎞️ Have a look a the video:
+
+<video width="320" height="240" controls>
+  <source src="./scenario_olten/img/olten_thumb.mp4" type="video/mp4">
+</video>
+
 ## Trajectories
 
 Trajectories are scenario traces collecting a policy's action and the agent's position etc. for benchmarking and regression testing.
