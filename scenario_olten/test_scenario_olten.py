@@ -17,9 +17,9 @@ def test_olten(scenario: str):
     # scenario Olten has step every 3 seconds for an hour
     STEPS_ONE_HOUR = 1300
     # how many ms per step if replaying in real-time
-    REALTIME_STEP_TO_MILLIS = 3600 / STEPS_ONE_HOUR * 1000
+    REALTIME_STEP_TO_MILLIS = 3600. / STEPS_ONE_HOUR * 1000.
     # run faster...
-    SPEEDUP = 1000
+    SPEEDUP = 100000000.
 
     with (data_dir / "position_to_latlon.pkl").resolve().open("rb") as file_in:
         position_to_latlon_olten = pickle.loads(file_in.read())
