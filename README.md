@@ -4,7 +4,7 @@ Collection of scenarios for [Flatland](https://github.com/flatland-association/f
 
 ## Scenario Olten
 
-![flatland_frame_0586.png](scenario_olten/data/outputs/flatland_frame_0586.png)
+![flatland_frame_0586.png](scenario_olten/data/olten/outputs/flatland_frame_0586.png)
 
 This scenario provides a real-world railway network and timetable centering around the train station hub Olten (Switzerland).
 It comes with a mapping of cells `(row,column)` with railway elements to geo-positions (lat,lon):
