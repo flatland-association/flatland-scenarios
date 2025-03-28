@@ -26,4 +26,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest flatland-rl
       - name: Run olten
-        run: pytest pyte
+        run: pytest .
