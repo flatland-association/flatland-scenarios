@@ -43,10 +43,13 @@ The simulation can be run at different simulation time to real-time ratios.
 
 #### Scenario Olten Disrupted
 
+Blocked line:
+
 <video alt="Scenario Olten Disrupted" src="https://github.com/user-attachments/assets/15c4c746-ca92-43d8-be77-7650cbbb75df" width="180"></video>
 
 #### Scenario Olten Partially Closed
 
+Only 3/10 lines open:
 <video alt="Scenario Olten Partially Closed" src="https://github.com/user-attachments/assets/262f36c6-155a-4a28-8b1f-ec8dcaa05b76" width="180"></video>
 
 ## Trajectories
