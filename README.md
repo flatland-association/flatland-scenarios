@@ -52,23 +52,47 @@ Blocked line:
 Only 3/10 lines open:
 <video alt="Scenario Olten Partially Closed" src="https://github.com/user-attachments/assets/262f36c6-155a-4a28-8b1f-ec8dcaa05b76" width="180"></video>
 
+## Scenarios (randomly generated)
+
+The zip file is created by
+
+```bash
+python scenarios/gen_envs.py
+```
+
+This is the same approach as in [Flatland Benchmarks](https://github.com/flatland-association/flatland-benchmarks/blob/main/benchmarks/flatland3/gen_envs.py).
+
+#### Changelog
+
+| Version                                              | Description          |
+|------------------------------------------------------|----------------------|
+| [environments_v1.zip](scenarios/environments_v1.zip) | Generated with 4.0.6 |
+
 ## Trajectories
+
+### malfunction_deadlock_avoidance_heuristics
 
 Trajectories are scenario traces collecting a policy's action and the agent's position etc. for benchmarking and regression testing.
 
-### Prepare new version
+The trajectories under `trajectories/malfunction_deadlock_avoidance_heuristics`
+are generated using
+[Deadlock Avoidance Heuristic Policy](https://github.com/flatland-association/flatland-baselines/tree/main/flatland_baselines/deadlock_avoidance_heuristic).
 
-```
+Under the hood, `flatland.trajectories.trajectories.generate_trajectories_from_metadata` is called.
+
+```bash
+PYTHONPATH=<....>/flatland-baselines python flatland/trajectories/trajectories.py
+
 cd trajectories
 VERSION="_v3"
 zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip 30x30\ map -x "*.DS_Store"
 zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip malfunction_deadlock_avoidance_heuristics -x "*.DS_Store"
 ```
 
-### Changelog
+#### Changelog
 
-| Version                                                                                                          | Description                                                                                                                        |
-|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| [v3](https://github.com/flatland-association/flatland-scenarios/commit/a90661093e1b7d365bc81c6bc020ac9906bb548d) | [Re-generate malfunction scenarios after bugfixing of step function](https://github.com/flatland-association/flatland-rl/pull/171) |
-| [v2](https://github.com/flatland-association/flatland-scenarios/commit/8ee8ff8cd2ca71645ab89684f97f7f33a3762e09) | [Add scenarios with malfunction](https://github.com/flatland-association/flatland-rl/pull/131/)                                    |
-| [v1](https://github.com/flatland-association/flatland-scenarios/commit/2067fd20c4c740b126cf6605b6c4770f6c37552f) | [Initial version without malfunction](https://github.com/flatland-association/flatland-rl/pull/105)                                |
+| Version                                                                                             | Description                                                                                                                                                                                                                                               |
+|-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [FLATLAND_BENCHMARK_EPISODES_FOLDER_v3.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v3.zip) | Re-generate malfunction scenarios after bugfixing of step function [pr](https://github.com/flatland-association/flatland-rl/pull/171) / [sha](https://github.com/flatland-association/flatland-scenarios/commit/a90661093e1b7d365bc81c6bc020ac9906bb548d) |
+| [FLATLAND_BENCHMARK_EPISODES_FOLDER_v2.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v2.zip) | Add scenarios with malfunction [pr](https://github.com/flatland-association/flatland-rl/pull/131/)  /  [sha](https://github.com/flatland-association/flatland-scenarios/commit/8ee8ff8cd2ca71645ab89684f97f7f33a3762e09)                                  |
+| [FLATLAND_BENCHMARK_EPISODES_FOLDER.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER.zip)       | Initial version without malfunction [pr](https://github.com/flatland-association/flatland-rl/pull/105) / [sha](https://github.com/flatland-association/flatland-scenarios/commit/2067fd20c4c740b126cf6605b6c4770f6c37552f)                                |
