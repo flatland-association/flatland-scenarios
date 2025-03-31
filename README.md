@@ -23,7 +23,7 @@ The scenario also includes a disrupted version of the network where one line is 
 The scenario also shows how integrate with [InteractiveAI](https://github.com/AI4REALNET/InteractiveAI), which allows to visualize context and events of the
 scenario:
 
-![img.png](scenario_olten/img/img.png)
+![img.png](scenario_olten/img/olten_interactive_ai.png)
 
 * **context** (`Map` view) shows the current train positions
 * **events** (`Notifications` view) alerts when trains have a malfunction
