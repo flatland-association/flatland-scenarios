@@ -31,11 +31,19 @@ scenario:
 
 The simulation can be run at different simulation time to real-time ratios.
 
-🎞️ Have a look a the Vidoes:
-* [InteractiveAI Integration Scenario Olten](https://github.com/user-attachments/assets/1f103db3-7b40-4b84-b928-1a227569b11c).
-* [Scenario Olten](https://github.com/user-attachments/assets/35f3933d-266a-405c-a411-3233d94782ed)
-* [Scenario Olten Disrupted](https://github.com/user-attachments/assets/15c4c746-ca92-43d8-be77-7650cbbb75df)
-* [Scenario Olten Partially Closed](https://github.com/user-attachments/assets/262f36c6-155a-4a28-8b1f-ec8dcaa05b76)
+### 🎞️ Have a look a the Vidoes
+
+#### InteractiveAI Integration Scenario Olten
+<video alt="InteractiveAI Integration Scenario Olten" src='https://github.com/user-attachments/assets/1f103db3-7b40-4b84-b928-1a227569b11c' width=180/>
+
+#### Scenario Olten
+<video alt="Scenario Olten" src='https://github.com/user-attachments/assets/35f3933d-266a-405c-a411-3233d94782ed' width=180/>
+
+#### Scenario Olten Disrupted
+<video alt="Scenario Olten Disrupted" src='https://github.com/user-attachments/assets/15c4c746-ca92-43d8-be77-7650cbbb75df' width=180/>
+
+#### Scenario Olten Partially Closed
+<video alt="Scenario Olten Partially Closed" src='https://github.com/user-attachments/assets/262f36c6-155a-4a28-8b1f-ec8dcaa05b76' width=180/>
 
 
 ## Trajectories
