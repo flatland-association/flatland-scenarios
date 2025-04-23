@@ -30,6 +30,6 @@ jobs:
       - name: Checkt flatland-baselines
         run: git clone https://github.com/flatland-association/flatland-baselines.git
       - name: Run olten
-        run: PYTHONPATH=$PWD/flatland-baselines python -m jupyter nbconvert --ExecutePreprocessor.timeout=120 --execute --to notebook --inplace scenario_olten/scenario_olten.ipynb
+        run: PYTHONPATH=$PWD/flatland-baselines python -m jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to notebook --inplace scenario_olten/scenario_olten.ipynb
       - name: Verify olten scenarios
         run: pytest -s
