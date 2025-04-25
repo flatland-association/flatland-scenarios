@@ -21,9 +21,15 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install ffmpeg
+        run: sudo apt-get install ffmpeg
       - name: Install Flatland
         run: |
           python -m pip install --upgrade pip
-          pip install pytest flatland-rl
-      - name: Run olten
+          pip install pytest flatland-rl notebook python-ffmpeg folium
+      - name: Checkout flatland-baselines
+        run: git clone https://github.com/flatland-association/flatland-baselines.git
+      - name: Run olten notebook
+        run: PYTHONPATH=$PWD/flatland-baselines python -m jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to notebook --inplace scenario_olten/scenario_olten.ipynb
+      - name: Verify olten scenarios
         run: pytest -s

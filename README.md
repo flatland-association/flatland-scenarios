@@ -2,6 +2,14 @@
 
 Collection of scenarios for [Flatland](https://github.com/flatland-association/flatland-rl).
 
+### ToC
+
+| description                                  |
+|----------------------------------------------|
+| [`scenario_olten`](#scenario-olten)          |
+| [`scenarios`](#scenarios-randomly-generated) |
+| [`trajectories`](#Trajectories)              |
+
 ## Scenario Olten
 
 ![flatland_frame_0586.png](scenario_olten/data/olten/outputs/flatland_frame_0586.png)
@@ -51,6 +59,13 @@ Blocked line:
 
 Only 3/10 lines open:
 <video alt="Scenario Olten Partially Closed" src="https://github.com/user-attachments/assets/262f36c6-155a-4a28-8b1f-ec8dcaa05b76" width="180"></video>
+
+### Changelog
+
+| Version | Description          |
+|---------|----------------------|
+| v2      | Generated with 4.1.0 |
+| v1      | Generated with 4.0.6 |
 
 ## Scenarios (randomly generated)
 
