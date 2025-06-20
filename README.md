@@ -251,10 +251,11 @@ are generated using
 Under the hood, `flatland.trajectories.trajectories.generate_trajectories_from_metadata` is called.
 
 ```bash
-PYTHONPATH=<....>/flatland-baselines python flatland/trajectories/trajectories.py
+export PYTHONPATH=.../flatland-baselines:$PWD
+python flatland/trajectories/policy_grid_runner.py
 
-cd trajectories
-VERSION="_v3"
+cd episodes/trajectories
+VERSION="_v4"
 zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip 30x30\ map -x "*.DS_Store"
 zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip malfunction_deadlock_avoidance_heuristics -x "*.DS_Store"
 ```
@@ -263,6 +264,7 @@ zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip malfunction_deadlock_avo
 
 | Version                                                                                             | Description                                                                                                                                                                                                                                               |
 |-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [FLATLAND_BENCHMARK_EPISODES_FOLDER_v4.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v4.zip) | Re-generate with rewards, dones, infos  [pr](https://github.com/flatland-association/flatland-rl/pull/222/)                                                                                                                                               |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER_v3.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v3.zip) | Re-generate malfunction scenarios after bugfixing of step function [pr](https://github.com/flatland-association/flatland-rl/pull/171) / [sha](https://github.com/flatland-association/flatland-scenarios/commit/a90661093e1b7d365bc81c6bc020ac9906bb548d) |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER_v2.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v2.zip) | Add scenarios with malfunction [pr](https://github.com/flatland-association/flatland-rl/pull/131/)  /  [sha](https://github.com/flatland-association/flatland-scenarios/commit/8ee8ff8cd2ca71645ab89684f97f7f33a3762e09)                                  |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER.zip)       | Initial version without malfunction [pr](https://github.com/flatland-association/flatland-rl/pull/105) / [sha](https://github.com/flatland-association/flatland-scenarios/commit/2067fd20c4c740b126cf6605b6c4770f6c37552f)                                |
