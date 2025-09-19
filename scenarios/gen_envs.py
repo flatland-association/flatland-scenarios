@@ -10,13 +10,11 @@ from flatland.envs.persistence import RailEnvPersister
 from yaml import safe_load
 
 
-def create_envs_from_metadata(metadata_template_file: Path, outdir: Path = None, initial_seed: int = 42):
+def create_envs_from_metadata(metadata_template_file: Path, outdir: Path = None, environments_zip="environments.zip"):
     metadata = pd.read_csv(metadata_template_file)
     print(metadata.to_markdown())
     if outdir is None:
         outdir = Path.cwd()
-
-    metadata["seed"] = initial_seed + metadata.index
 
     assert os.path.exists(outdir)
 
@@ -50,7 +48,7 @@ def create_envs_from_metadata(metadata_template_file: Path, outdir: Path = None,
 
         metadata.to_csv(f"{tmpdirname}/metadata.csv")
 
-        zip_directory(tmpdirname, outdir / "environments.zip")
+        zip_directory(tmpdirname, outdir / environments_zip)
 
 
 def zip_directory(directory_path, zip_path, filter: Callable[[Path], bool] = None):
@@ -63,4 +61,4 @@ def zip_directory(directory_path, zip_path, filter: Callable[[Path], bool] = Non
 
 
 if __name__ == '__main__':
-    create_envs_from_metadata(Path("./metadata.csv"))
+    create_envs_from_metadata(Path("./metadata.csv"), environments_zip="environments_v2.zip")
