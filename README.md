@@ -237,6 +237,7 @@ The configurations are taken from [metadata.csv](scenarios/metadata.csv):
 | Version                                              | Description          |
 |------------------------------------------------------|----------------------|
 | [environments_v1.zip](scenarios/environments_v1.zip) | Generated with 4.0.6 |
+| [environments_v2.zip](scenarios/environments_v2.zip) | Generated with 4.2.1 |
 
 ## Trajectories
 
