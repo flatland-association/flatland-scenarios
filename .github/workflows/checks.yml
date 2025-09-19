@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
 
-  run-olten-scenarios-main:
+  run-olten-scenarios:
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
