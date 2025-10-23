@@ -42,9 +42,11 @@ jobs:
           pip install pytest git+https://github.com/flatland-association/flatland-rl.git@${{ env.flatland-rl-ref }} notebook python-ffmpeg folium
       - name: Checkout flatland-baselines
         run: git clone -b ${{ env.flatland-baselines-ref }} https://github.com/flatland-association/flatland-baselines.git
-      - name: Run olten notebook
-        run: PYTHONPATH=$PWD/flatland-baselines python -m jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to notebook --inplace scenario_olten/scenario_olten.ipynb
       - name: Verify olten scenarios
+        run: pytest -s
+      - name: Run olten notebook to re-generate olten scenarios
+        run: PYTHONPATH=$PWD/flatland-baselines python -m jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to notebook --inplace scenario_olten/scenario_olten.ipynb
+      - name: Verify re-generated olten scenarios
         run: pytest -s
 
   run-scenarios:
