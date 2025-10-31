@@ -45,7 +45,7 @@ jobs:
       - name: Run olten notebook
         run: PYTHONPATH=$PWD/flatland-baselines python -m jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to notebook --inplace scenario_olten/scenario_olten.ipynb
       - name: Verify olten scenarios
-        run: pytest -s
+        run: pytest -s scenario_olten
 
   run-scenarios:
     runs-on: ubuntu-22.04
