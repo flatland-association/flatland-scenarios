@@ -1,10 +1,10 @@
 import json
 
 import numpy as np
-from flatland.core.transition_map import GridTransitionMap
 from flatland.envs.grid.rail_env_grid import RailEnvTransitions
 from flatland.envs.persistence import RailEnvPersister
 from flatland.envs.rail_env import RailEnv
+from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
 from flatland.envs.rail_trainrun_data_structures import Waypoint
 from flatland.envs.timetable_utils import Line, Timetable
 
@@ -42,7 +42,7 @@ def main(generated_json, scenario_pkl):
 
     number_of_agents = len(data['flatland line']['agent_positions'])
 
-    agent_positions = [[tuple(coords[0]) for coords in positions] for positions in data['flatland line']['agent_positions']]
+    agent_positions = [[[tuple(coords[0]) for coords in positions]] for positions in data['flatland line']['agent_positions']]
     agent_directions = data['flatland line']['agent_directions']
     agent_targets = [tuple(coords[0]) for coords in data['flatland line']['agent_targets']]
 
@@ -58,8 +58,7 @@ def main(generated_json, scenario_pkl):
         max_episode_steps=data['flatland timetable']['max_episode_steps']
     )
 
-    grid = GridTransitionMap(width=width, height=height, transitions=RailEnvTransitions())
-    grid.grid = np.array(data['grid'])
+    grid = RailGridTransitionMap(width=width, height=height, transitions=RailEnvTransitions(), grid=np.array(data['grid'], dtype=np.uint16))
 
     level_free_positions = [tuple(item) for item in data['overpasses']]
 
@@ -78,4 +77,4 @@ def main(generated_json, scenario_pkl):
 
 
 if __name__ == '__main__':
-    main(generated_json='scenario_1_generated.json', scenario_pkl="scenario1.pkl")
+    main(generated_json='scenario_1_generated.json', scenario_pkl="scenario_1.pkl")
