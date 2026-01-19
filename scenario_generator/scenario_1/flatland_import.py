@@ -42,13 +42,14 @@ def main(generated_json, scenario_pkl):
 
     number_of_agents = len(data['flatland line']['agent_positions'])
 
-    agent_positions = [[[tuple(coords[0]) for coords in positions]] for positions in data['flatland line']['agent_positions']]
+    agent_positions = [[tuple(coords) for coords in positions] for positions in data['flatland line']['agent_positions']]
     agent_directions = data['flatland line']['agent_directions']
     agent_targets = [tuple(coords[0]) for coords in data['flatland line']['agent_targets']]
+    agent_waypoints = {i: [[Waypoint(tuple(p), d) for p, d in zip(pa, da)] for pa, da in zip(pas, das)] + [[Waypoint(target, None)]] for i, (pas, das, target)
+                       in enumerate(zip(agent_positions, agent_directions, agent_targets))}
 
     line = Line(
-        agent_waypoints={i: [[Waypoint(p, d) for p, d in zip(pa, da)] for pa, da in zip(pas, das)] + [[Waypoint(target, None)]] for i, (pas, das, target) in
-                         enumerate(zip(agent_positions, agent_directions, agent_targets))},
+        agent_waypoints=agent_waypoints,
         agent_speeds=data['flatland line']['agent_speeds'],
     )
 
