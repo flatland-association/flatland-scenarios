@@ -4,7 +4,7 @@ env:
   # DEPENDENCY SWITCH:
   flatland-rl-ref: main
   # DEPENDENCY SWITCH:
-  flatland-baselines-ref: main
+  flatland-baselines-ref: 24-update-regression-tests
 
 on:
   workflow_dispatch:
