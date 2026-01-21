@@ -15673,8 +15673,8 @@
       0,
       0,
       0,
-      32800,
-      32800,
+      49186,
+      34864,
       0,
       0,
       0,
@@ -19543,7 +19543,8 @@
           "earliestDeparture": null,
           "latestArrival": 177
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756286889153,
@@ -19562,7 +19563,8 @@
           "earliestDeparture": null,
           "latestArrival": 177
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756287021130,
@@ -19581,7 +19583,8 @@
           "earliestDeparture": null,
           "latestArrival": 161
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756287031194,
@@ -19600,7 +19603,8 @@
           "earliestDeparture": null,
           "latestArrival": 161
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756287059401,
@@ -19619,7 +19623,8 @@
           "earliestDeparture": null,
           "latestArrival": 172
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756291586273,
@@ -19638,7 +19643,8 @@
           "earliestDeparture": null,
           "latestArrival": 172
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756291651737,
@@ -19672,7 +19678,8 @@
           "earliestDeparture": null,
           "latestArrival": 239
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756291653994,
@@ -19706,7 +19713,8 @@
           "earliestDeparture": null,
           "latestArrival": 234
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756291733842,
@@ -19745,7 +19753,8 @@
           "earliestDeparture": null,
           "latestArrival": 288
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756291736809,
@@ -19784,7 +19793,8 @@
           "earliestDeparture": null,
           "latestArrival": 349
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296607938,
@@ -19818,7 +19828,8 @@
           "earliestDeparture": null,
           "latestArrival": 249
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296666858,
@@ -19852,7 +19863,8 @@
           "earliestDeparture": null,
           "latestArrival": 248
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296696922,
@@ -19881,7 +19893,8 @@
           "earliestDeparture": null,
           "latestArrival": 279
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296744746,
@@ -19910,7 +19923,8 @@
           "earliestDeparture": null,
           "latestArrival": 280
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296773370,
@@ -19939,7 +19953,8 @@
           "earliestDeparture": null,
           "latestArrival": 238
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296796042,
@@ -19968,7 +19983,8 @@
           "earliestDeparture": null,
           "latestArrival": 238
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296828834,
@@ -20002,7 +20018,8 @@
           "earliestDeparture": null,
           "latestArrival": 306
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296828449,
@@ -20036,7 +20053,8 @@
           "earliestDeparture": null,
           "latestArrival": 303
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296828290,
@@ -20060,7 +20078,8 @@
           "earliestDeparture": null,
           "latestArrival": 238
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296828130,
@@ -20084,7 +20103,8 @@
           "earliestDeparture": null,
           "latestArrival": 235
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296827971,
@@ -20118,7 +20138,8 @@
           "earliestDeparture": null,
           "latestArrival": 345
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296827801,
@@ -20152,7 +20173,8 @@
           "earliestDeparture": null,
           "latestArrival": 348
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297051788,
@@ -20181,7 +20203,8 @@
           "earliestDeparture": null,
           "latestArrival": 289
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297051620,
@@ -20210,7 +20233,8 @@
           "earliestDeparture": null,
           "latestArrival": 287
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297051458,
@@ -20239,7 +20263,8 @@
           "earliestDeparture": null,
           "latestArrival": 214
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297124547,
@@ -20268,7 +20293,8 @@
           "earliestDeparture": null,
           "latestArrival": 214
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297124386,
@@ -20297,7 +20323,8 @@
           "earliestDeparture": null,
           "latestArrival": 270
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297124194,
@@ -20326,7 +20353,8 @@
           "earliestDeparture": null,
           "latestArrival": 270
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297215019,
@@ -20350,7 +20378,8 @@
           "earliestDeparture": null,
           "latestArrival": 270
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297214858,
@@ -20374,7 +20403,8 @@
           "earliestDeparture": null,
           "latestArrival": 271
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297250285,
@@ -20403,7 +20433,8 @@
           "earliestDeparture": null,
           "latestArrival": 245
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297250123,
@@ -20432,7 +20463,8 @@
           "earliestDeparture": null,
           "latestArrival": 246
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297385763,
@@ -20476,7 +20508,8 @@
           "earliestDeparture": null,
           "latestArrival": 456
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297411196,
@@ -20520,7 +20553,8 @@
           "earliestDeparture": null,
           "latestArrival": 452
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297410987,
@@ -20554,7 +20588,8 @@
           "earliestDeparture": null,
           "latestArrival": 459
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297537764,
@@ -20588,7 +20623,8 @@
           "earliestDeparture": null,
           "latestArrival": 457
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297567562,
@@ -20622,7 +20658,8 @@
           "earliestDeparture": null,
           "latestArrival": 409
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297567393,
@@ -20656,7 +20693,8 @@
           "earliestDeparture": null,
           "latestArrival": 406
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297683115,
@@ -20690,7 +20728,8 @@
           "earliestDeparture": null,
           "latestArrival": 288
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297682973,
@@ -20724,7 +20763,8 @@
           "earliestDeparture": null,
           "latestArrival": 290
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297772431,
@@ -20758,7 +20798,8 @@
           "earliestDeparture": null,
           "latestArrival": 376
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297772276,
@@ -20792,7 +20833,8 @@
           "earliestDeparture": null,
           "latestArrival": 376
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297842837,
@@ -20826,7 +20868,8 @@
           "earliestDeparture": null,
           "latestArrival": 377
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298862239,
@@ -20860,7 +20903,8 @@
           "earliestDeparture": null,
           "latestArrival": 379
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298893471,
@@ -20889,7 +20933,8 @@
           "earliestDeparture": null,
           "latestArrival": 192
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298893303,
@@ -20918,7 +20963,8 @@
           "earliestDeparture": null,
           "latestArrival": 192
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298943969,
@@ -20967,7 +21013,8 @@
           "earliestDeparture": null,
           "latestArrival": 790
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298943824,
@@ -21016,7 +21063,8 @@
           "earliestDeparture": null,
           "latestArrival": 790
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299061744,
@@ -21060,7 +21108,8 @@
           "earliestDeparture": null,
           "latestArrival": 484
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299061583,
@@ -21104,7 +21153,8 @@
           "earliestDeparture": null,
           "latestArrival": 485
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299143384,
@@ -21143,7 +21193,8 @@
           "earliestDeparture": null,
           "latestArrival": 421
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299197120,
@@ -21182,7 +21233,8 @@
           "earliestDeparture": null,
           "latestArrival": 422
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299243392,
@@ -21216,7 +21268,8 @@
           "earliestDeparture": null,
           "latestArrival": 458
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299242873,
@@ -21250,7 +21303,8 @@
           "earliestDeparture": null,
           "latestArrival": 461
         }
-      ]
+      ],
+      "dwellTime": 2
     }
   ],
   "trainClasses": [
@@ -23233,7 +23287,7 @@
           3
         ],
         [
-          2,
+          0,
           0
         ],
         [
