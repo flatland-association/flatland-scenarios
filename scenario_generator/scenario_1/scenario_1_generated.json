@@ -15673,8 +15673,8 @@
       0,
       0,
       0,
-      32800,
-      32800,
+      49186,
+      34864,
       0,
       0,
       0,
@@ -19527,7 +19527,7 @@
   ],
   "schedules": [
     {
-      "id": 13341821056928205694,
+      "id": 16320396071481001845,
       "name": "IC 1.1",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19543,10 +19543,11 @@
           "earliestDeparture": null,
           "latestArrival": 177
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18296279542468594249,
+      "id": 15014294700746821588,
       "name": "IC 1.2",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19562,10 +19563,11 @@
           "earliestDeparture": null,
           "latestArrival": 207
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18407155805949215187,
+      "id": 15841057234838046236,
       "name": "IC 1.3",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19581,10 +19583,11 @@
           "earliestDeparture": null,
           "latestArrival": 237
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5673719538341069327,
+      "id": 11081540077282806244,
       "name": "IC 1.4",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19600,10 +19603,11 @@
           "earliestDeparture": null,
           "latestArrival": 267
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18325269724187544372,
+      "id": 17982340048351215623,
       "name": "IC 1.5",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19619,10 +19623,11 @@
           "earliestDeparture": null,
           "latestArrival": 297
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13567261066123167553,
+      "id": 2879946442358475780,
       "name": "IC 1.6",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19638,10 +19643,11 @@
           "earliestDeparture": null,
           "latestArrival": 327
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15946570955960107183,
+      "id": 7645975130639844111,
       "name": "IC 1.7",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19657,10 +19663,11 @@
           "earliestDeparture": null,
           "latestArrival": 357
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17954433266457002071,
+      "id": 7127521621945303057,
       "name": "IC 1.8",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19676,10 +19683,11 @@
           "earliestDeparture": null,
           "latestArrival": 387
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2650815011607430196,
+      "id": 15975062547921258622,
       "name": "IC 1.9",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19695,10 +19703,11 @@
           "earliestDeparture": null,
           "latestArrival": 417
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16166319380763591991,
+      "id": 18390864994233828336,
       "name": "IC 1.10",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19714,10 +19723,11 @@
           "earliestDeparture": null,
           "latestArrival": 447
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18196165601992720418,
+      "id": 17886818876435415315,
       "name": "IC 1.11",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19733,10 +19743,11 @@
           "earliestDeparture": null,
           "latestArrival": 477
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7023877979357725626,
+      "id": 18389795128515381384,
       "name": "IC 1.12",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19752,10 +19763,11 @@
           "earliestDeparture": null,
           "latestArrival": 507
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5707475359338415118,
+      "id": 5206032015738160305,
       "name": "IC 1.13",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19771,10 +19783,11 @@
           "earliestDeparture": null,
           "latestArrival": 537
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15109464652722030508,
+      "id": 3500881303892869767,
       "name": "IC 1.14",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19790,10 +19803,11 @@
           "earliestDeparture": null,
           "latestArrival": 567
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7808313038056539471,
+      "id": 16188662402582528589,
       "name": "IC 1.15",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19809,10 +19823,11 @@
           "earliestDeparture": null,
           "latestArrival": 597
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10854957065054800093,
+      "id": 7603405354646261698,
       "name": "IC 1.16",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19828,10 +19843,11 @@
           "earliestDeparture": null,
           "latestArrival": 627
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6518109061014242806,
+      "id": 17641642757315514045,
       "name": "IC 1.17",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19847,10 +19863,11 @@
           "earliestDeparture": null,
           "latestArrival": 657
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17276542199868639172,
+      "id": 4840507134890364109,
       "name": "IC 1.18",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19866,10 +19883,11 @@
           "earliestDeparture": null,
           "latestArrival": 687
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17022502859485298956,
+      "id": 3238214348141512112,
       "name": "IC 1.19",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19885,10 +19903,11 @@
           "earliestDeparture": null,
           "latestArrival": 717
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16827198202350947792,
+      "id": 14365874251827333110,
       "name": "IC 1.20",
       "lineId": 1756278937912,
       "trainClassId": 1,
@@ -19904,10 +19923,11 @@
           "earliestDeparture": null,
           "latestArrival": 747
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2524866230453485675,
+      "id": 7780284550648513983,
       "name": "IC 2.1",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -19923,10 +19943,11 @@
           "earliestDeparture": null,
           "latestArrival": 177
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5319539977307506011,
+      "id": 6094474659979740451,
       "name": "IC 2.2",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -19942,10 +19963,11 @@
           "earliestDeparture": null,
           "latestArrival": 207
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8224723697373170533,
+      "id": 5635603012871471371,
       "name": "IC 2.3",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -19961,10 +19983,11 @@
           "earliestDeparture": null,
           "latestArrival": 237
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10395699162175915019,
+      "id": 3226567883087233790,
       "name": "IC 2.4",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -19980,10 +20003,11 @@
           "earliestDeparture": null,
           "latestArrival": 267
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5637259999800738102,
+      "id": 537976755457313513,
       "name": "IC 2.5",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -19999,10 +20023,11 @@
           "earliestDeparture": null,
           "latestArrival": 297
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16318227063633560290,
+      "id": 2199352164403792888,
       "name": "IC 2.6",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20018,10 +20043,11 @@
           "earliestDeparture": null,
           "latestArrival": 327
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5008039483774353738,
+      "id": 18105445858017627690,
       "name": "IC 2.7",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20037,10 +20063,11 @@
           "earliestDeparture": null,
           "latestArrival": 357
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15352030711022767942,
+      "id": 887679826184652705,
       "name": "IC 2.8",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20056,10 +20083,11 @@
           "earliestDeparture": null,
           "latestArrival": 387
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17738799023446508297,
+      "id": 7841927983417017201,
       "name": "IC 2.9",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20075,10 +20103,11 @@
           "earliestDeparture": null,
           "latestArrival": 417
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16360313786054165027,
+      "id": 5544104422032886211,
       "name": "IC 2.10",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20094,10 +20123,11 @@
           "earliestDeparture": null,
           "latestArrival": 447
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9253443493408558612,
+      "id": 8916652117644953336,
       "name": "IC 2.11",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20113,10 +20143,11 @@
           "earliestDeparture": null,
           "latestArrival": 477
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1676072490755769002,
+      "id": 786481940312442210,
       "name": "IC 2.12",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20132,10 +20163,11 @@
           "earliestDeparture": null,
           "latestArrival": 507
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11330335847033292945,
+      "id": 16973376601220337406,
       "name": "IC 2.13",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20151,10 +20183,11 @@
           "earliestDeparture": null,
           "latestArrival": 537
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18173508483788588886,
+      "id": 14256912769934773151,
       "name": "IC 2.14",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20170,10 +20203,11 @@
           "earliestDeparture": null,
           "latestArrival": 567
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13275692214910536964,
+      "id": 5156224678527257834,
       "name": "IC 2.15",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20189,10 +20223,11 @@
           "earliestDeparture": null,
           "latestArrival": 597
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8996741548281053884,
+      "id": 7908650858165586779,
       "name": "IC 2.16",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20208,10 +20243,11 @@
           "earliestDeparture": null,
           "latestArrival": 627
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2130025585332996114,
+      "id": 4188452181631585655,
       "name": "IC 2.17",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20227,10 +20263,11 @@
           "earliestDeparture": null,
           "latestArrival": 657
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17197683875343649591,
+      "id": 5067270159019492658,
       "name": "IC 2.18",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20246,10 +20283,11 @@
           "earliestDeparture": null,
           "latestArrival": 687
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12088936362779427173,
+      "id": 18029839241912601473,
       "name": "IC 2.19",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20265,10 +20303,11 @@
           "earliestDeparture": null,
           "latestArrival": 717
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1149387058546427139,
+      "id": 5786882570629958518,
       "name": "IC 2.20",
       "lineId": 1756278939201,
       "trainClassId": 1,
@@ -20284,10 +20323,11 @@
           "earliestDeparture": null,
           "latestArrival": 747
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11576724414969037328,
+      "id": 8256650985257256934,
       "name": "IC 3.1",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20303,10 +20343,11 @@
           "earliestDeparture": null,
           "latestArrival": 161
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8255509054787111286,
+      "id": 10086721786252119219,
       "name": "IC 3.2",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20322,10 +20363,11 @@
           "earliestDeparture": null,
           "latestArrival": 191
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9951473969483892147,
+      "id": 13376180717314656280,
       "name": "IC 3.3",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20341,10 +20383,11 @@
           "earliestDeparture": null,
           "latestArrival": 221
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11737573055039949089,
+      "id": 15513061305354832544,
       "name": "IC 3.4",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20360,10 +20403,11 @@
           "earliestDeparture": null,
           "latestArrival": 251
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6912507708272755326,
+      "id": 13326572353835453676,
       "name": "IC 3.5",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20379,10 +20423,11 @@
           "earliestDeparture": null,
           "latestArrival": 281
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12150500447062934143,
+      "id": 11035895543323183540,
       "name": "IC 3.6",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20398,10 +20443,11 @@
           "earliestDeparture": null,
           "latestArrival": 311
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16548469363779585310,
+      "id": 11963471571825083357,
       "name": "IC 3.7",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20417,10 +20463,11 @@
           "earliestDeparture": null,
           "latestArrival": 341
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16551502404562012339,
+      "id": 10330310032563718337,
       "name": "IC 3.8",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20436,10 +20483,11 @@
           "earliestDeparture": null,
           "latestArrival": 371
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 800022724300718164,
+      "id": 3011948008540554940,
       "name": "IC 3.9",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20455,10 +20503,11 @@
           "earliestDeparture": null,
           "latestArrival": 401
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16767976894820272335,
+      "id": 11362859045156832054,
       "name": "IC 3.10",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20474,10 +20523,11 @@
           "earliestDeparture": null,
           "latestArrival": 431
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3240514588379923290,
+      "id": 659535562148497608,
       "name": "IC 3.11",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20493,10 +20543,11 @@
           "earliestDeparture": null,
           "latestArrival": 461
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7201831074994998979,
+      "id": 9275712215051225979,
       "name": "IC 3.12",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20512,10 +20563,11 @@
           "earliestDeparture": null,
           "latestArrival": 491
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5937643508000703967,
+      "id": 5691615248635281476,
       "name": "IC 3.13",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20531,10 +20583,11 @@
           "earliestDeparture": null,
           "latestArrival": 521
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18304555568512713553,
+      "id": 5814744822173683622,
       "name": "IC 3.14",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20550,10 +20603,11 @@
           "earliestDeparture": null,
           "latestArrival": 551
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8067363290700860183,
+      "id": 4293808160786107978,
       "name": "IC 3.15",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20569,10 +20623,11 @@
           "earliestDeparture": null,
           "latestArrival": 581
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10633525151556718005,
+      "id": 12810514840931814931,
       "name": "IC 3.16",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20588,10 +20643,11 @@
           "earliestDeparture": null,
           "latestArrival": 611
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4908873358955529044,
+      "id": 16232400655117405221,
       "name": "IC 3.17",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20607,10 +20663,11 @@
           "earliestDeparture": null,
           "latestArrival": 641
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9073194466510392608,
+      "id": 5073546898962269949,
       "name": "IC 3.18",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20626,10 +20683,11 @@
           "earliestDeparture": null,
           "latestArrival": 671
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2293962268088356238,
+      "id": 16377369636709614962,
       "name": "IC 3.19",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20645,10 +20703,11 @@
           "earliestDeparture": null,
           "latestArrival": 701
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11282639813528864668,
+      "id": 14373125785355372961,
       "name": "IC 3.20",
       "lineId": 1756278961311,
       "trainClassId": 1,
@@ -20664,10 +20723,11 @@
           "earliestDeparture": null,
           "latestArrival": 731
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17667532283988298209,
+      "id": 14862262617765531410,
       "name": "IC 4.1",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20683,10 +20743,11 @@
           "earliestDeparture": null,
           "latestArrival": 161
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 431865654089763579,
+      "id": 16892929276596405280,
       "name": "IC 4.2",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20702,10 +20763,11 @@
           "earliestDeparture": null,
           "latestArrival": 191
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9012498819356705370,
+      "id": 17963299555374288248,
       "name": "IC 4.3",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20721,10 +20783,11 @@
           "earliestDeparture": null,
           "latestArrival": 221
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14581031688895349040,
+      "id": 3488249690925909919,
       "name": "IC 4.4",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20740,10 +20803,11 @@
           "earliestDeparture": null,
           "latestArrival": 251
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10937163623310902853,
+      "id": 2851063219688262022,
       "name": "IC 4.5",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20759,10 +20823,11 @@
           "earliestDeparture": null,
           "latestArrival": 281
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7413796032919388325,
+      "id": 5187311007508220316,
       "name": "IC 4.6",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20778,10 +20843,11 @@
           "earliestDeparture": null,
           "latestArrival": 311
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3935849548916671652,
+      "id": 2052652223746559445,
       "name": "IC 4.7",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20797,10 +20863,11 @@
           "earliestDeparture": null,
           "latestArrival": 341
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2533975257212993740,
+      "id": 8730540969317715134,
       "name": "IC 4.8",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20816,10 +20883,11 @@
           "earliestDeparture": null,
           "latestArrival": 371
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8091682084550557831,
+      "id": 5836303716588014978,
       "name": "IC 4.9",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20835,10 +20903,11 @@
           "earliestDeparture": null,
           "latestArrival": 401
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15431508727370763549,
+      "id": 18273060488435679474,
       "name": "IC 4.10",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20854,10 +20923,11 @@
           "earliestDeparture": null,
           "latestArrival": 431
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8663057346215559219,
+      "id": 14200729507298820314,
       "name": "IC 4.11",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20873,10 +20943,11 @@
           "earliestDeparture": null,
           "latestArrival": 461
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5963042769882204874,
+      "id": 16433362909322365619,
       "name": "IC 4.12",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20892,10 +20963,11 @@
           "earliestDeparture": null,
           "latestArrival": 491
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12794505560852482386,
+      "id": 12673893980489334879,
       "name": "IC 4.13",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20911,10 +20983,11 @@
           "earliestDeparture": null,
           "latestArrival": 521
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12302694651023740156,
+      "id": 12625499077139713762,
       "name": "IC 4.14",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20930,10 +21003,11 @@
           "earliestDeparture": null,
           "latestArrival": 551
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4795914468027351656,
+      "id": 7864595699096569276,
       "name": "IC 4.15",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20949,10 +21023,11 @@
           "earliestDeparture": null,
           "latestArrival": 581
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10126790385831724747,
+      "id": 1085979070183787642,
       "name": "IC 4.16",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20968,10 +21043,11 @@
           "earliestDeparture": null,
           "latestArrival": 611
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 217463015066059737,
+      "id": 8071592148133759584,
       "name": "IC 4.17",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -20987,10 +21063,11 @@
           "earliestDeparture": null,
           "latestArrival": 641
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8342482613123498590,
+      "id": 11805294256054552090,
       "name": "IC 4.18",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -21006,10 +21083,11 @@
           "earliestDeparture": null,
           "latestArrival": 671
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18376186829291602245,
+      "id": 5765893988058089946,
       "name": "IC 4.19",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -21025,10 +21103,11 @@
           "earliestDeparture": null,
           "latestArrival": 701
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4961104864150899704,
+      "id": 10591711315148818870,
       "name": "IC 4.20",
       "lineId": 1756278967984,
       "trainClassId": 1,
@@ -21044,10 +21123,11 @@
           "earliestDeparture": null,
           "latestArrival": 731
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2660481288236387690,
+      "id": 3680206407133971328,
       "name": "IC 5.1",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21063,10 +21143,11 @@
           "earliestDeparture": null,
           "latestArrival": 172
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3602324701387050107,
+      "id": 5457072714611507229,
       "name": "IC 5.2",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21082,10 +21163,11 @@
           "earliestDeparture": null,
           "latestArrival": 202
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1648113007760131156,
+      "id": 17237611509934344284,
       "name": "IC 5.3",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21101,10 +21183,11 @@
           "earliestDeparture": null,
           "latestArrival": 232
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3654260747133406903,
+      "id": 6496840409530191360,
       "name": "IC 5.4",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21120,10 +21203,11 @@
           "earliestDeparture": null,
           "latestArrival": 262
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9787038907581810180,
+      "id": 12690768908793300959,
       "name": "IC 5.5",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21139,10 +21223,11 @@
           "earliestDeparture": null,
           "latestArrival": 292
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4579244166611880898,
+      "id": 18259988415158373112,
       "name": "IC 5.6",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21158,10 +21243,11 @@
           "earliestDeparture": null,
           "latestArrival": 322
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13506210425445893683,
+      "id": 14580830879746378954,
       "name": "IC 5.7",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21177,10 +21263,11 @@
           "earliestDeparture": null,
           "latestArrival": 352
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17199246300539405124,
+      "id": 7627630185893545325,
       "name": "IC 5.8",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21196,10 +21283,11 @@
           "earliestDeparture": null,
           "latestArrival": 382
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10771897052534490647,
+      "id": 6711999653530781418,
       "name": "IC 5.9",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21215,10 +21303,11 @@
           "earliestDeparture": null,
           "latestArrival": 412
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17436963999168807991,
+      "id": 8928874543802699285,
       "name": "IC 5.10",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21234,10 +21323,11 @@
           "earliestDeparture": null,
           "latestArrival": 442
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14330257331478283527,
+      "id": 2971444789608728792,
       "name": "IC 5.11",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21253,10 +21343,11 @@
           "earliestDeparture": null,
           "latestArrival": 472
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10814381764273983238,
+      "id": 16430042427666352569,
       "name": "IC 5.12",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21272,10 +21363,11 @@
           "earliestDeparture": null,
           "latestArrival": 502
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7115483853089031404,
+      "id": 16844574940568243169,
       "name": "IC 5.13",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21291,10 +21383,11 @@
           "earliestDeparture": null,
           "latestArrival": 532
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13960745046792553769,
+      "id": 16073418626297512639,
       "name": "IC 5.14",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21310,10 +21403,11 @@
           "earliestDeparture": null,
           "latestArrival": 562
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9258435429574656471,
+      "id": 3535204508128396533,
       "name": "IC 5.15",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21329,10 +21423,11 @@
           "earliestDeparture": null,
           "latestArrival": 592
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17281844560586425838,
+      "id": 11837737851807549569,
       "name": "IC 5.16",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21348,10 +21443,11 @@
           "earliestDeparture": null,
           "latestArrival": 622
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11325200388494346366,
+      "id": 16329325445383799478,
       "name": "IC 5.17",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21367,10 +21463,11 @@
           "earliestDeparture": null,
           "latestArrival": 652
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11551752324444930654,
+      "id": 11131149659256734527,
       "name": "IC 5.18",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21386,10 +21483,11 @@
           "earliestDeparture": null,
           "latestArrival": 682
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8344287712827493504,
+      "id": 10792628105970598843,
       "name": "IC 5.19",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21405,10 +21503,11 @@
           "earliestDeparture": null,
           "latestArrival": 712
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13305272394408611401,
+      "id": 16534031460834558232,
       "name": "IC 5.20",
       "lineId": 1756279008160,
       "trainClassId": 1,
@@ -21424,10 +21523,11 @@
           "earliestDeparture": null,
           "latestArrival": 742
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17120279873416679234,
+      "id": 13956839063990324420,
       "name": "IC 6.1",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21443,10 +21543,11 @@
           "earliestDeparture": null,
           "latestArrival": 172
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15729290598289590227,
+      "id": 6633473176421483136,
       "name": "IC 6.2",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21462,10 +21563,11 @@
           "earliestDeparture": null,
           "latestArrival": 202
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7654245654957279547,
+      "id": 6281355293148660671,
       "name": "IC 6.3",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21481,10 +21583,11 @@
           "earliestDeparture": null,
           "latestArrival": 232
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16163234459733542214,
+      "id": 9933533739459821932,
       "name": "IC 6.4",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21500,10 +21603,11 @@
           "earliestDeparture": null,
           "latestArrival": 262
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8135593330403722766,
+      "id": 15804916886340125418,
       "name": "IC 6.5",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21519,10 +21623,11 @@
           "earliestDeparture": null,
           "latestArrival": 292
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4352693903364738035,
+      "id": 1413544020935393768,
       "name": "IC 6.6",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21538,10 +21643,11 @@
           "earliestDeparture": null,
           "latestArrival": 322
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12201557185885391397,
+      "id": 3295049834665036367,
       "name": "IC 6.7",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21557,10 +21663,11 @@
           "earliestDeparture": null,
           "latestArrival": 352
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5121480700103380699,
+      "id": 15664282745277468211,
       "name": "IC 6.8",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21576,10 +21683,11 @@
           "earliestDeparture": null,
           "latestArrival": 382
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16297595372723257937,
+      "id": 11116571409019125964,
       "name": "IC 6.9",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21595,10 +21703,11 @@
           "earliestDeparture": null,
           "latestArrival": 412
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10126645954259142848,
+      "id": 15658685531729904641,
       "name": "IC 6.10",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21614,10 +21723,11 @@
           "earliestDeparture": null,
           "latestArrival": 442
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9837251811781070786,
+      "id": 1204204322065039813,
       "name": "IC 6.11",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21633,10 +21743,11 @@
           "earliestDeparture": null,
           "latestArrival": 472
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3805011049912223108,
+      "id": 7068962839089008419,
       "name": "IC 6.12",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21652,10 +21763,11 @@
           "earliestDeparture": null,
           "latestArrival": 502
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7173891033161352475,
+      "id": 6652074958811121524,
       "name": "IC 6.13",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21671,10 +21783,11 @@
           "earliestDeparture": null,
           "latestArrival": 532
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11053111872239321752,
+      "id": 10673151546355630373,
       "name": "IC 6.14",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21690,10 +21803,11 @@
           "earliestDeparture": null,
           "latestArrival": 562
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7710335238620857967,
+      "id": 14981633104263790938,
       "name": "IC 6.15",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21709,10 +21823,11 @@
           "earliestDeparture": null,
           "latestArrival": 592
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12986468157134816910,
+      "id": 12423661314300266403,
       "name": "IC 6.16",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21728,10 +21843,11 @@
           "earliestDeparture": null,
           "latestArrival": 622
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2049557748808042082,
+      "id": 17683067881321350720,
       "name": "IC 6.17",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21747,10 +21863,11 @@
           "earliestDeparture": null,
           "latestArrival": 652
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12887281665715029673,
+      "id": 4888614195457639507,
       "name": "IC 6.18",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21766,10 +21883,11 @@
           "earliestDeparture": null,
           "latestArrival": 682
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3305649245586015390,
+      "id": 8844036475088357142,
       "name": "IC 6.19",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21785,10 +21903,11 @@
           "earliestDeparture": null,
           "latestArrival": 712
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5231506702447559714,
+      "id": 6052017563376568939,
       "name": "IC 6.20",
       "lineId": 1756279010216,
       "trainClassId": 1,
@@ -21804,10 +21923,11 @@
           "earliestDeparture": null,
           "latestArrival": 742
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2967809221450877511,
+      "id": 8466480945252024390,
       "name": "RE 1.1",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -21838,10 +21958,11 @@
           "earliestDeparture": null,
           "latestArrival": 239
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4169768722811341555,
+      "id": 2835813373422485618,
       "name": "RE 1.2",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -21872,10 +21993,11 @@
           "earliestDeparture": null,
           "latestArrival": 299
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3631924000790889973,
+      "id": 10186289023049483706,
       "name": "RE 1.3",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -21906,10 +22028,11 @@
           "earliestDeparture": null,
           "latestArrival": 359
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12800352599619421089,
+      "id": 9940133735196085331,
       "name": "RE 1.4",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -21940,10 +22063,11 @@
           "earliestDeparture": null,
           "latestArrival": 419
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11248394422076853412,
+      "id": 11691006616702043625,
       "name": "RE 1.5",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -21974,10 +22098,11 @@
           "earliestDeparture": null,
           "latestArrival": 479
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5278361590453522040,
+      "id": 3686301218311196124,
       "name": "RE 1.6",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -22008,10 +22133,11 @@
           "earliestDeparture": null,
           "latestArrival": 539
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16691373227889609139,
+      "id": 6385347616300548307,
       "name": "RE 1.7",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -22042,10 +22168,11 @@
           "earliestDeparture": null,
           "latestArrival": 599
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3022668041343222299,
+      "id": 17382472891913552961,
       "name": "RE 1.8",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -22076,10 +22203,11 @@
           "earliestDeparture": null,
           "latestArrival": 659
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3662713203860193614,
+      "id": 17757267814200921403,
       "name": "RE 1.9",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -22110,10 +22238,11 @@
           "earliestDeparture": null,
           "latestArrival": 719
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15364881559058991884,
+      "id": 13439933216360318669,
       "name": "RE 1.10",
       "lineId": 1756282114971,
       "trainClassId": 2,
@@ -22144,10 +22273,11 @@
           "earliestDeparture": null,
           "latestArrival": 779
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3323305941973158033,
+      "id": 653079232995217177,
       "name": "RE 2.1",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22178,10 +22308,11 @@
           "earliestDeparture": null,
           "latestArrival": 234
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9407877391633172695,
+      "id": 13261458849675299516,
       "name": "RE 2.2",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22212,10 +22343,11 @@
           "earliestDeparture": null,
           "latestArrival": 294
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10710378147502244246,
+      "id": 18184452613831936218,
       "name": "RE 2.3",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22246,10 +22378,11 @@
           "earliestDeparture": null,
           "latestArrival": 354
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15112715078122751779,
+      "id": 16354133838755809546,
       "name": "RE 2.4",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22280,10 +22413,11 @@
           "earliestDeparture": null,
           "latestArrival": 414
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9678315561218428355,
+      "id": 7685110482119573804,
       "name": "RE 2.5",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22314,10 +22448,11 @@
           "earliestDeparture": null,
           "latestArrival": 474
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12201597949037530002,
+      "id": 12049784059338509098,
       "name": "RE 2.6",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22348,10 +22483,11 @@
           "earliestDeparture": null,
           "latestArrival": 534
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2868340904779595796,
+      "id": 6560925352035370247,
       "name": "RE 2.7",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22382,10 +22518,11 @@
           "earliestDeparture": null,
           "latestArrival": 594
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15301412621762380814,
+      "id": 17160186300401208363,
       "name": "RE 2.8",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22416,10 +22553,11 @@
           "earliestDeparture": null,
           "latestArrival": 654
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3574132996503522394,
+      "id": 5385541288030913551,
       "name": "RE 2.9",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22450,10 +22588,11 @@
           "earliestDeparture": null,
           "latestArrival": 714
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13340567744520734122,
+      "id": 12793996701579035211,
       "name": "RE 2.10",
       "lineId": 1756282117507,
       "trainClassId": 2,
@@ -22484,10 +22623,11 @@
           "earliestDeparture": null,
           "latestArrival": 774
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16554203008815353079,
+      "id": 4445341185326073354,
       "name": "RE 3.1",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22523,10 +22663,11 @@
           "earliestDeparture": null,
           "latestArrival": 288
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11837024042616047802,
+      "id": 11673381391840791409,
       "name": "RE 3.2",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22562,10 +22703,11 @@
           "earliestDeparture": null,
           "latestArrival": 348
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1076533052172160604,
+      "id": 5900729914820020260,
       "name": "RE 3.3",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22601,10 +22743,11 @@
           "earliestDeparture": null,
           "latestArrival": 408
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6386212518613307169,
+      "id": 17603847590101405377,
       "name": "RE 3.4",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22640,10 +22783,11 @@
           "earliestDeparture": null,
           "latestArrival": 468
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12113051264248071727,
+      "id": 7173226378186738603,
       "name": "RE 3.5",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22679,10 +22823,11 @@
           "earliestDeparture": null,
           "latestArrival": 528
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4287203132896529049,
+      "id": 9204872344737368071,
       "name": "RE 3.6",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22718,10 +22863,11 @@
           "earliestDeparture": null,
           "latestArrival": 588
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10882277248070404650,
+      "id": 11244271887017984867,
       "name": "RE 3.7",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22757,10 +22903,11 @@
           "earliestDeparture": null,
           "latestArrival": 648
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11725875609027563369,
+      "id": 3609064116977355357,
       "name": "RE 3.8",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22796,10 +22943,11 @@
           "earliestDeparture": null,
           "latestArrival": 708
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12890582565929831446,
+      "id": 11935425366672098464,
       "name": "RE 3.9",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22835,10 +22983,11 @@
           "earliestDeparture": null,
           "latestArrival": 768
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5833199828873660428,
+      "id": 11896439973620302547,
       "name": "RE 3.10",
       "lineId": 1756282201363,
       "trainClassId": 2,
@@ -22874,10 +23023,11 @@
           "earliestDeparture": null,
           "latestArrival": 828
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17440585129624554049,
+      "id": 10599295694376355569,
       "name": "RE 4.1",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -22913,10 +23063,11 @@
           "earliestDeparture": null,
           "latestArrival": 349
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4635078194199937490,
+      "id": 10486202432610910280,
       "name": "RE 4.2",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -22952,10 +23103,11 @@
           "earliestDeparture": null,
           "latestArrival": 409
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7961543727270215867,
+      "id": 14965289244026225089,
       "name": "RE 4.3",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -22991,10 +23143,11 @@
           "earliestDeparture": null,
           "latestArrival": 469
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1548376096466159185,
+      "id": 9380650391031334485,
       "name": "RE 4.4",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -23030,10 +23183,11 @@
           "earliestDeparture": null,
           "latestArrival": 529
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5706489479876331410,
+      "id": 15117542758542495041,
       "name": "RE 4.5",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -23069,10 +23223,11 @@
           "earliestDeparture": null,
           "latestArrival": 589
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5317532124018134653,
+      "id": 5202554436119577192,
       "name": "RE 4.6",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -23108,10 +23263,11 @@
           "earliestDeparture": null,
           "latestArrival": 649
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10747762364976350070,
+      "id": 6543360325687067049,
       "name": "RE 4.7",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -23147,10 +23303,11 @@
           "earliestDeparture": null,
           "latestArrival": 709
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17884611559165149431,
+      "id": 4435403681959529741,
       "name": "RE 4.8",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -23186,10 +23343,11 @@
           "earliestDeparture": null,
           "latestArrival": 769
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8916365650350194996,
+      "id": 1676285816140221992,
       "name": "RE 4.9",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -23225,10 +23383,11 @@
           "earliestDeparture": null,
           "latestArrival": 829
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11142297614725760014,
+      "id": 4270231032231904848,
       "name": "RE 4.10",
       "lineId": 1756282204484,
       "trainClassId": 2,
@@ -23264,10 +23423,11 @@
           "earliestDeparture": null,
           "latestArrival": 889
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8708754985036631303,
+      "id": 7865917023447698535,
       "name": "RE 5.1",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23298,10 +23458,11 @@
           "earliestDeparture": null,
           "latestArrival": 259
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14747524810597484715,
+      "id": 10604860151745367679,
       "name": "RE 5.2",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23332,10 +23493,11 @@
           "earliestDeparture": null,
           "latestArrival": 319
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1515399106469841392,
+      "id": 2897876774178080649,
       "name": "RE 5.3",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23366,10 +23528,11 @@
           "earliestDeparture": null,
           "latestArrival": 379
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10204019975141935865,
+      "id": 16863928606113350611,
       "name": "RE 5.4",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23400,10 +23563,11 @@
           "earliestDeparture": null,
           "latestArrival": 439
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12869062661815289912,
+      "id": 6104485386928997009,
       "name": "RE 5.5",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23434,10 +23598,11 @@
           "earliestDeparture": null,
           "latestArrival": 499
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9837932511075257858,
+      "id": 12349725971148983265,
       "name": "RE 5.6",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23468,10 +23633,11 @@
           "earliestDeparture": null,
           "latestArrival": 559
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16627297387504617360,
+      "id": 15553842233277565622,
       "name": "RE 5.7",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23502,10 +23668,11 @@
           "earliestDeparture": null,
           "latestArrival": 619
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11018880302598474818,
+      "id": 4340762130594088093,
       "name": "RE 5.8",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23536,10 +23703,11 @@
           "earliestDeparture": null,
           "latestArrival": 679
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8714501559719053709,
+      "id": 2531646875587658870,
       "name": "RE 5.9",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23570,10 +23738,11 @@
           "earliestDeparture": null,
           "latestArrival": 739
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6723042564681320642,
+      "id": 8655263425622919076,
       "name": "RE 5.10",
       "lineId": 1756282261332,
       "trainClassId": 2,
@@ -23604,10 +23773,11 @@
           "earliestDeparture": null,
           "latestArrival": 799
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 646861050374409211,
+      "id": 16701570509469206499,
       "name": "RE 6.1",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23638,10 +23808,11 @@
           "earliestDeparture": null,
           "latestArrival": 258
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12623522764541413897,
+      "id": 1220888222878221868,
       "name": "RE 6.2",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23672,10 +23843,11 @@
           "earliestDeparture": null,
           "latestArrival": 318
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15333296164367516525,
+      "id": 11346518375035063772,
       "name": "RE 6.3",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23706,10 +23878,11 @@
           "earliestDeparture": null,
           "latestArrival": 378
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15765735137901889177,
+      "id": 15741370696608465781,
       "name": "RE 6.4",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23740,10 +23913,11 @@
           "earliestDeparture": null,
           "latestArrival": 438
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10454529051027194037,
+      "id": 17958601866202926970,
       "name": "RE 6.5",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23774,10 +23948,11 @@
           "earliestDeparture": null,
           "latestArrival": 498
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14563744084864222522,
+      "id": 11289122312488830646,
       "name": "RE 6.6",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23808,10 +23983,11 @@
           "earliestDeparture": null,
           "latestArrival": 558
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4168626956525326163,
+      "id": 14387697334206677080,
       "name": "RE 6.7",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23842,10 +24018,11 @@
           "earliestDeparture": null,
           "latestArrival": 618
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18334191100859859070,
+      "id": 2003580688962046963,
       "name": "RE 6.8",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23876,10 +24053,11 @@
           "earliestDeparture": null,
           "latestArrival": 678
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14418074250717382954,
+      "id": 5312358000191358951,
       "name": "RE 6.9",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23910,10 +24088,11 @@
           "earliestDeparture": null,
           "latestArrival": 738
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12745283631973877169,
+      "id": 14646895830766274519,
       "name": "RE 6.10",
       "lineId": 1756282263445,
       "trainClassId": 2,
@@ -23944,10 +24123,11 @@
           "earliestDeparture": null,
           "latestArrival": 798
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6756685858709982278,
+      "id": 8815704944431416141,
       "name": "RE 7.1",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -23973,10 +24153,11 @@
           "earliestDeparture": null,
           "latestArrival": 289
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16757939153590109036,
+      "id": 11208227256664867416,
       "name": "RE 7.2",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24002,10 +24183,11 @@
           "earliestDeparture": null,
           "latestArrival": 349
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9498929641335179376,
+      "id": 127728811386095524,
       "name": "RE 7.3",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24031,10 +24213,11 @@
           "earliestDeparture": null,
           "latestArrival": 409
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9740039717543169946,
+      "id": 6270832143708014017,
       "name": "RE 7.4",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24060,10 +24243,11 @@
           "earliestDeparture": null,
           "latestArrival": 469
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4134470267698497921,
+      "id": 17725368634873236861,
       "name": "RE 7.5",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24089,10 +24273,11 @@
           "earliestDeparture": null,
           "latestArrival": 529
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16562794605195642118,
+      "id": 3705416344738285581,
       "name": "RE 7.6",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24118,10 +24303,11 @@
           "earliestDeparture": null,
           "latestArrival": 589
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15210940738468856467,
+      "id": 13251130636294767112,
       "name": "RE 7.7",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24147,10 +24333,11 @@
           "earliestDeparture": null,
           "latestArrival": 649
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18390093308415004398,
+      "id": 17981376243673811899,
       "name": "RE 7.8",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24176,10 +24363,11 @@
           "earliestDeparture": null,
           "latestArrival": 709
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6859748831299585949,
+      "id": 14634605184466174825,
       "name": "RE 7.9",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24205,10 +24393,11 @@
           "earliestDeparture": null,
           "latestArrival": 769
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12005104243674532805,
+      "id": 10134104140157698217,
       "name": "RE 7.10",
       "lineId": 1756282350135,
       "trainClassId": 2,
@@ -24234,10 +24423,11 @@
           "earliestDeparture": null,
           "latestArrival": 829
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12823370551145416650,
+      "id": 18050907579035044764,
       "name": "RE 8.1",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24263,10 +24453,11 @@
           "earliestDeparture": null,
           "latestArrival": 290
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18118050079539088452,
+      "id": 12197315224434527178,
       "name": "RE 8.2",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24292,10 +24483,11 @@
           "earliestDeparture": null,
           "latestArrival": 350
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 496271942159715666,
+      "id": 2483665577062386276,
       "name": "RE 8.3",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24321,10 +24513,11 @@
           "earliestDeparture": null,
           "latestArrival": 410
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3997389228643927698,
+      "id": 5685885575770687104,
       "name": "RE 8.4",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24350,10 +24543,11 @@
           "earliestDeparture": null,
           "latestArrival": 470
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14637824225304726117,
+      "id": 9036891208060453393,
       "name": "RE 8.5",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24379,10 +24573,11 @@
           "earliestDeparture": null,
           "latestArrival": 530
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10950652760160947848,
+      "id": 1753481943100770531,
       "name": "RE 8.6",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24408,10 +24603,11 @@
           "earliestDeparture": null,
           "latestArrival": 590
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2247504904527691936,
+      "id": 13475236814836943551,
       "name": "RE 8.7",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24437,10 +24633,11 @@
           "earliestDeparture": null,
           "latestArrival": 650
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7036757990570542766,
+      "id": 687151040108775557,
       "name": "RE 8.8",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24466,10 +24663,11 @@
           "earliestDeparture": null,
           "latestArrival": 710
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18218969734213749944,
+      "id": 14638413111638836692,
       "name": "RE 8.9",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24495,10 +24693,11 @@
           "earliestDeparture": null,
           "latestArrival": 770
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4525347670184053518,
+      "id": 4218211808687312671,
       "name": "RE 8.10",
       "lineId": 1756282354239,
       "trainClassId": 2,
@@ -24524,10 +24723,11 @@
           "earliestDeparture": null,
           "latestArrival": 830
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3616495725631653238,
+      "id": 9037917733630461615,
       "name": "RE 9.1",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24553,10 +24753,11 @@
           "earliestDeparture": null,
           "latestArrival": 258
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11771585600871811604,
+      "id": 15822399453888269929,
       "name": "RE 9.2",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24582,10 +24783,11 @@
           "earliestDeparture": null,
           "latestArrival": 318
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 119022236004926684,
+      "id": 537821324510383028,
       "name": "RE 9.3",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24611,10 +24813,11 @@
           "earliestDeparture": null,
           "latestArrival": 378
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4509539906712783549,
+      "id": 314710643527339894,
       "name": "RE 9.4",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24640,10 +24843,11 @@
           "earliestDeparture": null,
           "latestArrival": 438
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8022084039217336110,
+      "id": 11229635411739627258,
       "name": "RE 9.5",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24669,10 +24873,11 @@
           "earliestDeparture": null,
           "latestArrival": 498
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15992684655366589787,
+      "id": 15870089170148280056,
       "name": "RE 9.6",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24698,10 +24903,11 @@
           "earliestDeparture": null,
           "latestArrival": 558
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10982859424150013748,
+      "id": 3827058205747790483,
       "name": "RE 9.7",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24727,10 +24933,11 @@
           "earliestDeparture": null,
           "latestArrival": 618
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7821641216876563483,
+      "id": 5128457345924744894,
       "name": "RE 9.8",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24756,10 +24963,11 @@
           "earliestDeparture": null,
           "latestArrival": 678
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2868009872711303633,
+      "id": 5286143481683985953,
       "name": "RE 9.9",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24785,10 +24993,11 @@
           "earliestDeparture": null,
           "latestArrival": 738
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5230410579615827322,
+      "id": 4537070360047995626,
       "name": "RE 9.10",
       "lineId": 1756282404560,
       "trainClassId": 2,
@@ -24814,10 +25023,11 @@
           "earliestDeparture": null,
           "latestArrival": 798
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4887670039584722347,
+      "id": 4057872107851763484,
       "name": "RE 10.1",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -24843,10 +25053,11 @@
           "earliestDeparture": null,
           "latestArrival": 258
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5070823036905080180,
+      "id": 6927280633066701046,
       "name": "RE 10.2",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -24872,10 +25083,11 @@
           "earliestDeparture": null,
           "latestArrival": 318
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16015748178988255243,
+      "id": 17551269112050567614,
       "name": "RE 10.3",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -24901,10 +25113,11 @@
           "earliestDeparture": null,
           "latestArrival": 378
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9410262555096271001,
+      "id": 10752095697732194187,
       "name": "RE 10.4",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -24930,10 +25143,11 @@
           "earliestDeparture": null,
           "latestArrival": 438
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3670587108279599495,
+      "id": 2161361924949951833,
       "name": "RE 10.5",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -24959,10 +25173,11 @@
           "earliestDeparture": null,
           "latestArrival": 498
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 690026204218149909,
+      "id": 16756994341414322344,
       "name": "RE 10.6",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -24988,10 +25203,11 @@
           "earliestDeparture": null,
           "latestArrival": 558
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9284864228487481089,
+      "id": 11894897692617426833,
       "name": "RE 10.7",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -25017,10 +25233,11 @@
           "earliestDeparture": null,
           "latestArrival": 618
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13135036863058627668,
+      "id": 8045562000505524109,
       "name": "RE 10.8",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -25046,10 +25263,11 @@
           "earliestDeparture": null,
           "latestArrival": 678
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8295587933135850918,
+      "id": 12797748201959738304,
       "name": "RE 10.9",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -25075,10 +25293,11 @@
           "earliestDeparture": null,
           "latestArrival": 738
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8457967496056621765,
+      "id": 2774091989598816505,
       "name": "RE 10.10",
       "lineId": 1756282414896,
       "trainClassId": 2,
@@ -25104,10 +25323,11 @@
           "earliestDeparture": null,
           "latestArrival": 798
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2288832138836000940,
+      "id": 7165203587563474260,
       "name": "RE 11.1",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25138,10 +25358,11 @@
           "earliestDeparture": null,
           "latestArrival": 326
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4342917994320776455,
+      "id": 6584086758843501874,
       "name": "RE 11.2",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25172,10 +25393,11 @@
           "earliestDeparture": null,
           "latestArrival": 386
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12502836601244831321,
+      "id": 8223790297055513953,
       "name": "RE 11.3",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25206,10 +25428,11 @@
           "earliestDeparture": null,
           "latestArrival": 446
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10607207430764905401,
+      "id": 18246735135199477838,
       "name": "RE 11.4",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25240,10 +25463,11 @@
           "earliestDeparture": null,
           "latestArrival": 506
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4831517884186053788,
+      "id": 11670581233931599891,
       "name": "RE 11.5",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25274,10 +25498,11 @@
           "earliestDeparture": null,
           "latestArrival": 566
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14609660103686177973,
+      "id": 7604413467244186239,
       "name": "RE 11.6",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25308,10 +25533,11 @@
           "earliestDeparture": null,
           "latestArrival": 626
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 106212017278568286,
+      "id": 10459222373512203041,
       "name": "RE 11.7",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25342,10 +25568,11 @@
           "earliestDeparture": null,
           "latestArrival": 686
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12517081962104047192,
+      "id": 12891897245123823592,
       "name": "RE 11.8",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25376,10 +25603,11 @@
           "earliestDeparture": null,
           "latestArrival": 746
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2208970948167155894,
+      "id": 11405537307324139491,
       "name": "RE 11.9",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25410,10 +25638,11 @@
           "earliestDeparture": null,
           "latestArrival": 806
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17797000486450578013,
+      "id": 12376458496212487428,
       "name": "RE 11.10",
       "lineId": 1756282474577,
       "trainClassId": 2,
@@ -25444,10 +25673,11 @@
           "earliestDeparture": null,
           "latestArrival": 866
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12111632088333894879,
+      "id": 46040680079575421,
       "name": "RE 12.1",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25478,10 +25708,11 @@
           "earliestDeparture": null,
           "latestArrival": 323
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6814245282319322973,
+      "id": 840836946932023434,
       "name": "RE 12.2",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25512,10 +25743,11 @@
           "earliestDeparture": null,
           "latestArrival": 383
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5508168997789781181,
+      "id": 7877761370525220893,
       "name": "RE 12.3",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25546,10 +25778,11 @@
           "earliestDeparture": null,
           "latestArrival": 443
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11178570975889213496,
+      "id": 4208639292120386048,
       "name": "RE 12.4",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25580,10 +25813,11 @@
           "earliestDeparture": null,
           "latestArrival": 503
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6182315640209689188,
+      "id": 16158168907490609145,
       "name": "RE 12.5",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25614,10 +25848,11 @@
           "earliestDeparture": null,
           "latestArrival": 563
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8093392202412410864,
+      "id": 10171502110973185508,
       "name": "RE 12.6",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25648,10 +25883,11 @@
           "earliestDeparture": null,
           "latestArrival": 623
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13252371715690743802,
+      "id": 2025118617710248030,
       "name": "RE 12.7",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25682,10 +25918,11 @@
           "earliestDeparture": null,
           "latestArrival": 683
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10943160408664591449,
+      "id": 13571766774976236050,
       "name": "RE 12.8",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25716,10 +25953,11 @@
           "earliestDeparture": null,
           "latestArrival": 743
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 998529413848911047,
+      "id": 9827280282705740916,
       "name": "RE 12.9",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25750,10 +25988,11 @@
           "earliestDeparture": null,
           "latestArrival": 803
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11481447995638434336,
+      "id": 12300017412600778577,
       "name": "RE 12.10",
       "lineId": 1756282526314,
       "trainClassId": 2,
@@ -25784,10 +26023,11 @@
           "earliestDeparture": null,
           "latestArrival": 863
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7144762770678694590,
+      "id": 1392765736731693006,
       "name": "RE 13.1",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -25808,10 +26048,11 @@
           "earliestDeparture": null,
           "latestArrival": 258
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9206320221661709845,
+      "id": 6104336086903443055,
       "name": "RE 13.2",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -25832,10 +26073,11 @@
           "earliestDeparture": null,
           "latestArrival": 318
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5026394244499261232,
+      "id": 17963343924526990191,
       "name": "RE 13.3",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -25856,10 +26098,11 @@
           "earliestDeparture": null,
           "latestArrival": 378
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5641334007699752766,
+      "id": 14365835867111377910,
       "name": "RE 13.4",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -25880,10 +26123,11 @@
           "earliestDeparture": null,
           "latestArrival": 438
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14129526885723947052,
+      "id": 11391472969429762224,
       "name": "RE 13.5",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -25904,10 +26148,11 @@
           "earliestDeparture": null,
           "latestArrival": 498
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16205456062542923847,
+      "id": 6959195138935312161,
       "name": "RE 13.6",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -25928,10 +26173,11 @@
           "earliestDeparture": null,
           "latestArrival": 558
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15215437994784278035,
+      "id": 8740634040689837525,
       "name": "RE 13.7",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -25952,10 +26198,11 @@
           "earliestDeparture": null,
           "latestArrival": 618
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 904507640103653225,
+      "id": 4183007697668164912,
       "name": "RE 13.8",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -25976,10 +26223,11 @@
           "earliestDeparture": null,
           "latestArrival": 678
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6271984231497351814,
+      "id": 10370958391897902692,
       "name": "RE 13.9",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -26000,10 +26248,11 @@
           "earliestDeparture": null,
           "latestArrival": 738
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17355252587798414245,
+      "id": 8700548146456513691,
       "name": "RE 13.10",
       "lineId": 1756283127817,
       "trainClassId": 2,
@@ -26024,10 +26273,11 @@
           "earliestDeparture": null,
           "latestArrival": 798
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8024067256766973699,
+      "id": 5437940496915318586,
       "name": "RE 14.1",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26048,10 +26298,11 @@
           "earliestDeparture": null,
           "latestArrival": 255
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2951319652942499806,
+      "id": 10192546069200784653,
       "name": "RE 14.2",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26072,10 +26323,11 @@
           "earliestDeparture": null,
           "latestArrival": 315
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17281565453874317468,
+      "id": 2424383271599817023,
       "name": "RE 14.3",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26096,10 +26348,11 @@
           "earliestDeparture": null,
           "latestArrival": 375
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8099906225064332338,
+      "id": 14013266681210489872,
       "name": "RE 14.4",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26120,10 +26373,11 @@
           "earliestDeparture": null,
           "latestArrival": 435
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10629990300578957638,
+      "id": 4761034674850253144,
       "name": "RE 14.5",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26144,10 +26398,11 @@
           "earliestDeparture": null,
           "latestArrival": 495
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3250752213642397612,
+      "id": 6618502699090461952,
       "name": "RE 14.6",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26168,10 +26423,11 @@
           "earliestDeparture": null,
           "latestArrival": 555
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15070405023624087644,
+      "id": 5975231245882510140,
       "name": "RE 14.7",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26192,10 +26448,11 @@
           "earliestDeparture": null,
           "latestArrival": 615
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16298941821009807698,
+      "id": 9189930273520175950,
       "name": "RE 14.8",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26216,10 +26473,11 @@
           "earliestDeparture": null,
           "latestArrival": 675
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15802241541852055375,
+      "id": 10717782229602550049,
       "name": "RE 14.9",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26240,10 +26498,11 @@
           "earliestDeparture": null,
           "latestArrival": 735
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1933647314678270999,
+      "id": 18130980893014380353,
       "name": "RE 14.10",
       "lineId": 1756283130400,
       "trainClassId": 2,
@@ -26264,10 +26523,11 @@
           "earliestDeparture": null,
           "latestArrival": 795
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11629501471852217070,
+      "id": 2283733436337180064,
       "name": "RE 15.1",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26298,10 +26558,11 @@
           "earliestDeparture": null,
           "latestArrival": 375
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12955397731981476324,
+      "id": 12203569248674858896,
       "name": "RE 15.2",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26332,10 +26593,11 @@
           "earliestDeparture": null,
           "latestArrival": 435
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9075672445069181177,
+      "id": 4911957175863823745,
       "name": "RE 15.3",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26366,10 +26628,11 @@
           "earliestDeparture": null,
           "latestArrival": 495
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2255959970202668620,
+      "id": 14182081755786264942,
       "name": "RE 15.4",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26400,10 +26663,11 @@
           "earliestDeparture": null,
           "latestArrival": 555
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3763486300019968747,
+      "id": 12477357586295374297,
       "name": "RE 15.5",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26434,10 +26698,11 @@
           "earliestDeparture": null,
           "latestArrival": 615
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7065247610466877999,
+      "id": 202695943076136461,
       "name": "RE 15.6",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26468,10 +26733,11 @@
           "earliestDeparture": null,
           "latestArrival": 675
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7402410291952307013,
+      "id": 4173160647570900080,
       "name": "RE 15.7",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26502,10 +26768,11 @@
           "earliestDeparture": null,
           "latestArrival": 735
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4225288162407368013,
+      "id": 2300829414483970700,
       "name": "RE 15.8",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26536,10 +26803,11 @@
           "earliestDeparture": null,
           "latestArrival": 795
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16838944085677002137,
+      "id": 6634941332048858656,
       "name": "RE 15.9",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26570,10 +26838,11 @@
           "earliestDeparture": null,
           "latestArrival": 855
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5181068469934771348,
+      "id": 786356122252102890,
       "name": "RE 15.10",
       "lineId": 1756283248724,
       "trainClassId": 2,
@@ -26604,10 +26873,11 @@
           "earliestDeparture": null,
           "latestArrival": 915
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16854850147021702129,
+      "id": 13868332625384128991,
       "name": "RE 16.1",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26638,10 +26908,11 @@
           "earliestDeparture": null,
           "latestArrival": 378
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16895547791637432518,
+      "id": 13483966132624443000,
       "name": "RE 16.2",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26672,10 +26943,11 @@
           "earliestDeparture": null,
           "latestArrival": 438
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16014193160177078149,
+      "id": 5828445054893641634,
       "name": "RE 16.3",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26706,10 +26978,11 @@
           "earliestDeparture": null,
           "latestArrival": 498
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10239896025791287181,
+      "id": 16339158806465170932,
       "name": "RE 16.4",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26740,10 +27013,11 @@
           "earliestDeparture": null,
           "latestArrival": 558
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1579185191417692203,
+      "id": 11632189478888751441,
       "name": "RE 16.5",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26774,10 +27048,11 @@
           "earliestDeparture": null,
           "latestArrival": 618
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3545392903876986564,
+      "id": 1075135439965144418,
       "name": "RE 16.6",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26808,10 +27083,11 @@
           "earliestDeparture": null,
           "latestArrival": 678
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4028088476450376119,
+      "id": 4109585506228912456,
       "name": "RE 16.7",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26842,10 +27118,11 @@
           "earliestDeparture": null,
           "latestArrival": 738
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11005635484560736543,
+      "id": 10892124412520448226,
       "name": "RE 16.8",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26876,10 +27153,11 @@
           "earliestDeparture": null,
           "latestArrival": 798
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4640709239244343316,
+      "id": 3080728457481502726,
       "name": "RE 16.9",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26910,10 +27188,11 @@
           "earliestDeparture": null,
           "latestArrival": 858
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3495981195093822966,
+      "id": 3734575648643435778,
       "name": "RE 16.10",
       "lineId": 1756283282354,
       "trainClassId": 2,
@@ -26944,10 +27223,11 @@
           "earliestDeparture": null,
           "latestArrival": 918
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13050343273947680507,
+      "id": 1411172323121186062,
       "name": "RE 17.1",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -26973,10 +27253,11 @@
           "earliestDeparture": null,
           "latestArrival": 319
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16438349702133203336,
+      "id": 9481599001912298146,
       "name": "RE 17.2",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27002,10 +27283,11 @@
           "earliestDeparture": null,
           "latestArrival": 379
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16948448583192103347,
+      "id": 416845331320293501,
       "name": "RE 17.3",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27031,10 +27313,11 @@
           "earliestDeparture": null,
           "latestArrival": 439
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8987510377237399103,
+      "id": 15288572985021056308,
       "name": "RE 17.4",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27060,10 +27343,11 @@
           "earliestDeparture": null,
           "latestArrival": 499
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6420788037419352369,
+      "id": 11944210292722648150,
       "name": "RE 17.5",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27089,10 +27373,11 @@
           "earliestDeparture": null,
           "latestArrival": 559
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11789314113934085340,
+      "id": 11626483903289903497,
       "name": "RE 17.6",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27118,10 +27403,11 @@
           "earliestDeparture": null,
           "latestArrival": 619
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4072152050278681305,
+      "id": 6514420238769080668,
       "name": "RE 17.7",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27147,10 +27433,11 @@
           "earliestDeparture": null,
           "latestArrival": 679
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10124056319704256433,
+      "id": 3091032016697249444,
       "name": "RE 17.8",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27176,10 +27463,11 @@
           "earliestDeparture": null,
           "latestArrival": 739
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13040428461144688136,
+      "id": 16532103336734968428,
       "name": "RE 17.9",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27205,10 +27493,11 @@
           "earliestDeparture": null,
           "latestArrival": 799
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7100704311751560185,
+      "id": 12646412208679636103,
       "name": "RE 17.10",
       "lineId": 1756283359723,
       "trainClassId": 2,
@@ -27234,10 +27523,11 @@
           "earliestDeparture": null,
           "latestArrival": 859
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8841461060680435097,
+      "id": 8216566782710206304,
       "name": "RE 18.1",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27263,10 +27553,11 @@
           "earliestDeparture": null,
           "latestArrival": 317
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6790151105176159454,
+      "id": 12628132335192132084,
       "name": "RE 18.2",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27292,10 +27583,11 @@
           "earliestDeparture": null,
           "latestArrival": 377
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 219427978866936960,
+      "id": 3580833097429435962,
       "name": "RE 18.3",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27321,10 +27613,11 @@
           "earliestDeparture": null,
           "latestArrival": 437
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15099403345291920761,
+      "id": 774645843329568099,
       "name": "RE 18.4",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27350,10 +27643,11 @@
           "earliestDeparture": null,
           "latestArrival": 497
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13317367580762588034,
+      "id": 87567950964673626,
       "name": "RE 18.5",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27379,10 +27673,11 @@
           "earliestDeparture": null,
           "latestArrival": 557
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10443934594855945111,
+      "id": 15849258970149571178,
       "name": "RE 18.6",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27408,10 +27703,11 @@
           "earliestDeparture": null,
           "latestArrival": 617
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10964749957816795398,
+      "id": 3242852780868978046,
       "name": "RE 18.7",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27437,10 +27733,11 @@
           "earliestDeparture": null,
           "latestArrival": 677
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9521375167791318384,
+      "id": 8809423547762035502,
       "name": "RE 18.8",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27466,10 +27763,11 @@
           "earliestDeparture": null,
           "latestArrival": 737
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6946615096736039025,
+      "id": 7303876914339925845,
       "name": "RE 18.9",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27495,10 +27793,11 @@
           "earliestDeparture": null,
           "latestArrival": 797
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6438687698289445970,
+      "id": 11412930598882855766,
       "name": "RE 18.10",
       "lineId": 1756283362347,
       "trainClassId": 2,
@@ -27524,10 +27823,11 @@
           "earliestDeparture": null,
           "latestArrival": 857
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7825587234380792795,
+      "id": 16779415226051742519,
       "name": "RE 19.1",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27553,10 +27853,11 @@
           "earliestDeparture": null,
           "latestArrival": 224
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14005117615578106727,
+      "id": 463522495561876630,
       "name": "RE 19.2",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27582,10 +27883,11 @@
           "earliestDeparture": null,
           "latestArrival": 284
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18297710989373556974,
+      "id": 3252545205086668822,
       "name": "RE 19.3",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27611,10 +27913,11 @@
           "earliestDeparture": null,
           "latestArrival": 344
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16636512050986305845,
+      "id": 10988729186044890371,
       "name": "RE 19.4",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27640,10 +27943,11 @@
           "earliestDeparture": null,
           "latestArrival": 404
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1915873687397155703,
+      "id": 18372176011230398184,
       "name": "RE 19.5",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27669,10 +27973,11 @@
           "earliestDeparture": null,
           "latestArrival": 464
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15710990295081435410,
+      "id": 5608407558828345403,
       "name": "RE 19.6",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27698,10 +28003,11 @@
           "earliestDeparture": null,
           "latestArrival": 524
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4038149093275093656,
+      "id": 5080248989367616449,
       "name": "RE 19.7",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27727,10 +28033,11 @@
           "earliestDeparture": null,
           "latestArrival": 584
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6712644847952085194,
+      "id": 1093993500322776819,
       "name": "RE 19.8",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27756,10 +28063,11 @@
           "earliestDeparture": null,
           "latestArrival": 644
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4983965217487800259,
+      "id": 15563213883645773909,
       "name": "RE 19.9",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27785,10 +28093,11 @@
           "earliestDeparture": null,
           "latestArrival": 704
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14470353402806354682,
+      "id": 1907060287803968934,
       "name": "RE 19.10",
       "lineId": 1756283392522,
       "trainClassId": 2,
@@ -27814,10 +28123,11 @@
           "earliestDeparture": null,
           "latestArrival": 764
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2391179194119504525,
+      "id": 6841989883754201990,
       "name": "RE 20.1",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -27843,10 +28153,11 @@
           "earliestDeparture": null,
           "latestArrival": 224
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15594148747685675227,
+      "id": 11759008029627597200,
       "name": "RE 20.2",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -27872,10 +28183,11 @@
           "earliestDeparture": null,
           "latestArrival": 284
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3703413242895944414,
+      "id": 438170239895948794,
       "name": "RE 20.3",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -27901,10 +28213,11 @@
           "earliestDeparture": null,
           "latestArrival": 344
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6260277840494677646,
+      "id": 13823706392970084836,
       "name": "RE 20.4",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -27930,10 +28243,11 @@
           "earliestDeparture": null,
           "latestArrival": 404
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5292635019952668697,
+      "id": 3433535565558465196,
       "name": "RE 20.5",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -27959,10 +28273,11 @@
           "earliestDeparture": null,
           "latestArrival": 464
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10068057014345418342,
+      "id": 17085541480051328816,
       "name": "RE 20.6",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -27988,10 +28303,11 @@
           "earliestDeparture": null,
           "latestArrival": 524
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12313311066488523432,
+      "id": 13085639036134769437,
       "name": "RE 20.7",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -28017,10 +28333,11 @@
           "earliestDeparture": null,
           "latestArrival": 584
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12060573029272865327,
+      "id": 4362586107954154087,
       "name": "RE 20.8",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -28046,10 +28363,11 @@
           "earliestDeparture": null,
           "latestArrival": 644
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4874922701419333445,
+      "id": 7120351901653486150,
       "name": "RE 20.9",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -28075,10 +28393,11 @@
           "earliestDeparture": null,
           "latestArrival": 704
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13402693769746662317,
+      "id": 10601314006847997852,
       "name": "RE 20.10",
       "lineId": 1756283397771,
       "trainClassId": 2,
@@ -28104,10 +28423,11 @@
           "earliestDeparture": null,
           "latestArrival": 764
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10425065665911605927,
+      "id": 16522696265553168000,
       "name": "RE 21.1",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28133,10 +28453,11 @@
           "earliestDeparture": null,
           "latestArrival": 280
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11584389204108331906,
+      "id": 4678156713166194258,
       "name": "RE 21.2",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28162,10 +28483,11 @@
           "earliestDeparture": null,
           "latestArrival": 340
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16293631159816832320,
+      "id": 11022870286267796026,
       "name": "RE 21.3",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28191,10 +28513,11 @@
           "earliestDeparture": null,
           "latestArrival": 400
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5165509785068522325,
+      "id": 11986150954548874947,
       "name": "RE 21.4",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28220,10 +28543,11 @@
           "earliestDeparture": null,
           "latestArrival": 460
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9809520073754691157,
+      "id": 17354742632361774005,
       "name": "RE 21.5",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28249,10 +28573,11 @@
           "earliestDeparture": null,
           "latestArrival": 520
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15831955258664698310,
+      "id": 7906769781909376797,
       "name": "RE 21.6",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28278,10 +28603,11 @@
           "earliestDeparture": null,
           "latestArrival": 580
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3525636405270957524,
+      "id": 6385229246592403908,
       "name": "RE 21.7",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28307,10 +28633,11 @@
           "earliestDeparture": null,
           "latestArrival": 640
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3021695550356803386,
+      "id": 6275874590912628950,
       "name": "RE 21.8",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28336,10 +28663,11 @@
           "earliestDeparture": null,
           "latestArrival": 700
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2085206328144971141,
+      "id": 17004573739469521994,
       "name": "RE 21.9",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28365,10 +28693,11 @@
           "earliestDeparture": null,
           "latestArrival": 760
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16597463059206130841,
+      "id": 12593297018411502973,
       "name": "RE 21.10",
       "lineId": 1756283476643,
       "trainClassId": 2,
@@ -28394,10 +28723,11 @@
           "earliestDeparture": null,
           "latestArrival": 820
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11452748974645792473,
+      "id": 5625299587202435932,
       "name": "RE 22.1",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28423,10 +28753,11 @@
           "earliestDeparture": null,
           "latestArrival": 280
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18072469201014574610,
+      "id": 6485057847173203872,
       "name": "RE 22.2",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28452,10 +28783,11 @@
           "earliestDeparture": null,
           "latestArrival": 340
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10351586745125192946,
+      "id": 8023372796856845308,
       "name": "RE 22.3",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28481,10 +28813,11 @@
           "earliestDeparture": null,
           "latestArrival": 400
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11649127665326705402,
+      "id": 2297755354443762893,
       "name": "RE 22.4",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28510,10 +28843,11 @@
           "earliestDeparture": null,
           "latestArrival": 460
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7009536277319533726,
+      "id": 8157541334149055104,
       "name": "RE 22.5",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28539,10 +28873,11 @@
           "earliestDeparture": null,
           "latestArrival": 520
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1092813882588744800,
+      "id": 9041600245436466448,
       "name": "RE 22.6",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28568,10 +28903,11 @@
           "earliestDeparture": null,
           "latestArrival": 580
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5465529016035067512,
+      "id": 15856553713338499422,
       "name": "RE 22.7",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28597,10 +28933,11 @@
           "earliestDeparture": null,
           "latestArrival": 640
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4933739277660802485,
+      "id": 16287236137368963116,
       "name": "RE 22.8",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28626,10 +28963,11 @@
           "earliestDeparture": null,
           "latestArrival": 700
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12155241452642520806,
+      "id": 5430350225037544777,
       "name": "RE 22.9",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28655,10 +28993,11 @@
           "earliestDeparture": null,
           "latestArrival": 760
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15984314033679647541,
+      "id": 11024904123194296192,
       "name": "RE 22.10",
       "lineId": 1756283478683,
       "trainClassId": 2,
@@ -28684,10 +29023,11 @@
           "earliestDeparture": null,
           "latestArrival": 820
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5244935424812073002,
+      "id": 9374830112541592659,
       "name": "RE 23.1",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28708,10 +29048,11 @@
           "earliestDeparture": null,
           "latestArrival": 310
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9257014603185932076,
+      "id": 6183826743194962307,
       "name": "RE 23.2",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28732,10 +29073,11 @@
           "earliestDeparture": null,
           "latestArrival": 370
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10519034629144070753,
+      "id": 496898622938236562,
       "name": "RE 23.3",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28756,10 +29098,11 @@
           "earliestDeparture": null,
           "latestArrival": 430
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14098452371644894528,
+      "id": 1175752799135680828,
       "name": "RE 23.4",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28780,10 +29123,11 @@
           "earliestDeparture": null,
           "latestArrival": 490
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2679179852576278500,
+      "id": 15790092900329474426,
       "name": "RE 23.5",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28804,10 +29148,11 @@
           "earliestDeparture": null,
           "latestArrival": 550
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4386107274970088562,
+      "id": 10958781990557207855,
       "name": "RE 23.6",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28828,10 +29173,11 @@
           "earliestDeparture": null,
           "latestArrival": 610
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15172027209428321612,
+      "id": 4073944010460252948,
       "name": "RE 23.7",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28852,10 +29198,11 @@
           "earliestDeparture": null,
           "latestArrival": 670
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15076919855576730818,
+      "id": 11419777767064354824,
       "name": "RE 23.8",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28876,10 +29223,11 @@
           "earliestDeparture": null,
           "latestArrival": 730
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11267255250714509619,
+      "id": 3494684572225062715,
       "name": "RE 23.9",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28900,10 +29248,11 @@
           "earliestDeparture": null,
           "latestArrival": 790
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7305187773411707300,
+      "id": 16840217544140869399,
       "name": "RE 23.10",
       "lineId": 1756283510029,
       "trainClassId": 2,
@@ -28924,10 +29273,11 @@
           "earliestDeparture": null,
           "latestArrival": 850
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16304111790733544672,
+      "id": 8898185967608873636,
       "name": "RE 24.1",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -28948,10 +29298,11 @@
           "earliestDeparture": null,
           "latestArrival": 311
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8761111417081054907,
+      "id": 2840727225439963486,
       "name": "RE 24.2",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -28972,10 +29323,11 @@
           "earliestDeparture": null,
           "latestArrival": 371
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1140182659698608076,
+      "id": 4150224450655044436,
       "name": "RE 24.3",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -28996,10 +29348,11 @@
           "earliestDeparture": null,
           "latestArrival": 431
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 704924904186332585,
+      "id": 15353463993527058472,
       "name": "RE 24.4",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -29020,10 +29373,11 @@
           "earliestDeparture": null,
           "latestArrival": 491
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13772118834037081696,
+      "id": 1835534349154404396,
       "name": "RE 24.5",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -29044,10 +29398,11 @@
           "earliestDeparture": null,
           "latestArrival": 551
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6639984965587127259,
+      "id": 2806886421676573760,
       "name": "RE 24.6",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -29068,10 +29423,11 @@
           "earliestDeparture": null,
           "latestArrival": 611
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13943813018346668343,
+      "id": 5648418795789569691,
       "name": "RE 24.7",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -29092,10 +29448,11 @@
           "earliestDeparture": null,
           "latestArrival": 671
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18199349520579971017,
+      "id": 14928168196856299702,
       "name": "RE 24.8",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -29116,10 +29473,11 @@
           "earliestDeparture": null,
           "latestArrival": 731
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1912716112918499075,
+      "id": 14277989242250677116,
       "name": "RE 24.9",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -29140,10 +29498,11 @@
           "earliestDeparture": null,
           "latestArrival": 791
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4460316721112629369,
+      "id": 9552906099787254899,
       "name": "RE 24.10",
       "lineId": 1756283512212,
       "trainClassId": 2,
@@ -29164,10 +29523,11 @@
           "earliestDeparture": null,
           "latestArrival": 851
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16938470403024767103,
+      "id": 1699072887269441608,
       "name": "RE 25.1",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29193,10 +29553,11 @@
           "earliestDeparture": null,
           "latestArrival": 285
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1533962355490832630,
+      "id": 6398432814236058329,
       "name": "RE 25.2",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29222,10 +29583,11 @@
           "earliestDeparture": null,
           "latestArrival": 345
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9001526769572333929,
+      "id": 14109638752853380929,
       "name": "RE 25.3",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29251,10 +29613,11 @@
           "earliestDeparture": null,
           "latestArrival": 405
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12523200126232184675,
+      "id": 818913052366557013,
       "name": "RE 25.4",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29280,10 +29643,11 @@
           "earliestDeparture": null,
           "latestArrival": 465
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12202140536906206787,
+      "id": 16983158566558582615,
       "name": "RE 25.5",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29309,10 +29673,11 @@
           "earliestDeparture": null,
           "latestArrival": 525
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7536460410162466045,
+      "id": 5581674436769759584,
       "name": "RE 25.6",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29338,10 +29703,11 @@
           "earliestDeparture": null,
           "latestArrival": 585
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3941969716486292414,
+      "id": 17595695324883733449,
       "name": "RE 25.7",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29367,10 +29733,11 @@
           "earliestDeparture": null,
           "latestArrival": 645
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11201891829226491077,
+      "id": 8179612014093157099,
       "name": "RE 25.8",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29396,10 +29763,11 @@
           "earliestDeparture": null,
           "latestArrival": 705
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8347524856856920493,
+      "id": 243373114349538088,
       "name": "RE 25.9",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29425,10 +29793,11 @@
           "earliestDeparture": null,
           "latestArrival": 765
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13142605701545610303,
+      "id": 15730592065506394995,
       "name": "RE 25.10",
       "lineId": 1756283546155,
       "trainClassId": 2,
@@ -29454,10 +29823,11 @@
           "earliestDeparture": null,
           "latestArrival": 825
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8826453933362922463,
+      "id": 10039637141066498571,
       "name": "RE 26.1",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29483,10 +29853,11 @@
           "earliestDeparture": null,
           "latestArrival": 286
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1989575524241589644,
+      "id": 11992533921201343652,
       "name": "RE 26.2",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29512,10 +29883,11 @@
           "earliestDeparture": null,
           "latestArrival": 346
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12803298237324805037,
+      "id": 5802422734183350813,
       "name": "RE 26.3",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29541,10 +29913,11 @@
           "earliestDeparture": null,
           "latestArrival": 406
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3584771090274076786,
+      "id": 2672482582400486875,
       "name": "RE 26.4",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29570,10 +29943,11 @@
           "earliestDeparture": null,
           "latestArrival": 466
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5147506762681436936,
+      "id": 15558282706271226756,
       "name": "RE 26.5",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29599,10 +29973,11 @@
           "earliestDeparture": null,
           "latestArrival": 526
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6087666942092790800,
+      "id": 9753738017896156859,
       "name": "RE 26.6",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29628,10 +30003,11 @@
           "earliestDeparture": null,
           "latestArrival": 586
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3178308453295017746,
+      "id": 5707720060148664297,
       "name": "RE 26.7",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29657,10 +30033,11 @@
           "earliestDeparture": null,
           "latestArrival": 646
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14790610676397131970,
+      "id": 8301069156536502672,
       "name": "RE 26.8",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29686,10 +30063,11 @@
           "earliestDeparture": null,
           "latestArrival": 706
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15387392319360287642,
+      "id": 15045203797367932577,
       "name": "RE 26.9",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29715,10 +30093,11 @@
           "earliestDeparture": null,
           "latestArrival": 766
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14366230770734219338,
+      "id": 852201270702982458,
       "name": "RE 26.10",
       "lineId": 1756283555708,
       "trainClassId": 2,
@@ -29744,10 +30123,11 @@
           "earliestDeparture": null,
           "latestArrival": 826
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4537617134446461363,
+      "id": 3833910659426503185,
       "name": "RE 50.1",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -29788,10 +30168,11 @@
           "earliestDeparture": null,
           "latestArrival": 471
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11515026615273081965,
+      "id": 6534791973292820172,
       "name": "RE 50.2",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -29832,10 +30213,11 @@
           "earliestDeparture": null,
           "latestArrival": 531
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7063491619123445975,
+      "id": 4919149943169830191,
       "name": "RE 50.3",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -29876,10 +30258,11 @@
           "earliestDeparture": null,
           "latestArrival": 591
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9958631269044012642,
+      "id": 12629092700274969746,
       "name": "RE 50.4",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -29920,10 +30303,11 @@
           "earliestDeparture": null,
           "latestArrival": 651
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15353328741679515243,
+      "id": 7229776222944119538,
       "name": "RE 50.5",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -29964,10 +30348,11 @@
           "earliestDeparture": null,
           "latestArrival": 711
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4023529718981151352,
+      "id": 2977741357042714105,
       "name": "RE 50.6",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -30008,10 +30393,11 @@
           "earliestDeparture": null,
           "latestArrival": 771
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5193014988487018753,
+      "id": 3795936202764600493,
       "name": "RE 50.7",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -30052,10 +30438,11 @@
           "earliestDeparture": null,
           "latestArrival": 831
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 85604376983129955,
+      "id": 16055786279930646175,
       "name": "RE 50.8",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -30096,10 +30483,11 @@
           "earliestDeparture": null,
           "latestArrival": 891
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18408691378804507218,
+      "id": 6173579226003554602,
       "name": "RE 50.9",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -30140,10 +30528,11 @@
           "earliestDeparture": null,
           "latestArrival": 951
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12046133161440592296,
+      "id": 10143929739702452475,
       "name": "RE 50.10",
       "lineId": 1756283632053,
       "trainClassId": 2,
@@ -30184,10 +30573,11 @@
           "earliestDeparture": null,
           "latestArrival": 1011
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6211603252044843815,
+      "id": 14671905737995863216,
       "name": "RE 51.1",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30228,10 +30618,11 @@
           "earliestDeparture": null,
           "latestArrival": 467
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2885078467144663114,
+      "id": 10039890321951049650,
       "name": "RE 51.2",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30272,10 +30663,11 @@
           "earliestDeparture": null,
           "latestArrival": 527
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17555112791746428939,
+      "id": 16908191153677815460,
       "name": "RE 51.3",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30316,10 +30708,11 @@
           "earliestDeparture": null,
           "latestArrival": 587
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 484554208153062007,
+      "id": 4335692780377426385,
       "name": "RE 51.4",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30360,10 +30753,11 @@
           "earliestDeparture": null,
           "latestArrival": 647
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2799017623117254558,
+      "id": 4678118029906496595,
       "name": "RE 51.5",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30404,10 +30798,11 @@
           "earliestDeparture": null,
           "latestArrival": 707
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4141403830062499094,
+      "id": 8900729340127428772,
       "name": "RE 51.6",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30448,10 +30843,11 @@
           "earliestDeparture": null,
           "latestArrival": 767
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18207073619929942018,
+      "id": 2984748763405175237,
       "name": "RE 51.7",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30492,10 +30888,11 @@
           "earliestDeparture": null,
           "latestArrival": 827
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13941167861210300460,
+      "id": 14695662247794655858,
       "name": "RE 51.8",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30536,10 +30933,11 @@
           "earliestDeparture": null,
           "latestArrival": 887
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1926135757247956425,
+      "id": 6219883606098264747,
       "name": "RE 51.9",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30580,10 +30978,11 @@
           "earliestDeparture": null,
           "latestArrival": 947
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3640530860236950314,
+      "id": 3484553359976778129,
       "name": "RE 51.10",
       "lineId": 1756283635685,
       "trainClassId": 2,
@@ -30624,10 +31023,11 @@
           "earliestDeparture": null,
           "latestArrival": 1007
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11033967022431554382,
+      "id": 16296752491877059246,
       "name": "RE 52.1",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30658,10 +31058,11 @@
           "earliestDeparture": null,
           "latestArrival": 474
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17567521478887886457,
+      "id": 3133056669275736067,
       "name": "RE 52.2",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30692,10 +31093,11 @@
           "earliestDeparture": null,
           "latestArrival": 534
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11875678227478102351,
+      "id": 8469483168824969564,
       "name": "RE 52.3",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30726,10 +31128,11 @@
           "earliestDeparture": null,
           "latestArrival": 594
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10859246307853356567,
+      "id": 119135489683308648,
       "name": "RE 52.4",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30760,10 +31163,11 @@
           "earliestDeparture": null,
           "latestArrival": 654
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9437928281874451005,
+      "id": 9882226935050816388,
       "name": "RE 52.5",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30794,10 +31198,11 @@
           "earliestDeparture": null,
           "latestArrival": 714
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14623622385324147324,
+      "id": 3890565169290889642,
       "name": "RE 52.6",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30828,10 +31233,11 @@
           "earliestDeparture": null,
           "latestArrival": 774
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14269042272538871153,
+      "id": 15549150024986937820,
       "name": "RE 52.7",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30862,10 +31268,11 @@
           "earliestDeparture": null,
           "latestArrival": 834
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11800673765378641366,
+      "id": 11183142140133262391,
       "name": "RE 52.8",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30896,10 +31303,11 @@
           "earliestDeparture": null,
           "latestArrival": 894
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6858794467327101916,
+      "id": 16112746879794169665,
       "name": "RE 52.9",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30930,10 +31338,11 @@
           "earliestDeparture": null,
           "latestArrival": 954
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8067409341964829901,
+      "id": 14451075806281943021,
       "name": "RE 52.10",
       "lineId": 1756283705229,
       "trainClassId": 2,
@@ -30964,10 +31373,11 @@
           "earliestDeparture": null,
           "latestArrival": 1014
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15273419412552565411,
+      "id": 4505909767586991641,
       "name": "RE 53.1",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -30998,10 +31408,11 @@
           "earliestDeparture": null,
           "latestArrival": 472
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6300272624463006506,
+      "id": 2760869666444168812,
       "name": "RE 53.2",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31032,10 +31443,11 @@
           "earliestDeparture": null,
           "latestArrival": 532
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15142315425543373317,
+      "id": 9448669097035910334,
       "name": "RE 53.3",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31066,10 +31478,11 @@
           "earliestDeparture": null,
           "latestArrival": 592
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16332071035107427048,
+      "id": 9661199394159741698,
       "name": "RE 53.4",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31100,10 +31513,11 @@
           "earliestDeparture": null,
           "latestArrival": 652
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11603930072312136193,
+      "id": 14027206521020433555,
       "name": "RE 53.5",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31134,10 +31548,11 @@
           "earliestDeparture": null,
           "latestArrival": 712
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4696858484132628059,
+      "id": 2209193282236532947,
       "name": "RE 53.6",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31168,10 +31583,11 @@
           "earliestDeparture": null,
           "latestArrival": 772
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10731857146465306687,
+      "id": 16925531365354720019,
       "name": "RE 53.7",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31202,10 +31618,11 @@
           "earliestDeparture": null,
           "latestArrival": 832
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6843393927138658247,
+      "id": 6481478174748461780,
       "name": "RE 53.8",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31236,10 +31653,11 @@
           "earliestDeparture": null,
           "latestArrival": 892
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1365533972791509941,
+      "id": 2631945488103457404,
       "name": "RE 53.9",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31270,10 +31688,11 @@
           "earliestDeparture": null,
           "latestArrival": 952
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9359692986247890488,
+      "id": 1604653866129968198,
       "name": "RE 53.10",
       "lineId": 1756283711870,
       "trainClassId": 2,
@@ -31304,10 +31723,11 @@
           "earliestDeparture": null,
           "latestArrival": 1012
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6530791547249642454,
+      "id": 2661432899744448740,
       "name": "RE 54.1",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31338,10 +31758,11 @@
           "earliestDeparture": null,
           "latestArrival": 454
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4520547500017601457,
+      "id": 9307967118718290752,
       "name": "RE 54.2",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31372,10 +31793,11 @@
           "earliestDeparture": null,
           "latestArrival": 514
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12955965626115113231,
+      "id": 15108374063861746882,
       "name": "RE 54.3",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31406,10 +31828,11 @@
           "earliestDeparture": null,
           "latestArrival": 574
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13737856621649284344,
+      "id": 1896803377846243106,
       "name": "RE 54.4",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31440,10 +31863,11 @@
           "earliestDeparture": null,
           "latestArrival": 634
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8269337296592193561,
+      "id": 2957552193061406952,
       "name": "RE 54.5",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31474,10 +31898,11 @@
           "earliestDeparture": null,
           "latestArrival": 694
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8684791612239594628,
+      "id": 1752784455114310428,
       "name": "RE 54.6",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31508,10 +31933,11 @@
           "earliestDeparture": null,
           "latestArrival": 754
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15822739244804096567,
+      "id": 6034683829974288996,
       "name": "RE 54.7",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31542,10 +31968,11 @@
           "earliestDeparture": null,
           "latestArrival": 814
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16816984344449139944,
+      "id": 6583101647033093219,
       "name": "RE 54.8",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31576,10 +32003,11 @@
           "earliestDeparture": null,
           "latestArrival": 874
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14878831179430251285,
+      "id": 1430322691092202910,
       "name": "RE 54.9",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31610,10 +32038,11 @@
           "earliestDeparture": null,
           "latestArrival": 934
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4954738644420805438,
+      "id": 9005281546862939259,
       "name": "RE 54.10",
       "lineId": 1756283740157,
       "trainClassId": 2,
@@ -31644,10 +32073,11 @@
           "earliestDeparture": null,
           "latestArrival": 994
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14942845605371922757,
+      "id": 8645231420841805698,
       "name": "RE 55.1",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31678,10 +32108,11 @@
           "earliestDeparture": null,
           "latestArrival": 451
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1030885380391518481,
+      "id": 3898736029515401547,
       "name": "RE 55.2",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31712,10 +32143,11 @@
           "earliestDeparture": null,
           "latestArrival": 511
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16233089752149017985,
+      "id": 15400006778675482473,
       "name": "RE 55.3",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31746,10 +32178,11 @@
           "earliestDeparture": null,
           "latestArrival": 571
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17305380143361248594,
+      "id": 1530720002734771593,
       "name": "RE 55.4",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31780,10 +32213,11 @@
           "earliestDeparture": null,
           "latestArrival": 631
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17426228017237281125,
+      "id": 3166040130048247436,
       "name": "RE 55.5",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31814,10 +32248,11 @@
           "earliestDeparture": null,
           "latestArrival": 691
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11064801231964225568,
+      "id": 10466275159141994487,
       "name": "RE 55.6",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31848,10 +32283,11 @@
           "earliestDeparture": null,
           "latestArrival": 751
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12130278014120839304,
+      "id": 4883196254030547272,
       "name": "RE 55.7",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31882,10 +32318,11 @@
           "earliestDeparture": null,
           "latestArrival": 811
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10844250714837041775,
+      "id": 10892376007084101578,
       "name": "RE 55.8",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31916,10 +32353,11 @@
           "earliestDeparture": null,
           "latestArrival": 871
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 258623901233794424,
+      "id": 7227576335105019138,
       "name": "RE 55.9",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31950,10 +32388,11 @@
           "earliestDeparture": null,
           "latestArrival": 931
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12127549176372020589,
+      "id": 14622287045827577790,
       "name": "RE 55.10",
       "lineId": 1756283757230,
       "trainClassId": 2,
@@ -31984,10 +32423,11 @@
           "earliestDeparture": null,
           "latestArrival": 991
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17973878137476039575,
+      "id": 339525078002060132,
       "name": "RE 56.1",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32018,10 +32458,11 @@
           "earliestDeparture": null,
           "latestArrival": 333
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6774419850415525061,
+      "id": 6266730630806523602,
       "name": "RE 56.2",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32052,10 +32493,11 @@
           "earliestDeparture": null,
           "latestArrival": 393
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12545582198396569569,
+      "id": 13847825126971821923,
       "name": "RE 56.3",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32086,10 +32528,11 @@
           "earliestDeparture": null,
           "latestArrival": 453
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9093420254409870321,
+      "id": 16009649306362724639,
       "name": "RE 56.4",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32120,10 +32563,11 @@
           "earliestDeparture": null,
           "latestArrival": 513
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 555648215696164424,
+      "id": 5846804516898883456,
       "name": "RE 56.5",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32154,10 +32598,11 @@
           "earliestDeparture": null,
           "latestArrival": 573
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6767972631734404218,
+      "id": 2994971724262624892,
       "name": "RE 56.6",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32188,10 +32633,11 @@
           "earliestDeparture": null,
           "latestArrival": 633
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15708913687509618447,
+      "id": 4436777538629420712,
       "name": "RE 56.7",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32222,10 +32668,11 @@
           "earliestDeparture": null,
           "latestArrival": 693
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 111785183795758404,
+      "id": 8108527013813636898,
       "name": "RE 56.8",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32256,10 +32703,11 @@
           "earliestDeparture": null,
           "latestArrival": 753
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11848014276654350371,
+      "id": 12359898862537490835,
       "name": "RE 56.9",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32290,10 +32738,11 @@
           "earliestDeparture": null,
           "latestArrival": 813
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17993214484520585395,
+      "id": 4489791902241213687,
       "name": "RE 56.10",
       "lineId": 1756284895185,
       "trainClassId": 2,
@@ -32324,10 +32773,11 @@
           "earliestDeparture": null,
           "latestArrival": 873
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15181506947652993154,
+      "id": 18426191437103124323,
       "name": "RE 57.1",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32358,10 +32808,11 @@
           "earliestDeparture": null,
           "latestArrival": 335
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5517030311674594013,
+      "id": 9297665012026458452,
       "name": "RE 57.2",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32392,10 +32843,11 @@
           "earliestDeparture": null,
           "latestArrival": 395
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11840478381027836296,
+      "id": 464755388034270174,
       "name": "RE 57.3",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32426,10 +32878,11 @@
           "earliestDeparture": null,
           "latestArrival": 455
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 193400867299282770,
+      "id": 4295387724432689230,
       "name": "RE 57.4",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32460,10 +32913,11 @@
           "earliestDeparture": null,
           "latestArrival": 515
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5738643841033978188,
+      "id": 12230851212257479603,
       "name": "RE 57.5",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32494,10 +32948,11 @@
           "earliestDeparture": null,
           "latestArrival": 575
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4921117266492539777,
+      "id": 5680472503886037249,
       "name": "RE 57.6",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32528,10 +32983,11 @@
           "earliestDeparture": null,
           "latestArrival": 635
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 281204901989663616,
+      "id": 5926101251953675549,
       "name": "RE 57.7",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32562,10 +33018,11 @@
           "earliestDeparture": null,
           "latestArrival": 695
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14551823344093447272,
+      "id": 16767757460367231389,
       "name": "RE 57.8",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32596,10 +33053,11 @@
           "earliestDeparture": null,
           "latestArrival": 755
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13847594559681871880,
+      "id": 16097635364965532475,
       "name": "RE 57.9",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32630,10 +33088,11 @@
           "earliestDeparture": null,
           "latestArrival": 815
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5561783104265603232,
+      "id": 12909021338511363204,
       "name": "RE 57.10",
       "lineId": 1756284937385,
       "trainClassId": 2,
@@ -32664,10 +33123,11 @@
           "earliestDeparture": null,
           "latestArrival": 875
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1427686971484488620,
+      "id": 861106225952081628,
       "name": "RE 58.1",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32698,10 +33158,11 @@
           "earliestDeparture": null,
           "latestArrival": 391
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14572299603210683990,
+      "id": 9939584772256582677,
       "name": "RE 58.2",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32732,10 +33193,11 @@
           "earliestDeparture": null,
           "latestArrival": 451
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16263310290603558829,
+      "id": 11146291458906147933,
       "name": "RE 58.3",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32766,10 +33228,11 @@
           "earliestDeparture": null,
           "latestArrival": 511
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8414022864817179928,
+      "id": 1733218896622669752,
       "name": "RE 58.4",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32800,10 +33263,11 @@
           "earliestDeparture": null,
           "latestArrival": 571
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9684599095484958079,
+      "id": 16188467301362516090,
       "name": "RE 58.5",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32834,10 +33298,11 @@
           "earliestDeparture": null,
           "latestArrival": 631
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18022153731374334871,
+      "id": 7493081197032720544,
       "name": "RE 58.6",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32868,10 +33333,11 @@
           "earliestDeparture": null,
           "latestArrival": 691
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14910099419543915869,
+      "id": 16155358849249594461,
       "name": "RE 58.7",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32902,10 +33368,11 @@
           "earliestDeparture": null,
           "latestArrival": 751
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4026307586110606272,
+      "id": 11668413671015727417,
       "name": "RE 58.8",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32936,10 +33403,11 @@
           "earliestDeparture": null,
           "latestArrival": 811
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9626487319023993580,
+      "id": 14604308525405064763,
       "name": "RE 58.9",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -32970,10 +33438,11 @@
           "earliestDeparture": null,
           "latestArrival": 871
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5844920489076213109,
+      "id": 15350010412113281441,
       "name": "RE 58.10",
       "lineId": 1756283808510,
       "trainClassId": 2,
@@ -33004,10 +33473,11 @@
           "earliestDeparture": null,
           "latestArrival": 931
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2428465739604837299,
+      "id": 5712635834555322133,
       "name": "RE 59.1",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33038,10 +33508,11 @@
           "earliestDeparture": null,
           "latestArrival": 391
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17781066201849545716,
+      "id": 5164613072330968049,
       "name": "RE 59.2",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33072,10 +33543,11 @@
           "earliestDeparture": null,
           "latestArrival": 451
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12074449133247284902,
+      "id": 10859859430014470504,
       "name": "RE 59.3",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33106,10 +33578,11 @@
           "earliestDeparture": null,
           "latestArrival": 511
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12817436987509326542,
+      "id": 4026787755036920300,
       "name": "RE 59.4",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33140,10 +33613,11 @@
           "earliestDeparture": null,
           "latestArrival": 571
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11475316202578527166,
+      "id": 4019667539226346826,
       "name": "RE 59.5",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33174,10 +33648,11 @@
           "earliestDeparture": null,
           "latestArrival": 631
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7338251946685384314,
+      "id": 13724454662479955447,
       "name": "RE 59.6",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33208,10 +33683,11 @@
           "earliestDeparture": null,
           "latestArrival": 691
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9317601197170573776,
+      "id": 12395327976342441500,
       "name": "RE 59.7",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33242,10 +33718,11 @@
           "earliestDeparture": null,
           "latestArrival": 751
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16666413191638763360,
+      "id": 7660966084345415793,
       "name": "RE 59.8",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33276,10 +33753,11 @@
           "earliestDeparture": null,
           "latestArrival": 811
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15059006635565533885,
+      "id": 14633709846985525431,
       "name": "RE 59.9",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33310,10 +33788,11 @@
           "earliestDeparture": null,
           "latestArrival": 871
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11147893820466940284,
+      "id": 9728663681162691076,
       "name": "RE 59.10",
       "lineId": 1756283811831,
       "trainClassId": 2,
@@ -33344,10 +33823,11 @@
           "earliestDeparture": null,
           "latestArrival": 931
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12051063653689541934,
+      "id": 15362800348324447903,
       "name": "RE 60.1",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33378,10 +33858,11 @@
           "earliestDeparture": null,
           "latestArrival": 392
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15713144095013683316,
+      "id": 7270500391397246414,
       "name": "RE 60.2",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33412,10 +33893,11 @@
           "earliestDeparture": null,
           "latestArrival": 452
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16809944954146016287,
+      "id": 14540539868398961644,
       "name": "RE 60.3",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33446,10 +33928,11 @@
           "earliestDeparture": null,
           "latestArrival": 512
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1456423103771658870,
+      "id": 15991200557506775147,
       "name": "RE 60.4",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33480,10 +33963,11 @@
           "earliestDeparture": null,
           "latestArrival": 572
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9864151948835505757,
+      "id": 12327313327662385949,
       "name": "RE 60.5",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33514,10 +33998,11 @@
           "earliestDeparture": null,
           "latestArrival": 632
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6868373581875138280,
+      "id": 5301841735414664328,
       "name": "RE 60.6",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33548,10 +34033,11 @@
           "earliestDeparture": null,
           "latestArrival": 692
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3659173206373646407,
+      "id": 12189197168372502114,
       "name": "RE 60.7",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33582,10 +34068,11 @@
           "earliestDeparture": null,
           "latestArrival": 752
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2331659106618919149,
+      "id": 2267616195970941241,
       "name": "RE 60.8",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33616,10 +34103,11 @@
           "earliestDeparture": null,
           "latestArrival": 812
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3875754743506882535,
+      "id": 14023288674111539262,
       "name": "RE 60.9",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33650,10 +34138,11 @@
           "earliestDeparture": null,
           "latestArrival": 872
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16837116253760146930,
+      "id": 691350855531253572,
       "name": "RE 60.10",
       "lineId": 1756283810430,
       "trainClassId": 2,
@@ -33684,10 +34173,11 @@
           "earliestDeparture": null,
           "latestArrival": 932
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18389307145974989844,
+      "id": 13989248354612431138,
       "name": "RE 61.1",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33718,10 +34208,11 @@
           "earliestDeparture": null,
           "latestArrival": 394
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16356146220715035788,
+      "id": 18202077057454850845,
       "name": "RE 61.2",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33752,10 +34243,11 @@
           "earliestDeparture": null,
           "latestArrival": 454
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2718253285601724188,
+      "id": 16659041887982471238,
       "name": "RE 61.3",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33786,10 +34278,11 @@
           "earliestDeparture": null,
           "latestArrival": 514
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1870308027137347569,
+      "id": 12589236527556087642,
       "name": "RE 61.4",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33820,10 +34313,11 @@
           "earliestDeparture": null,
           "latestArrival": 574
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16942633214510973988,
+      "id": 6393735834151766492,
       "name": "RE 61.5",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33854,10 +34348,11 @@
           "earliestDeparture": null,
           "latestArrival": 634
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8149084851044568605,
+      "id": 10806955746862843710,
       "name": "RE 61.6",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33888,10 +34383,11 @@
           "earliestDeparture": null,
           "latestArrival": 694
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17414877189186601337,
+      "id": 11793942144276185518,
       "name": "RE 61.7",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33922,10 +34418,11 @@
           "earliestDeparture": null,
           "latestArrival": 754
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15258377138814208675,
+      "id": 1449149097270463003,
       "name": "RE 61.8",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33956,10 +34453,11 @@
           "earliestDeparture": null,
           "latestArrival": 814
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18373672414413802797,
+      "id": 12176442938179079578,
       "name": "RE 61.9",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -33990,10 +34488,11 @@
           "earliestDeparture": null,
           "latestArrival": 874
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9590185739732012783,
+      "id": 1247348321617265228,
       "name": "RE 61.10",
       "lineId": 1756283839814,
       "trainClassId": 2,
@@ -34024,10 +34523,11 @@
           "earliestDeparture": null,
           "latestArrival": 934
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6563689738554197185,
+      "id": 6298708891419231082,
       "name": "RE 62.1",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34053,10 +34553,11 @@
           "earliestDeparture": null,
           "latestArrival": 237
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7525957964579817112,
+      "id": 18167752543779441683,
       "name": "RE 62.2",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34082,10 +34583,11 @@
           "earliestDeparture": null,
           "latestArrival": 297
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7462257996550980881,
+      "id": 3396579203774104632,
       "name": "RE 62.3",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34111,10 +34613,11 @@
           "earliestDeparture": null,
           "latestArrival": 357
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2852164158798447432,
+      "id": 805239246029277145,
       "name": "RE 62.4",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34140,10 +34643,11 @@
           "earliestDeparture": null,
           "latestArrival": 417
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3941614041428410441,
+      "id": 16979212896516456800,
       "name": "RE 62.5",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34169,10 +34673,11 @@
           "earliestDeparture": null,
           "latestArrival": 477
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11617251395097215253,
+      "id": 16902878049912308546,
       "name": "RE 62.6",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34198,10 +34703,11 @@
           "earliestDeparture": null,
           "latestArrival": 537
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5331038949033394640,
+      "id": 9436425187187117893,
       "name": "RE 62.7",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34227,10 +34733,11 @@
           "earliestDeparture": null,
           "latestArrival": 597
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15322290198583790854,
+      "id": 7390232318291954209,
       "name": "RE 62.8",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34256,10 +34763,11 @@
           "earliestDeparture": null,
           "latestArrival": 657
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18359423804848883348,
+      "id": 15606039015447940978,
       "name": "RE 62.9",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34285,10 +34793,11 @@
           "earliestDeparture": null,
           "latestArrival": 717
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6424044060868822224,
+      "id": 14848378548782845059,
       "name": "RE 62.10",
       "lineId": 1756284986746,
       "trainClassId": 2,
@@ -34314,10 +34823,11 @@
           "earliestDeparture": null,
           "latestArrival": 777
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4080030632461683013,
+      "id": 15238009168239610265,
       "name": "RE 63.1",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34343,10 +34853,11 @@
           "earliestDeparture": null,
           "latestArrival": 237
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5440941395973128263,
+      "id": 16411342080286935611,
       "name": "RE 63.2",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34372,10 +34883,11 @@
           "earliestDeparture": null,
           "latestArrival": 297
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9705764207727952633,
+      "id": 285731798993881232,
       "name": "RE 63.3",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34401,10 +34913,11 @@
           "earliestDeparture": null,
           "latestArrival": 357
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2489032655095219860,
+      "id": 2003043651178480013,
       "name": "RE 63.4",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34430,10 +34943,11 @@
           "earliestDeparture": null,
           "latestArrival": 417
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6734478422105670189,
+      "id": 15900336679528579340,
       "name": "RE 63.5",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34459,10 +34973,11 @@
           "earliestDeparture": null,
           "latestArrival": 477
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3821564766241771273,
+      "id": 4470123352067293982,
       "name": "RE 63.6",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34488,10 +35003,11 @@
           "earliestDeparture": null,
           "latestArrival": 537
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11215416432031843996,
+      "id": 7567911815733068679,
       "name": "RE 63.7",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34517,10 +35033,11 @@
           "earliestDeparture": null,
           "latestArrival": 597
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3949918895482094138,
+      "id": 4742047898551600592,
       "name": "RE 63.8",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34546,10 +35063,11 @@
           "earliestDeparture": null,
           "latestArrival": 657
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11671570642089037720,
+      "id": 14681145040708849068,
       "name": "RE 63.9",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34575,10 +35093,11 @@
           "earliestDeparture": null,
           "latestArrival": 717
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8154978355068291494,
+      "id": 5172134613627585718,
       "name": "RE 63.10",
       "lineId": 1756285024011,
       "trainClassId": 2,
@@ -34604,10 +35123,11 @@
           "earliestDeparture": null,
           "latestArrival": 777
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5203158958186450001,
+      "id": 12070914743895803348,
       "name": "RE 64.1",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -34653,10 +35173,11 @@
           "earliestDeparture": null,
           "latestArrival": 835
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4709543376285027697,
+      "id": 13599261412786521483,
       "name": "RE 64.2",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -34702,10 +35223,11 @@
           "earliestDeparture": null,
           "latestArrival": 895
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8329516707444444020,
+      "id": 12889718891789043425,
       "name": "RE 64.3",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -34751,10 +35273,11 @@
           "earliestDeparture": null,
           "latestArrival": 955
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13393160635771602637,
+      "id": 6375319572161842785,
       "name": "RE 64.4",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -34800,10 +35323,11 @@
           "earliestDeparture": null,
           "latestArrival": 1015
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3754708760500326154,
+      "id": 10068393634010646481,
       "name": "RE 64.5",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -34849,10 +35373,11 @@
           "earliestDeparture": null,
           "latestArrival": 1075
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11154435770828016411,
+      "id": 11949233158133860017,
       "name": "RE 64.6",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -34898,10 +35423,11 @@
           "earliestDeparture": null,
           "latestArrival": 1135
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 561453259586357497,
+      "id": 1072766919658128753,
       "name": "RE 64.7",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -34947,10 +35473,11 @@
           "earliestDeparture": null,
           "latestArrival": 1195
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14569904184996415023,
+      "id": 13944497313819738736,
       "name": "RE 64.8",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -34996,10 +35523,11 @@
           "earliestDeparture": null,
           "latestArrival": 1255
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16319977556905511290,
+      "id": 809381312188727453,
       "name": "RE 64.9",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -35045,10 +35573,11 @@
           "earliestDeparture": null,
           "latestArrival": 1315
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8873819574915714669,
+      "id": 12442279863640605252,
       "name": "RE 64.10",
       "lineId": 1756283843594,
       "trainClassId": 2,
@@ -35094,10 +35623,11 @@
           "earliestDeparture": null,
           "latestArrival": 1375
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11574602790379470933,
+      "id": 11112441718795485715,
       "name": "RE 65.1",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35143,10 +35673,11 @@
           "earliestDeparture": null,
           "latestArrival": 835
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 592138390572253412,
+      "id": 1150361281541128309,
       "name": "RE 65.2",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35192,10 +35723,11 @@
           "earliestDeparture": null,
           "latestArrival": 895
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13158452717462506451,
+      "id": 13208475978944432239,
       "name": "RE 65.3",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35241,10 +35773,11 @@
           "earliestDeparture": null,
           "latestArrival": 955
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6364872099772451551,
+      "id": 816534407204848271,
       "name": "RE 65.4",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35290,10 +35823,11 @@
           "earliestDeparture": null,
           "latestArrival": 1015
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12369906790176476566,
+      "id": 1120234695978077372,
       "name": "RE 65.5",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35339,10 +35873,11 @@
           "earliestDeparture": null,
           "latestArrival": 1075
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13232920318947639473,
+      "id": 8194186432443140045,
       "name": "RE 65.6",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35388,10 +35923,11 @@
           "earliestDeparture": null,
           "latestArrival": 1135
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7963149126747242869,
+      "id": 9419158299943323773,
       "name": "RE 65.7",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35437,10 +35973,11 @@
           "earliestDeparture": null,
           "latestArrival": 1195
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12157915273537865392,
+      "id": 14129874956069916285,
       "name": "RE 65.8",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35486,10 +36023,11 @@
           "earliestDeparture": null,
           "latestArrival": 1255
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 243623688093846049,
+      "id": 17421371261881633813,
       "name": "RE 65.9",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35535,10 +36073,11 @@
           "earliestDeparture": null,
           "latestArrival": 1315
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 779027477502706154,
+      "id": 10768220221706945554,
       "name": "RE 65.10",
       "lineId": 1756283942071,
       "trainClassId": 2,
@@ -35584,10 +36123,11 @@
           "earliestDeparture": null,
           "latestArrival": 1375
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12454664304219146983,
+      "id": 15844512364431885952,
       "name": "RE 66.1",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35628,10 +36168,11 @@
           "earliestDeparture": null,
           "latestArrival": 529
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11998956527825012526,
+      "id": 1493740570366462452,
       "name": "RE 66.2",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35672,10 +36213,11 @@
           "earliestDeparture": null,
           "latestArrival": 589
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13041634828420073037,
+      "id": 427174187876764109,
       "name": "RE 66.3",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35716,10 +36258,11 @@
           "earliestDeparture": null,
           "latestArrival": 649
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5470115725338823225,
+      "id": 13053137777540088147,
       "name": "RE 66.4",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35760,10 +36303,11 @@
           "earliestDeparture": null,
           "latestArrival": 709
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17872775499999036913,
+      "id": 4452397923354298907,
       "name": "RE 66.5",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35804,10 +36348,11 @@
           "earliestDeparture": null,
           "latestArrival": 769
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12997216161522140431,
+      "id": 12514393815451059440,
       "name": "RE 66.6",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35848,10 +36393,11 @@
           "earliestDeparture": null,
           "latestArrival": 829
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9279271046639012098,
+      "id": 9580141967494365443,
       "name": "RE 66.7",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35892,10 +36438,11 @@
           "earliestDeparture": null,
           "latestArrival": 889
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4803033806595903162,
+      "id": 10445791861784920738,
       "name": "RE 66.8",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35936,10 +36483,11 @@
           "earliestDeparture": null,
           "latestArrival": 949
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12082235987805947487,
+      "id": 3334446312722943372,
       "name": "RE 66.9",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -35980,10 +36528,11 @@
           "earliestDeparture": null,
           "latestArrival": 1009
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3004710623953371943,
+      "id": 15001985290837966975,
       "name": "RE 66.10",
       "lineId": 1756284570345,
       "trainClassId": 2,
@@ -36024,10 +36573,11 @@
           "earliestDeparture": null,
           "latestArrival": 1069
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14941758822690473282,
+      "id": 14667544946888559715,
       "name": "RE 67.1",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36068,10 +36618,11 @@
           "earliestDeparture": null,
           "latestArrival": 530
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12919747644506588177,
+      "id": 11670416849310466381,
       "name": "RE 67.2",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36112,10 +36663,11 @@
           "earliestDeparture": null,
           "latestArrival": 590
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12213496238218100964,
+      "id": 17817201173174698380,
       "name": "RE 67.3",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36156,10 +36708,11 @@
           "earliestDeparture": null,
           "latestArrival": 650
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4691132645330931221,
+      "id": 5515813189972477968,
       "name": "RE 67.4",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36200,10 +36753,11 @@
           "earliestDeparture": null,
           "latestArrival": 710
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7868032440503914297,
+      "id": 13463388921656266260,
       "name": "RE 67.5",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36244,10 +36798,11 @@
           "earliestDeparture": null,
           "latestArrival": 770
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15414813761809368324,
+      "id": 12438985471619190454,
       "name": "RE 67.6",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36288,10 +36843,11 @@
           "earliestDeparture": null,
           "latestArrival": 830
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5714076345311707300,
+      "id": 22295398817351414,
       "name": "RE 67.7",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36332,10 +36888,11 @@
           "earliestDeparture": null,
           "latestArrival": 890
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17758781700825959665,
+      "id": 1499646826052667554,
       "name": "RE 67.8",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36376,10 +36933,11 @@
           "earliestDeparture": null,
           "latestArrival": 950
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 4594352346672352549,
+      "id": 1171152064570673873,
       "name": "RE 67.9",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36420,10 +36978,11 @@
           "earliestDeparture": null,
           "latestArrival": 1010
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 10777801039343144383,
+      "id": 13132346520447504145,
       "name": "RE 67.10",
       "lineId": 1756284573056,
       "trainClassId": 2,
@@ -36464,10 +37023,11 @@
           "earliestDeparture": null,
           "latestArrival": 1070
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12104205181688695991,
+      "id": 14450301993515303529,
       "name": "IR 1.1",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36503,10 +37063,11 @@
           "earliestDeparture": null,
           "latestArrival": 421
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2913670002063134486,
+      "id": 766898342647515057,
       "name": "IR 1.2",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36542,10 +37103,11 @@
           "earliestDeparture": null,
           "latestArrival": 481
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 12615374702923431961,
+      "id": 1773355865245109993,
       "name": "IR 1.3",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36581,10 +37143,11 @@
           "earliestDeparture": null,
           "latestArrival": 541
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2969983032829036862,
+      "id": 9955870618717147097,
       "name": "IR 1.4",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36620,10 +37183,11 @@
           "earliestDeparture": null,
           "latestArrival": 601
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8132048073793292369,
+      "id": 5561766469851825335,
       "name": "IR 1.5",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36659,10 +37223,11 @@
           "earliestDeparture": null,
           "latestArrival": 661
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14301794337985151479,
+      "id": 4920924864550617352,
       "name": "IR 1.6",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36698,10 +37263,11 @@
           "earliestDeparture": null,
           "latestArrival": 721
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3315104627986025693,
+      "id": 13648772674210974961,
       "name": "IR 1.7",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36737,10 +37303,11 @@
           "earliestDeparture": null,
           "latestArrival": 781
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 18360725231504149796,
+      "id": 17274236097006749094,
       "name": "IR 1.8",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36776,10 +37343,11 @@
           "earliestDeparture": null,
           "latestArrival": 841
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13321944716938592427,
+      "id": 8615915775969085136,
       "name": "IR 1.9",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36815,10 +37383,11 @@
           "earliestDeparture": null,
           "latestArrival": 901
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8294603603967821674,
+      "id": 3385674695141575450,
       "name": "IR 1.10",
       "lineId": 1756284730072,
       "trainClassId": 3,
@@ -36854,10 +37423,11 @@
           "earliestDeparture": null,
           "latestArrival": 961
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 11005368635650688379,
+      "id": 5645030139847196694,
       "name": "IR 2.1",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -36893,10 +37463,11 @@
           "earliestDeparture": null,
           "latestArrival": 422
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 1048148460354357382,
+      "id": 979390536348943687,
       "name": "IR 2.2",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -36932,10 +37503,11 @@
           "earliestDeparture": null,
           "latestArrival": 482
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17484688720789717962,
+      "id": 7235233722284263242,
       "name": "IR 2.3",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -36971,10 +37543,11 @@
           "earliestDeparture": null,
           "latestArrival": 542
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 6483781891107668217,
+      "id": 10792115660106645999,
       "name": "IR 2.4",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -37010,10 +37583,11 @@
           "earliestDeparture": null,
           "latestArrival": 602
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3467384840434764313,
+      "id": 395514931951257480,
       "name": "IR 2.5",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -37049,10 +37623,11 @@
           "earliestDeparture": null,
           "latestArrival": 662
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9853983491817881679,
+      "id": 4934564105221066550,
       "name": "IR 2.6",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -37088,10 +37663,11 @@
           "earliestDeparture": null,
           "latestArrival": 722
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9577834571172564793,
+      "id": 985357726409312985,
       "name": "IR 2.7",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -37127,10 +37703,11 @@
           "earliestDeparture": null,
           "latestArrival": 782
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17035470951295565827,
+      "id": 10799680998520409006,
       "name": "IR 2.8",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -37166,10 +37743,11 @@
           "earliestDeparture": null,
           "latestArrival": 842
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2968014127598028105,
+      "id": 4424838541294257931,
       "name": "IR 2.9",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -37205,10 +37783,11 @@
           "earliestDeparture": null,
           "latestArrival": 902
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2497237158763970579,
+      "id": 17814495691455809807,
       "name": "IR 2.10",
       "lineId": 1756284733344,
       "trainClassId": 3,
@@ -37244,10 +37823,11 @@
           "earliestDeparture": null,
           "latestArrival": 962
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 151477023776327391,
+      "id": 9128320740582969221,
       "name": "IR 3.1",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37278,10 +37858,11 @@
           "earliestDeparture": null,
           "latestArrival": 458
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2993953702416499373,
+      "id": 3338758068711411287,
       "name": "IR 3.2",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37312,10 +37893,11 @@
           "earliestDeparture": null,
           "latestArrival": 518
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2479008356234579180,
+      "id": 1784587863154705618,
       "name": "IR 3.3",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37346,10 +37928,11 @@
           "earliestDeparture": null,
           "latestArrival": 578
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 17964622369342311193,
+      "id": 14387263188275187635,
       "name": "IR 3.4",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37380,10 +37963,11 @@
           "earliestDeparture": null,
           "latestArrival": 638
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3402820276932922087,
+      "id": 10857729149875080352,
       "name": "IR 3.5",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37414,10 +37998,11 @@
           "earliestDeparture": null,
           "latestArrival": 698
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7384331406309540084,
+      "id": 17285242902960948085,
       "name": "IR 3.6",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37448,10 +38033,11 @@
           "earliestDeparture": null,
           "latestArrival": 758
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 14041613446544902840,
+      "id": 2805553165479530187,
       "name": "IR 3.7",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37482,10 +38068,11 @@
           "earliestDeparture": null,
           "latestArrival": 818
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13139729357440501996,
+      "id": 14989805992054965794,
       "name": "IR 3.8",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37516,10 +38103,11 @@
           "earliestDeparture": null,
           "latestArrival": 878
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 7167444509166945497,
+      "id": 11104308366422524561,
       "name": "IR 3.9",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37550,10 +38138,11 @@
           "earliestDeparture": null,
           "latestArrival": 938
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15267060782370342760,
+      "id": 12081964674480033278,
       "name": "IR 3.10",
       "lineId": 1756284811441,
       "trainClassId": 3,
@@ -37584,10 +38173,11 @@
           "earliestDeparture": null,
           "latestArrival": 998
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 749419405771952018,
+      "id": 280119441374791359,
       "name": "IR 4.1",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37618,10 +38208,11 @@
           "earliestDeparture": null,
           "latestArrival": 461
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 9758008709437341934,
+      "id": 7486219219408146263,
       "name": "IR 4.2",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37652,10 +38243,11 @@
           "earliestDeparture": null,
           "latestArrival": 521
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 8921970686137550301,
+      "id": 6217051745292078008,
       "name": "IR 4.3",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37686,10 +38278,11 @@
           "earliestDeparture": null,
           "latestArrival": 581
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 2539836908361830098,
+      "id": 13134769733348311895,
       "name": "IR 4.4",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37720,10 +38313,11 @@
           "earliestDeparture": null,
           "latestArrival": 641
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3344975584904037816,
+      "id": 10785803929571183463,
       "name": "IR 4.5",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37754,10 +38348,11 @@
           "earliestDeparture": null,
           "latestArrival": 701
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 13324692330879469018,
+      "id": 4876649133734842159,
       "name": "IR 4.6",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37788,10 +38383,11 @@
           "earliestDeparture": null,
           "latestArrival": 761
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 3537305127254443733,
+      "id": 12005343800838867023,
       "name": "IR 4.7",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37822,10 +38418,11 @@
           "earliestDeparture": null,
           "latestArrival": 821
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 5276466922059877604,
+      "id": 1293660535508255017,
       "name": "IR 4.8",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37856,10 +38453,11 @@
           "earliestDeparture": null,
           "latestArrival": 881
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 15719353222918260028,
+      "id": 12147864727680139510,
       "name": "IR 4.9",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37890,10 +38488,11 @@
           "earliestDeparture": null,
           "latestArrival": 941
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
-      "id": 16964461521559831678,
+      "id": 14839415857252681368,
       "name": "IR 4.10",
       "lineId": 1756284814592,
       "trainClassId": 3,
@@ -37924,7 +38523,8 @@
           "earliestDeparture": null,
           "latestArrival": 1001
         }
-      ]
+      ],
+      "dwellTime": 2
     }
   ],
   "trainClasses": [
@@ -58228,28 +58828,7 @@
           3
         ],
         [
-          2,
-          0
-        ],
-        [
           0,
-          0
-        ],
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          0
-        ]
-      ],
-      [
-        [
-          3
-        ],
-        [
-          2,
           0
         ],
         [
@@ -58270,28 +58849,7 @@
           3
         ],
         [
-          2,
-          0
-        ],
-        [
           0,
-          0
-        ],
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          0
-        ]
-      ],
-      [
-        [
-          3
-        ],
-        [
-          2,
           0
         ],
         [
@@ -58312,28 +58870,7 @@
           3
         ],
         [
-          2,
-          0
-        ],
-        [
           0,
-          0
-        ],
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          0
-        ]
-      ],
-      [
-        [
-          3
-        ],
-        [
-          2,
           0
         ],
         [
@@ -58354,28 +58891,7 @@
           3
         ],
         [
-          2,
-          0
-        ],
-        [
           0,
-          0
-        ],
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          0
-        ]
-      ],
-      [
-        [
-          3
-        ],
-        [
-          2,
           0
         ],
         [
@@ -58396,7 +58912,7 @@
           3
         ],
         [
-          2,
+          0,
           0
         ],
         [
@@ -58417,7 +58933,91 @@
           3
         ],
         [
-          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          3
+        ],
+        [
+          0,
           0
         ],
         [
