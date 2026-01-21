@@ -705,7 +705,7 @@ Test_01_Level_5	101	2	0.0	{'action_required': False, 'malfunction': 0, 'speed': 
 Test_01_Level_5	101	3	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0, 'state': <TrainState.STOPPED: 4>}	False
 Test_01_Level_5	101	4	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0, 'state': <TrainState.STOPPED: 4>}	False
 Test_01_Level_5	101	5	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.DONE: 6>}	True
-Test_01_Level_5	101	6	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.DONE: 6>}	True
+Test_01_Level_5	101	6	-1.0	{'action_required': False, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_5	102	0	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_5	102	1	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_5	102	2	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.3333333333333333, 'state': <TrainState.DONE: 6>}	True
@@ -915,4 +915,4 @@ Test_01_Level_5	131	2	0.0	{'action_required': False, 'malfunction': 0, 'speed': 
 Test_01_Level_5	131	3	-54.0	{'action_required': False, 'malfunction': 0, 'speed': 0, 'state': <TrainState.STOPPED: 4>}	True
 Test_01_Level_5	131	4	-48.0	{'action_required': False, 'malfunction': 0, 'speed': 0, 'state': <TrainState.STOPPED: 4>}	True
 Test_01_Level_5	131	5	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.DONE: 6>}	True
-Test_01_Level_5	131	6	-1.0	{'action_required': False, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.DONE: 6>}	True
+Test_01_Level_5	131	6	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.DONE: 6>}	True
