@@ -1,6 +1,6 @@
 import json
-
 import numpy as np
+
 from flatland.envs.grid.rail_env_grid import RailEnvTransitions
 from flatland.envs.persistence import RailEnvPersister
 from flatland.envs.rail_env import RailEnv
@@ -42,7 +42,7 @@ def main(generated_json, scenario_pkl):
 
     number_of_agents = len(data['flatland line']['agent_positions'])
 
-    agent_positions = [[tuple(coords) for coords in positions] for positions in data['flatland line']['agent_positions']]
+    agent_positions = [[[tuple(c) for c in coords] for coords in positions] for positions in data['flatland line']['agent_positions']]
     agent_directions = data['flatland line']['agent_directions']
     agent_targets = [tuple(coords[0]) for coords in data['flatland line']['agent_targets']]
     agent_waypoints = {i: [[Waypoint(tuple(p), d) for p, d in zip(pa, da)] for pa, da in zip(pas, das)] + [[Waypoint(target, None)]] for i, (pas, das, target)
