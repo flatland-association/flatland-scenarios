@@ -702,60 +702,47 @@
 
 /**
  * Calculates path from a specific cell to any cell in a target list.
- * Respects momentum: if incomingEntryDir is provided, the path MUST continue 
- * legally through the start cell based on that entry direction.
- * 
- * @param {number} startR - Start Row
- * @param {number} startC - Start Col
- * @param {Array} targetCellsArray - Array of {r, c} objects
- * @param {string|null} incomingEntryDir - The direction (N,E,S,W) the train entered the start cell from. Null if starting fresh.
- * @returns {Object|null} - { dist: number, endCell: {r,c}, endEntryDir: string } or null if no path.
+ * Returns the end state AND the initial direction taken to leave the start cell.
  */
 function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir = null) {
     const targetCellsSet = new Set(targetCellsArray.map(cell => `${cell.r},${cell.c}`));
 
-    // Edge Case: If start is already target (distance 0), return immediately.
-    // However, if we are passing through, we likely want to move at least 1 step. 
-    // For simplicity, if we are 'at' the station, we assume we need to go to the *next* station, 
-    // so we don't check targetCellsSet.has(start) here usually. 
-    // But if the stations overlap, this handles it.
+    // Edge Case: Start is target.
     if (targetCellsSet.has(`${startR},${startC}`) && incomingEntryDir === null) {
-        return { dist: 0, endCell: { r: startR, c: startC }, endEntryDir: null };
+        return { dist: 0, endCell: { r: startR, c: startC }, endEntryDir: null, initialDepartureDir: null };
     }
 
     const queue = [];
     const visited = new Set();
 
-    // --- STEP 1: INITIALIZE QUEUE ---
-    
+    // Helper to add to queue
+    const addToQueue = (r, c, dist, cameFrom, initialDir) => {
+        const visitedKey = `${r},${c},${cameFrom}`;
+        if (!visited.has(visitedKey)) {
+            visited.add(visitedKey);
+            queue.push({ r, c, dist, cameFrom, initialDir });
+        }
+    };
+
     if (incomingEntryDir === null) {
-        // CASE A: Fresh Start (First station in line)
-        // Try leaving the cell in all 4 directions
+        // CASE A: Fresh Start
         for (const exitDir of Object.values(D)) {
             const delta = DIRECTION_DELTA[exitDir];
             const nr = startR + delta.r;
             const nc = startC + delta.c;
-
             if (nr < 0 || nr >= numRows || nc < 0 || nc >= numCols) continue;
 
-            // We are entering the neighbor from the OPPOSITE of our exit
             const entryDirForNeighbor = OPPOSITE_DIRECTION[exitDir];
             const neighborCell = gridData[nr][nc];
             const neighborDef = TILE_DEFINITIONS[neighborCell.caseIndex];
 
-            // Check if neighbor accepts entry
             if (neighborDef && neighborDef[entryDirForNeighbor]) {
-                const visitedKey = `${nr},${nc},${entryDirForNeighbor}`;
-                if (!visited.has(visitedKey)) {
-                    queue.push({ r: nr, c: nc, dist: 1, cameFrom: entryDirForNeighbor });
-                    visited.add(visitedKey);
-                }
+                // The initial departure direction is simply exitDir
+                addToQueue(nr, nc, 1, entryDirForNeighbor, exitDir);
             }
         }
     } else {
-        // CASE B: Continuing Momentum (Passing through station)
-        // We are inside startCell, having entered from incomingEntryDir.
-        // We can ONLY exit via directions allowed by the track shape.
+        // CASE B: Continuing Momentum
         const currentCell = gridData[startR][startC];
         const validExits = TRANSITION_MAP[currentCell.caseIndex]?.[incomingEntryDir];
 
@@ -764,7 +751,6 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 const delta = DIRECTION_DELTA[exitDir];
                 const nr = startR + delta.r;
                 const nc = startC + delta.c;
-
                 if (nr < 0 || nr >= numRows || nc < 0 || nc >= numCols) continue;
 
                 const entryDirForNeighbor = OPPOSITE_DIRECTION[exitDir];
@@ -772,24 +758,25 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 const neighborDef = TILE_DEFINITIONS[neighborCell.caseIndex];
 
                 if (neighborDef && neighborDef[entryDirForNeighbor]) {
-                    const visitedKey = `${nr},${nc},${entryDirForNeighbor}`;
-                    if (!visited.has(visitedKey)) {
-                        queue.push({ r: nr, c: nc, dist: 1, cameFrom: entryDirForNeighbor });
-                        visited.add(visitedKey);
-                    }
+                    // The initial departure direction is exitDir
+                    addToQueue(nr, nc, 1, entryDirForNeighbor, exitDir);
                 }
             }
         }
     }
 
-    // --- STEP 2: BFS LOOP ---
-
+    // BFS LOOP
     while (queue.length > 0) {
-        const { r, c, dist, cameFrom } = queue.shift();
+        // FIXED: Destructure 'initialDir' (matching the object pushed in addToQueue)
+        const { r, c, dist, cameFrom, initialDir } = queue.shift(); 
 
-        // Check if we reached ANY cell of the target station
         if (targetCellsSet.has(`${r},${c}`)) {
-            return { dist, endCell: { r, c }, endEntryDir: cameFrom };
+            return { 
+                dist, 
+                endCell: { r, c }, 
+                endEntryDir: cameFrom,
+                initialDepartureDir: initialDir // Return as standard property name
+            };
         }
 
         const currentCell = gridData[r][c];
@@ -801,20 +788,14 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             const delta = DIRECTION_DELTA[exitDir];
             const nr = r + delta.r;
             const nc = c + delta.c;
-
             if (nr < 0 || nr >= numRows || nc < 0 || nc >= numCols) continue;
 
             const nextCameFrom = OPPOSITE_DIRECTION[exitDir];
-            const visitedKey = `${nr},${nc},${nextCameFrom}`;
-
-            if (!visited.has(visitedKey)) {
-                visited.add(visitedKey);
-                queue.push({ r: nr, c: nc, dist: dist + 1, cameFrom: nextCameFrom });
-            }
+            // Pass 'initialDir' forward unchanged
+            addToQueue(nr, nc, dist + 1, nextCameFrom, initialDir);
         }
     }
-
-    return null; // Path not found
+    return null; 
 }
 
     // --- FLATLAND EXPORT HELPERS ---
@@ -2384,90 +2365,97 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             const train = trainClasses.find(t => t.id === schedule.trainClassId);
 
             if (!line || !train || !line.stationIds || line.stationIds.length < 2) {
-                return; // Skip schedules that aren't valid journeys
+                return; 
             }
 
-            // 1. agent_positions (List of List of List of coords)
-            const agentPositionsForAgent = []; 
+            // --- NEW: Continuous Path Simulation for Export ---
             
-            // For the first station, use line.startCell or default
-            let firstStationCell = line.startCell;
-            if (!firstStationCell) {
-                firstStationCell = getDefaultStationCell(line.stationIds[0]);
-            }
-            if (firstStationCell) {
-                agentPositionsForAgent.push([[firstStationCell.r, firstStationCell.c]]); // Single cell for start
-            } else {
-                console.warn(`Could not determine start cell for line ${line.name}. Using default (0,0) for Flatland export.`);
-                agentPositionsForAgent.push([[0, 0]]); // Fallback
-            }
+            const agentPositionsForAgent = [];
+            const agentDirectionsForAgent = [];
 
-            // For intermediate stations, use all cells in the station
-            for (let i = 1; i < line.stationIds.length - 1; i++) { 
-                const stationId = line.stationIds[i];
-                const cells = findStationCells(stationId).map(cell => [cell.r, cell.c]);
-                agentPositionsForAgent.push(cells); 
-            }
-            flatlandLine.agent_positions.push(agentPositionsForAgent);
+            // 1. Initialize Start
+            let currentCell = line.startCell || getDefaultStationCell(line.stationIds[0]);
+            let currentIncomingDir = null; // Fresh start
 
-
-            // 2. agent_directions (List of List of List of directions)
-            const agentDirectionsForAgent = []; 
-            
-            // For the first segment, use the chosen/default start cell to find initial direction
-            if (firstStationCell && line.stationIds.length > 1) {
-                 const targetStationIdForFirstSegment = line.stationIds[1];
-                 const direction = getDepartureDirectionFromCell(firstStationCell.r, firstStationCell.c, targetStationIdForFirstSegment);
-                 agentDirectionsForAgent.push([direction !== null ? direction : -1]); // Single direction for initial segment
-            } else {
-                 agentDirectionsForAgent.push([-1]); // Fallback
+            if (!currentCell) {
+                console.warn(`Could not determine start cell for line ${line.name}. Using default (0,0).`);
+                currentCell = {r:0, c:0};
             }
 
-            // For subsequent segments, use all cells of the departing station
-            for (let i = 1; i < line.stationIds.length - 1; i++) { // From 2nd station to (last-1)th station
-                const startStationId = line.stationIds[i];
+            // Add the FIRST position (List of 1 coordinate)
+            agentPositionsForAgent.push([[currentCell.r, currentCell.c]]);
+
+            // 2. Iterate Segments
+            for (let i = 0; i < line.stationIds.length - 1; i++) {
                 const endStationId = line.stationIds[i + 1];
-                const startCells = findStationCells(startStationId);
-                
-                const directionsFromStationCells = []; 
-                startCells.forEach(startCell => {
-                    const direction = getDepartureDirectionFromCell(startCell.r, startCell.c, endStationId);
-                    directionsFromStationCells.push(direction !== null ? direction : -1); 
-                });
-                agentDirectionsForAgent.push(directionsFromStationCells);
+
+                // Determine potential targets
+                let segmentEndCells;
+                if (i === line.stationIds.length - 2 && line.endCell) {
+                    segmentEndCells = [line.endCell];
+                } else {
+                    segmentEndCells = findStationCells(endStationId);
+                }
+
+                if (segmentEndCells.length === 0) {
+                     // Fallback if target station is deleted or empty
+                     agentDirectionsForAgent.push([-1]);
+                     agentPositionsForAgent.push([[0,0]]);
+                     continue;
+                }
+
+                // Calculate the directional path
+                const pathResult = findContinuousPath(
+                    currentCell.r, 
+                    currentCell.c, 
+                    segmentEndCells, 
+                    currentIncomingDir
+                );
+
+                // FIXED: Check explicitly for null to ensure 0-indexed directions (like 'N'->0) are processed
+                if (pathResult && pathResult.initialDepartureDir !== null && pathResult.initialDepartureDir !== undefined) {
+                    
+                    // A. Record the direction used to leave the current cell
+                    const flatlandDir = FLATLAND_DIRECTION[pathResult.initialDepartureDir];
+                    agentDirectionsForAgent.push([flatlandDir]);
+
+                    // B. Record the EXACT cell we arrived at as the next waypoint
+                    agentPositionsForAgent.push([[pathResult.endCell.r, pathResult.endCell.c]]);
+
+                    // C. Update state for next loop
+                    currentCell = pathResult.endCell;
+                    currentIncomingDir = pathResult.endEntryDir;
+
+                } else {
+                    // Failure: No path found (broken track or invalid direction)
+                    console.warn(`Export warning: Broken path between station ${line.stationIds[i]} and ${endStationId}`);
+                    agentDirectionsForAgent.push([-1]); // Invalid direction
+                    agentPositionsForAgent.push([[0,0]]); // Dummy position
+                    currentIncomingDir = null; // Reset momentum
+                }
             }
+
+            // 3. Add to Flatland Object
+            flatlandLine.agent_positions.push(agentPositionsForAgent);
             flatlandLine.agent_directions.push(agentDirectionsForAgent);
+            
+            // 4. Targets
+            // The last position added to agentPositionsForAgent is effectively the target.
+            const finalPos = agentPositionsForAgent[agentPositionsForAgent.length - 1][0];
+            flatlandLine.agent_targets.push([finalPos]); 
 
-
-            // 3. agent_targets (List of List of coords)
-            let lastStationCell = line.endCell;
-            if (!lastStationCell) {
-                lastStationCell = getDefaultStationCell(line.stationIds[line.stationIds.length - 1]);
-            }
-            if (lastStationCell) {
-                flatlandLine.agent_targets.push([[lastStationCell.r, lastStationCell.c]]); // Single cell for target
-            } else {
-                console.warn(`Could not determine end cell for line ${line.name}. Using default (0,0) for Flatland export.`);
-                flatlandLine.agent_targets.push([[0, 0]]); // Fallback
-            }
-
-
-            // 4. agent_speeds
+            // 5. Speeds & Timetable (unchanged)
             flatlandLine.agent_speeds.push(train.speed);
 
-            // 5. Timetable data
             const earliestDepartures = [];
             const latestArrivals = []; 
-
             schedule.stops.forEach(stop => {
                 earliestDepartures.push(stop.earliestDeparture);
                 latestArrivals.push(stop.latestArrival);
-                
                 if (stop.latestArrival != null && stop.latestArrival > maxLatestArrival) {
                     maxLatestArrival = stop.latestArrival;
                 }
             });
-
             flatlandTimetable.earliest_departures.push(earliestDepartures);
             flatlandTimetable.latest_arrivals.push(latestArrivals);
         });
@@ -2560,7 +2548,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 endCell: line.endCell || null      
             }));
 
-            // Important: Handle dwellTime for schedules (new top-level property)
+            // Important: Handle dwellTime for schedules
             schedules = (data.schedules || []).map(schedule => ({
                 ...schedule,
                 // Default dwellTime to 2 if not present in older JSONs (or if null/undefined)
@@ -2665,7 +2653,7 @@ if __name__ == '__main__':
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'Flatland_import.py';
+        a.download = 'flatland_import.py';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
