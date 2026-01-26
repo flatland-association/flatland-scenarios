@@ -17,7 +17,7 @@ def main(scenario: str, data_dir: str):
 
 
 if __name__ == '__main__':
-    data_dir = "./results20260126_1216"
+    data_dir = "./results20260126_1341"
     main("scenario_1", data_dir)
     all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats = data_frame_for_trajectories(root_data_dir=Path(data_dir))
     print(all_trains_arrived)
