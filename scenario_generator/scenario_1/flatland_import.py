@@ -78,4 +78,5 @@ def main(generated_json, scenario_pkl):
 
 
 if __name__ == '__main__':
-    main(generated_json='scenario_1_generated.json', scenario_pkl="scenario_1.pkl")
+    main(generated_json='scenario_1_generated.json', scenario_pkl="scenario_1_generated.pkl")
+    main(generated_json='scenario_1.json', scenario_pkl="scenario_1.pkl")
