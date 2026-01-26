@@ -2373,23 +2373,24 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             const agentPositionsForAgent = [];
             const agentDirectionsForAgent = [];
 
-            // 1. Initialize Start
+            // 1. Initialize Start (Fixed Single Cell)
             let currentCell = line.startCell || getDefaultStationCell(line.stationIds[0]);
-            let currentIncomingDir = null; // Fresh start
+            let currentIncomingDir = null; 
 
             if (!currentCell) {
                 console.warn(`Could not determine start cell for line ${line.name}. Using default (0,0).`);
                 currentCell = {r:0, c:0};
             }
 
-            // Add the FIRST position (List of 1 coordinate)
+            // Push Start Position (Single waypoint)
             agentPositionsForAgent.push([[currentCell.r, currentCell.c]]);
 
             // 2. Iterate Segments
             for (let i = 0; i < line.stationIds.length - 1; i++) {
                 const endStationId = line.stationIds[i + 1];
 
-                // Determine potential targets
+                // Determine potential targets for PATHFINDING
+                // We always look for *any* cell in the target station to find the best path
                 let segmentEndCells;
                 if (i === line.stationIds.length - 2 && line.endCell) {
                     segmentEndCells = [line.endCell];
@@ -2398,7 +2399,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 }
 
                 if (segmentEndCells.length === 0) {
-                     // Fallback if target station is deleted or empty
+                     // Fallback
                      agentDirectionsForAgent.push([-1]);
                      agentPositionsForAgent.push([[0,0]]);
                      continue;
@@ -2412,26 +2413,44 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                     currentIncomingDir
                 );
 
-                // FIXED: Check explicitly for null to ensure 0-indexed directions (like 'N'->0) are processed
                 if (pathResult && pathResult.initialDepartureDir !== null && pathResult.initialDepartureDir !== undefined) {
                     
-                    // A. Record the direction used to leave the current cell
+                    // A. Record Directions
+                    // We must provide a direction for EVERY cell in the *previous* position list.
                     const flatlandDir = FLATLAND_DIRECTION[pathResult.initialDepartureDir];
-                    agentDirectionsForAgent.push([flatlandDir]);
+                    const previousPosCount = agentPositionsForAgent[agentPositionsForAgent.length - 1].length;
+                    
+                    // Broadcast the valid direction to all previous cells
+                    agentDirectionsForAgent.push(new Array(previousPosCount).fill(flatlandDir));
 
-                    // B. Record the EXACT cell we arrived at as the next waypoint
-                    agentPositionsForAgent.push([[pathResult.endCell.r, pathResult.endCell.c]]);
+                    // B. Record Next Position (Arrival)
+                    let exportCells = [];
+                    const isLastSegment = (i === line.stationIds.length - 2);
 
-                    // C. Update state for next loop
+                    if (isLastSegment) {
+                        // LAST STOP: Always export as a SINGLE fixed cell (the one we arrived at).
+                        // This ensures the agent targets a specific point and has no outgoing direction.
+                        exportCells = [[pathResult.endCell.r, pathResult.endCell.c]];
+                    } else {
+                        // INTERMEDIATE STOP: Export ALL station cells.
+                        // This allows the agent to arrive anywhere at this station, 
+                        // and the NEXT iteration's direction broadcast handles the departure from any of them.
+                        exportCells = findStationCells(endStationId).map(c => [c.r, c.c]);
+                    }
+
+                    agentPositionsForAgent.push(exportCells);
+
+                    // C. Update logical state for next loop
                     currentCell = pathResult.endCell;
                     currentIncomingDir = pathResult.endEntryDir;
 
                 } else {
-                    // Failure: No path found (broken track or invalid direction)
+                    // Failure Handling
                     console.warn(`Export warning: Broken path between station ${line.stationIds[i]} and ${endStationId}`);
-                    agentDirectionsForAgent.push([-1]); // Invalid direction
-                    agentPositionsForAgent.push([[0,0]]); // Dummy position
-                    currentIncomingDir = null; // Reset momentum
+                    const previousPosCount = agentPositionsForAgent[agentPositionsForAgent.length - 1].length;
+                    agentDirectionsForAgent.push(new Array(previousPosCount).fill(-1)); 
+                    agentPositionsForAgent.push([[0,0]]);
+                    currentIncomingDir = null;
                 }
             }
 
@@ -2440,11 +2459,11 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             flatlandLine.agent_directions.push(agentDirectionsForAgent);
             
             // 4. Targets
-            // The last position added to agentPositionsForAgent is effectively the target.
-            const finalPos = agentPositionsForAgent[agentPositionsForAgent.length - 1][0];
-            flatlandLine.agent_targets.push([finalPos]); 
+            // The last position added is now guaranteed to be a single coordinate list.
+            const finalPosList = agentPositionsForAgent[agentPositionsForAgent.length - 1];
+            flatlandLine.agent_targets.push(finalPosList[0]); 
 
-            // 5. Speeds & Timetable (unchanged)
+            // 5. Speeds & Timetable
             flatlandLine.agent_speeds.push(train.speed);
 
             const earliestDepartures = [];
@@ -2612,7 +2631,7 @@ def main(generated_json, scenario_pkl):
 
     agent_positions = [[[tuple(c) for c in coords] for coords in positions] for positions in data['flatland line']['agent_positions']]
     agent_directions = data['flatland line']['agent_directions']
-    agent_targets = [tuple(coords[0]) for coords in data['flatland line']['agent_targets']]
+    agent_targets = [tuple(coords) for coords in data['flatland line']['agent_targets']]
     agent_waypoints = {i: [[Waypoint(p, d) for p, d in zip(pa, da)] for pa, da in zip(pas, das)] + [[Waypoint(target, None)]] for i, (pas, das, target)
                        in enumerate(zip(agent_positions, agent_directions, agent_targets))}
 
