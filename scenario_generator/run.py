@@ -14,6 +14,7 @@ class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
             count_num_opp_agents_towards_min_free_cell=True,
             use_switches_heuristic=True,
             use_entering_prevention=True,
+            use_alternative_at_first_intermediate_and_then_always_first_strategy=True,
         )
 
 
