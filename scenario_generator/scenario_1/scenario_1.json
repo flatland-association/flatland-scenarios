@@ -2,7 +2,7 @@
   "gridDimensions": {
     "rows": 120,
     "cols": 150,
-    "cellSize": 15
+    "cellSize": 12
   },
   "grid": [
     [
@@ -19652,7 +19652,6 @@
       "lineId": 1756282114971,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19676,10 +19675,11 @@
         },
         {
           "stationId": 4,
-          "earliestDeparture": 241,
+          "earliestDeparture": null,
           "latestArrival": 239
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756291653994,
@@ -19687,7 +19687,6 @@
       "lineId": 1756282117507,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19701,20 +19700,21 @@
         },
         {
           "stationId": 6,
-          "earliestDeparture": 143,
-          "latestArrival": 141
+          "earliestDeparture": 142,
+          "latestArrival": 140
         },
         {
           "stationId": 7,
-          "earliestDeparture": 196,
-          "latestArrival": 194
+          "earliestDeparture": 195,
+          "latestArrival": 193
         },
         {
           "stationId": 8,
-          "earliestDeparture": 236,
+          "earliestDeparture": null,
           "latestArrival": 234
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756291733842,
@@ -19722,7 +19722,6 @@
       "lineId": 1756282201363,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19736,25 +19735,26 @@
         },
         {
           "stationId": 6,
-          "earliestDeparture": 94,
-          "latestArrival": 92
+          "earliestDeparture": 96,
+          "latestArrival": 94
         },
         {
           "stationId": 12,
-          "earliestDeparture": 147,
-          "latestArrival": 145
+          "earliestDeparture": 149,
+          "latestArrival": 147
         },
         {
           "stationId": 5,
-          "earliestDeparture": 220,
-          "latestArrival": 218
+          "earliestDeparture": 223,
+          "latestArrival": 221
         },
         {
           "stationId": 4,
-          "earliestDeparture": 290,
-          "latestArrival": 281
+          "earliestDeparture": null,
+          "latestArrival": 288
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756291736809,
@@ -19762,7 +19762,6 @@
       "lineId": 1756282204484,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19776,25 +19775,26 @@
         },
         {
           "stationId": 12,
-          "earliestDeparture": 137,
-          "latestArrival": 135
+          "earliestDeparture": 204,
+          "latestArrival": 202
         },
         {
           "stationId": 6,
-          "earliestDeparture": 189,
-          "latestArrival": 187
+          "earliestDeparture": 257,
+          "latestArrival": 255
         },
         {
           "stationId": 7,
-          "earliestDeparture": 244,
-          "latestArrival": 242
+          "earliestDeparture": 310,
+          "latestArrival": 308
         },
         {
           "stationId": 8,
-          "earliestDeparture": 351,
-          "latestArrival": 282
+          "earliestDeparture": null,
+          "latestArrival": 349
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296607938,
@@ -19802,7 +19802,6 @@
       "lineId": 1756282261332,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19821,15 +19820,16 @@
         },
         {
           "stationId": 13,
-          "earliestDeparture": 204,
-          "latestArrival": 202
+          "earliestDeparture": 205,
+          "latestArrival": 203
         },
         {
           "stationId": 4,
-          "earliestDeparture": 251,
-          "latestArrival": 248
+          "earliestDeparture": null,
+          "latestArrival": 249
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296666858,
@@ -19837,7 +19837,6 @@
       "lineId": 1756282263445,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19856,15 +19855,16 @@
         },
         {
           "stationId": 6,
-          "earliestDeparture": 159,
-          "latestArrival": 157
+          "earliestDeparture": 160,
+          "latestArrival": 158
         },
         {
           "stationId": 8,
-          "earliestDeparture": 250,
-          "latestArrival": 249
+          "earliestDeparture": null,
+          "latestArrival": 248
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296696922,
@@ -19872,7 +19872,6 @@
       "lineId": 1756282350135,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19891,10 +19890,11 @@
         },
         {
           "stationId": 4,
-          "earliestDeparture": 281,
-          "latestArrival": 278
+          "earliestDeparture": null,
+          "latestArrival": 279
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296744746,
@@ -19902,7 +19902,6 @@
       "lineId": 1756282354239,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19916,15 +19915,16 @@
         },
         {
           "stationId": 10,
-          "earliestDeparture": 212,
-          "latestArrival": 210
+          "earliestDeparture": 214,
+          "latestArrival": 212
         },
         {
           "stationId": 8,
-          "earliestDeparture": 282,
-          "latestArrival": 277
+          "earliestDeparture": null,
+          "latestArrival": 280
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296773370,
@@ -19932,7 +19932,6 @@
       "lineId": 1756282404560,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -19951,10 +19950,11 @@
         },
         {
           "stationId": 8,
-          "earliestDeparture": 240,
-          "latestArrival": 237
+          "earliestDeparture": null,
+          "latestArrival": 238
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296796042,
@@ -19962,7 +19962,6 @@
       "lineId": 1756282414896,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19971,20 +19970,21 @@
         },
         {
           "stationId": 10,
-          "earliestDeparture": 88,
-          "latestArrival": 64
+          "earliestDeparture": 67,
+          "latestArrival": 65
         },
         {
           "stationId": 11,
-          "earliestDeparture": 177,
-          "latestArrival": 175
+          "earliestDeparture": 156,
+          "latestArrival": 154
         },
         {
           "stationId": 2,
-          "earliestDeparture": 240,
-          "latestArrival": 259
+          "earliestDeparture": null,
+          "latestArrival": 238
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296828834,
@@ -19992,7 +19992,6 @@
       "lineId": 1756282474577,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20006,20 +20005,21 @@
         },
         {
           "stationId": 22,
-          "earliestDeparture": 165,
-          "latestArrival": 163
+          "earliestDeparture": 164,
+          "latestArrival": 162
         },
         {
           "stationId": 9,
-          "earliestDeparture": 210,
-          "latestArrival": 208
+          "earliestDeparture": 209,
+          "latestArrival": 207
         },
         {
           "stationId": 8,
-          "earliestDeparture": 308,
-          "latestArrival": 305
+          "earliestDeparture": null,
+          "latestArrival": 306
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296828449,
@@ -20027,7 +20027,6 @@
       "lineId": 1756282526314,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20041,20 +20040,21 @@
         },
         {
           "stationId": 22,
-          "earliestDeparture": 141,
-          "latestArrival": 139
+          "earliestDeparture": 142,
+          "latestArrival": 140
         },
         {
           "stationId": 21,
-          "earliestDeparture": 192,
-          "latestArrival": 190
+          "earliestDeparture": 193,
+          "latestArrival": 191
         },
         {
           "stationId": 2,
-          "earliestDeparture": 305,
-          "latestArrival": 302
+          "earliestDeparture": null,
+          "latestArrival": 303
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296828290,
@@ -20062,7 +20062,6 @@
       "lineId": 1756283127817,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20076,10 +20075,11 @@
         },
         {
           "stationId": 8,
-          "earliestDeparture": 240,
-          "latestArrival": 236
+          "earliestDeparture": null,
+          "latestArrival": 238
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296828130,
@@ -20087,7 +20087,6 @@
       "lineId": 1756283130400,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20101,10 +20100,11 @@
         },
         {
           "stationId": 2,
-          "earliestDeparture": 237,
-          "latestArrival": 234
+          "earliestDeparture": null,
+          "latestArrival": 235
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296827971,
@@ -20112,7 +20112,6 @@
       "lineId": 1756283248724,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20126,20 +20125,21 @@
         },
         {
           "stationId": 20,
-          "earliestDeparture": 120,
-          "latestArrival": 118
+          "earliestDeparture": 119,
+          "latestArrival": 117
         },
         {
           "stationId": 23,
-          "earliestDeparture": 243,
-          "latestArrival": 241
+          "earliestDeparture": 241,
+          "latestArrival": 239
         },
         {
           "stationId": 8,
-          "earliestDeparture": 347,
+          "earliestDeparture": null,
           "latestArrival": 345
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756296827801,
@@ -20147,7 +20147,6 @@
       "lineId": 1756283282354,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20161,20 +20160,21 @@
         },
         {
           "stationId": 20,
-          "earliestDeparture": 228,
-          "latestArrival": 226
+          "earliestDeparture": 229,
+          "latestArrival": 227
         },
         {
           "stationId": 11,
-          "earliestDeparture": 263,
-          "latestArrival": 261
+          "earliestDeparture": 264,
+          "latestArrival": 262
         },
         {
           "stationId": 2,
-          "earliestDeparture": 350,
-          "latestArrival": 347
+          "earliestDeparture": null,
+          "latestArrival": 348
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297051788,
@@ -20182,7 +20182,6 @@
       "lineId": 1756283359723,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20196,15 +20195,16 @@
         },
         {
           "stationId": 9,
-          "earliestDeparture": 194,
-          "latestArrival": 192
+          "earliestDeparture": 192,
+          "latestArrival": 190
         },
         {
           "stationId": 8,
-          "earliestDeparture": 291,
+          "earliestDeparture": null,
           "latestArrival": 289
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297051620,
@@ -20212,7 +20212,6 @@
       "lineId": 1756283362347,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20226,15 +20225,16 @@
         },
         {
           "stationId": 21,
-          "earliestDeparture": 175,
-          "latestArrival": 173
+          "earliestDeparture": 177,
+          "latestArrival": 175
         },
         {
           "stationId": 2,
-          "earliestDeparture": 289,
-          "latestArrival": 285
+          "earliestDeparture": null,
+          "latestArrival": 287
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297051458,
@@ -20242,7 +20242,6 @@
       "lineId": 1756283392522,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20261,10 +20260,11 @@
         },
         {
           "stationId": 4,
-          "earliestDeparture": 216,
-          "latestArrival": 216
+          "earliestDeparture": null,
+          "latestArrival": 214
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297124547,
@@ -20272,7 +20272,6 @@
       "lineId": 1756283397771,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20291,10 +20290,11 @@
         },
         {
           "stationId": 2,
-          "earliestDeparture": 216,
-          "latestArrival": 216
+          "earliestDeparture": null,
+          "latestArrival": 214
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297124386,
@@ -20302,7 +20302,6 @@
       "lineId": 1756283476643,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20321,10 +20320,11 @@
         },
         {
           "stationId": 4,
-          "earliestDeparture": 272,
+          "earliestDeparture": null,
           "latestArrival": 270
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297124194,
@@ -20332,7 +20332,6 @@
       "lineId": 1756283478683,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20351,10 +20350,11 @@
         },
         {
           "stationId": 2,
-          "earliestDeparture": 272,
-          "latestArrival": 274
+          "earliestDeparture": null,
+          "latestArrival": 270
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297215019,
@@ -20362,7 +20362,6 @@
       "lineId": 1756283510029,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20376,10 +20375,11 @@
         },
         {
           "stationId": 4,
-          "earliestDeparture": 272,
-          "latestArrival": 268
+          "earliestDeparture": null,
+          "latestArrival": 270
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297214858,
@@ -20387,7 +20387,6 @@
       "lineId": 1756283512212,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20401,10 +20400,11 @@
         },
         {
           "stationId": 2,
-          "earliestDeparture": 273,
-          "latestArrival": 270
+          "earliestDeparture": null,
+          "latestArrival": 271
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297250285,
@@ -20442,7 +20442,6 @@
       "lineId": 1756283555708,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20461,10 +20460,11 @@
         },
         {
           "stationId": 2,
-          "earliestDeparture": 248,
-          "latestArrival": 244
+          "earliestDeparture": null,
+          "latestArrival": 246
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297385763,
@@ -20472,7 +20472,6 @@
       "lineId": 1756283632053,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20486,30 +20485,31 @@
         },
         {
           "stationId": 19,
-          "earliestDeparture": 184,
-          "latestArrival": 182
+          "earliestDeparture": 185,
+          "latestArrival": 183
         },
         {
           "stationId": 21,
-          "earliestDeparture": 274,
-          "latestArrival": 272
+          "earliestDeparture": 262,
+          "latestArrival": 260
         },
         {
           "stationId": 22,
-          "earliestDeparture": 326,
-          "latestArrival": 324
+          "earliestDeparture": 313,
+          "latestArrival": 311
         },
         {
           "stationId": 9,
-          "earliestDeparture": 371,
-          "latestArrival": 369
+          "earliestDeparture": 358,
+          "latestArrival": 356
         },
         {
           "stationId": 8,
-          "earliestDeparture": 458,
-          "latestArrival": 468
+          "earliestDeparture": null,
+          "latestArrival": 456
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297411196,
@@ -20517,7 +20517,6 @@
       "lineId": 1756283635685,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20531,30 +20530,31 @@
         },
         {
           "stationId": 22,
-          "earliestDeparture": 142,
-          "latestArrival": 140
+          "earliestDeparture": 143,
+          "latestArrival": 141
         },
         {
           "stationId": 21,
-          "earliestDeparture": 193,
-          "latestArrival": 191
+          "earliestDeparture": 194,
+          "latestArrival": 192
         },
         {
           "stationId": 19,
-          "earliestDeparture": 285,
-          "latestArrival": 283
+          "earliestDeparture": 269,
+          "latestArrival": 267
         },
         {
           "stationId": 23,
-          "earliestDeparture": 363,
-          "latestArrival": 361
+          "earliestDeparture": 348,
+          "latestArrival": 346
         },
         {
           "stationId": 8,
-          "earliestDeparture": 454,
-          "latestArrival": 465
+          "earliestDeparture": null,
+          "latestArrival": 452
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297410987,
@@ -20562,7 +20562,6 @@
       "lineId": 1756283705229,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20586,10 +20585,11 @@
         },
         {
           "stationId": 8,
-          "earliestDeparture": 461,
-          "latestArrival": 460
+          "earliestDeparture": null,
+          "latestArrival": 459
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297537764,
@@ -20597,7 +20597,6 @@
       "lineId": 1756283711870,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20616,15 +20615,16 @@
         },
         {
           "stationId": 10,
-          "earliestDeparture": 392,
-          "latestArrival": 390
+          "earliestDeparture": 391,
+          "latestArrival": 389
         },
         {
           "stationId": 8,
-          "earliestDeparture": 459,
+          "earliestDeparture": null,
           "latestArrival": 457
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297567562,
@@ -20632,7 +20632,6 @@
       "lineId": 1756283740157,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20656,10 +20655,11 @@
         },
         {
           "stationId": 8,
-          "earliestDeparture": 411,
-          "latestArrival": 408
+          "earliestDeparture": null,
+          "latestArrival": 409
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297567393,
@@ -20667,7 +20667,6 @@
       "lineId": 1756283757230,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20681,8 +20680,8 @@
         },
         {
           "stationId": 11,
-          "earliestDeparture": 251,
-          "latestArrival": 249
+          "earliestDeparture": 252,
+          "latestArrival": 250
         },
         {
           "stationId": 10,
@@ -20691,10 +20690,11 @@
         },
         {
           "stationId": 8,
-          "earliestDeparture": 408,
-          "latestArrival": 405
+          "earliestDeparture": null,
+          "latestArrival": 406
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297683115,
@@ -20702,7 +20702,6 @@
       "lineId": 1756284895185,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20716,20 +20715,21 @@
         },
         {
           "stationId": 6,
-          "earliestDeparture": 195,
-          "latestArrival": 193
+          "earliestDeparture": 196,
+          "latestArrival": 194
         },
         {
           "stationId": 7,
-          "earliestDeparture": 250,
-          "latestArrival": 248
+          "earliestDeparture": 249,
+          "latestArrival": 247
         },
         {
           "stationId": 8,
-          "earliestDeparture": 290,
+          "earliestDeparture": null,
           "latestArrival": 288
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297682973,
@@ -20737,7 +20737,6 @@
       "lineId": 1756284937385,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20751,20 +20750,21 @@
         },
         {
           "stationId": 6,
-          "earliestDeparture": 94,
-          "latestArrival": 92
+          "earliestDeparture": 96,
+          "latestArrival": 94
         },
         {
           "stationId": 10,
-          "earliestDeparture": 223,
-          "latestArrival": 221
+          "earliestDeparture": 225,
+          "latestArrival": 223
         },
         {
           "stationId": 8,
-          "earliestDeparture": 292,
-          "latestArrival": 289
+          "earliestDeparture": null,
+          "latestArrival": 290
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297772431,
@@ -20772,7 +20772,6 @@
       "lineId": 1756283808510,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20791,15 +20790,16 @@
         },
         {
           "stationId": 15,
-          "earliestDeparture": 247,
-          "latestArrival": 245
+          "earliestDeparture": 249,
+          "latestArrival": 247
         },
         {
           "stationId": 4,
-          "earliestDeparture": 378,
-          "latestArrival": 374
+          "earliestDeparture": null,
+          "latestArrival": 376
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297772276,
@@ -20807,7 +20807,6 @@
       "lineId": 1756283811831,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20821,20 +20820,21 @@
         },
         {
           "stationId": 14,
-          "earliestDeparture": 246,
-          "latestArrival": 244
+          "earliestDeparture": 241,
+          "latestArrival": 239
         },
         {
           "stationId": 3,
-          "earliestDeparture": 338,
-          "latestArrival": 336
+          "earliestDeparture": 334,
+          "latestArrival": 332
         },
         {
           "stationId": 4,
-          "earliestDeparture": 378,
-          "latestArrival": 381
+          "earliestDeparture": null,
+          "latestArrival": 376
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756297842837,
@@ -20842,7 +20842,6 @@
       "lineId": 1756283810430,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20861,15 +20860,16 @@
         },
         {
           "stationId": 17,
-          "earliestDeparture": 275,
-          "latestArrival": 273
+          "earliestDeparture": 276,
+          "latestArrival": 274
         },
         {
           "stationId": 4,
-          "earliestDeparture": 379,
-          "latestArrival": 374
+          "earliestDeparture": null,
+          "latestArrival": 377
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298862239,
@@ -20877,7 +20877,6 @@
       "lineId": 1756283839814,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20891,20 +20890,21 @@
         },
         {
           "stationId": 14,
-          "earliestDeparture": 243,
-          "latestArrival": 241
+          "earliestDeparture": 244,
+          "latestArrival": 242
         },
         {
           "stationId": 3,
-          "earliestDeparture": 335,
-          "latestArrival": 333
+          "earliestDeparture": 337,
+          "latestArrival": 335
         },
         {
           "stationId": 4,
-          "earliestDeparture": 381,
-          "latestArrival": 378
+          "earliestDeparture": null,
+          "latestArrival": 379
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298893471,
@@ -20912,7 +20912,6 @@
       "lineId": 1756284986746,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20926,15 +20925,16 @@
         },
         {
           "stationId": 13,
-          "earliestDeparture": 160,
-          "latestArrival": 158
+          "earliestDeparture": 148,
+          "latestArrival": 146
         },
         {
           "stationId": 4,
-          "earliestDeparture": 194,
-          "latestArrival": 204
+          "earliestDeparture": null,
+          "latestArrival": 192
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298893303,
@@ -20942,7 +20942,6 @@
       "lineId": 1756285024011,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20956,15 +20955,16 @@
         },
         {
           "stationId": 5,
-          "earliestDeparture": 144,
-          "latestArrival": 142
+          "earliestDeparture": 127,
+          "latestArrival": 125
         },
         {
           "stationId": 4,
-          "earliestDeparture": 194,
-          "latestArrival": 205
+          "earliestDeparture": null,
+          "latestArrival": 192
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298943969,
@@ -20972,7 +20972,6 @@
       "lineId": 1756283843594,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20986,13 +20985,13 @@
         },
         {
           "stationId": 9,
-          "earliestDeparture": 195,
-          "latestArrival": 193
+          "earliestDeparture": 193,
+          "latestArrival": 191
         },
         {
           "stationId": 8,
-          "earliestDeparture": 291,
-          "latestArrival": 289
+          "earliestDeparture": 290,
+          "latestArrival": 288
         },
         {
           "stationId": 5,
@@ -21006,15 +21005,16 @@
         },
         {
           "stationId": 15,
-          "earliestDeparture": 646,
-          "latestArrival": 644
+          "earliestDeparture": 649,
+          "latestArrival": 647
         },
         {
           "stationId": 2,
-          "earliestDeparture": 792,
-          "latestArrival": 791
+          "earliestDeparture": null,
+          "latestArrival": 790
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756298943824,
@@ -21022,7 +21022,6 @@
       "lineId": 1756283942071,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -21046,8 +21045,8 @@
         },
         {
           "stationId": 8,
-          "earliestDeparture": 500,
-          "latestArrival": 498
+          "earliestDeparture": 499,
+          "latestArrival": 497
         },
         {
           "stationId": 9,
@@ -21056,15 +21055,16 @@
         },
         {
           "stationId": 21,
-          "earliestDeparture": 675,
-          "latestArrival": 673
+          "earliestDeparture": 677,
+          "latestArrival": 675
         },
         {
           "stationId": 2,
-          "earliestDeparture": 792,
-          "latestArrival": 788
+          "earliestDeparture": null,
+          "latestArrival": 790
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299061744,
@@ -21072,7 +21072,6 @@
       "lineId": 1756284570345,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -21086,8 +21085,8 @@
         },
         {
           "stationId": 12,
-          "earliestDeparture": 212,
-          "latestArrival": 210
+          "earliestDeparture": 211,
+          "latestArrival": 209
         },
         {
           "stationId": 13,
@@ -21106,10 +21105,11 @@
         },
         {
           "stationId": 2,
-          "earliestDeparture": 486,
-          "latestArrival": 486
+          "earliestDeparture": null,
+          "latestArrival": 484
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299061583,
@@ -21117,7 +21117,6 @@
       "lineId": 1756284573056,
       "trainClassId": 2,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -21136,13 +21135,13 @@
         },
         {
           "stationId": 13,
-          "earliestDeparture": 216,
-          "latestArrival": 214
+          "earliestDeparture": 215,
+          "latestArrival": 213
         },
         {
           "stationId": 12,
-          "earliestDeparture": 275,
-          "latestArrival": 273
+          "earliestDeparture": 274,
+          "latestArrival": 272
         },
         {
           "stationId": 11,
@@ -21151,10 +21150,11 @@
         },
         {
           "stationId": 2,
-          "earliestDeparture": 487,
+          "earliestDeparture": null,
           "latestArrival": 485
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299143384,
@@ -21162,7 +21162,6 @@
       "lineId": 1756284730072,
       "trainClassId": 3,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 22,
@@ -21176,25 +21175,26 @@
         },
         {
           "stationId": 23,
-          "earliestDeparture": 148,
-          "latestArrival": 146
+          "earliestDeparture": 150,
+          "latestArrival": 148
         },
         {
           "stationId": 19,
-          "earliestDeparture": 251,
-          "latestArrival": 249
+          "earliestDeparture": 255,
+          "latestArrival": 253
         },
         {
           "stationId": 21,
-          "earliestDeparture": 371,
-          "latestArrival": 369
+          "earliestDeparture": 356,
+          "latestArrival": 354
         },
         {
           "stationId": 22,
-          "earliestDeparture": 423,
-          "latestArrival": 437
+          "earliestDeparture": null,
+          "latestArrival": 421
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299197120,
@@ -21202,7 +21202,6 @@
       "lineId": 1756284733344,
       "trainClassId": 3,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 22,
@@ -21216,25 +21215,26 @@
         },
         {
           "stationId": 19,
-          "earliestDeparture": 189,
-          "latestArrival": 187
+          "earliestDeparture": 167,
+          "latestArrival": 165
         },
         {
           "stationId": 23,
-          "earliestDeparture": 292,
-          "latestArrival": 290
+          "earliestDeparture": 272,
+          "latestArrival": 270
         },
         {
           "stationId": 9,
-          "earliestDeparture": 379,
-          "latestArrival": 377
+          "earliestDeparture": 361,
+          "latestArrival": 359
         },
         {
           "stationId": 22,
-          "earliestDeparture": 424,
-          "latestArrival": 438
+          "earliestDeparture": null,
+          "latestArrival": 422
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299243392,
@@ -21242,7 +21242,6 @@
       "lineId": 1756284811441,
       "trainClassId": 3,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 6,
@@ -21256,20 +21255,21 @@
         },
         {
           "stationId": 18,
-          "earliestDeparture": 166,
-          "latestArrival": 164
+          "earliestDeparture": 168,
+          "latestArrival": 166
         },
         {
           "stationId": 11,
-          "earliestDeparture": 267,
-          "latestArrival": 265
+          "earliestDeparture": 271,
+          "latestArrival": 269
         },
         {
           "stationId": 6,
-          "earliestDeparture": 460,
-          "latestArrival": 456
+          "earliestDeparture": null,
+          "latestArrival": 458
         }
-      ]
+      ],
+      "dwellTime": 2
     },
     {
       "id": 1756299242873,
@@ -21277,7 +21277,6 @@
       "lineId": 1756284814592,
       "trainClassId": 3,
       "travelFactor": 1.1,
-      "dwellTime": 2,
       "stops": [
         {
           "stationId": 6,
@@ -21296,15 +21295,16 @@
         },
         {
           "stationId": 12,
-          "earliestDeparture": 391,
-          "latestArrival": 389
+          "earliestDeparture": 393,
+          "latestArrival": 391
         },
         {
           "stationId": 6,
-          "earliestDeparture": 463,
-          "latestArrival": 457
+          "earliestDeparture": null,
+          "latestArrival": 461
         }
-      ]
+      ],
+      "dwellTime": 2
     }
   ],
   "trainClasses": [
@@ -21425,31 +21425,31 @@
         [
           [
             20,
-            5
+            6
           ],
           [
             20,
-            6
+            5
           ]
         ],
         [
-          [
-            57,
-            6
-          ],
           [
             57,
             7
+          ],
+          [
+            57,
+            6
           ]
         ],
         [
           [
             107,
-            11
+            12
           ],
           [
             107,
-            12
+            11
           ]
         ],
         [
@@ -21513,41 +21513,41 @@
         [
           [
             20,
-            5
+            6
           ],
           [
             20,
-            6
+            5
           ]
         ],
         [
-          [
-            57,
-            6
-          ],
           [
             57,
             7
+          ],
+          [
+            57,
+            6
           ]
         ],
         [
-          [
-            72,
-            27
-          ],
           [
             72,
             28
+          ],
+          [
+            72,
+            27
           ]
         ],
         [
           [
             107,
-            11
+            12
           ],
           [
             107,
-            12
+            11
           ]
         ],
         [
@@ -21621,31 +21621,31 @@
         [
           [
             57,
-            6
+            7
           ],
           [
             57,
-            7
+            6
           ]
         ],
         [
-          [
-            72,
-            27
-          ],
           [
             72,
             28
+          ],
+          [
+            72,
+            27
           ]
         ],
         [
-          [
-            99,
-            42
-          ],
           [
             99,
             43
+          ],
+          [
+            99,
+            42
           ]
         ],
         [
@@ -21719,11 +21719,11 @@
         [
           [
             72,
-            27
+            28
           ],
           [
             72,
-            28
+            27
           ]
         ],
         [
@@ -21752,11 +21752,11 @@
         ],
         [
           [
-            36,
+            37,
             36
           ],
           [
-            37,
+            36,
             36
           ]
         ],
@@ -21776,21 +21776,21 @@
         ],
         [
           [
-            53,
+            54,
             82
           ],
           [
-            54,
+            53,
             82
           ]
         ],
         [
           [
-            36,
+            37,
             36
           ],
           [
-            37,
+            36,
             36
           ]
         ],
@@ -21854,21 +21854,21 @@
         ],
         [
           [
-            2,
+            3,
             113
           ],
           [
-            3,
+            2,
             113
           ]
         ],
         [
           [
-            6,
+            7,
             87
           ],
           [
-            7,
+            6,
             87
           ]
         ],
@@ -21909,11 +21909,11 @@
         [
           [
             16,
-            134
+            135
           ],
           [
             16,
-            135
+            134
           ]
         ],
         [
@@ -21932,11 +21932,11 @@
         ],
         [
           [
-            6,
+            7,
             87
           ],
           [
-            7,
+            6,
             87
           ]
         ],
@@ -21980,11 +21980,11 @@
         ],
         [
           [
-            53,
+            54,
             82
           ],
           [
-            54,
+            53,
             82
           ]
         ],
@@ -22000,11 +22000,11 @@
         ],
         [
           [
-            23,
+            24,
             76
           ],
           [
-            24,
+            23,
             76
           ]
         ],
@@ -22034,11 +22034,11 @@
         ],
         [
           [
-            45,
+            46,
             86
           ],
           [
-            46,
+            45,
             86
           ]
         ],
@@ -22078,11 +22078,11 @@
         ],
         [
           [
-            6,
+            7,
             87
           ],
           [
-            7,
+            6,
             87
           ]
         ],
@@ -22113,11 +22113,11 @@
         [
           [
             16,
-            134
+            135
           ],
           [
             16,
-            135
+            134
           ]
         ],
         [
@@ -22136,22 +22136,22 @@
         ],
         [
           [
-            73,
+            74,
             98
           ],
           [
-            74,
+            73,
             98
           ]
         ],
         [
           [
             98,
-            56
+            57
           ],
           [
             98,
-            57
+            56
           ]
         ],
         [
@@ -22204,21 +22204,21 @@
         ],
         [
           [
-            110,
+            111,
             128
           ],
           [
-            111,
+            110,
             128
           ]
         ],
         [
           [
-            111,
+            112,
             97
           ],
           [
-            112,
+            111,
             97
           ]
         ],
@@ -22272,11 +22272,11 @@
         ],
         [
           [
-            117,
+            118,
             116
           ],
           [
-            118,
+            117,
             116
           ]
         ],
@@ -22320,22 +22320,22 @@
         ],
         [
           [
-            63,
+            64,
             64
           ],
           [
-            64,
+            63,
             64
           ]
         ],
         [
           [
             99,
-            42
+            43
           ],
           [
             99,
-            43
+            42
           ]
         ],
         [
@@ -22418,21 +22418,21 @@
         ],
         [
           [
-            2,
+            3,
             113
           ],
           [
-            3,
+            2,
             113
           ]
         ],
         [
           [
-            6,
+            7,
             87
           ],
           [
-            7,
+            6,
             87
           ]
         ],
@@ -22473,31 +22473,31 @@
         [
           [
             16,
-            134
+            135
           ],
           [
             16,
-            135
+            134
           ]
         ],
         [
-          [
-            26,
-            112
-          ],
           [
             27,
             112
+          ],
+          [
+            26,
+            112
           ]
         ],
         [
-          [
-            23,
-            76
-          ],
           [
             24,
             76
+          ],
+          [
+            23,
+            76
           ]
         ],
         [
@@ -22561,30 +22561,30 @@
         [
           [
             16,
-            134
+            135
           ],
           [
             16,
-            135
+            134
           ]
         ],
         [
-          [
-            53,
-            82
-          ],
           [
             54,
             82
+          ],
+          [
+            53,
+            82
           ]
         ],
         [
           [
-            36,
+            37,
             36
           ],
           [
-            37,
+            36,
             36
           ]
         ],
@@ -22624,11 +22624,11 @@
         ],
         [
           [
-            26,
+            27,
             112
           ],
           [
-            27,
+            26,
             112
           ]
         ],
@@ -22658,21 +22658,21 @@
         ],
         [
           [
-            53,
+            54,
             82
           ],
           [
-            54,
+            53,
             82
           ]
         ],
         [
           [
-            36,
+            37,
             36
           ],
           [
-            37,
+            36,
             36
           ]
         ],
@@ -22737,31 +22737,31 @@
         [
           [
             20,
-            5
+            6
           ],
           [
             20,
-            6
+            5
           ]
         ],
         [
-          [
-            57,
-            6
-          ],
           [
             57,
             7
+          ],
+          [
+            57,
+            6
           ]
         ],
         [
-          [
-            36,
-            36
-          ],
           [
             37,
             36
+          ],
+          [
+            36,
+            36
           ]
         ],
         [
@@ -22800,11 +22800,11 @@
         ],
         [
           [
-            110,
+            111,
             128
           ],
           [
-            111,
+            110,
             128
           ]
         ],
@@ -22834,22 +22834,22 @@
         ],
         [
           [
-            73,
+            74,
             98
           ],
           [
-            74,
+            73,
             98
           ]
         ],
         [
           [
             98,
-            56
+            57
           ],
           [
             98,
-            57
+            56
           ]
         ],
         [
@@ -22884,6 +22884,30 @@
           [
             74,
             98
+          ]
+        ],
+        [
+          [
+            118,
+            116
+          ],
+          [
+            117,
+            116
+          ]
+        ],
+        [
+          [
+            118,
+            46
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            115,
+            46
           ]
         ],
         [
@@ -22898,46 +22922,22 @@
         ],
         [
           [
-            118,
-            46
-          ]
-        ]
-      ],
-      [
-        [
-          [
-            115,
-            46
-          ]
-        ],
-        [
-          [
-            117,
-            116
+            74,
+            98
           ],
-          [
-            118,
-            116
-          ]
-        ],
-        [
           [
             73,
             98
-          ],
-          [
-            74,
-            98
           ]
         ],
         [
           [
             98,
-            56
+            57
           ],
           [
             98,
-            57
+            56
           ]
         ],
         [
@@ -22967,11 +22967,11 @@
         [
           [
             99,
-            42
+            43
           ],
           [
             99,
-            43
+            42
           ]
         ],
         [
@@ -23001,11 +23001,11 @@
         [
           [
             107,
-            11
+            12
           ],
           [
             107,
-            12
+            11
           ]
         ],
         [
@@ -23034,21 +23034,17 @@
         ],
         [
           [
-            6,
+            7,
             87
           ],
           [
-            7,
+            6,
             87
           ]
         ],
         [
           [
-            6,
-            19
-          ],
-          [
-            7,
+            9,
             19
           ],
           [
@@ -23056,18 +23052,22 @@
             19
           ],
           [
-            9,
+            7,
+            19
+          ],
+          [
+            6,
             19
           ]
         ],
         [
           [
             107,
-            11
+            12
           ],
           [
             107,
-            12
+            11
           ]
         ],
         [
@@ -23114,21 +23114,17 @@
         ],
         [
           [
-            110,
+            111,
             128
           ],
           [
-            111,
+            110,
             128
           ]
         ],
         [
           [
-            115,
-            46
-          ],
-          [
-            116,
+            118,
             46
           ],
           [
@@ -23136,7 +23132,11 @@
             46
           ],
           [
-            118,
+            116,
+            46
+          ],
+          [
+            115,
             46
           ]
         ],
@@ -23181,11 +23181,11 @@
         [
           [
             16,
-            134
+            135
           ],
           [
             16,
-            135
+            134
           ]
         ],
         [
@@ -23203,33 +23203,33 @@
           ]
         ],
         [
-          [
-            53,
-            82
-          ],
           [
             54,
             82
+          ],
+          [
+            53,
+            82
           ]
         ],
         [
-          [
-            72,
-            27
-          ],
           [
             72,
             28
+          ],
+          [
+            72,
+            27
           ]
         ],
         [
           [
             99,
-            42
+            43
           ],
           [
             99,
-            43
+            42
           ]
         ],
         [
@@ -23268,22 +23268,22 @@
         ],
         [
           [
-            73,
+            74,
             98
           ],
           [
-            74,
+            73,
             98
           ]
         ],
         [
           [
             98,
-            56
+            57
           ],
           [
             98,
-            57
+            56
           ]
         ],
         [
@@ -23332,11 +23332,11 @@
         ],
         [
           [
-            6,
+            7,
             87
           ],
           [
-            7,
+            6,
             87
           ]
         ],
@@ -23387,30 +23387,30 @@
         [
           [
             16,
-            134
+            135
           ],
           [
             16,
-            135
+            134
           ]
         ],
         [
-          [
-            26,
-            112
-          ],
           [
             27,
             112
+          ],
+          [
+            26,
+            112
           ]
         ],
         [
           [
-            23,
+            24,
             76
           ],
           [
-            24,
+            23,
             76
           ]
         ],
@@ -23441,11 +23441,11 @@
         [
           [
             72,
-            27
+            28
           ],
           [
             72,
-            28
+            27
           ]
         ],
         [
@@ -23460,11 +23460,11 @@
         ],
         [
           [
-            53,
+            54,
             82
           ],
           [
-            54,
+            53,
             82
           ]
         ],
@@ -23494,11 +23494,11 @@
         ],
         [
           [
-            63,
+            64,
             64
           ],
           [
-            64,
+            63,
             64
           ]
         ],
@@ -24666,152 +24666,152 @@
         41,
         96,
         174,
-        241
+        null
       ],
       [
         0,
         64,
-        143,
-        196,
-        236
+        142,
+        195,
+        null
       ],
       [
         0,
         41,
-        94,
-        147,
-        220,
-        290
+        96,
+        149,
+        223,
+        null
       ],
       [
         0,
         64,
-        137,
-        189,
-        244,
-        351
+        204,
+        257,
+        310,
+        null
       ],
       [
         0,
         92,
         145,
-        204,
-        251
+        205,
+        null
       ],
       [
         0,
         48,
         107,
-        159,
-        250
+        160,
+        null
       ],
       [
         0,
         67,
         177,
-        281
+        null
       ],
       [
         0,
         104,
-        212,
-        282
+        214,
+        null
       ],
       [
         0,
         84,
         173,
-        240
+        null
       ],
       [
         0,
-        88,
-        177,
-        240
+        67,
+        156,
+        null
       ],
       [
         0,
         113,
-        165,
-        210,
-        308
+        164,
+        209,
+        null
       ],
       [
         0,
         96,
-        141,
-        192,
-        305
+        142,
+        193,
+        null
       ],
       [
         0,
         141,
-        240
+        null
       ],
       [
         0,
         96,
-        237
+        null
       ],
       [
         0,
         85,
-        120,
-        243,
-        347
+        119,
+        241,
+        null
       ],
       [
         0,
         106,
-        228,
-        263,
-        350
+        229,
+        264,
+        null
       ],
       [
         0,
         113,
-        194,
-        291
+        192,
+        null
       ],
       [
         0,
         96,
-        175,
-        289
+        177,
+        null
       ],
       [
         0,
         81,
         174,
-        216
+        null
       ],
       [
         0,
         41,
         134,
-        216
+        null
       ],
       [
         0,
         141,
         187,
-        272
+        null
       ],
       [
         0,
         86,
         131,
-        272
+        null
       ],
       [
         0,
         169,
-        272
+        null
       ],
       [
         0,
         103,
-        273
+        null
       ],
       [
         0,
@@ -24823,175 +24823,175 @@
         0,
         46,
         127,
-        248
+        null
       ],
       [
         0,
         106,
-        184,
-        274,
-        326,
-        371,
-        458
+        185,
+        262,
+        313,
+        358,
+        null
       ],
       [
         0,
         97,
-        142,
-        193,
-        285,
-        363,
-        454
+        143,
+        194,
+        269,
+        348,
+        null
       ],
       [
         0,
         67,
         156,
         285,
-        461
+        null
       ],
       [
         0,
         174,
         303,
-        392,
-        459
+        391,
+        null
       ],
       [
         0,
         67,
         156,
         249,
-        411
+        null
       ],
       [
         0,
         159,
-        251,
+        252,
         340,
-        408
+        null
       ],
       [
         0,
         67,
-        195,
-        250,
-        290
+        196,
+        249,
+        null
       ],
       [
         0,
         41,
-        94,
-        223,
-        292
+        96,
+        225,
+        null
       ],
       [
         0,
         42,
         135,
-        247,
-        378
+        249,
+        null
       ],
       [
         0,
         129,
-        246,
-        338,
-        378
+        241,
+        334,
+        null
       ],
       [
         0,
         42,
         135,
-        275,
-        379
+        276,
+        null
       ],
       [
         0,
         103,
-        243,
-        335,
-        381
+        244,
+        337,
+        null
       ],
       [
         0,
         64,
-        160,
-        194
+        148,
+        null
       ],
       [
         0,
         48,
-        144,
-        194
+        127,
+        null
       ],
       [
         0,
         114,
-        195,
-        291,
+        193,
+        290,
         456,
         520,
-        646,
-        792
+        649,
+        null
       ],
       [
         0,
         143,
         271,
         334,
-        500,
+        499,
         596,
-        675,
-        792
+        677,
+        null
       ],
       [
         0,
         89,
-        212,
+        211,
         271,
         311,
         404,
-        486
+        null
       ],
       [
         0,
         82,
         175,
-        216,
-        275,
+        215,
+        274,
         397,
-        487
+        null
       ],
       [
         0,
         61,
-        148,
-        251,
-        371,
-        423
+        150,
+        255,
+        356,
+        null
       ],
       [
         0,
         67,
-        189,
-        292,
-        379,
-        424
+        167,
+        272,
+        361,
+        null
       ],
       [
         0,
         68,
-        166,
-        267,
-        460
+        168,
+        271,
+        null
       ],
       [
         0,
         190,
         293,
-        391,
-        463
+        393,
+        null
       ]
     ],
     "latest_arrivals": [
@@ -25029,125 +25029,125 @@
       [
         null,
         62,
-        141,
-        194,
+        140,
+        193,
         234
       ],
       [
         null,
         39,
-        92,
-        145,
-        218,
-        281
+        94,
+        147,
+        221,
+        288
       ],
       [
         null,
         62,
-        135,
-        187,
-        242,
-        282
+        202,
+        255,
+        308,
+        349
       ],
       [
         null,
         90,
         143,
-        202,
-        248
+        203,
+        249
       ],
       [
         null,
         46,
         105,
-        157,
-        249
+        158,
+        248
       ],
       [
         null,
         65,
         175,
-        278
+        279
       ],
       [
         null,
         102,
-        210,
-        277
+        212,
+        280
       ],
       [
         null,
         82,
         171,
-        237
+        238
       ],
       [
         null,
-        64,
-        175,
-        259
+        65,
+        154,
+        238
       ],
       [
         null,
         111,
-        163,
-        208,
-        305
+        162,
+        207,
+        306
       ],
       [
         null,
         94,
-        139,
-        190,
-        302
+        140,
+        191,
+        303
       ],
       [
         null,
         139,
-        236
+        238
       ],
       [
         null,
         94,
-        234
+        235
       ],
       [
         null,
         83,
-        118,
-        241,
+        117,
+        239,
         345
       ],
       [
         null,
         104,
-        226,
-        261,
-        347
+        227,
+        262,
+        348
       ],
       [
         null,
         111,
-        192,
+        190,
         289
       ],
       [
         null,
         94,
-        173,
-        285
+        175,
+        287
       ],
       [
         null,
         79,
         172,
-        216
+        214
       ],
       [
         null,
         39,
         132,
-        216
+        214
       ],
       [
         null,
@@ -25159,17 +25159,17 @@
         null,
         84,
         129,
-        274
+        270
       ],
       [
         null,
         167,
-        268
+        270
       ],
       [
         null,
         101,
-        270
+        271
       ],
       [
         null,
@@ -25181,38 +25181,38 @@
         null,
         44,
         125,
-        244
+        246
       ],
       [
         null,
         104,
-        182,
-        272,
-        324,
-        369,
-        468
+        183,
+        260,
+        311,
+        356,
+        456
       ],
       [
         null,
         95,
-        140,
-        191,
-        283,
-        361,
-        465
+        141,
+        192,
+        267,
+        346,
+        452
       ],
       [
         null,
         65,
         154,
         283,
-        460
+        459
       ],
       [
         null,
         172,
         301,
-        390,
+        389,
         457
       ],
       [
@@ -25220,138 +25220,138 @@
         65,
         154,
         247,
-        408
+        409
       ],
       [
         null,
         157,
-        249,
+        250,
         338,
-        405
+        406
       ],
       [
         null,
         65,
-        193,
-        248,
+        194,
+        247,
         288
       ],
       [
         null,
         39,
-        92,
-        221,
-        289
+        94,
+        223,
+        290
       ],
       [
         null,
         40,
         133,
-        245,
-        374
+        247,
+        376
       ],
       [
         null,
         127,
-        244,
-        336,
-        381
+        239,
+        332,
+        376
       ],
       [
         null,
         40,
         133,
-        273,
-        374
+        274,
+        377
       ],
       [
         null,
         101,
-        241,
-        333,
-        378
+        242,
+        335,
+        379
       ],
       [
         null,
         62,
-        158,
-        204
+        146,
+        192
       ],
       [
         null,
         46,
-        142,
-        205
+        125,
+        192
       ],
       [
         null,
         112,
-        193,
-        289,
+        191,
+        288,
         454,
         518,
-        644,
-        791
+        647,
+        790
       ],
       [
         null,
         141,
         269,
         332,
-        498,
+        497,
         594,
-        673,
-        788
+        675,
+        790
       ],
       [
         null,
         87,
-        210,
+        209,
         269,
         309,
         402,
-        486
+        484
       ],
       [
         null,
         80,
         173,
-        214,
-        273,
+        213,
+        272,
         395,
         485
       ],
       [
         null,
         59,
-        146,
-        249,
-        369,
-        437
+        148,
+        253,
+        354,
+        421
       ],
       [
         null,
         65,
-        187,
-        290,
-        377,
-        438
+        165,
+        270,
+        359,
+        422
       ],
       [
         null,
         66,
-        164,
-        265,
-        456
+        166,
+        269,
+        458
       ],
       [
         null,
         188,
         291,
-        389,
-        457
+        391,
+        461
       ]
     ],
-    "max_episode_steps": 1582
+    "max_episode_steps": 1580
   }
 }

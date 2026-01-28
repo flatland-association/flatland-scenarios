@@ -2416,7 +2416,6 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 if (pathResult && pathResult.initialDepartureDir !== null && pathResult.initialDepartureDir !== undefined) {
                     
                     // A. Record Directions
-                    // We must provide a direction for EVERY cell in the *previous* position list.
                     const flatlandDir = FLATLAND_DIRECTION[pathResult.initialDepartureDir];
                     const previousPosCount = agentPositionsForAgent[agentPositionsForAgent.length - 1].length;
                     
@@ -2432,10 +2431,25 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                         // This ensures the agent targets a specific point and has no outgoing direction.
                         exportCells = [[pathResult.endCell.r, pathResult.endCell.c]];
                     } else {
-                        // INTERMEDIATE STOP: Export ALL station cells.
-                        // This allows the agent to arrive anywhere at this station, 
-                        // and the NEXT iteration's direction broadcast handles the departure from any of them.
-                        exportCells = findStationCells(endStationId).map(c => [c.r, c.c]);
+                        // INTERMEDIATE STOP
+                        
+                        // 1. Get all cells for the station (Default sort: Top-Left to Bottom-Right)
+                        let stationCells = findStationCells(endStationId).map(c => [c.r, c.c]);
+                        
+                        // 2. Determine the direction the train is facing upon arrival
+                        // pathResult.endEntryDir is the side we entered FROM (e.g., 'N').
+                        // The facing direction is the OPPOSITE (e.g., facing 'S').
+                        const entryFrom = pathResult.endEntryDir;
+                        const travelDirStr = OPPOSITE_DIRECTION[entryFrom];
+                        const travelDirInt = FLATLAND_DIRECTION[travelDirStr];
+
+                        // 3. Apply Sorting Logic based on your request
+                        // If traveling South (2) or West (3), reverse the order.
+                        if (travelDirInt === 2 || travelDirInt === 3) {
+                            stationCells.reverse();
+                        }
+                        
+                        exportCells = stationCells;
                     }
 
                     agentPositionsForAgent.push(exportCells);
