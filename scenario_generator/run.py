@@ -1,40 +1,40 @@
 from datetime import datetime
 from pathlib import Path
 
-import pytest
-
+from flatland.callbacks.generate_movie_callbacks import GenerateMovieCallbacks
+from flatland.envs.persistence import RailEnvPersister
 from flatland.evaluators.trajectory_analysis import data_frame_for_trajectories
-from flatland.trajectories.policy_runner import generate_trajectory_from_policy
+from flatland.trajectories.policy_runner import PolicyRunner
+from flatland_baselines.deadlock_avoidance_heuristic.observation.full_env_observation import FullEnvObservation
 from flatland_baselines.deadlock_avoidance_heuristic.policy.deadlock_avoidance_policy import DeadLockAvoidancePolicy
 
 
 class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
-    def __init__(self):
+    def __init__(self, seed: int = None):
         super().__init__(
             count_num_opp_agents_towards_min_free_cell=False,
             use_switches_heuristic=False,
             use_entering_prevention=True,
             use_alternative_at_first_intermediate_and_then_always_first_strategy=True,
-            seed=43,
+            seed=seed,
         )
 
 
-def main(scenario: str, sub_scenario: str, data_dir: str = None, generate_movies: bool = False):
-    data_dir = f"./results_{sub_scenario}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"  #
-    Path(data_dir).mkdir(exist_ok=False)
-    with pytest.raises(SystemExit) as e_info:
-        args = [
-            "--data-dir", data_dir,
-            "--ep-id", sub_scenario,
-            "--env-path", f"./{scenario}/{sub_scenario}.pkl",
-            "--policy-pkg", "scenario_generator.run", "--policy-cls", "DeadlockAvoidanceNoHeuristics",
-            "--obs-builder-pkg", "flatland_baselines.deadlock_avoidance_heuristic.observation.full_env_observation", "--obs-builder-cls", "FullEnvObservation",
+def main(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: int = None):
+    data_dir = Path(f"./results/results_{sub_scenario}_{seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
+    data_dir.mkdir(exist_ok=False, parents=True)
 
-        ]
-        if generate_movies:
-            args += ["--callbacks-pkg", "flatland.callbacks.generate_movie_callbacks", "--callbacks-cls", "GenerateMovieCallbacks"]
-        generate_trajectory_from_policy(args)
-        assert e_info.value.code == 0
+    callbacks = None
+    if generate_movies:
+        callbacks = GenerateMovieCallbacks()
+
+    PolicyRunner.create_from_policy(
+        policy=DeadlockAvoidanceNoHeuristics(seed=seed),
+        data_dir=data_dir,
+        ep_id=sub_scenario,
+        env=RailEnvPersister.load_new(f"./{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation())[0],
+        callbacks=callbacks,
+    )
 
     all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats = data_frame_for_trajectories(
         root_data_dir=Path(data_dir))
@@ -44,11 +44,21 @@ def main(scenario: str, sub_scenario: str, data_dir: str = None, generate_movies
 
 
 if __name__ == '__main__':
-    main(
-        "scenario_1",
-        "scenario_1",
-        # generate_movies=True,
-    )
+    for seed in range(42, 142):
+        main(
+            "scenario_1",
+            "scenario_1",
+            seed=seed
+            # generate_movies=True,
+        )
+
+# "scenario_1",
+# "scenario_1",
+#             count_num_opp_agents_towards_min_free_cell=False,
+#             use_switches_heuristic=False,
+#             use_entering_prevention=True,
+#             use_alternative_at_first_intermediate_and_then_always_first_strategy=True,
+
 
 # seed 42:
 # normalized_reward=0.944669195111673
@@ -59,3 +69,8 @@ if __name__ == '__main__':
 # normalized_reward=0.7407758580324952
 # mean_normalized_reward=0.7407758580324952
 # success_rate=0.7407407407407407
+
+# seed 44:
+# normalized_reward=0.8450063211125158
+# mean_normalized_reward=0.8450063211125158
+# success_rate=0.8703703703703703
