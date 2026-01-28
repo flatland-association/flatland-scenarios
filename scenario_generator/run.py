@@ -11,21 +11,22 @@ from flatland_baselines.deadlock_avoidance_heuristic.policy.deadlock_avoidance_p
 class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
     def __init__(self):
         super().__init__(
-            count_num_opp_agents_towards_min_free_cell=True,
-            use_switches_heuristic=True,
+            count_num_opp_agents_towards_min_free_cell=False,
+            use_switches_heuristic=False,
             use_entering_prevention=True,
             use_alternative_at_first_intermediate_and_then_always_first_strategy=True,
+            seed=43,
         )
 
 
-def main(scenario: str, data_dir: str = None, generate_movies: bool = False):
-    data_dir = f"./results_{scenario}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"  #
+def main(scenario: str, sub_scenario: str, data_dir: str = None, generate_movies: bool = False):
+    data_dir = f"./results_{sub_scenario}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"  #
     Path(data_dir).mkdir(exist_ok=False)
     with pytest.raises(SystemExit) as e_info:
         args = [
             "--data-dir", data_dir,
-            "--ep-id", scenario,
-            "--env-path", f"./{scenario}/{scenario}.pkl",
+            "--ep-id", sub_scenario,
+            "--env-path", f"./{scenario}/{sub_scenario}.pkl",
             "--policy-pkg", "scenario_generator.run", "--policy-cls", "DeadlockAvoidanceNoHeuristics",
             "--obs-builder-pkg", "flatland_baselines.deadlock_avoidance_heuristic.observation.full_env_observation", "--obs-builder-cls", "FullEnvObservation",
 
@@ -44,6 +45,17 @@ def main(scenario: str, data_dir: str = None, generate_movies: bool = False):
 
 if __name__ == '__main__':
     main(
-        "scenario_2",
+        "scenario_1",
+        "scenario_1",
         # generate_movies=True,
     )
+
+# seed 42:
+# normalized_reward=0.944669195111673
+# mean_normalized_reward=0.944669195111673
+# success_rate=1.0
+
+# seed 43:
+# normalized_reward=0.7407758580324952
+# mean_normalized_reward=0.7407758580324952
+# success_rate=0.7407407407407407
