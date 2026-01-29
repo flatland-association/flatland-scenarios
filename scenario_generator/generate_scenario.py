@@ -3,7 +3,7 @@ import copy
 import uuid
 
 # scenarios you can choose from
-implemented_scenarios = ['scenario_1', 'scenario_2']
+implemented_scenarios = ['scenario_1', 'scenario_2', 'scenario_3']
 
 # functions
 import os
@@ -167,6 +167,10 @@ def generate_scenario(scenario_name: str, show_schedule: bool = False):
     # generate the chosen scenario
     if scenario_name == implemented_scenarios[0]: # scenario 1
         data = generate_lines_scenario_1(data)
+    elif scenario_name == implemented_scenarios[1]: # scenario 2
+        data = generate_lines_scenario_2(data)
+    elif scenario_name == implemented_scenarios[2]: # scenario 3
+        data = generate_lines_scenario_3(data)
 
     # export the modified JSON file
     write_json(data, scenario_json)
@@ -235,10 +239,57 @@ def generate_lines_scenario_2(data: dict) -> dict:
     scenario_schedules = []
 
     for name in ['IC 1.1','IC 2.1','IC 3.1','IC 4.1']:
-        scenario_schedules += create_schedules(name=name,initial_shift=0,shift=30,times=20)
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=0,shift=30,times=20)
 
     for name in ['RE 1.1','RE 2.1','RE 3.1','RE 4.1','RE 5.1','RE 6.1']:
-        scenario_schedules += create_schedules(name=name,initial_shift=0,shift=60,times=10)
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=0,shift=60,times=10)
+
+    # write the schadules and flatland line into the data dict
+    data['schedules'] = scenario_schedules
+    data['flatland line'] = flatland_line
+
+    # generate the flatland timetables
+    data['flatland timetable'] = generate_flatland_timetables(scenario_schedules)
+
+    return data
+
+# generate scenario_3
+def generate_lines_scenario_3(data: dict) -> dict:
+    # create the schedules by multiplying each initial schedule
+    # initialize flatland line dictionary
+    flatland_line = initialize_flatland_line()
+
+    scenario_schedules = []
+
+    for name in ['IC 1.1','IC 2.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=0,shift=30,times=20)
+
+    for name in ['IR 1.1','IR 2.1','IR 3.1','IR 4.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=0,shift=30,times=20)
+
+    for name in ['IR 5.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=15,shift=30,times=16)
+
+    for name in ['IR 6.1','IR 7.1','IR 8.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=15,shift=30,times=6)
+
+    for name in ['S 1.1','S 2.1','S 3.1','S 4.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=5,shift=60,times=10)
+
+    for name in ['S 5.1','S 6.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=5,shift=60,times=8)
+
+    for name in ['S 7.1','S 9.1','S 10.1','S 11.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=5,shift=60,times=6)
+
+    for name in ['S 8.1','S 12.1','S 13.1','S 14.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=5,shift=60,times=5)
+
+    for name in ['Cargo 1.1','Cargo 2.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=0,shift=120,times=4)
+
+    for name in ['Cargo 3.1','Cargo 4.1']:
+        scenario_schedules += create_schedules(data=data, line=flatland_line, name=name,initial_shift=60,shift=120,times=2)
 
     # write the schadules and flatland line into the data dict
     data['schedules'] = scenario_schedules
@@ -251,4 +302,4 @@ def generate_lines_scenario_2(data: dict) -> dict:
 
 
 if __name__ == '__main__':
-    generate_scenario('scenario_2', show_schedule=False)
+    generate_scenario('scenario_3', show_schedule=False)
