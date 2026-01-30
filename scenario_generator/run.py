@@ -1,3 +1,4 @@
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -15,13 +16,14 @@ class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
             count_num_opp_agents_towards_min_free_cell=False,
             use_switches_heuristic=False,
             use_entering_prevention=True,
-            use_alternative_at_first_intermediate_and_then_always_first_strategy=True,
+            use_alternative_at_first_intermediate_and_then_always_first_strategy=2,
             drop_next_threshold=20,
+            k_shortest_path_cutoff=100,
             seed=seed,
         )
 
 
-def main(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: int = None):
+def run(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: int = None):
     data_dir = Path(f"./results/results_{sub_scenario}_{seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
     data_dir.mkdir(exist_ok=False, parents=True)
 
@@ -29,6 +31,7 @@ def main(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: 
     if generate_movies:
         callbacks = GenerateMovieCallbacks()
 
+    start_time = time.time()
     PolicyRunner.create_from_policy(
         policy=DeadlockAvoidanceNoHeuristics(seed=seed),
         data_dir=data_dir,
@@ -36,7 +39,8 @@ def main(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: 
         env=RailEnvPersister.load_new(f"./{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation())[0],
         callbacks=callbacks,
     )
-
+    end_time = time.time()
+    print(f"Took {end_time - start_time:.2f}s")
     all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats = data_frame_for_trajectories(
         root_data_dir=Path(data_dir))
     print(f"normalized_reward={all_trains_arrived["normalized_reward"].sum()}")
@@ -44,36 +48,21 @@ def main(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: 
     print(f"success_rate={all_trains_arrived["success_rate"].mean()}")
 
 
-if __name__ == '__main__':
-    NUM = 1
-    START = 48
-    for seed in range(START, START + NUM):
-        main(
+def main(num=10, start_seed=42):
+    for seed in range(start_seed, start_seed + num):
+        run(
             "scenario_1",
             "scenario_1",
             seed=seed
             # generate_movies=True,
         )
 
-# "scenario_1",
-# "scenario_1",
-#             count_num_opp_agents_towards_min_free_cell=False,
-#             use_switches_heuristic=False,
-#             use_entering_prevention=True,
-#             use_alternative_at_first_intermediate_and_then_always_first_strategy=True,
 
-
-# seed 42:
-# normalized_reward=0.944669195111673
-# mean_normalized_reward=0.944669195111673
-# success_rate=1.0
-
-# seed 43:
-# normalized_reward=0.7407758580324952
-# mean_normalized_reward=0.7407758580324952
-# success_rate=0.7407407407407407
-
-# seed 44:
-# normalized_reward=0.8450063211125158
-# mean_normalized_reward=0.8450063211125158
-# success_rate=0.8703703703703703
+if __name__ == '__main__':
+    # cProfile.run('main()', sort='cumtime', filename="run.hprof")
+    NUM = 10
+    start_time = time.time()
+    main(num=NUM)
+    end_time = time.time()
+    total = end_time - start_time
+    print(f"Took {total :.2f}s for {NUM}")
