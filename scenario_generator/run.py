@@ -44,7 +44,9 @@ def main(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: 
 
 
 if __name__ == '__main__':
-    for seed in range(42, 142):
+    NUM = 1
+    START = 48
+    for seed in range(START, START + NUM):
         main(
             "scenario_1",
             "scenario_1",
