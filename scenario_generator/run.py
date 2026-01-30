@@ -16,6 +16,7 @@ class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
             use_switches_heuristic=False,
             use_entering_prevention=True,
             use_alternative_at_first_intermediate_and_then_always_first_strategy=True,
+            drop_next_threshold=20,
             seed=seed,
         )
 
