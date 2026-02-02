@@ -1,3 +1,4 @@
+import cProfile
 import time
 from datetime import datetime
 from pathlib import Path
@@ -18,7 +19,7 @@ class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
             use_entering_prevention=True,
             use_alternative_at_first_intermediate_and_then_always_first_strategy=2,
             drop_next_threshold=20,
-            k_shortest_path_cutoff=100,
+            k_shortest_path_cutoff=150,
             seed=seed,
         )
 
@@ -48,21 +49,24 @@ def run(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: i
     print(f"success_rate={all_trains_arrived["success_rate"].mean()}")
 
 
-def main(num=10, start_seed=42):
+def main(num, start_seed):
     for seed in range(start_seed, start_seed + num):
         run(
             "scenario_1",
-            "scenario_1",
+            "scenario_1_generated",
             seed=seed
             # generate_movies=True,
         )
 
 
 if __name__ == '__main__':
-    # cProfile.run('main()', sort='cumtime', filename="run.hprof")
-    NUM = 10
+    profiling = False
+    NUM = 1
     start_time = time.time()
-    main(num=NUM)
+    if profiling:
+        cProfile.run(f'main(num={NUM},start_seed=48)', sort='cumtime', filename="run.hprof")
+    else:
+        main(num=NUM, start_seed=48)
     end_time = time.time()
     total = end_time - start_time
     print(f"Took {total :.2f}s for {NUM}")
