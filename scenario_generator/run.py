@@ -19,8 +19,9 @@ class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
             use_entering_prevention=True,
             use_alternative_at_first_intermediate_and_then_always_first_strategy=2,
             drop_next_threshold=20,
-            k_shortest_path_cutoff=150,
+            k_shortest_path_cutoff=200,
             seed=seed,
+            verbose=True,
         )
 
 
@@ -49,12 +50,12 @@ def run(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: i
     print(f"success_rate={all_trains_arrived["success_rate"].mean()}")
 
 
-def main(num, start_seed):
+def main(num, start_seed, scenario, sub_scenario):
     for seed in range(start_seed, start_seed + num):
         run(
-            "scenario_1",
-            "scenario_1_generated",
-            seed=seed
+            scenario,
+            sub_scenario,
+            seed=seed,
             # generate_movies=True,
         )
 
@@ -63,10 +64,18 @@ if __name__ == '__main__':
     profiling = False
     NUM = 1
     start_time = time.time()
-    if profiling:
-        cProfile.run(f'main(num={NUM},start_seed=48)', sort='cumtime', filename="run.hprof")
-    else:
-        main(num=NUM, start_seed=48)
+    for scenario, sub_scenario in [
+        ("scenario_2", "scenario_2"),
+        ("scenario_2", "scenario_2_generated"),
+        # ("scenario_3", "scenario_3"),
+        # ("scenario_3", "scenario_3_generated"),
+        # ("scenario_1", "scenario_1"),
+        # ("scenario_1", "scenario_1_generated"),
+    ]:
+        if profiling:
+            cProfile.run(f'main(num={NUM},start_seed=48, scenario="{scenario}", sub_scenario="{sub_scenario}")', sort='cumtime', filename="run.hprof")
+        else:
+            main(num=NUM, start_seed=48, scenario=scenario, sub_scenario=sub_scenario)
     end_time = time.time()
     total = end_time - start_time
     print(f"Took {total :.2f}s for {NUM}")
