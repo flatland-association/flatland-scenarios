@@ -1,2 +1,2 @@
-episode_id	env_time	success_rate
-Test_01_Level_1	171	1.0
+episode_id	env_time	success_rate	mean_normalized_reward
+Test_01_Level_1	171	1.0	1.0

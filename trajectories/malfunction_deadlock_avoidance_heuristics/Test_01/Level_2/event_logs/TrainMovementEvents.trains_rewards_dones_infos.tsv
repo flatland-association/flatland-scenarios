@@ -877,7 +877,7 @@ Test_01_Level_2	125	6	0.0	{'action_required': False, 'malfunction': 0, 'speed': 
 Test_01_Level_2	126	0	0.0	{'action_required': False, 'malfunction': 12, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_2	126	1	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_2	126	2	0.0	{'action_required': True, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.MOVING: 3>}	False
-Test_01_Level_2	126	3	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
+Test_01_Level_2	126	3	-8.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_2	126	4	0.0	{'action_required': True, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.MOVING: 3>}	False
 Test_01_Level_2	126	5	0.0	{'action_required': True, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.MOVING: 3>}	False
 Test_01_Level_2	126	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.MOVING: 3>}	False
@@ -1143,7 +1143,7 @@ Test_01_Level_2	163	6	0.0	{'action_required': False, 'malfunction': 0, 'speed': 
 Test_01_Level_2	164	0	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_2	164	1	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_2	164	2	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
-Test_01_Level_2	164	3	-8.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
+Test_01_Level_2	164	3	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_2	164	4	-52.0	{'action_required': False, 'malfunction': 0, 'speed': 0.5, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_2	164	5	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
 Test_01_Level_2	164	6	0.0	{'action_required': False, 'malfunction': 0, 'speed': 0.25, 'state': <TrainState.DONE: 6>}	True
