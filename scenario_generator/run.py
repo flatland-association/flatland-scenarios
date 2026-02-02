@@ -12,20 +12,24 @@ from flatland_baselines.deadlock_avoidance_heuristic.policy.deadlock_avoidance_p
 
 
 class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
-    def __init__(self, seed: int = None):
+    def __init__(self,
+                 use_alternative_at_first_intermediate_and_then_always_first_strategy=2,
+                 seed: int = None,
+                 ):
         super().__init__(
             count_num_opp_agents_towards_min_free_cell=False,
             use_switches_heuristic=False,
             use_entering_prevention=True,
-            use_alternative_at_first_intermediate_and_then_always_first_strategy=2,
+            use_alternative_at_first_intermediate_and_then_always_first_strategy=use_alternative_at_first_intermediate_and_then_always_first_strategy,
             drop_next_threshold=20,
-            k_shortest_path_cutoff=200,
+            k_shortest_path_cutoff=250,
             seed=seed,
-            verbose=True,
+            # verbose=False,
         )
 
 
-def run(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: int = None):
+def run(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: int = None,
+        use_alternative_at_first_intermediate_and_then_always_first_strategy: int = 2):
     data_dir = Path(f"./results/results_{sub_scenario}_{seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
     data_dir.mkdir(exist_ok=False, parents=True)
 
@@ -35,7 +39,10 @@ def run(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: i
 
     start_time = time.time()
     PolicyRunner.create_from_policy(
-        policy=DeadlockAvoidanceNoHeuristics(seed=seed),
+        policy=DeadlockAvoidanceNoHeuristics(
+            seed=seed,
+            use_alternative_at_first_intermediate_and_then_always_first_strategy=use_alternative_at_first_intermediate_and_then_always_first_strategy
+        ),
         data_dir=data_dir,
         ep_id=sub_scenario,
         env=RailEnvPersister.load_new(f"./{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation())[0],
@@ -48,6 +55,7 @@ def run(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: i
     print(f"normalized_reward={all_trains_arrived["normalized_reward"].sum()}")
     print(f"mean_normalized_reward={all_trains_arrived["normalized_reward"].mean()}")
     print(f"success_rate={all_trains_arrived["success_rate"].mean()}")
+    return all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats
 
 
 def main(num, start_seed, scenario, sub_scenario):
@@ -62,12 +70,12 @@ def main(num, start_seed, scenario, sub_scenario):
 
 if __name__ == '__main__':
     profiling = False
-    NUM = 1
+    NUM = 10
     start_time = time.time()
     for scenario, sub_scenario in [
-        ("scenario_2", "scenario_2"),
-        ("scenario_2", "scenario_2_generated"),
-        # ("scenario_3", "scenario_3"),
+        # ("scenario_2", "scenario_2"),
+        # ("scenario_2", "scenario_2_generated"),
+        ("scenario_3", "scenario_3"),
         # ("scenario_3", "scenario_3_generated"),
         # ("scenario_1", "scenario_1"),
         # ("scenario_1", "scenario_1_generated"),
