@@ -11,9 +11,9 @@ if __name__ == '__main__':
         # TODO disabling alternatives yields better results in scenario_3_generated, analyse in detail, e.g. does the penalty in the normalized reward come from skipping intermediate stops:
         # ("scenario_3", "scenario_3_generated", 48, None, 0.810678, 0.913534),
         ("scenario_3", "scenario_3_generated", 48, 2, 0.6950677101473028, 0.3233082706766917),
-        ("scenario_1", "scenario_1", 48, 2, 0.958906, 1.0),
-        # TODO analyse scenario_1_generated: what happens here?
-        ("scenario_1", "scenario_1_generated", 48, 2, 0.818131696969697, 0.21),  # Took 798.57s
+        # ("scenario_1", "scenario_1", 48, 2, 0.958906, 1.0),
+        # # TODO analyse scenario_1_generated: what happens here?
+        # ("scenario_1", "scenario_1_generated", 48, 2, 0.818131696969697, 0.21),  # Took 798.57s
     ]:
         all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats = run(
             seed=seed, scenario=scenario,
