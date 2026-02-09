@@ -6,6 +6,7 @@ from pathlib import Path
 from flatland.callbacks.callbacks import make_multi_callbacks
 from flatland.callbacks.generate_movie_callbacks import GenerateMovieCallbacks
 from flatland.envs.persistence import RailEnvPersister
+from flatland.envs.rewards import BaseDefaultRewards
 from flatland.evaluators.trajectory_analysis import data_frame_for_trajectories
 from flatland.trajectories.policy_runner import PolicyRunner
 from flatland_baselines.deadlock_avoidance_heuristic.observation.full_env_observation import FullEnvObservation
@@ -58,7 +59,7 @@ def run(scenario: str,
         policy=policy,
         data_dir=data_dir,
         ep_id=sub_scenario,
-        env=RailEnvPersister.load_new(f"./{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation())[0],
+        env=RailEnvPersister.load_new(f"./{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation(), rewards=BaseDefaultRewards())[0],
         callbacks=callbacks,
     )
     end_time = time.time()
@@ -77,21 +78,22 @@ def main(num, start_seed, scenario, sub_scenario):
             scenario,
             sub_scenario,
             seed=seed,
-            # generate_movies=True,
+            generate_movies=True,
+            audit=True,
         )
 
 
 if __name__ == '__main__':
     profiling = False
-    NUM = 10
+
     start_time = time.time()
-    for scenario, sub_scenario in [
-        # ("scenario_2", "scenario_2"),
-        # ("scenario_2", "scenario_2_generated"),
-        ("scenario_3", "scenario_3"),
-        # ("scenario_3", "scenario_3_generated"),
-        # ("scenario_1", "scenario_1"),
-        # ("scenario_1", "scenario_1_generated"),
+    for scenario, sub_scenario, NUM in [
+        ("scenario_2", "scenario_2_initial", 10),
+        ("scenario_2", "scenario_2_generated", 10),
+        ("scenario_3", "scenario_3_initial", 10),
+        ("scenario_3", "scenario_3_generated", 10),
+        ("scenario_1", "scenario_1_initial", 1),
+        ("scenario_1", "scenario_1_generated", 1),
     ]:
         if profiling:
             cProfile.run(f'main(num={NUM},start_seed=48, scenario="{scenario}", sub_scenario="{sub_scenario}")', sort='cumtime', filename="run.hprof")
