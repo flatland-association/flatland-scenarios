@@ -33,8 +33,8 @@ def timetable_generator_from_timetable(timetable):
     return timetable_generator
 
 
-def main(generated_json, scenario_pkl):
-    with open(generated_json, 'r') as f:
+def main(scenario_json, scenario_pkl):
+    with open(scenario_json, 'r') as f:
         data = json.load(f)
 
     width = data['gridDimensions']['cols']
@@ -78,5 +78,9 @@ def main(generated_json, scenario_pkl):
 
 
 if __name__ == '__main__':
-    main(generated_json='scenario_2_generated.json', scenario_pkl="scenario_2_generated.pkl")
-    main(generated_json='scenario_2.json', scenario_pkl="scenario_2.pkl")
+    main(scenario_json='scenario_1/scenario_1_generated.json', scenario_pkl='scenario_1/scenario_1_generated.pkl')
+    main(scenario_json='scenario_1/scenario_1_initial.json', scenario_pkl='scenario_1/scenario_1_initial.pkl')
+    main(scenario_json='scenario_2/scenario_2_generated.json', scenario_pkl='scenario_2/scenario_2_generated.pkl')
+    main(scenario_json='scenario_2/scenario_2_initial.json', scenario_pkl='scenario_2/scenario_2_initial.pkl')
+    main(scenario_json='scenario_3/scenario_3_generated.json', scenario_pkl='scenario_3/scenario_3_generated.pkl')
+    main(scenario_json='scenario_3/scenario_3_initial.json', scenario_pkl='scenario_3/scenario_3_initial.pkl')
