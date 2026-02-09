@@ -3,11 +3,14 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+from flatland.callbacks.callbacks import make_multi_callbacks
 from flatland.callbacks.generate_movie_callbacks import GenerateMovieCallbacks
 from flatland.envs.persistence import RailEnvPersister
 from flatland.evaluators.trajectory_analysis import data_frame_for_trajectories
 from flatland.trajectories.policy_runner import PolicyRunner
 from flatland_baselines.deadlock_avoidance_heuristic.observation.full_env_observation import FullEnvObservation
+from flatland_baselines.deadlock_avoidance_heuristic.policy.TimingCallbacks import TimingCallbacks
+from flatland_baselines.deadlock_avoidance_heuristic.policy.deadlock_avoidance_debug_callbacks import DeadlockAvoidanceDebugCallbacks
 from flatland_baselines.deadlock_avoidance_heuristic.policy.deadlock_avoidance_policy import DeadLockAvoidancePolicy
 
 
@@ -15,6 +18,7 @@ class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
     def __init__(self,
                  use_alternative_at_first_intermediate_and_then_always_first_strategy=2,
                  seed: int = None,
+                 audit: bool = False,
                  ):
         super().__init__(
             count_num_opp_agents_towards_min_free_cell=False,
@@ -24,25 +28,34 @@ class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
             drop_next_threshold=20,
             k_shortest_path_cutoff=250,
             seed=seed,
-            # verbose=False,
+            audit=audit,
         )
 
 
-def run(scenario: str, sub_scenario: str, generate_movies: bool = False, seed: int = None,
-        use_alternative_at_first_intermediate_and_then_always_first_strategy: int = 2):
+def run(scenario: str,
+        sub_scenario: str,
+        generate_movies: bool = False,
+        seed: int = None,
+        use_alternative_at_first_intermediate_and_then_always_first_strategy: int = 2,
+        audit: bool = False
+        ):
     data_dir = Path(f"./results/results_{sub_scenario}_{seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
     data_dir.mkdir(exist_ok=False, parents=True)
 
-    callbacks = None
+    policy = DeadlockAvoidanceNoHeuristics(
+        seed=seed,
+        use_alternative_at_first_intermediate_and_then_always_first_strategy=use_alternative_at_first_intermediate_and_then_always_first_strategy,
+        audit=audit,
+    )
+    callbacks = [DeadlockAvoidanceDebugCallbacks(policy), TimingCallbacks()]
     if generate_movies:
-        callbacks = GenerateMovieCallbacks()
+        callbacks = callbacks.append(GenerateMovieCallbacks())
+    callbacks = make_multi_callbacks(*callbacks)
 
     start_time = time.time()
+
     PolicyRunner.create_from_policy(
-        policy=DeadlockAvoidanceNoHeuristics(
-            seed=seed,
-            use_alternative_at_first_intermediate_and_then_always_first_strategy=use_alternative_at_first_intermediate_and_then_always_first_strategy
-        ),
+        policy=policy,
         data_dir=data_dir,
         ep_id=sub_scenario,
         env=RailEnvPersister.load_new(f"./{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation())[0],
