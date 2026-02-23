@@ -15,7 +15,7 @@ from flatland_baselines.deadlock_avoidance_heuristic.policy.deadlock_avoidance_d
 from flatland_baselines.deadlock_avoidance_heuristic.policy.deadlock_avoidance_policy import DeadLockAvoidancePolicy
 
 
-class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
+class DeadlockAvoidanceHeuristics(DeadLockAvoidancePolicy):
     def __init__(self,
                  use_alternative_at_first_intermediate_and_then_always_first_strategy=2,
                  seed: int = None,
@@ -27,7 +27,7 @@ class DeadlockAvoidanceNoHeuristics(DeadLockAvoidancePolicy):
             use_entering_prevention=True,
             use_alternative_at_first_intermediate_and_then_always_first_strategy=use_alternative_at_first_intermediate_and_then_always_first_strategy,
             drop_next_threshold=20,
-            k_shortest_path_cutoff=250,
+            k_shortest_path_cutoff=450,
             seed=seed,
             audit=audit,
         )
@@ -38,19 +38,20 @@ def run(scenario: str,
         generate_movies: bool = False,
         seed: int = None,
         use_alternative_at_first_intermediate_and_then_always_first_strategy: int = 2,
-        audit: bool = False
+        audit: bool = False,
+        base_dir: str = None,
         ):
     data_dir = Path(f"./results/results_{sub_scenario}_{seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
     data_dir.mkdir(exist_ok=False, parents=True)
 
-    policy = DeadlockAvoidanceNoHeuristics(
+    policy = DeadlockAvoidanceHeuristics(
         seed=seed,
         use_alternative_at_first_intermediate_and_then_always_first_strategy=use_alternative_at_first_intermediate_and_then_always_first_strategy,
         audit=audit,
     )
     callbacks = [DeadlockAvoidanceDebugCallbacks(policy), TimingCallbacks()]
     if generate_movies:
-        callbacks = callbacks.append(GenerateMovieCallbacks())
+        callbacks.append(GenerateMovieCallbacks())
     callbacks = make_multi_callbacks(*callbacks)
 
     start_time = time.time()
@@ -59,7 +60,8 @@ def run(scenario: str,
         policy=policy,
         data_dir=data_dir,
         ep_id=sub_scenario,
-        env=RailEnvPersister.load_new(f"./{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation(), rewards=BaseDefaultRewards())[0],
+        env=RailEnvPersister.load_new(f"{base_dir if base_dir is not None else "."}/{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation(),
+                                      rewards=BaseDefaultRewards())[0],
         callbacks=callbacks,
     )
     end_time = time.time()
@@ -72,21 +74,27 @@ def run(scenario: str,
     return all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats
 
 
-def main(num, start_seed, scenario, sub_scenario):
+def main(num, start_seed, scenario, sub_scenario, base_dir=None, generate_movies=False):
+    start_time = time.time()
+    ress = []
     for seed in range(start_seed, start_seed + num):
-        run(
+        ress.append(run(
             scenario,
             sub_scenario,
             seed=seed,
-            generate_movies=True,
+            generate_movies=generate_movies,
             audit=True,
-        )
+            base_dir=base_dir,
+        ))
+    end_time = time.time()
+    total = end_time - start_time
+    print(f"Took {total :.2f}s for {num}")
+    return ress
 
 
 if __name__ == '__main__':
     profiling = False
 
-    start_time = time.time()
     for scenario, sub_scenario, NUM in [
         ("scenario_2", "scenario_2_initial", 10),
         ("scenario_2", "scenario_2_generated", 10),
@@ -99,6 +107,3 @@ if __name__ == '__main__':
             cProfile.run(f'main(num={NUM},start_seed=48, scenario="{scenario}", sub_scenario="{sub_scenario}")', sort='cumtime', filename="run.hprof")
         else:
             main(num=NUM, start_seed=48, scenario=scenario, sub_scenario=sub_scenario)
-    end_time = time.time()
-    total = end_time - start_time
-    print(f"Took {total :.2f}s for {NUM}")
