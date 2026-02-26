@@ -2634,8 +2634,8 @@ def timetable_generator_from_timetable(timetable):
     return timetable_generator
 
 
-def main(generated_json, scenario_pkl):
-    with open(generated_json, 'r') as f:
+def main(scenario_json, scenario_pkl):
+    with open(scenario_json, 'r') as f:
         data = json.load(f)
 
     width = data['gridDimensions']['cols']
@@ -2679,8 +2679,8 @@ def main(generated_json, scenario_pkl):
 
 
 if __name__ == '__main__':
-    main(generated_json='scenario_1_generated.json', scenario_pkl="scenario_1_generated.pkl")
-    main(generated_json='scenario_1.json', scenario_pkl="scenario_1.pkl")
+    main(scenario_json='scenario_1_generated.json', scenario_pkl='scenario_1/scenario_1_generated.pkl')
+    main(scenario_json='scenario_1_initial.json', scenario_pkl='scenario_1/scenario_1_initial.pkl')
 
 `;
         const blob = new Blob([pythonScriptContent.trim()], { type: 'text/x-python' });
@@ -2766,7 +2766,7 @@ if __name__ == '__main__':
         scheduleLineSelect.addEventListener('change', () => populateScheduleStopsTable());
         scheduleTrainClassSelect.addEventListener('change', () => recalculateFullTimetable());
         scheduleTravelFactorInput.addEventListener('input', () => recalculateFullTimetable());
-        scheduleDwellTimeInput.addEventListener('input', () => populateScheduleStopsTable()); // NEW: Dwell time input listener now re-populates table to update suggested inputs
+        scheduleDwellTimeInput.addEventListener('input', () => recalculateFullTimetable());
 
         // Trains Tab Listeners
         newTrainButton.addEventListener('click', () => showTrainEditor());
