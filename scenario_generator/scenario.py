@@ -195,7 +195,7 @@ class ScenarioBuilder:
             2 * latest_arrivals[-1],
         )
 
-    def add_schedules_from_dict(self, initial_schedule: list[dict], schedule_dict: dict):
+    def add_schedules_from_dict(self, initial_schedule: list[dict], schedule_dict: dict) -> "ScenarioBuilder":
         for s in initial_schedule:
             name = s['name']
             key = name.split(' ')[0]
@@ -205,3 +205,4 @@ class ScenarioBuilder:
             for i in range(d.get('times', 1)):
                 new_name = get_new_name(name, i)
                 self.add_schedule(name, d.get('initial shift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travel factor', 1))
+        return self

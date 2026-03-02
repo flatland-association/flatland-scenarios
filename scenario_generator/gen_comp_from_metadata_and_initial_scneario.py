@@ -36,16 +36,8 @@ def get_scenario_schedule_dict(config: dict, level: str, scene: str) -> dict:
     return dict_scenario_schedule
 
 
-def stretch_and_fold_from_initial(scenario: Scenario, level: str, metadata: dict, scene: str) -> Scenario:
-    builder = ScenarioBuilder(scenario)
-    scenario_initial_schedules = get_scene_schedules(scenario, scene)
-    scenario_dict = get_scenario_schedule_dict(metadata, level, scene)
-    builder.add_schedules_from_dict(scenario_initial_schedules, scenario_dict)
-    return builder.build()
-
-
 def main(initial_scenario_file_name: str, metadata_file_name: str, levels: list[str] = None, scenes: list[str] = None, create_pkl: bool = False):
-    scenario = Scenario.load(initial_scenario_file_name)
+    initial_scenario = Scenario.load(initial_scenario_file_name)
     metadata = load_json(metadata_file_name)
 
     if levels is None:
@@ -58,7 +50,9 @@ def main(initial_scenario_file_name: str, metadata_file_name: str, levels: list[
 
         # nomenclature: scene = region
         for scene in scenes:
-            scenario = stretch_and_fold_from_initial(scenario, level, metadata, scene)
+            schedule_initial_scenario = get_scene_schedules(initial_scenario, scene)
+            stretch_and_fold_config_from_metadata = get_scenario_schedule_dict(metadata, level, scene)
+            scenario = ScenarioBuilder(initial_scenario).add_schedules_from_dict(schedule_initial_scenario, stretch_and_fold_config_from_metadata).build()
             scenario.save(name=f'{level}_{scene}', folder=f'{level}', create_pkl=create_pkl)
 
 
