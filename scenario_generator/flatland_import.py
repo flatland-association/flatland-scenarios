@@ -1,5 +1,6 @@
 import json
 import numpy as np
+import re
 
 from flatland.envs.grid.rail_env_grid import RailEnvTransitions
 from flatland.envs.persistence import RailEnvPersister
@@ -33,8 +34,11 @@ def timetable_generator_from_timetable(timetable):
     return timetable_generator
 
 
-def main(scenario_json, scenario_pkl):
-    with open(scenario_json, 'r') as f:
+def main(scenario_json, scenario_pkl, folder=None):
+    json_file_path = f'{folder}/{scenario_json}' if folder is not None else scenario_json
+    pkl_file_path = f'{folder}/{scenario_pkl}' if folder is not None else scenario_pkl
+
+    with open(json_file_path, 'r') as f:
         data = json.load(f)
 
     width = data['gridDimensions']['cols']
@@ -74,13 +78,8 @@ def main(scenario_json, scenario_pkl):
 
     env.reset()
 
-    RailEnvPersister.save(env, scenario_pkl)
+    RailEnvPersister.save(env, pkl_file_path)
 
 
 if __name__ == '__main__':
-    main(scenario_json='scenario_1/scenario_1_generated.json', scenario_pkl='scenario_1/scenario_1_generated.pkl')
-    main(scenario_json='scenario_1/scenario_1_initial.json', scenario_pkl='scenario_1/scenario_1_initial.pkl')
-    main(scenario_json='scenario_2/scenario_2_generated.json', scenario_pkl='scenario_2/scenario_2_generated.pkl')
-    main(scenario_json='scenario_2/scenario_2_initial.json', scenario_pkl='scenario_2/scenario_2_initial.pkl')
-    main(scenario_json='scenario_3/scenario_3_generated.json', scenario_pkl='scenario_3/scenario_3_generated.pkl')
-    main(scenario_json='scenario_3/scenario_3_initial.json', scenario_pkl='scenario_3/scenario_3_initial.pkl')
+    main(scenario_json='level_0_scene_1.json', scenario_pkl='level_0_scene_1.pkl', folder='level_0')
