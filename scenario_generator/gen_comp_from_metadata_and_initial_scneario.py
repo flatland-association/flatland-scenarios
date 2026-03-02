@@ -2,7 +2,7 @@
 This file creates all scenes used in the Flatland competition.
 There are 5 regions (N,E,S,W,ALL), called 'scenes' (1,2,3,4,5), with W (4) being the combination of N (1) and S (3).
 """
-from scenario_generator.scenario import Scenario
+from scenario_generator.scenario import Scenario, ScenarioBuilder
 from scenario_generator.utils import load_json
 
 
@@ -37,10 +37,11 @@ def get_scenario_schedule_dict(config: dict, level: str, scene: str) -> dict:
 
 
 def stretch_and_fold_from_initial(scenario: Scenario, level: str, metadata: dict, scene: str) -> Scenario:
+    builder = ScenarioBuilder(scenario)
     scenario_initial_schedules = get_scene_schedules(scenario, scene)
     scenario_dict = get_scenario_schedule_dict(metadata, level, scene)
-    scenario.add_schedules_from_dict(scenario_initial_schedules, scenario_dict)
-    return scenario
+    builder.add_schedules_from_dict(scenario_initial_schedules, scenario_dict)
+    return builder.build()
 
 
 def main(initial_scenario_file_name: str, metadata_file_name: str, levels: list[str] = None, scenes: list[str] = None, create_pkl: bool = False):
