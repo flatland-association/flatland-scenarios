@@ -1,0 +1,53 @@
+{
+  "level_0": {
+    "defaults": {
+      "schedules": {
+        "IC": {
+          "initial shift": 0,
+          "periodicity": 0,
+          "times": 1,
+          "travel factor": 1
+        },
+        "RE": {
+          "initial shift": 0,
+          "periodicity": 0,
+          "times": 1,
+          "travel factor": 1
+        },
+        "S": {
+          "initial shift": 0,
+          "periodicity": 0,
+          "times": 1,
+          "travel factor": 1
+        },
+        "C": {
+          "initial shift": 0,
+          "periodicity": 0,
+          "times": 1,
+          "travel factor": 1
+        }
+      },
+      "malfunctions": {}
+    },
+    "scene_1": {
+      "schedules": {},
+      "malfunctions": {}
+    },
+    "scene_2": {
+      "schedules": {},
+      "malfunctions": {}
+    },
+    "scene_3": {
+      "schedules": {},
+      "malfunctions": {}
+    },
+    "scene_4": {
+      "schedules": {},
+      "malfunctions": {}
+    },
+    "scene_5": {
+      "schedules": {},
+      "malfunctions": {}
+    }
+  }
+}
