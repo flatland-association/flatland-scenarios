@@ -88,24 +88,25 @@ class Scenario:
         observations, info = env.reset()
         return env, observations, info
 
-    def save(self, name: str, folder: str = None, create_pkl: bool = False):
+    def save(self, name: str, folder: Path = None, create_pkl: bool = False):
         """
         Save in scenario generator format and optionally pkl.
         """
         data = self.data
 
-        file_path = Path(name).with_suffix('.json')
+        if folder is None:
+            folder = Path('.')
 
-        if folder:
-            file_path = Path(folder) / file_path
-            file_path.parent.mkdir(parents=False, exist_ok=True)
+        file_path = Path(name).with_suffix('.json')
+        file_path = folder / file_path
+        file_path.parent.mkdir(parents=False, exist_ok=True)
 
         file_path.write_text(json.dumps(data, indent=2))
 
         if create_pkl:
             scenario_pkl = f'{name}.pkl'
             env, _, _ = self.to_rail_env()
-            RailEnvPersister.save(env, Path(folder) / scenario_pkl)
+            RailEnvPersister.save(env, folder / scenario_pkl)
 
 
 class ScenarioBuilder:

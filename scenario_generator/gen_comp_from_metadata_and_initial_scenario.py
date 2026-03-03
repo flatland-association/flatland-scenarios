@@ -2,6 +2,8 @@
 This file creates all scenes used in the Flatland competition.
 There are 5 regions (N,E,S,W,ALL), called 'scenes' (1,2,3,4,5), with W (4) being the combination of N (1) and S (3).
 """
+from pathlib import Path
+
 from scenario_generator.scenario import Scenario, ScenarioBuilder
 from scenario_generator.utils import load_json
 
@@ -36,9 +38,13 @@ def display_services_for_scene(initial_scenario_file_name: str) -> dict:
         print([n["name"] for n in get_scene_schedules(initial_scenario, region)])
 
 
-def main(initial_scenario_file_name: str, metadata_file_name: str, levels: list[str] = None, scenarios: list[str] = None, create_pkl: bool = False):
+def gen_comp_from_metadata_and_initial_scenario(initial_scenario_file_name: str, metadata_file_name: str, levels: list[str] = None, scenarios: list[str] = None,
+                                                create_pkl: bool = False, output_folder: Path = None):
     initial_scenario = Scenario.load(initial_scenario_file_name)
     metadata = load_json(metadata_file_name)
+
+    if output_folder is None:
+        output_folder = Path(".")
 
     for level in metadata["levels"]:
         level_name = level["name"]
@@ -53,14 +59,14 @@ def main(initial_scenario_file_name: str, metadata_file_name: str, levels: list[
             # merge defaults with scenario-specific specs
             schedule_specs = {**level["defaults"]["scheduleSpecs"], **scenario["scheduleSpecs"]}
             scenario = ScenarioBuilder(initial_scenario).add_schedules_according_to_specs(schedules_initial_scenario, schedule_specs).build()
-            scenario.save(name=f'{level_name}_{scenario_name_}', folder=f'{level_name}', create_pkl=create_pkl)
+            scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
 
 
 if __name__ == '__main__':
     display_services_for_scene('scene_sample_initial.json')
     display_services_for_scene('scene_all_initial.json')
     # main(scenario_name='scene_all_initial', config_file='config_template', create_pkl=True)
-    main(
+    gen_comp_from_metadata_and_initial_scenario(
         initial_scenario_file_name='scene_all_initial.json',
         metadata_file_name='metadata_template.json',
         levels=['level_0'],
