@@ -14,7 +14,7 @@ from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
 from flatland.envs.rail_trainrun_data_structures import Waypoint
 from flatland.envs.timetable_utils import Line, Timetable
 from scenario_generator.flatland_generators import rail_generator_from_grid_map, line_generator_from_line, timetable_generator_from_timetable
-from scenario_generator.utils import load_json, get_new_name
+from scenario_generator.utils import load_json
 
 
 class Scenario:
@@ -195,14 +195,22 @@ class ScenarioBuilder:
             2 * latest_arrivals[-1],
         )
 
-    def add_schedules_from_dict(self, initial_schedule: list[dict], schedule_dict: dict) -> "ScenarioBuilder":
+    # get consecutive line names by numbering
+    @staticmethod
+    def _get_new_name(name: str, i: int) -> str:
+        prefix, suffix = name.rsplit('.', 1)
+        new_name = f'{prefix}.{int(suffix) + i}'
+        return new_name
+
+    def add_schedules_according_to_specs(self, initial_schedule: list[dict], schedule_specs: dict) -> "ScenarioBuilder":
         for s in initial_schedule:
             name = s['name']
-            key = name.split(' ')[0]
-            d = schedule_dict.get(key, None)
+            # TODO make not dependent on naming convention
+            schedule_spec = name.split(' ')[0]
+            d = schedule_specs.get(schedule_spec, None)
             if d is None:
                 continue
             for i in range(d.get('times', 1)):
-                new_name = get_new_name(name, i)
+                new_name = self._get_new_name(name, i)
                 self.add_schedule(name, d.get('initial shift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travel factor', 1))
         return self
