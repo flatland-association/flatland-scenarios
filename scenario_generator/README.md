@@ -1,6 +1,8 @@
 # Scenario generator
 
-This tool helps you to create Flatland environments and generate customized scenarios.
+This is a tool to help you create Flatland environments and generate customized scenarios.
+
+Scenarios 1-3 are added as examples. They were used as playground examples to test the drawing tool and the [deadlock avoidance heuristic](https://github.com/flatland-association/flatland-baselines/tree/main/flatland_baselines/deadlock_avoidance_heuristic). 
 
 ## Drawing Tool
 
