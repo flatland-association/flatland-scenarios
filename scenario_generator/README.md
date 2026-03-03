@@ -27,6 +27,7 @@ classDiagram
   }
   metadata "1" --> "1..*" level
   level "1" --> "1..*" scenario
+  scenario "1" --> "1..*" Service
   class ScheduleSpecs {
     ScheduleSpec IR
     ScheduleSpec RE
