@@ -21,14 +21,14 @@ def test_gen_comp_from_metadata_and_initial_scenario():
             data = json.load(f)
             print(data)
 
-            assert data['flatland line'] == {
+            assert data['flatlandLine'] == {
                 'agent_positions': [[[[51, 72]], [[38, 89], [38, 90], [38, 91], [38, 92]], [[14, 116], [14, 117], [14, 118], [14, 119]],
                                      [[2, 141], [3, 141], [4, 141], [5, 141]], [[3, 145]]]],
                 'agent_directions': [[[1], [0, 0, 0, 0], [0, 0, 0, 0], [1, 1, 1, 1]]],
                 'agent_targets': [[3, 145]],
                 'agent_speeds': [1]
             }
-            assert data['flatland timetable'] == {
+            assert data['flatlandTimetable'] == {
                 'earliest_departures': [[0, 37, 96, 136, None]],
                 'latest_arrivals': [[None, 35, 94, 134, 142]],
                 'max_episode_steps': 284
