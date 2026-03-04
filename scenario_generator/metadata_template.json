@@ -5,28 +5,28 @@
       "defaults": {
         "scheduleSpecs": {
           "IC": {
-            "initial shift": 0,
+            "initialShift": 0,
             "periodicity": 0,
             "times": 1,
-            "travel factor": 1
+            "travelFactor": 1
           },
           "RE": {
-            "initial shift": 0,
+            "initialShift": 0,
             "periodicity": 0,
             "times": 1,
-            "travel factor": 1
+            "travelFactor": 1
           },
           "S": {
-            "initial shift": 0,
+            "initialShift": 0,
             "periodicity": 0,
             "times": 1,
-            "travel factor": 1
+            "travelFactor": 1
           },
           "C": {
-            "initial shift": 0,
+            "initialShift": 0,
             "periodicity": 0,
             "times": 1,
-            "travel factor": 1
+            "travelFactor": 1
           }
         }
       },

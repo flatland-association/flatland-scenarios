@@ -8,12 +8,12 @@ This tool helps you to create Flatland environments and generate customized scen
 
 | Term             | Description                                                                                                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Scenario         | Rail, lines, timetables and malfunction parameters fixed (each train has a set of stops with routing flexibility and a time window at each stop)                                                   |
+| Scenario         | Rail, lines, Services and malfunction parameters fixed (each train has a set of stops with routing flexibility and a time window at each stop).                                                    |
 | Initial Scenario | Defines services all starting at zero, malfunction usually empty.                                                                                                                                  |
 | Metadata         | Defines services: a service template from the initial scenario and schedule specs on how to instantiate the scenario.                                                                              |
 | Line             | A line is a sequence of stops with routing flexibility at intermediates and target but not initial (in strict Flatland sense, lines are agents with stops already assigned and max speeds as well) |
 | Train Category   | Used to differentiate schedule specs for different train categories.                                                                                                                               |
-| Service          | Corresponds to a Flatland agent with the stops to serve in given time-windows.(Flatland Timetable)                                                                                                 |
+| Service          | Corresponds to a Flatland agent with the stops to serve in a given time-windows (Flatland Timetable).                                                                                              |
 | Scene            | A set of lines.                                                                                                                                                                                    |
 
 ### Data Model
@@ -36,10 +36,10 @@ classDiagram
     ScheduleSpec C
   }
   class ScheduleSpec {
-    int "initial shift"
+    int "initialShift"
     int "periodicity"
     int "times"
-    int "travel factor"
+    int "travelFactor"
   }
   class Service {
     string name

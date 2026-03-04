@@ -1,4 +1,3 @@
-# load JSON from Flatland Drawing Tool
 import json
 
 
