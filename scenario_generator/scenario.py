@@ -31,8 +31,8 @@ class Scenario:
         self.lines = data['lines']
         self.schedules = data['schedules']
         self.train_classes = data['trainClasses']
-        self.flatland_line = data['flatland line']
-        self.flatland_timetable = data['flatland timetable']
+        self.flatland_line = data['flatlandLine']
+        self.flatland_timetable = data['flatlandTimetable']
 
     @staticmethod
     def load(file_name: str) -> "Scenario":
@@ -53,23 +53,23 @@ class Scenario:
         width = data['gridDimensions']['cols']
         height = data['gridDimensions']['rows']
 
-        number_of_agents = len(data['flatland line']['agent_positions'])
+        number_of_agents = len(data['flatlandLine']['agent_positions'])
 
-        agent_positions = [[[tuple(c) for c in coords] for coords in positions] for positions in data['flatland line']['agent_positions']]
-        agent_directions = data['flatland line']['agent_directions']
-        agent_targets = [tuple(coords) for coords in data['flatland line']['agent_targets']]
+        agent_positions = [[[tuple(c) for c in coords] for coords in positions] for positions in data['flatlandLine']['agent_positions']]
+        agent_directions = data['flatlandLine']['agent_directions']
+        agent_targets = [tuple(coords) for coords in data['flatlandLine']['agent_targets']]
         agent_waypoints = {i: [[Waypoint(p, d) for p, d in zip(pa, da)] for pa, da in zip(pas, das)] + [[Waypoint(target, None)]] for i, (pas, das, target)
                            in enumerate(zip(agent_positions, agent_directions, agent_targets))}
 
         line = Line(
             agent_waypoints=agent_waypoints,
-            agent_speeds=data['flatland line']['agent_speeds'],
+            agent_speeds=data['flatlandLine']['agent_speeds'],
         )
 
         timetable = Timetable(
-            earliest_departures=data['flatland timetable']['earliest_departures'],
-            latest_arrivals=data['flatland timetable']['latest_arrivals'],
-            max_episode_steps=data['flatland timetable']['max_episode_steps']
+            earliest_departures=data['flatlandTimetable']['earliest_departures'],
+            latest_arrivals=data['flatlandTimetable']['latest_arrivals'],
+            max_episode_steps=data['flatlandTimetable']['max_episode_steps']
         )
 
         grid = RailGridTransitionMap(width=width, height=height, transitions=RailEnvTransitions(), grid=np.array(data['grid'], dtype=np.uint16))
@@ -130,8 +130,8 @@ class ScenarioBuilder:
     def build(self) -> Scenario:
         self.scenario.data['lines'] = self.scenario_lines
         self.scenario.data['schedules'] = self.scenario_schedules
-        self.scenario.data['flatland line'] = self.scenario_flatland_line
-        self.scenario.data['flatland timetable'] = self.scenario_flatland_timetable
+        self.scenario.data['flatlandLine'] = self.scenario_flatland_line
+        self.scenario.data['flatlandTimetable'] = self.scenario_flatland_timetable
         return self.scenario
 
     def rescale_schedule(self, schedule: list[dict], travel_factor: float = 1.0) -> list[dict]:
@@ -174,7 +174,7 @@ class ScenarioBuilder:
             earliest_departures.append(stop['earliestDeparture'])
             latest_arrivals.append(stop['latestArrival'])
 
-        # append line and flatland line
+        # append line and flatlandLine
         if line not in self.scenario_lines:
             self.scenario_lines.append(line)
 
@@ -186,7 +186,7 @@ class ScenarioBuilder:
         new_flatland_line['agent_targets'].append(source_line['agent_targets'][idx])
         new_flatland_line['agent_speeds'].append(source_line['agent_speeds'][idx])
 
-        # append schedule and flatland timetable
+        # append schedule and flatlandTimetable
         self.scenario_schedules.append(schedule)
 
         self.scenario_flatland_timetable['earliest_departures'].append(earliest_departures)
