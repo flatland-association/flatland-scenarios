@@ -61,4 +61,4 @@ def zip_directory(directory_path, zip_path, filter: Callable[[Path], bool] = Non
 
 
 if __name__ == '__main__':
-    create_envs_from_metadata(Path("./metadata.csv"), environments_zip="environments_v2.zip")
+    create_envs_from_metadata(Path("./metadata.csv"), environments_zip="environments_v3.zip")
