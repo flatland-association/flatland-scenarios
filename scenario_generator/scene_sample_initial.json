@@ -18945,7 +18945,8 @@
       "id": 1771831912598,
       "name": "IC 1.3.1",
       "lineId": 1771412862121,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -18980,7 +18981,8 @@
       "id": 1771831935997,
       "name": "IC 1.4.1",
       "lineId": 1771412886143,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -19015,7 +19017,8 @@
       "id": 1771832717764,
       "name": "IC 2.1.1",
       "lineId": 1771413160776,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -19040,7 +19043,8 @@
       "id": 1771832720812,
       "name": "IC 2.2.1",
       "lineId": 1771413182376,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -19070,7 +19074,8 @@
       "id": 1771833328719,
       "name": "IC 3.1.1",
       "lineId": 1771414163859,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -19105,7 +19110,8 @@
       "id": 1771833332272,
       "name": "IC 3.2.1",
       "lineId": 1771414166915,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -19142,29 +19148,29 @@
       ]
     }
   ],
-  "trainClasses": [
-    {
+  "trainCategoryes": {
+    "IC": {
       "id": 1,
-      "name": "High-Speed",
+      "description": "High-Speed",
       "speed": 1
     },
-    {
+    "RE": {
       "id": 2,
-      "name": "Express",
+      "description": "Express",
       "speed": 0.8
     },
-    {
+    "S": {
       "id": 3,
-      "name": "Local",
+      "description": "Local",
       "speed": 0.6
     },
-    {
+    "C": {
       "id": 4,
-      "name": "Cargo",
+      "description": "Cargo",
       "speed": 0.5
     }
-  ],
-  "flatland line": {
+  },
+  "flatlandLine": {
     "agent_positions": [
       [
         [
@@ -19742,7 +19748,7 @@
       1
     ]
   },
-  "flatland timetable": {
+  "flatlandTimetable": {
     "earliest_departures": [
       [
         0,
