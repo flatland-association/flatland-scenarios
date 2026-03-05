@@ -199,19 +199,21 @@ class ScenarioBuilder:
     # get consecutive line names by numbering
     @staticmethod
     def _get_new_name(name: str, i: int) -> str:
-        prefix, suffix = name.rsplit('.', 1)
+        if '.' in name:
+            prefix, suffix = name.rsplit('.', 1)
+        else:
+            prefix, suffix = name, '0'
         new_name = f'{prefix}.{int(suffix) + i}'
         return new_name
 
     def add_schedules_according_to_specs(self, initial_schedule: list[dict], schedule_specs: dict) -> "ScenarioBuilder":
         for s in initial_schedule:
             name = s['name']
-            # TODO make not dependent on naming convention
-            schedule_spec = name.split(' ')[0]
-            d = schedule_specs.get(schedule_spec, None)
+            train_category_name = s['trainCategoryName']
+            d = schedule_specs.get(train_category_name, None)
             if d is None:
                 continue
             for i in range(d.get('times', 1)):
                 new_name = self._get_new_name(name, i)
-                self.add_schedule(name, d.get('initial shift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travel factor', 1))
+                self.add_schedule(name, d.get('initialShift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travelFactor', 1))
         return self
