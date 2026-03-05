@@ -68,3 +68,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install git+https://github.com/flatland-association/flatland-rl.git@${{ env.flatland-rl-ref }} pytest
           flatland-trajectory-generate-from-policy --data-dir "/tmp" --policy-pkg tests.trajectories.test_trajectories --policy-cls RandomPolicy --env-path scenarios/Test_01/Level_0.pkl
+
+  test-scenario-generator:
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [ "3.10", "3.11", "3.12", "3.13" ]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Flatland
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/flatland-association/flatland-rl.git@${{ env.flatland-rl-ref }} pytest
+          pytest -s scenario_generator

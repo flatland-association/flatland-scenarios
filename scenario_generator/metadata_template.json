@@ -1,0 +1,49 @@
+{
+  "levels": [
+    {
+      "name": "level_0",
+      "defaults": {
+        "scheduleSpecs": {
+          "IC": {
+            "initialShift": 0,
+            "periodicity": 0,
+            "times": 1,
+            "travelFactor": 1
+          },
+          "RE": {
+            "initialShift": 0,
+            "periodicity": 0,
+            "times": 1,
+            "travelFactor": 1
+          },
+          "S": {
+            "initialShift": 0,
+            "periodicity": 0,
+            "times": 1,
+            "travelFactor": 1
+          },
+          "C": {
+            "initialShift": 0,
+            "periodicity": 0,
+            "times": 1,
+            "travelFactor": 1
+          }
+        }
+      },
+      "scenarios": [
+        {
+          "name": "scenario_1",
+          "scheduleSpecs": {},
+          "services": [
+            {
+              "name": "IC 1.3",
+              "template": "IC 1.3.1",
+              "scheduleSpec": "IC"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
