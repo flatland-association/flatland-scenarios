@@ -30,7 +30,7 @@ class Scenario:
         self.stations = data['stations']
         self.lines = data['lines']
         self.schedules = data['schedules']
-        self.train_classes = data['trainClasses']
+        self.train_classes = data['trainCategories']
         self.flatland_line = data['flatlandLine']
         self.flatland_timetable = data['flatlandTimetable']
 

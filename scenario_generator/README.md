@@ -55,9 +55,9 @@ classDiagram
     nextStationId
     lines
     schedules
-    trainClasses
-    flatland line
-    flatland timetable
+    trainCategories
+    flatlandLine
+    flatlandTimetable
   }
 
 ```
