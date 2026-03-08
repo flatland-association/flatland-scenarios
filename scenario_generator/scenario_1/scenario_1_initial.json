@@ -19525,13 +19525,15 @@
       }
     }
   ],
-  "schedules": [
+  "timetables": [
     {
       "id": 1756286726473,
       "name": "IC 1.1",
       "lineId": 1756278937912,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -19543,15 +19545,16 @@
           "earliestDeparture": null,
           "latestArrival": 177
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756286889153,
       "name": "IC 2.1",
       "lineId": 1756278939201,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19563,15 +19566,16 @@
           "earliestDeparture": null,
           "latestArrival": 177
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756287021130,
       "name": "IC 3.1",
       "lineId": 1756278961311,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -19583,15 +19587,16 @@
           "earliestDeparture": null,
           "latestArrival": 161
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756287031194,
       "name": "IC 4.1",
       "lineId": 1756278967984,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19603,15 +19608,16 @@
           "earliestDeparture": null,
           "latestArrival": 161
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756287059401,
       "name": "IC 5.1",
       "lineId": 1756279008160,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19623,15 +19629,16 @@
           "earliestDeparture": null,
           "latestArrival": 172
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756291586273,
       "name": "IC 6.1",
       "lineId": 1756279010216,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19643,15 +19650,16 @@
           "earliestDeparture": null,
           "latestArrival": 172
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756291651737,
       "name": "RE 1.1",
       "lineId": 1756282114971,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19678,15 +19686,16 @@
           "earliestDeparture": null,
           "latestArrival": 239
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756291653994,
       "name": "RE 2.1",
       "lineId": 1756282117507,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19713,15 +19722,16 @@
           "earliestDeparture": null,
           "latestArrival": 234
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756291733842,
       "name": "RE 3.1",
       "lineId": 1756282201363,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19753,15 +19763,16 @@
           "earliestDeparture": null,
           "latestArrival": 288
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756291736809,
       "name": "RE 4.1",
       "lineId": 1756282204484,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19793,15 +19804,16 @@
           "earliestDeparture": null,
           "latestArrival": 349
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296607938,
       "name": "RE 5.1",
       "lineId": 1756282261332,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19828,15 +19840,16 @@
           "earliestDeparture": null,
           "latestArrival": 249
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296666858,
       "name": "RE 6.1",
       "lineId": 1756282263445,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19863,15 +19876,16 @@
           "earliestDeparture": null,
           "latestArrival": 248
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296696922,
       "name": "RE 7.1",
       "lineId": 1756282350135,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19893,15 +19907,16 @@
           "earliestDeparture": null,
           "latestArrival": 279
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296744746,
       "name": "RE 8.1",
       "lineId": 1756282354239,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -19923,15 +19938,16 @@
           "earliestDeparture": null,
           "latestArrival": 280
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296773370,
       "name": "RE 9.1",
       "lineId": 1756282404560,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -19953,15 +19969,16 @@
           "earliestDeparture": null,
           "latestArrival": 238
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296796042,
       "name": "RE 10.1",
       "lineId": 1756282414896,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -19983,15 +20000,16 @@
           "earliestDeparture": null,
           "latestArrival": 238
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296828834,
       "name": "RE 11.1",
       "lineId": 1756282474577,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20018,15 +20036,16 @@
           "earliestDeparture": null,
           "latestArrival": 306
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296828449,
       "name": "RE 12.1",
       "lineId": 1756282526314,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20053,15 +20072,16 @@
           "earliestDeparture": null,
           "latestArrival": 303
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296828290,
       "name": "RE 13.1",
       "lineId": 1756283127817,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20078,15 +20098,16 @@
           "earliestDeparture": null,
           "latestArrival": 238
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296828130,
       "name": "RE 14.1",
       "lineId": 1756283130400,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20103,15 +20124,16 @@
           "earliestDeparture": null,
           "latestArrival": 235
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296827971,
       "name": "RE 15.1",
       "lineId": 1756283248724,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20138,15 +20160,16 @@
           "earliestDeparture": null,
           "latestArrival": 345
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756296827801,
       "name": "RE 16.1",
       "lineId": 1756283282354,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20173,15 +20196,16 @@
           "earliestDeparture": null,
           "latestArrival": 348
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297051788,
       "name": "RE 17.1",
       "lineId": 1756283359723,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20203,15 +20227,16 @@
           "earliestDeparture": null,
           "latestArrival": 289
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297051620,
       "name": "RE 18.1",
       "lineId": 1756283362347,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20233,15 +20258,16 @@
           "earliestDeparture": null,
           "latestArrival": 287
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297051458,
       "name": "RE 19.1",
       "lineId": 1756283392522,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20263,15 +20289,16 @@
           "earliestDeparture": null,
           "latestArrival": 214
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297124547,
       "name": "RE 20.1",
       "lineId": 1756283397771,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20293,15 +20320,16 @@
           "earliestDeparture": null,
           "latestArrival": 214
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297124386,
       "name": "RE 21.1",
       "lineId": 1756283476643,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20323,15 +20351,16 @@
           "earliestDeparture": null,
           "latestArrival": 270
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297124194,
       "name": "RE 22.1",
       "lineId": 1756283478683,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20353,15 +20382,16 @@
           "earliestDeparture": null,
           "latestArrival": 270
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297215019,
       "name": "RE 23.1",
       "lineId": 1756283510029,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20378,15 +20408,16 @@
           "earliestDeparture": null,
           "latestArrival": 270
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297214858,
       "name": "RE 24.1",
       "lineId": 1756283512212,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20403,15 +20434,16 @@
           "earliestDeparture": null,
           "latestArrival": 271
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297250285,
       "name": "RE 25.1",
       "lineId": 1756283546155,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -20433,15 +20465,16 @@
           "earliestDeparture": null,
           "latestArrival": 245
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297250123,
       "name": "RE 26.1",
       "lineId": 1756283555708,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20463,15 +20496,16 @@
           "earliestDeparture": null,
           "latestArrival": 246
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297385763,
       "name": "RE 50.1",
       "lineId": 1756283632053,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20508,15 +20542,16 @@
           "earliestDeparture": null,
           "latestArrival": 456
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297411196,
       "name": "RE 51.1",
       "lineId": 1756283635685,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20553,15 +20588,16 @@
           "earliestDeparture": null,
           "latestArrival": 452
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297410987,
       "name": "RE 52.1",
       "lineId": 1756283705229,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20588,15 +20624,16 @@
           "earliestDeparture": null,
           "latestArrival": 459
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297537764,
       "name": "RE 53.1",
       "lineId": 1756283711870,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20623,15 +20660,16 @@
           "earliestDeparture": null,
           "latestArrival": 457
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297567562,
       "name": "RE 54.1",
       "lineId": 1756283740157,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20658,15 +20696,16 @@
           "earliestDeparture": null,
           "latestArrival": 409
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297567393,
       "name": "RE 55.1",
       "lineId": 1756283757230,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20693,15 +20732,16 @@
           "earliestDeparture": null,
           "latestArrival": 406
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297683115,
       "name": "RE 56.1",
       "lineId": 1756284895185,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20728,15 +20768,16 @@
           "earliestDeparture": null,
           "latestArrival": 288
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297682973,
       "name": "RE 57.1",
       "lineId": 1756284937385,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 8,
@@ -20763,15 +20804,16 @@
           "earliestDeparture": null,
           "latestArrival": 290
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297772431,
       "name": "RE 58.1",
       "lineId": 1756283808510,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20798,15 +20840,16 @@
           "earliestDeparture": null,
           "latestArrival": 376
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297772276,
       "name": "RE 59.1",
       "lineId": 1756283811831,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20833,15 +20876,16 @@
           "earliestDeparture": null,
           "latestArrival": 376
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756297842837,
       "name": "RE 60.1",
       "lineId": 1756283810430,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20868,15 +20912,16 @@
           "earliestDeparture": null,
           "latestArrival": 377
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756298862239,
       "name": "RE 61.1",
       "lineId": 1756283839814,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20903,15 +20948,16 @@
           "earliestDeparture": null,
           "latestArrival": 379
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756298893471,
       "name": "RE 62.1",
       "lineId": 1756284986746,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20933,15 +20979,16 @@
           "earliestDeparture": null,
           "latestArrival": 192
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756298893303,
       "name": "RE 63.1",
       "lineId": 1756285024011,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 4,
@@ -20963,15 +21010,16 @@
           "earliestDeparture": null,
           "latestArrival": 192
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756298943969,
       "name": "RE 64.1",
       "lineId": 1756283843594,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -21013,15 +21061,16 @@
           "earliestDeparture": null,
           "latestArrival": 790
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756298943824,
       "name": "RE 65.1",
       "lineId": 1756283942071,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -21063,15 +21112,16 @@
           "earliestDeparture": null,
           "latestArrival": 790
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756299061744,
       "name": "RE 66.1",
       "lineId": 1756284570345,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -21108,15 +21158,16 @@
           "earliestDeparture": null,
           "latestArrival": 484
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756299061583,
       "name": "RE 67.1",
       "lineId": 1756284573056,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 2,
@@ -21153,15 +21204,16 @@
           "earliestDeparture": null,
           "latestArrival": 485
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756299143384,
       "name": "IR 1.1",
       "lineId": 1756284730072,
-      "trainClassId": 3,
+      "trainCategoryId": 3,
+      "trainCategoryName": "S",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 22,
@@ -21193,15 +21245,16 @@
           "earliestDeparture": null,
           "latestArrival": 421
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756299197120,
       "name": "IR 2.1",
       "lineId": 1756284733344,
-      "trainClassId": 3,
+      "trainCategoryId": 3,
+      "trainCategoryName": "S",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 22,
@@ -21233,15 +21286,16 @@
           "earliestDeparture": null,
           "latestArrival": 422
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756299243392,
       "name": "IR 3.1",
       "lineId": 1756284811441,
-      "trainClassId": 3,
+      "trainCategoryId": 3,
+      "trainCategoryName": "S",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 6,
@@ -21268,15 +21322,16 @@
           "earliestDeparture": null,
           "latestArrival": 458
         }
-      ],
-      "dwellTime": 2
+      ]
     },
     {
       "id": 1756299242873,
       "name": "IR 4.1",
       "lineId": 1756284814592,
-      "trainClassId": 3,
+      "trainCategoryId": 3,
+      "trainCategoryName": "S",
       "travelFactor": 1.1,
+      "dwellTime": 2,
       "stops": [
         {
           "stationId": 6,
@@ -21303,33 +21358,32 @@
           "earliestDeparture": null,
           "latestArrival": 461
         }
-      ],
-      "dwellTime": 2
+      ]
     }
   ],
-  "trainClasses": [
-    {
+  "trainCategories": {
+    "IC": {
       "id": 1,
-      "name": "High-Speed",
+      "description": "High-Speed",
       "speed": 1
     },
-    {
+    "RE": {
       "id": 2,
-      "name": "Express",
+      "description": "Express",
       "speed": 0.8
     },
-    {
+    "S": {
       "id": 3,
-      "name": "Local",
+      "description": "Local",
       "speed": 0.6
     },
-    {
+    "C": {
       "id": 4,
-      "name": "Cargo",
+      "description": "Cargo",
       "speed": 0.5
     }
-  ],
-  "flatland line": {
+  },
+  "flatlandLine": {
     "agent_positions": [
       [
         [
@@ -24635,7 +24689,7 @@
       0.6
     ]
   },
-  "flatland timetable": {
+  "flatlandTimetable": {
     "earliest_departures": [
       [
         0,
