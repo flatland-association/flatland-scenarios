@@ -8,24 +8,24 @@ from scenario_generator.scenario import Scenario, ScenarioBuilder
 from scenario_generator.utils import load_json
 
 
-def get_initial_schedule_for_template(scenario: Scenario, template: str) -> dict:
-    templates = [n for n in scenario.schedules if n['name'] == template]
+def get_initial_timetable_for_template(scenario: Scenario, template: str) -> dict:
+    templates = [n for n in scenario.timetables if n['name'] == template]
     assert len(templates) == 1
     return templates[0]
 
 
-# get initial schedules for one of the 5 scenes / regions
-def get_scene_schedules(scenario: Scenario, scene: str) -> list[dict]:
+# get initial timetables for one of the 5 scenes / regions
+def get_scene_timetables(scenario: Scenario, scene: str) -> list[dict]:
     if scene == 'scene_1':
-        return [n for n in scenario.schedules if n['name'].split(' ')[1][0] == '1']
+        return [n for n in scenario.timetables if n['name'].split(' ')[1][0] == '1']
     elif scene == 'scene_2':
-        return [n for n in scenario.schedules if n['name'].split(' ')[1][0] == '2']
+        return [n for n in scenario.timetables if n['name'].split(' ')[1][0] == '2']
     elif scene == 'scene_3':
-        return [n for n in scenario.schedules if n['name'].split(' ')[1][0] == '3']
+        return [n for n in scenario.timetables if n['name'].split(' ')[1][0] == '3']
     elif scene == 'scene_4':
-        return [n for n in scenario.schedules if n['name'].split(' ')[1][0] in ('1', '3', '4')]
+        return [n for n in scenario.timetables if n['name'].split(' ')[1][0] in ('1', '3', '4')]
     elif scene == 'scene_5':
-        return scenario.schedules
+        return scenario.timetables
     else:
         raise ValueError(f"unknown scene: {scene}")
 
@@ -35,7 +35,7 @@ def display_services_for_scene(initial_scenario_file_name: str) -> dict:
     for i in range(1, 6):
         region = f'scene_{i}'
         print(region)
-        print([n["name"] for n in get_scene_schedules(initial_scenario, region)])
+        print([n["name"] for n in get_scene_timetables(initial_scenario, region)])
 
 
 def gen_comp_from_metadata_and_initial_scenario(initial_scenario_file_name: str, metadata_file_name: str, levels: list[str] = None, scenarios: list[str] = None,
@@ -55,10 +55,10 @@ def gen_comp_from_metadata_and_initial_scenario(initial_scenario_file_name: str,
             if scenarios is not None and scenario_name_ not in scenarios:
                 continue
             # lookup service template
-            schedules_initial_scenario = [get_initial_schedule_for_template(initial_scenario, service["template"]) for service in scenario["services"]]
+            timetables_initial_scenario = [get_initial_timetable_for_template(initial_scenario, service["template"]) for service in scenario["services"]]
             # merge defaults with scenario-specific specs
-            schedule_specs = {**level["defaults"]["scheduleSpecs"], **scenario["scheduleSpecs"]}
-            scenario = ScenarioBuilder(initial_scenario).add_schedules_according_to_specs(schedules_initial_scenario, schedule_specs).build()
+            timetable_specs = {**level["defaults"]["timetableSpecs"], **scenario["timetableSpecs"]}
+            scenario = ScenarioBuilder(initial_scenario).add_timetables_according_to_specs(timetables_initial_scenario, timetable_specs).build()
             scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
 
 

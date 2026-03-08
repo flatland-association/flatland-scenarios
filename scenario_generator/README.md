@@ -10,10 +10,10 @@ This tool helps you to create Flatland environments and generate customized scen
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Scenario         | Rail, lines, Services and malfunction parameters fixed (each train has a set of stops with routing flexibility and a time window at each stop).                                                    |
 | Initial Scenario | Defines services all starting at zero, malfunction usually empty.                                                                                                                                  |
-| Metadata         | Defines services: a service template from the initial scenario and schedule specs on how to instantiate the scenario.                                                                              |
+| Metadata         | Defines services: a service template from the initial scenario and timetable specs on how to instantiate the scenario.                                                                              |
 | Line             | A line is a sequence of stops with routing flexibility at intermediates and target but not initial (in strict Flatland sense, lines are agents with stops already assigned and max speeds as well) |
-| Train Category   | Used to differentiate schedule specs for different train categories.                                                                                                                               |
-| Service          | Corresponds to a Flatland agent with the stops to serve in a given time-windows (Flatland Timetable).                                                                                              |
+| Train Category   | Used to differentiate timetable specs for different train categories.                                                                                                                               |
+| Timetable          | Corresponds to a Flatland agent with the stops to serve in a given time-windows (Flatland Timetable).                                                                                              |
 | Scene            | A set of lines.                                                                                                                                                                                    |
 
 ### Data Model
@@ -21,21 +21,21 @@ This tool helps you to create Flatland environments and generate customized scen
 ```mermaid
 classDiagram
   class metadata {
-    ScheduleSpecs defaults.scheduleSpecs
+    timetableSpecs defaults.timetableSpecs
   }
   class scenario {
-    ScheduleSpecs scheduleSpecs
+    timetableSpecs timetableSpecs
   }
   metadata "1" --> "1..*" level
   level "1" --> "1..*" scenario
   scenario "1" --> "1..*" Service
-  class ScheduleSpecs {
-    ScheduleSpec IR
-    ScheduleSpec RE
-    ScheduleSpec S
-    ScheduleSpec C
+  class timetableSpecs {
+    timetableSpec IR
+    timetableSpec RE
+    timetableSpec S
+    timetableSpec C
   }
-  class ScheduleSpec {
+  class TimetableSpec {
     int "initialShift"
     int "periodicity"
     int "times"
@@ -44,7 +44,7 @@ classDiagram
   class Service {
     string name
     Scenario template
-    Optional[ScheduleSpec] scheduleSpec
+    Optional[timetableSpec] timetableSpec
   }
 
   class Scenario {
@@ -54,7 +54,7 @@ classDiagram
     stations
     nextStationId
     lines
-    schedules
+    timetables
     trainCategories
     flatlandLine
     flatlandTimetable
@@ -82,7 +82,7 @@ flowchart LR
   B(flatland_environment_drawing_tool.html) --> C[scenario_initial.json]
   C --> D(tbd.py)
   F[metadata.json] --> D
-  D --> I[RailEnv with rail/line/schedule generator]
+  D --> I[RailEnv with rail/line/timetable generator]
 ```
 
 ## Drawing Tool
@@ -93,7 +93,7 @@ flowchart LR
 | [`Draw grid-world`](#draw-grid-world)           |
 | [`Create Lines`](#create-lines)                 |
 | [`Define train classes`](#define-train-classes) |
-| [`Create Schedules`](#create-schedules)         |
+| [`Create Timetables`](#create-timetables)         |
 | [`Export environment`](#export-environment)     |
 
 ### Initialize grid
@@ -116,7 +116,7 @@ Use the arrow keys to navigate on the grid and the keyboard shortcuts listed in 
 
 ### Create Lines
 
-To create Lines click the *Lines & Schedules* button. Each Line has
+To create Lines click the *Lines & Timetables* button. Each Line has
 
 - a unique **name**
 - an **ordered list of stations** (can be created by clicking on the map or comma separated manual input)
@@ -134,19 +134,19 @@ Once a Line is created, you can display the shortest path lengths between the st
 In order to choose what train is running your Lines you can create classes of trains whose sole parameter is **maximum speed**. There are 4 predefined train
 classes.
 
-### Create Schedules
+### Create Timetables
 
-To create Schedules click the *Lines & Schedules* button.
+To create Timetables click the *Lines & Timetables* button.
 
 - give it a **name**
 - select a **Line**
 - select a **train class**
 - choose the **travel factor** (this factor is multiplied with the length of the shortest path connecting to the subsequent station to add time flexibility)
 - choose the **dwell time** [default: 2] (the dwell time is the number of time steps between the *latest arrival* and the *earliest departure* used in the
-  automatic filling of the schedule)
-- apply a **shift** to the whole schedule (this is mainly used when copying a Schedule to then shift the copy)
+  automatic filling of the timetable)
+- apply a **shift** to the whole timetable (this is mainly used when copying a Timetable to then shift the copy)
 
-Schedules can be copied (and then shifted) within the drawing tool. However, to create scenarios with lots of shifted Schedules on the same lines, use
+Timetables can be copied (and then shifted) within the drawing tool. However, to create scenarios with lots of shifted Timetables on the same lines, use
 `generate_scenario.py` with your customized duplication function (see below).
 
 ### Export environment
@@ -160,12 +160,12 @@ you use `generate_scenario.py` to generate your scenario, do this before running
 
 ## Generate scenario
 
-Use the `generate_scenario.py` script to duplicate the initial Schedules to create a complete schedule:
+Use the `generate_scenario.py` script to duplicate the initial Timetables to create a complete timetable:
 
 - the **initial_shift** defines the first *earliest departure*
-- the **shift** defines the shift from one Schedule to the next
-- **times** defines how many times the Schedule should be created (it is technically not copied, so `times=1` results in only one Schedule)
+- the **shift** defines the shift from one Timetable to the next
+- **times** defines how many times the Timetable should be created (it is technically not copied, so `times=1` results in only one Timetable)
 
-Using this method you only need to create each unique Schedules once in the drawing tool.
+Using this method you only need to create each unique Timetables once in the drawing tool.
 
-:warning: To use this script without much customization, name your schedules *XY 1.1*, *XY 2.1*, etc. (e.g. *IC 1.1*, *IC 2.1*, *RE 1.1*, *RE 2.1*).
+:warning: To use this script without much customization, name your timetables *XY 1.1*, *XY 2.1*, etc. (e.g. *IC 1.1*, *IC 2.1*, *RE 1.1*, *RE 2.1*).

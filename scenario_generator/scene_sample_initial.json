@@ -18940,7 +18940,7 @@
       }
     }
   ],
-  "schedules": [
+  "timetables": [
     {
       "id": 1771831912598,
       "name": "IC 1.3.1",
@@ -19148,7 +19148,7 @@
       ]
     }
   ],
-  "trainCategories": {
+  "trainCategoryes": {
     "IC": {
       "id": 1,
       "description": "High-Speed",

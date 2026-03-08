@@ -29,7 +29,7 @@ class Scenario:
         self.level_free_crossings = data['overpasses']
         self.stations = data['stations']
         self.lines = data['lines']
-        self.schedules = data['schedules']
+        self.timetables = data['timetables']
         self.train_classes = data['trainCategories']
         self.flatland_line = data['flatlandLine']
         self.flatland_timetable = data['flatlandTimetable']
@@ -43,9 +43,9 @@ class Scenario:
         for line in self.lines:
             print(line['name'], line['stationIds'])
 
-    def print_schedules(self):
-        for schedule in self.schedules:
-            print(schedule['name'])
+    def print_timetables(self):
+        for timetable in self.timetables:
+            print(timetable['name'])
 
     def to_rail_env(self) -> Tuple[RailEnv, Dict, Dict]:
         data = self.data
@@ -114,7 +114,7 @@ class ScenarioBuilder:
         self.scenario = Scenario(copy.deepcopy(initial_scenario.data))
 
         self.scenario_lines = []
-        self.scenario_schedules = []
+        self.scenario_timetables = []
         self.scenario_flatland_line = {
             'agent_positions': [],
             'agent_directions': [],
@@ -129,13 +129,13 @@ class ScenarioBuilder:
 
     def build(self) -> Scenario:
         self.scenario.data['lines'] = self.scenario_lines
-        self.scenario.data['schedules'] = self.scenario_schedules
+        self.scenario.data['timetables'] = self.scenario_timetables
         self.scenario.data['flatlandLine'] = self.scenario_flatland_line
         self.scenario.data['flatlandTimetable'] = self.scenario_flatland_timetable
         return self.scenario
 
-    def rescale_schedule(self, schedule: list[dict], travel_factor: float = 1.0) -> list[dict]:
-        stops = schedule['stops']
+    def rescale_timetable(self, timetable: list[dict], travel_factor: float = 1.0) -> list[dict]:
+        stops = timetable['stops']
         new_stops = copy.deepcopy(stops)  # create new list of adjusted stops
         for i in range(1, len(stops)):
             previous = stops[i - 1]
@@ -147,27 +147,27 @@ class ScenarioBuilder:
             dwell_time = current['earliestDeparture'] - current['latestArrival'] if current['earliestDeparture'] is not None else None
             new_current['latestArrival'] = new_previous['earliestDeparture'] + math.ceil(original_time * travel_factor)
             new_current['earliestDeparture'] = new_current['latestArrival'] + dwell_time if i < len(stops) - 1 else None  # no departure from the target
-        schedule['stops'] = new_stops
-        schedule['travelFactor'] *= travel_factor
-        return schedule
+        timetable['stops'] = new_stops
+        timetable['travelFactor'] *= travel_factor
+        return timetable
 
-    def add_schedule(self, name: str, shift: int, new_name: str, travel_factor: float = None):
-        idx, input_schedule = next(((i, s) for i, s in enumerate(self.scenario.schedules) if s['name'] == name), (None, None))
-        assert input_schedule is not None, f'schedule {name} not found'
+    def add_timetable(self, name: str, shift: int, new_name: str, travel_factor: float = None):
+        idx, input_timetable = next(((i, s) for i, s in enumerate(self.scenario.timetables) if s['name'] == name), (None, None))
+        assert input_timetable is not None, f'timetable {name} not found'
 
-        line = next((l for l in self.scenario.lines if input_schedule['lineId'] == l['id']), None)
+        line = next((l for l in self.scenario.lines if input_timetable['lineId'] == l['id']), None)
 
-        schedule = copy.deepcopy(input_schedule)
-        schedule['name'] = new_name
-        schedule['id'] = uuid.uuid4().int >> 64
+        timetable = copy.deepcopy(input_timetable)
+        timetable['name'] = new_name
+        timetable['id'] = uuid.uuid4().int >> 64
 
         earliest_departures = []
         latest_arrivals = []
 
         if travel_factor is not None:
-            schedule = self.rescale_schedule(schedule, travel_factor)
+            timetable = self.rescale_timetable(timetable, travel_factor)
 
-        for stop in schedule['stops']:
+        for stop in timetable['stops']:
             if stop['earliestDeparture'] is not None: stop['earliestDeparture'] += shift
             if stop['latestArrival'] is not None: stop['latestArrival'] += shift
 
@@ -186,8 +186,8 @@ class ScenarioBuilder:
         new_flatland_line['agent_targets'].append(source_line['agent_targets'][idx])
         new_flatland_line['agent_speeds'].append(source_line['agent_speeds'][idx])
 
-        # append schedule and flatlandTimetable
-        self.scenario_schedules.append(schedule)
+        # append timetable and flatlandTimetable
+        self.scenario_timetables.append(timetable)
 
         self.scenario_flatland_timetable['earliest_departures'].append(earliest_departures)
         self.scenario_flatland_timetable['latest_arrivals'].append(latest_arrivals)
@@ -206,14 +206,14 @@ class ScenarioBuilder:
         new_name = f'{prefix}.{int(suffix) + i}'
         return new_name
 
-    def add_schedules_according_to_specs(self, initial_schedule: list[dict], schedule_specs: dict) -> "ScenarioBuilder":
-        for s in initial_schedule:
+    def add_timetables_according_to_specs(self, initial_timetable: list[dict], timetable_specs: dict) -> "ScenarioBuilder":
+        for s in initial_timetable:
             name = s['name']
             train_category_name = s['trainCategoryName']
-            d = schedule_specs.get(train_category_name, None)
+            d = timetable_specs.get(train_category_name, None)
             if d is None:
                 continue
             for i in range(d.get('times', 1)):
                 new_name = self._get_new_name(name, i)
-                self.add_schedule(name, d.get('initialShift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travelFactor', 1))
+                self.add_timetable(name, d.get('initialShift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travelFactor', 1))
         return self
