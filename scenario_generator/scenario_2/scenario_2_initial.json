@@ -4497,12 +4497,13 @@
       }
     }
   ],
-  "schedules": [
+  "timetables": [
     {
       "id": 1769450981025,
       "name": "IC 1.1",
       "lineId": 1769434242532,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
       "dwellTime": 2,
       "stops": [
@@ -4527,7 +4528,8 @@
       "id": 1769450982968,
       "name": "IC 2.1",
       "lineId": 1769434272133,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
       "dwellTime": 2,
       "stops": [
@@ -4552,7 +4554,8 @@
       "id": 1769450999624,
       "name": "IC 3.1",
       "lineId": 1769434319804,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
       "dwellTime": 2,
       "stops": [
@@ -4577,7 +4580,8 @@
       "id": 1769451018217,
       "name": "IC 4.1",
       "lineId": 1769434324500,
-      "trainClassId": 1,
+      "trainCategoryId": 1,
+      "trainCategoryName": "IC",
       "travelFactor": 1.05,
       "dwellTime": 2,
       "stops": [
@@ -4602,7 +4606,8 @@
       "id": 1769451035072,
       "name": "RE 1.1",
       "lineId": 1769434393260,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -4632,7 +4637,8 @@
       "id": 1769451083096,
       "name": "RE 2.1",
       "lineId": 1769434395365,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -4662,7 +4668,8 @@
       "id": 1769451101465,
       "name": "RE 3.1",
       "lineId": 1769434476524,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -4692,7 +4699,8 @@
       "id": 1769451117512,
       "name": "RE 4.1",
       "lineId": 1769434479485,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -4722,7 +4730,8 @@
       "id": 1769451132321,
       "name": "RE 5.1",
       "lineId": 1769434527845,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -4747,7 +4756,8 @@
       "id": 1769451151889,
       "name": "RE 6.1",
       "lineId": 1769434529900,
-      "trainClassId": 2,
+      "trainCategoryId": 2,
+      "trainCategoryName": "RE",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -4769,29 +4779,29 @@
       ]
     }
   ],
-  "trainClasses": [
-    {
+  "trainCategories": {
+    "IC": {
       "id": 1,
-      "name": "High-Speed",
+      "description": "High-Speed",
       "speed": 1
     },
-    {
+    "RE": {
       "id": 2,
-      "name": "Express",
+      "description": "Express",
       "speed": 0.8
     },
-    {
+    "S": {
       "id": 3,
-      "name": "Local",
+      "description": "Local",
       "speed": 0.6
     },
-    {
+    "C": {
       "id": 4,
-      "name": "Cargo",
+      "description": "Cargo",
       "speed": 0.5
     }
-  ],
-  "flatland line": {
+  },
+  "flatlandLine": {
     "agent_positions": [
       [
         [
@@ -5297,7 +5307,7 @@
       0.8
     ]
   },
-  "flatland timetable": {
+  "flatlandTimetable": {
     "earliest_departures": [
       [
         0,

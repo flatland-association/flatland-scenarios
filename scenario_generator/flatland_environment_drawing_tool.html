@@ -68,7 +68,7 @@
         .ops-manager-tab { padding: 8px 15px; cursor: pointer; border: 1px solid transparent; border-bottom: none; border-radius: 5px 5px 0 0; background-color: #f1f3f5; color: #333; }
         .ops-manager-tab.active { background-color: #fff; border-color: #dee2e6; border-bottom-color: #fff; margin-bottom: -1px; }
 
-        #linesListContainer, #schedulesListContainer, #trainsListContainer { max-height: 400px; overflow-y: auto; }
+        #linesListContainer, #timetablesListContainer, #trainsListContainer { max-height: 400px; overflow-y: auto; }
         
         .list-item { display: flex; align-items: center; justify-content: space-between; padding: 8px; border-radius: 4px; margin-bottom: 5px; background-color: #f8f9fa; }
         .list-item:nth-child(odd) { background-color: #f1f3f5; }
@@ -97,23 +97,23 @@
         }
 
         
-        #lineEditor, #scheduleEditor, #trainEditor { display: none; }
+        #lineEditor, #timetableEditor, #trainEditor { display: none; }
         .editor-field { margin-bottom: 10px; }
         .editor-field label { display: block; margin-bottom: 4px; font-weight: 500; font-size: 0.9em; }
         .line-editor-stations-wrapper { display: flex; align-items: center; gap: 10px; }
         .line-editor-stations { flex-grow: 1; }
 
-        .schedule-editor-top-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 20px; margin-bottom: 15px; }
-        .schedule-editor-top-grid .editor-field { margin-bottom: 0; }
+        .timetable-editor-top-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 20px; margin-bottom: 15px; }
+        .timetable-editor-top-grid .editor-field { margin-bottom: 0; }
         .shift-control { display: flex; align-items: flex-end; gap: 5px; }
         .shift-control input { width: 70px; }
         .shift-control button { height: 30.5px; }
         
-        #scheduleStopsTable { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        #scheduleStopsTable th, #scheduleStopsTable td { padding: 6px 8px; border: 1px solid #d1d9e6; text-align: center; font-size: 0.85em; vertical-align: middle; }
-        #scheduleStopsTable th { background-color: #e9ecef; }
-        #scheduleStopsTable td input[type="number"] { width: 60px; text-align: center; padding: 4px; }
-        #scheduleStopsTable td input:disabled { background-color: #f1f3f5; color: #6c757d; cursor: not-allowed; }
+        #timetableStopsTable { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        #timetableStopsTable th, #timetableStopsTable td { padding: 6px 8px; border: 1px solid #d1d9e6; text-align: center; font-size: 0.85em; vertical-align: middle; }
+        #timetableStopsTable th { background-color: #e9ecef; }
+        #timetableStopsTable td input[type="number"] { width: 60px; text-align: center; padding: 4px; }
+        #timetableStopsTable td input:disabled { background-color: #f1f3f5; color: #6c757d; cursor: not-allowed; }
         .calculated-value { color: #555; font-style: italic; }
         .distance-value { font-size: 0.9em; color: #6c757d; }
         .exceeded-constraint { color: #dc3545; font-weight: bold; }
@@ -177,7 +177,7 @@
             <button id="exportAllJsonButton" title="Download Grid, Overpasses & Stations as JSON File">Export All (.json)</button>
         </div>
         <div id="operationsControls" class="controls-group">
-             <button id="openOperationsManagerButton">Lines & Schedules</button>
+             <button id="openOperationsManagerButton">Lines & Timetables</button>
         </div>
         <div id="flatlandControls" class="controls-group">
             <button id="flatlandDownloadButton">Flatland Download</button>
@@ -220,7 +220,7 @@
 
             <div class="ops-manager-tabs">
                 <button id="linesTabButton" class="ops-manager-tab active">Lines</button>
-                <button id="schedulesTabButton" class="ops-manager-tab">Schedules</button>
+                <button id="timetablesTabButton" class="ops-manager-tab">Timetables</button>
                 <button id="trainsTabButton" class="ops-manager-tab">Trains</button>
             </div>
 
@@ -264,47 +264,47 @@
                 </div>
             </div>
 
-            <div id="schedulesManagerView" style="display: none;">
-                <div id="schedulesListView">
+            <div id="timetablesManagerView" style="display: none;">
+                <div id="timetablesListView">
                     <div style="margin-bottom: 15px; display:flex; justify-content: flex-end;">
-                        <button id="newScheduleButton">New Schedule</button>
+                        <button id="newTimetableButton">New Timetable</button>
                     </div>
-                    <div id="schedulesListContainer"></div>
+                    <div id="timetablesListContainer"></div>
                 </div>
-                <div id="scheduleEditor">
-                    <h3 id="scheduleEditorTitle">Edit Schedule</h3>
-                    <input type="hidden" id="scheduleIdInput">
-                    <div class="schedule-editor-top-grid">
+                <div id="timetableEditor">
+                    <h3 id="timetableEditorTitle">Edit Timetable</h3>
+                    <input type="hidden" id="timetableIdInput">
+                    <div class="timetable-editor-top-grid">
                         <div class="editor-field">
-                            <label for="scheduleNameInput">Schedule Name:</label>
-                            <input type="text" id="scheduleNameInput" placeholder="e.g., U1 Weekday">
+                            <label for="timetableNameInput">Timetable Name:</label>
+                            <input type="text" id="timetableNameInput" placeholder="e.g., U1 Weekday">
                         </div>
                         <div class="editor-field">
-                            <label for="scheduleLineSelect">Line:</label>
-                            <select id="scheduleLineSelect"></select>
+                            <label for="timetableLineSelect">Line:</label>
+                            <select id="timetableLineSelect"></select>
                         </div>
                          <div class="editor-field">
-                            <label for="scheduleTrainClassSelect">Train Class:</label>
-                            <select id="scheduleTrainClassSelect"></select>
+                            <label for="timetableTrainCategorySelect">Train Category:</label>
+                            <select id="timetableTrainCategorySelect"></select>
                         </div>
                         <div class="editor-field" style="grid-column: 1;">
-                            <label for="scheduleTravelFactorInput">Travel Factor:</label>
-                            <input type="number" id="scheduleTravelFactorInput" value="1.1" step="0.05" min="1">
+                            <label for="timetableTravelFactorInput">Travel Factor:</label>
+                            <input type="number" id="timetableTravelFactorInput" value="1.1" step="0.05" min="1">
                         </div>
                         <!-- NEW Dwell Time Input -->
                         <div class="editor-field">
-                            <label for="scheduleDwellTimeInput">Dwell Time:</label>
-                            <input type="number" id="scheduleDwellTimeInput" value="2" step="1" min="0">
+                            <label for="timetableDwellTimeInput">Dwell Time:</label>
+                            <input type="number" id="timetableDwellTimeInput" value="2" step="1" min="0">
                         </div>
                          <div class="shift-control" style="grid-column: 3;">
                            <div class="editor-field">
-                               <label for="scheduleShiftInput">Shift Amount:</label>
-                               <input type="number" id="scheduleShiftInput" value="10" step="1">
+                               <label for="timetableShiftInput">Shift Amount:</label>
+                               <input type="number" id="timetableShiftInput" value="10" step="1">
                            </div>
-                           <button id="scheduleShiftButton" class="secondary">Shift</button>
+                           <button id="timetableShiftButton" class="secondary">Shift</button>
                         </div>
                     </div>
-                    <table id="scheduleStopsTable">
+                    <table id="timetableStopsTable">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -317,13 +317,13 @@
                                 <th>Earliest Departure</th>
                             </tr>
                         </thead>
-                        <tbody id="scheduleStopsTableBody">
+                        <tbody id="timetableStopsTableBody">
                         </tbody>
                     </table>
                      <div style="display: flex; gap: 10px; justify-content: flex-end; align-items: center; margin-top: 20px;">
-                        <span id="scheduleValidationWarning" class="validation-warning" style="display: none;">(!) Please fix all validation errors.</span>
-                        <button id="cancelScheduleEditButton" class="secondary">Cancel</button>
-                        <button id="saveScheduleButton">Save Schedule</button>
+                        <span id="timetableValidationWarning" class="validation-warning" style="display: none;">(!) Please fix all validation errors.</span>
+                        <button id="cancelTimetableEditButton" class="secondary">Cancel</button>
+                        <button id="saveTimetableButton">Save Timetable</button>
                     </div>
                 </div>
             </div>
@@ -331,23 +331,27 @@
             <div id="trainsManagerView" style="display: none;">
                 <div id="trainsListView">
                     <div style="margin-bottom: 15px; display:flex; justify-content: flex-end;">
-                        <button id="newTrainButton">New Train Class</button>
+                        <button id="newTrainButton">New Train Category</button>
                     </div>
                     <div id="trainsListContainer"></div>
                 </div>
                 <div id="trainEditor">
-                     <h3 id="trainEditorTitle">Edit Train Class</h3>
+                     <h3 id="trainEditorTitle">Edit Train Category</h3>
                      <input type="hidden" id="trainIdInput">
                      <div class="train-editor-grid">
-                         <div class="editor-field">
-                             <label for="trainNameInput">Train Class Name:</label>
-                             <input type="text" id="trainNameInput" placeholder="e.g., Regional">
-                         </div>
-                         <div class="editor-field">
-                             <label for="trainSpeedInput">Speed (0.1 to 1.0):</label>
-                             <input type="number" id="trainSpeedInput" value="1.0" step="0.1" min="0.1" max="1">
-                         </div>
-                     </div>
+                        <div class="editor-field">
+                            <label for="trainNameInput">Train Category Name:</label>
+                            <input type="text" id="trainNameInput" placeholder="e.g., IC, RE">
+                        </div>
+                        <div class="editor-field">
+                            <label for="trainDescriptionInput">Description:</label>
+                            <input type="text" id="trainDescriptionInput" placeholder="e.g., High-Speed, Regional">
+                        </div>
+                        <div class="editor-field">
+                            <label for="trainSpeedInput">Speed (0.1 to 1.0):</label>
+                            <input type="number" id="trainSpeedInput" value="1.0" step="0.1" min="0.1" max="1">
+                        </div>
+                    </div>
                      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
                         <button id="cancelTrainEditButton" class="secondary">Cancel</button>
                         <button id="saveTrainButton">Save Train</button>
@@ -404,10 +408,10 @@
     const linesManagerPanel = document.getElementById('linesManagerPanel');
     const closeLinesManagerButton = document.getElementById('closeLinesManagerButton');
     const linesTabButton = document.getElementById('linesTabButton');
-    const schedulesTabButton = document.getElementById('schedulesTabButton');
+    const timetablesTabButton = document.getElementById('timetablesTabButton');
     const trainsTabButton = document.getElementById('trainsTabButton');
     const linesManagerView = document.getElementById('linesManagerView');
-    const schedulesManagerView = document.getElementById('schedulesManagerView');
+    const timetablesManagerView = document.getElementById('timetablesManagerView');
     const trainsManagerView = document.getElementById('trainsManagerView');
 
     // Lines Tab References
@@ -432,25 +436,25 @@
     const endCellDisplay = document.getElementById('endCellDisplay');
     const selectEndCellButton = document.getElementById('selectEndCellButton');
 
-    // Schedules Tab References
-    const schedulesListView = document.getElementById('schedulesListView');
-    const schedulesListContainer = document.getElementById('schedulesListContainer');
-    const newScheduleButton = document.getElementById('newScheduleButton');
-    const scheduleEditor = document.getElementById('scheduleEditor');
-    const scheduleEditorTitle = document.getElementById('scheduleEditorTitle');
-    const scheduleIdInput = document.getElementById('scheduleIdInput');
-    const scheduleNameInput = document.getElementById('scheduleNameInput');
-    const scheduleLineSelect = document.getElementById('scheduleLineSelect');
-    const scheduleTrainClassSelect = document.getElementById('scheduleTrainClassSelect');
-    const scheduleTravelFactorInput = document.getElementById('scheduleTravelFactorInput');
-    const scheduleShiftInput = document.getElementById('scheduleShiftInput');
-    const scheduleShiftButton = document.getElementById('scheduleShiftButton');
-    const scheduleStopsTableBody = document.getElementById('scheduleStopsTableBody');
-    const saveScheduleButton = document.getElementById('saveScheduleButton');
-    const cancelScheduleEditButton = document.getElementById('cancelScheduleEditButton');
-    const scheduleValidationWarning = document.getElementById('scheduleValidationWarning');
+    // Timetables Tab References
+    const timetablesListView = document.getElementById('timetablesListView');
+    const timetablesListContainer = document.getElementById('timetablesListContainer');
+    const newTimetableButton = document.getElementById('newTimetableButton');
+    const timetableEditor = document.getElementById('timetableEditor');
+    const timetableEditorTitle = document.getElementById('timetableEditorTitle');
+    const timetableIdInput = document.getElementById('timetableIdInput');
+    const timetableNameInput = document.getElementById('timetableNameInput');
+    const timetableLineSelect = document.getElementById('timetableLineSelect');
+    const timetableTrainCategorySelect = document.getElementById('timetableTrainCategorySelect');
+    const timetableTravelFactorInput = document.getElementById('timetableTravelFactorInput');
+    const timetableShiftInput = document.getElementById('timetableShiftInput');
+    const timetableShiftButton = document.getElementById('timetableShiftButton');
+    const timetableStopsTableBody = document.getElementById('timetableStopsTableBody');
+    const saveTimetableButton = document.getElementById('saveTimetableButton');
+    const cancelTimetableEditButton = document.getElementById('cancelTimetableEditButton');
+    const timetableValidationWarning = document.getElementById('timetableValidationWarning');
     // NEW: Dwell Time Input Reference
-    const scheduleDwellTimeInput = document.getElementById('scheduleDwellTimeInput');
+    const timetableDwellTimeInput = document.getElementById('timetableDwellTimeInput');
 
     // Trains Tab References
     const trainsListView = document.getElementById('trainsListView');
@@ -460,6 +464,7 @@
     const trainEditorTitle = document.getElementById('trainEditorTitle');
     const trainIdInput = document.getElementById('trainIdInput');
     const trainNameInput = document.getElementById('trainNameInput');
+    const trainDescriptionInput = document.getElementById('trainDescriptionInput');
     const trainSpeedInput = document.getElementById('trainSpeedInput');
     const saveTrainButton = document.getElementById('saveTrainButton');
     const cancelTrainEditButton = document.getElementById('cancelTrainEditButton');
@@ -488,12 +493,12 @@
 
     // --- DATA MODELS ---
     let lines = [];
-    let schedules = []; 
-    let trainClasses = [ 
-        { id: 1, name: "High-Speed", speed: 1.0 }, 
-        { id: 2, name: "Express", speed: 0.8 }, 
-        { id: 3, name: "Local", speed: 0.6 },
-        { id: 4, name: "Cargo", speed: 0.5 }
+    let timetables = []; 
+    let trainCategories = [ 
+        { id: 1, name: "IC", description: "High-Speed", speed: 1.0 }, 
+        { id: 2, name: "RE", description: "Express", speed: 0.8 }, 
+        { id: 3, name: "S", description: "Local", speed: 0.6 },
+        { id: 4, name: "C", description: "Cargo", speed: 0.5 }
     ];
 
     // --- CONSTANTS ---
@@ -558,8 +563,8 @@
             numCols: numCols, 
             cellSize: cellSize, 
             lines: JSON.parse(JSON.stringify(lines)),
-            schedules: JSON.parse(JSON.stringify(schedules)),
-            trainClasses: JSON.parse(JSON.stringify(trainClasses))
+            timetables: JSON.parse(JSON.stringify(timetables)),
+            trainCategories: JSON.parse(JSON.stringify(trainCategories))
         }; 
         if (historyIndex < historyStack.length - 1) { historyStack = historyStack.slice(0, historyIndex + 1); } 
         historyStack.push(state); historyIndex++; updateHistoryButtons(); 
@@ -568,8 +573,24 @@
         gridData = JSON.parse(JSON.stringify(state.gridData)); 
         nextStationId = state.nextStationId; 
         lines = JSON.parse(JSON.stringify(state.lines)); 
-        schedules = state.schedules ? JSON.parse(JSON.stringify(state.schedules)) : [];
-        trainClasses = state.trainClasses ? JSON.parse(JSON.stringify(state.trainClasses)) : [ { id: 1, name: "High-Speed", speed: 1.0 }, { id: 2, name: "Express", speed: 0.8 }, { id: 3, name: "Local", speed: 0.6 }, { id: 4, name: "Cargo", speed: 0.5 }];
+        timetables = (state.timetables || []).map(timetable => {
+            const actualTrainCategoryId = timetable.trainCategoryId || timetable.trainClassId;
+            return {
+                id: timetable.id,
+                name: timetable.name,
+                lineId: timetable.lineId,
+                trainCategoryId: actualTrainCategoryId,
+                travelFactor: timetable.travelFactor,
+                dwellTime: timetable.dwellTime ?? 2, // Ensure dwellTime also has a default if missing
+                stops: timetable.stops || [] // Ensure stops array is present
+            };
+        });
+        trainCategories = state.trainCategories ? JSON.parse(JSON.stringify(state.trainCategories)) : [
+            { id: 1, name: "IC", description: "High-Speed", speed: 1.0 },
+            { id: 2, name: "RE", description: "Express", speed: 0.8 },
+            { id: 3, name: "S", description: "Local", speed: 0.6 },
+            { id: 4, name: "C", description: "Cargo", speed: 0.5 }
+        ];
         if (numRows !== state.numRows) document.getElementById('rows').value = state.numRows; 
         if (numCols !== state.numCols) document.getElementById('cols').value = state.cols; 
         if (cellSize !== state.cellSize) document.getElementById('cellSize').value = state.cellSize; 
@@ -924,21 +945,21 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
              return;
         }
         linesManagerView.style.display = 'none';
-        schedulesManagerView.style.display = 'none';
+        timetablesManagerView.style.display = 'none';
         trainsManagerView.style.display = 'none';
         linesTabButton.classList.remove('active');
-        schedulesTabButton.classList.remove('active');
+        timetablesTabButton.classList.remove('active');
         trainsTabButton.classList.remove('active');
         if (tabName === 'lines') {
             linesTabButton.classList.add('active');
             linesManagerView.style.display = 'block';
             renderLinesList(); 
             showLinesListView();
-        } else if (tabName === 'schedules') {
-            schedulesTabButton.classList.add('active');
-            schedulesManagerView.style.display = 'block';
-            renderSchedulesList();
-            showSchedulesListView();
+        } else if (tabName === 'timetables') {
+            timetablesTabButton.classList.add('active');
+            timetablesManagerView.style.display = 'block';
+            renderTimetablesList();
+            showTimetablesListView();
         } else if (tabName === 'trains') {
             trainsTabButton.classList.add('active');
             trainsManagerView.style.display = 'block';
@@ -958,8 +979,8 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             }
             if (linesTabButton.classList.contains('active')) {
                 showOperationsTab('lines');
-            } else if (schedulesTabButton.classList.contains('active')) {
-                showOperationsTab('schedules');
+            } else if (timetablesTabButton.classList.contains('active')) {
+                showOperationsTab('timetables');
             } else {
                  showOperationsTab('trains');
             }
@@ -1212,7 +1233,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 saveState();
                 break;
             case 'reverse': lines[lineIndex].stationIds.reverse(); renderLinesList(); saveState(); break;
-            case 'delete': if (window.confirm(`Are you sure you want to delete line "${lines[lineIndex].name}"? This will also delete any schedules that use it.`)) { lines.splice(lineIndex, 1); schedules = schedules.filter(s => s.lineId !== id); renderSchedulesList(); renderLinesList(); saveState(); } break;
+            case 'delete': if (window.confirm(`Are you sure you want to delete line "${lines[lineIndex].name}"? This will also delete any timetables that use it.`)) { lines.splice(lineIndex, 1); timetables = timetables.filter(s => s.lineId !== id); renderTimetablesList(); renderLinesList(); saveState(); } break;
             case 'test': 
                 const line = lines[lineIndex];
                 if (line.stationIds.length < 2) { alert("Line needs at least two stations."); return; }
@@ -1354,116 +1375,147 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         saveState(); 
     }
     
-    // --- SCHEDULES Functions ---
-    function renderSchedulesList() {
-        schedulesListContainer.innerHTML = '';
-        if (schedules.length === 0) {
-            schedulesListContainer.innerHTML = '<p style="text-align:center; color: #666;">No schedules created yet. Click "New Schedule" to start.</p>';
+    // --- Timetables Functions ---
+    function renderTimetablesList() {
+        timetablesListContainer.innerHTML = '';
+        if (timetables.length === 0) {
+            timetablesListContainer.innerHTML = '<p style="text-align:center; color: #666;">No timetables created yet. Click "New Timetable" to start.</p>';
             return;
         }
-        schedules.forEach((schedule, index) => {
-            const line = lines.find(l => l.id === schedule.lineId);
-            const train = trainClasses.find(t => t.id === schedule.trainClassId);
+        timetables.forEach((timetable, index) => {
+            const line = lines.find(l => l.id === timetable.lineId);
+            const train = trainCategories.find(t => t.id === timetable.trainCategoryId);
             const details = `Line: ${line ? line.name : 'N/A'} | Train: ${train ? train.name : 'N/A'}`;
             const disableUp = index === 0;
-            const disableDown = index === schedules.length - 1;
+            const disableDown = index === timetables.length - 1;
 
             const el = document.createElement('div');
             el.className = 'list-item';
             el.innerHTML = `
                  <div class="list-item-main-content">
-                    <button class="reorder-button" data-action="move-up" data-id="${schedule.id}" title="Move Up" ${disableUp ? 'disabled' : ''}>▲</button>
-                    <button class="reorder-button" data-action="move-down" data-id="${schedule.id}" title="Move Down" ${disableDown ? 'disabled' : ''}>▼</button>
-                    <span class="list-item-name">${schedule.name}</span> 
+                    <button class="reorder-button" data-action="move-up" data-id="${timetable.id}" title="Move Up" ${disableUp ? 'disabled' : ''}>▲</button>
+                    <button class="reorder-button" data-action="move-down" data-id="${timetable.id}" title="Move Down" ${disableDown ? 'disabled' : ''}>▼</button>
+                    <span class="list-item-name">${timetable.name}</span> 
                 </div>
                 <span class="list-item-details">${details}</span> 
                 <div class="list-item-actions">
-                    <button data-action="edit" data-id="${schedule.id}">Edit</button> 
-                    <button data-action="copy" data-id="${schedule.id}" class="secondary">Copy</button> 
-                    <button data-action="delete" data-id="${schedule.id}" class="danger">Delete</button> 
+                    <button data-action="edit" data-id="${timetable.id}">Edit</button> 
+                    <button data-action="copy" data-id="${timetable.id}" class="secondary">Copy</button> 
+                    <button data-action="delete" data-id="${timetable.id}" class="danger">Delete</button> 
                 </div>`;
-            schedulesListContainer.appendChild(el);
+            timetablesListContainer.appendChild(el);
         });
     }
 
-    function handleSchedulesListClick(e) {
+    function handleTimetablesListClick(e) {
         const action = e.target.dataset.action;
         const id = parseInt(e.target.dataset.id);
         if (!action || !id) return;
-        const scheduleIndex = schedules.findIndex(s => s.id === id);
-        if (scheduleIndex === -1) return;
+        const timetableIndex = timetables.findIndex(s => s.id === id);
+        if (timetableIndex === -1) return;
 
         switch (action) {
-            case 'edit': showScheduleEditor(schedules[scheduleIndex]); break;
-            case 'copy': const newSchedule = JSON.parse(JSON.stringify(schedules[scheduleIndex])); newSchedule.id = Date.now(); newSchedule.name = `${schedules[scheduleIndex].name} (Copy)`; schedules.splice(scheduleIndex + 1, 0, newSchedule); renderSchedulesList(); saveState(); break;
-            case 'delete': if (window.confirm(`Are you sure you want to delete schedule "${schedules[scheduleIndex].name}"?`)) { schedules.splice(scheduleIndex, 1); renderSchedulesList(); saveState(); } break;
+            case 'edit': showTimetableEditor(timetables[timetableIndex]); break;
+            case 'copy': const newTimetable = JSON.parse(JSON.stringify(timetables[timetableIndex])); newTimetable.id = Date.now(); newTimetable.name = `${timetables[timetableIndex].name} (Copy)`; timetables.splice(timetableIndex + 1, 0, newTimetable); renderTimetablesList(); saveState(); break;
+            case 'delete': if (window.confirm(`Are you sure you want to delete timetable "${timetables[timetableIndex].name}"?`)) { timetables.splice(timetableIndex, 1); renderTimetablesList(); saveState(); } break;
             case 'move-up':
-                if (scheduleIndex > 0) { [schedules[scheduleIndex], schedules[scheduleIndex - 1]] = [schedules[scheduleIndex - 1], schedules[scheduleIndex]]; renderSchedulesList(); saveState(); }
+                if (timetableIndex > 0) { [timetables[timetableIndex], timetables[timetableIndex - 1]] = [timetables[timetableIndex - 1], timetables[timetableIndex]]; renderTimetablesList(); saveState(); }
                 break;
             case 'move-down':
-                if (scheduleIndex < schedules.length - 1) { [schedules[scheduleIndex], schedules[scheduleIndex + 1]] = [schedules[scheduleIndex + 1], schedules[scheduleIndex]]; renderSchedulesList(); saveState(); }
+                if (timetableIndex < timetables.length - 1) { [timetables[timetableIndex], timetables[timetableIndex + 1]] = [timetables[timetableIndex + 1], timetables[timetableIndex]]; renderTimetablesList(); saveState(); }
                 break;
         }
     }
-    function showSchedulesListView() {
-        scheduleEditor.style.display = 'none';
-        schedulesListView.style.display = 'block';
+    function showTimetablesListView() {
+        timetableEditor.style.display = 'none';
+        timetablesListView.style.display = 'block';
         setOpsManagerEditingMode(false);
     }
-    function showScheduleEditor(schedule = null) {
-        if (lines.length === 0) { alert("Please create a Line first before creating a Schedule."); return; }
-        if (trainClasses.length === 0) { alert("Please create a Train Class first before creating a Schedule."); return; }
-        schedulesListView.style.display = 'none';
-        scheduleEditor.style.display = 'block';
+    function showTimetableEditor(timetable = null) {
+        if (lines.length === 0) { alert("Please create a Line first before creating a Timetable."); return; }
+        if (trainCategories.length === 0) { alert("Please create a Train Category first before creating a Timetable."); return; }
+        timetablesListView.style.display = 'none';
+        timetableEditor.style.display = 'block';
         setOpsManagerEditingMode(true);
 
-        scheduleLineSelect.innerHTML = lines.map(l => `<option value="${l.id}">${l.name}</option>`).join('');
-        scheduleTrainClassSelect.innerHTML = trainClasses.map(t => `<option value="${t.id}">${t.name} (Speed: ${t.speed})</option>`).join('');
+        // Populate dropdowns BEFORE attempting to set their values
+        timetableLineSelect.innerHTML = lines.map(l => `<option value="${l.id}">${l.name}</option>`).join('');
+        timetableTrainCategorySelect.innerHTML = trainCategories.map(t => `<option value="${t.id}">${t.name} - ${t.description} (Speed: ${t.speed})</option>`).join('');
 
-        if (schedule) {
-            scheduleEditorTitle.textContent = 'Edit Schedule';
-            scheduleIdInput.value = schedule.id;
-            scheduleNameInput.value = schedule.name;
-            scheduleLineSelect.value = schedule.lineId;
-            scheduleTrainClassSelect.value = schedule.trainClassId;
-            scheduleTravelFactorInput.value = schedule.travelFactor || 1.1;
-            scheduleDwellTimeInput.value = schedule.dwellTime ?? 2; // NEW: Populate dwell time from schedule, default to 2
+        let currentTimetableTrainCategoryId = null;
+
+        if (timetable) {
+            timetableEditorTitle.textContent = 'Edit Timetable';
+            timetableIdInput.value = timetable.id;
+            timetableNameInput.value = timetable.name;
+            timetableLineSelect.value = timetable.lineId; 
+
+            const doesTrainCategoryExist = trainCategories.some(t => t.id === timetable.trainCategoryId);
+            if (doesTrainCategoryExist) {
+                timetableTrainCategorySelect.value = timetable.trainCategoryId;
+                currentTimetableTrainCategoryId = timetable.trainCategoryId;
+            } else if (trainCategories.length > 0) {
+                // Fallback: If the timetable's trainCategoryId is invalid, use the first available category
+                timetableTrainCategorySelect.value = trainCategories[0].id;
+                currentTimetableTrainCategoryId = trainCategories[0].id;
+                console.warn(`Timetable (ID: ${timetable.id}) had an invalid/missing trainCategoryId: ${timetable.trainCategoryId}. Defaulted to first available train category: ${trainCategories[0].name}.`);
+            } else {
+                // No train categories at all, leave dropdown unselected
+                timetableTrainCategorySelect.value = '';
+                currentTimetableTrainCategoryId = null;
+                console.error("No train categories available to select for timetable. Please create at least one train category.");
+            }
+
+            timetableTravelFactorInput.value = timetable.travelFactor || 1.1;
+            timetableDwellTimeInput.value = timetable.dwellTime ?? 2;
         } else {
-            scheduleEditorTitle.textContent = 'Create New Schedule';
-            scheduleIdInput.value = '';
-            scheduleNameInput.value = '';
-            scheduleLineSelect.value = lines[0]?.id || '';
-            scheduleTrainClassSelect.value = trainClasses[0]?.id || '';
-            scheduleTravelFactorInput.value = 1.1;
-            scheduleDwellTimeInput.value = 2; // NEW: Default dwell time for new schedules
+            timetableEditorTitle.textContent = 'Create New Timetable';
+            timetableIdInput.value = '';
+            timetableNameInput.value = '';
+            timetableLineSelect.value = lines[0]?.id || ''; // Default to first line if available
+
+            // For a NEW timetable, also ensure a train category is selected if available
+            if (trainCategories.length > 0) {
+                timetableTrainCategorySelect.value = trainCategories[0].id;
+                currentTimetableTrainCategoryId = trainCategories[0].id;
+            } else {
+                timetableTrainCategorySelect.value = '';
+                currentTimetableTrainCategoryId = null;
+            }
+            
+            timetableTravelFactorInput.value = 1.1;
+            timetableDwellTimeInput.value = 2;
         }
-        populateScheduleStopsTable(schedule);
+        
+        // Only populate the table if a train category was successfully selected
+        // We pass the 'timetable' argument, as it's needed for initial stop data
+        populateTimetableStopsTable(timetable);
     }
-    function populateScheduleStopsTable(schedule = null) {
-        scheduleStopsTableBody.innerHTML = '';
-        const selectedLineId = parseInt(scheduleLineSelect.value);
+    function populateTimetableStopsTable(timetable = null) {
+        timetableStopsTableBody.innerHTML = '';
+        const selectedLineId = parseInt(timetableLineSelect.value);
         const line = lines.find(l => l.id === selectedLineId);
         if (!line || !line.stationIds || line.stationIds.length === 0) {
-            scheduleStopsTableBody.innerHTML = '<tr><td colspan="8">Please select a valid line with stations.</td></tr>'; // Reduced colspan
-            validateScheduleInputs();
+            timetableStopsTableBody.innerHTML = '<tr><td colspan="8">Please select a valid line with stations.</td></tr>'; // Reduced colspan
+            validateTimetableInputs();
             return;
         }
 
-        const selectedTrainClassId = parseInt(scheduleTrainClassSelect.value);
-        const train = trainClasses.find(t => t.id === selectedTrainClassId);
-        const travelFactor = parseFloat(scheduleTravelFactorInput.value);
-        const dwellTime = parseFloat(scheduleDwellTimeInput.value); // NEW: Get dwell time from input
+        const selectedTrainCategoryId = parseInt(timetableTrainCategorySelect.value);
+        const train = trainCategories.find(t => t.id === selectedTrainCategoryId);
+        const travelFactor = parseFloat(timetableTravelFactorInput.value);
+        const dwellTime = parseFloat(timetableDwellTimeInput.value); // NEW: Get dwell time from input
 
         if (!train || isNaN(travelFactor) || isNaN(dwellTime)) {
-            scheduleStopsTableBody.innerHTML = '<tr><td colspan="8">Invalid train class, travel factor, or dwell time.</td></tr>';
-            validateScheduleInputs();
+            timetableStopsTableBody.innerHTML = '<tr><td colspan="8">Invalid Train Category, travel factor, or dwell time.</td></tr>';
+            validateTimetableInputs();
             return;
         }
 
         let tempDepartureTimeOfPreviousStop = 0; // Temporary variable for pre-filling calculation
 
         line.stationIds.forEach((stationId, index) => {
-            const stopData = schedule?.stops?.[index] || {};
+            const stopData = timetable?.stops?.[index] || {};
             const tr = document.createElement('tr');
             tr.dataset.stationId = stationId;
             
@@ -1543,22 +1595,22 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
 
             const inputs = tr.querySelectorAll('input');
             inputs.forEach(input => input.addEventListener('input', recalculateFullTimetable));
-            scheduleStopsTableBody.appendChild(tr);
+            timetableStopsTableBody.appendChild(tr);
         });
         recalculateFullTimetable();
     }
     function recalculateFullTimetable() {
-        const selectedTrainClassId = parseInt(scheduleTrainClassSelect.value);
-        const train = trainClasses.find(t => t.id === selectedTrainClassId);
-        const travelFactor = parseFloat(scheduleTravelFactorInput.value);
-        const dwellTime = parseFloat(scheduleDwellTimeInput.value); 
+        const selectedTrainCategoryId = parseInt(timetableTrainCategorySelect.value);
+        const train = trainCategories.find(t => t.id === selectedTrainCategoryId);
+        const travelFactor = parseFloat(timetableTravelFactorInput.value);
+        const dwellTime = parseFloat(timetableDwellTimeInput.value); 
 
         if(!train || isNaN(travelFactor) || isNaN(dwellTime)) return; 
 
         let currentDepartureForNextStop = 0; // This is the departure time that affects the *next* stop's arrival.
-        const rows = scheduleStopsTableBody.querySelectorAll('tr');
+        const rows = timetableStopsTableBody.querySelectorAll('tr');
 
-        const selectedLineId = parseInt(scheduleLineSelect.value);
+        const selectedLineId = parseInt(timetableLineSelect.value);
         const line = lines.find(l => l.id === selectedLineId);
         if (!line || !line.stationIds || line.stationIds.length === 0) {
             return;
@@ -1675,12 +1727,12 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             // IMPORTANT: This updates the departure time for the *next* segment's arrival calculation
             currentDepartureForNextStop = currentActualDeparture;
         }
-        validateScheduleInputs();
+        validateTimetableInputs();
     }
     function handleShiftTimings() {
-        const shiftValue = parseInt(scheduleShiftInput.value);
+        const shiftValue = parseInt(timetableShiftInput.value);
         if (isNaN(shiftValue)) { alert("Please enter a valid number to shift by."); return; }
-        scheduleStopsTableBody.querySelectorAll('tr').forEach(row => {
+        timetableStopsTableBody.querySelectorAll('tr').forEach(row => {
             const latestArrivalInput = row.querySelector('.latest-arrival-input');
             const earliestDepartureInput = row.querySelector('.earliest-departure-input');
             if (!latestArrivalInput.disabled && latestArrivalInput.value !== '') {
@@ -1692,9 +1744,9 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         });
         recalculateFullTimetable();
     }
-    function validateScheduleInputs() {
+    function validateTimetableInputs() {
         let hasEmptyRequiredFields = false;
-        const rows = scheduleStopsTableBody.querySelectorAll('tr');
+        const rows = timetableStopsTableBody.querySelectorAll('tr');
 
         rows.forEach((row, index) => {
             const latestArrivalInput = row.querySelector('.latest-arrival-input');
@@ -1715,28 +1767,28 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             }
         });
 
-        const hasTimingErrors = scheduleStopsTableBody.querySelector('.exceeded-constraint') !== null;
+        const hasTimingErrors = timetableStopsTableBody.querySelector('.exceeded-constraint') !== null;
         const isValid = !hasEmptyRequiredFields && !hasTimingErrors;
 
-        saveScheduleButton.disabled = !isValid;
-        scheduleValidationWarning.style.display = isValid ? 'none' : 'inline';
+        saveTimetableButton.disabled = !isValid;
+        timetableValidationWarning.style.display = isValid ? 'none' : 'inline';
         
         if (hasEmptyRequiredFields) {
-            scheduleValidationWarning.textContent = "(!) Please fill all mandatory arrival/departure fields.";
+            timetableValidationWarning.textContent = "(!) Please fill all mandatory arrival/departure fields.";
         } else if (hasTimingErrors) {
-            scheduleValidationWarning.textContent = "(!) Please fix red timing violations.";
+            timetableValidationWarning.textContent = "(!) Please fix red timing violations.";
         }
 
         return isValid;
     }
-    function saveSchedule() {
-        if (!validateScheduleInputs()) { alert("Cannot save. Please fix all validation errors first."); return; }
-        const id = scheduleIdInput.value ? parseInt(scheduleIdInput.value) : Date.now();
-        const name = scheduleNameInput.value.trim() || 'Untitled Schedule';
-        const lineId = parseInt(scheduleLineSelect.value);
-        const trainClassId = parseInt(scheduleTrainClassSelect.value);
-        const travelFactor = parseFloat(scheduleTravelFactorInput.value);
-        const dwellTime = parseFloat(scheduleDwellTimeInput.value); // NEW: Get dwell time
+    function saveTimetable() {
+        if (!validateTimetableInputs()) { alert("Cannot save. Please fix all validation errors first."); return; }
+        const id = timetableIdInput.value ? parseInt(timetableIdInput.value) : Date.now();
+        const name = timetableNameInput.value.trim() || 'Untitled Timetable';
+        const lineId = parseInt(timetableLineSelect.value);
+        const trainCategoryId = parseInt(timetableTrainCategorySelect.value);
+        const travelFactor = parseFloat(timetableTravelFactorInput.value);
+        const dwellTime = parseFloat(timetableDwellTimeInput.value); // NEW: Get dwell time
         if (isNaN(lineId)) { alert("A valid line must be selected."); return; }
         
         // NEW: Validate dwellTime
@@ -1746,7 +1798,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         }
 
         const stops = [];
-        scheduleStopsTableBody.querySelectorAll('tr').forEach(tr => {
+        timetableStopsTableBody.querySelectorAll('tr').forEach(tr => {
             const stationId = parseInt(tr.dataset.stationId);
             if (isNaN(stationId)) return;
 
@@ -1763,34 +1815,34 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 latestArrival: isNaN(latestArrival) ? null : latestArrival
             });
         });
-        // NEW: Add dwellTime to scheduleData
-        const scheduleData = { id, name, lineId, trainClassId, travelFactor, dwellTime, stops };
-        const existingIndex = schedules.findIndex(s => s.id === id);
-        if (existingIndex > -1) { schedules[existingIndex] = scheduleData; } else { schedules.push(scheduleData); }
-        renderSchedulesList();
-        showSchedulesListView();
+        // NEW: Add dwellTime to timetableData
+        const timetableData = { id, name, lineId, trainCategoryId, travelFactor, dwellTime, stops };
+        const existingIndex = timetables.findIndex(s => s.id === id);
+        if (existingIndex > -1) { timetables[existingIndex] = timetableData; } else { timetables.push(timetableData); }
+        renderTimetablesList();
+        showTimetablesListView();
         saveState();
     }
 
     // --- TRAINS Functions ---
     function renderTrainsList() {
         trainsListContainer.innerHTML = '';
-        if (trainClasses.length === 0) {
-            trainsListContainer.innerHTML = '<p style="text-align:center; color: #666;">No train classes defined.</p>';
+        if (trainCategories.length === 0) {
+            trainsListContainer.innerHTML = '<p style="text-align:center; color: #666;">No Train Categoryes defined.</p>';
             return;
         }
-        trainClasses.forEach((train, index) => {
+        trainCategories.forEach((train, index) => {
             const el = document.createElement('div');
             el.className = 'list-item';
             const disableUp = index === 0;
-            const disableDown = index === trainClasses.length - 1;
+            const disableDown = index === trainCategories.length - 1;
             el.innerHTML = `
                 <div class="list-item-main-content">
                     <button class="reorder-button" data-action="move-up" data-id="${train.id}" title="Move Up" ${disableUp ? 'disabled' : ''}>▲</button>
                     <button class="reorder-button" data-action="move-down" data-id="${train.id}" title="Move Down" ${disableDown ? 'disabled' : ''}>▼</button>
                     <span class="list-item-name">${train.name}</span> 
                 </div>
-                <span class="list-item-details">Speed: ${train.speed.toFixed(2)}</span> 
+                <span class="list-item-details">Description: ${train.description} | Speed: ${train.speed.toFixed(2)}</span> 
                 <div class="list-item-actions">
                     <button data-action="edit" data-id="${train.id}">Edit</button> 
                     <button data-action="delete" data-id="${train.id}" class="danger">Delete</button> 
@@ -1802,21 +1854,21 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         const action = e.target.dataset.action;
         const id = parseInt(e.target.dataset.id);
         if (!action || !id) return;
-        const trainIndex = trainClasses.findIndex(t => t.id === id);
+        const trainIndex = trainCategories.findIndex(t => t.id === id);
         if (trainIndex === -1) return;
         
         switch (action) {
-            case 'edit': showTrainEditor(trainClasses[trainIndex]); break;
+            case 'edit': showTrainEditor(trainCategories[trainIndex]); break;
             case 'delete':
-                const isUsed = schedules.some(s => s.trainClassId === id);
-                if (isUsed) { alert(`Cannot delete "${trainClasses[trainIndex].name}" because it is currently used by one or more schedules.`); return; }
-                if (window.confirm(`Are you sure you want to delete train class "${trainClasses[trainIndex].name}"?`)) { trainClasses.splice(trainIndex, 1); renderTrainsList(); saveState(); } 
+                const isUsed = timetables.some(s => s.trainCategoryId === id);
+                if (isUsed) { alert(`Cannot delete "${trainCategories[trainIndex].name}" because it is currently used by one or more timetables.`); return; }
+                if (window.confirm(`Are you sure you want to delete Train Category "${trainCategories[trainIndex].name}"?`)) { trainCategories.splice(trainIndex, 1); renderTrainsList(); saveState(); } 
                 break;
             case 'move-up':
-                if (trainIndex > 0) { [trainClasses[trainIndex], trainClasses[trainIndex - 1]] = [trainClasses[trainIndex - 1], trainClasses[trainIndex]]; renderTrainsList(); saveState(); }
+                if (trainIndex > 0) { [trainCategories[trainIndex], trainCategories[trainIndex - 1]] = [trainCategories[trainIndex - 1], trainCategories[trainIndex]]; renderTrainsList(); saveState(); }
                 break;
             case 'move-down':
-                if (trainIndex < trainClasses.length - 1) { [trainClasses[trainIndex], trainClasses[trainIndex + 1]] = [trainClasses[trainIndex + 1], trainClasses[trainIndex]]; renderTrainsList(); saveState(); }
+                if (trainIndex < trainCategories.length - 1) { [trainCategories[trainIndex], trainCategories[trainIndex + 1]] = [trainCategories[trainIndex + 1], trainCategories[trainIndex]]; renderTrainsList(); saveState(); }
                 break;
         }
     }
@@ -1830,32 +1882,44 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         trainEditor.style.display = 'block';
         setOpsManagerEditingMode(true);
         if (train) {
-            trainEditorTitle.textContent = 'Edit Train Class';
+            trainEditorTitle.textContent = `Edit Train Category: ${train.name}`;
             trainIdInput.value = train.id;
             trainNameInput.value = train.name;
+            trainDescriptionInput.value = train.description;
             trainSpeedInput.value = train.speed;
         } else {
-            trainEditorTitle.textContent = 'Create New Train Class';
+            trainEditorTitle.textContent = 'Create New Train Category';
             trainIdInput.value = '';
             trainNameInput.value = '';
+            trainDescriptionInput.value = '';
             trainSpeedInput.value = 1.0;
         }
     }
-    function saveTrainClass() {
+    function saveTrainCategory() {
         const id = trainIdInput.value ? parseInt(trainIdInput.value) : Date.now();
-        const name = trainNameInput.value.trim() || 'Untitled Train';
+        const name = trainNameInput.value.trim();
+        const description = trainDescriptionInput.value.trim();
         const speed = parseFloat(trainSpeedInput.value);
-
+        
+        if (!name) {
+            alert("Train Category Name cannot be empty.");
+            return;
+        }
         if (isNaN(speed) || speed <= 0 || speed > 1) {
             alert("Speed must be a positive number up to a maximum of 1.0.");
             return;
         }
-        const trainData = { id, name, speed };
-        const existingIndex = trainClasses.findIndex(t => t.id === id);
+        const isNameTaken = trainCategories.some(t => t.name === name && t.id !== id);
+        if (isNameTaken) {
+            alert(`The Train Category Name "${name}" is already in use. Please choose a different one.`);
+            return;
+        }
+        const trainData = { id, name, description, speed };
+        const existingIndex = trainCategories.findIndex(t => t.id === id);
         if (existingIndex > -1) {
-            trainClasses[existingIndex] = trainData;
+            trainCategories[existingIndex] = trainData;
         } else {
-            trainClasses.push(trainData);
+            trainCategories.push(trainData);
         }
         renderTrainsList();
         showTrainsListView();
@@ -1895,7 +1959,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         if (clearOnly) { 
             nextStationId = 1; 
             lines = []; 
-            schedules = []; 
+            timetables = []; 
             // Clear lineBuilderData as well when clearing grid
             lineBuilderData = { stations: [], originalStations: '', startCell: null, endCell: null }; 
         } 
@@ -2359,16 +2423,28 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             max_episode_steps: 0
         };
         let maxLatestArrival = 0;
+        
+        const timetablesToExport = timetables.map(timetable => {
+            const trainCategory = trainCategories.find(t => t.id === timetable.trainCategoryId);
+            return {
+                id: timetable.id,
+                name: timetable.name,
+                lineId: timetable.lineId,
+                trainCategoryId: timetable.trainCategoryId, // Explicitly include the ID
+                trainCategoryName: trainCategory ? trainCategory.name : 'Unknown', // NEW: Add the name (code) here
+                travelFactor: timetable.travelFactor,
+                dwellTime: timetable.dwellTime,
+                stops: timetable.stops
+            };
+        });
 
-        schedules.forEach(schedule => {
-            const line = lines.find(l => l.id === schedule.lineId);
-            const train = trainClasses.find(t => t.id === schedule.trainClassId);
+        timetables.forEach(timetable => {
+            const line = lines.find(l => l.id === timetable.lineId);
+            const train = trainCategories.find(t => t.id === timetable.trainCategoryId);
 
             if (!line || !train || !line.stationIds || line.stationIds.length < 2) {
                 return; 
             }
-
-            // --- NEW: Continuous Path Simulation for Export ---
             
             const agentPositionsForAgent = [];
             const agentDirectionsForAgent = [];
@@ -2482,7 +2558,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
 
             const earliestDepartures = [];
             const latestArrivals = []; 
-            schedule.stops.forEach(stop => {
+            timetable.stops.forEach(stop => {
                 earliestDepartures.push(stop.earliestDeparture);
                 latestArrivals.push(stop.latestArrival);
                 if (stop.latestArrival != null && stop.latestArrival > maxLatestArrival) {
@@ -2502,10 +2578,17 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             stations: stations,
             nextStationId: nextStationId,
             lines: lines,
-            schedules: schedules,
-            trainClasses: trainClasses,
-            "flatland line": flatlandLine,
-            "flatland timetable": flatlandTimetable
+            timetables: timetablesToExport,
+            trainCategories: trainCategories.reduce((acc, train) => {
+                acc[train.name] = { // Use train.name as the key
+                    id: train.id,
+                    description: train.description,
+                    speed: train.speed
+                };
+                return acc;
+            }, {}),
+            "flatlandLine": flatlandLine,
+            "flatlandTimetable": flatlandTimetable
         };
 
         const jsonString = JSON.stringify(dataToExport, null, 2);
@@ -2572,7 +2655,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             }); 
             nextStationId = data.nextStationId !== undefined ? data.nextStationId : ((data.stations || []).length > 0 ? Math.max(1, maxImportedId + 1) : 1); 
             
-            // Handle new line properties during import
+            // Handle line properties during import
             lines = (data.lines || []).map(line => ({
                 id: line.id,
                 name: line.name,
@@ -2581,18 +2664,67 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 endCell: line.endCell || null      
             }));
 
-            // Important: Handle dwellTime for schedules
-            schedules = (data.schedules || []).map(schedule => ({
-                ...schedule,
-                // Default dwellTime to 2 if not present in older JSONs (or if null/undefined)
-                dwellTime: schedule.dwellTime ?? 2,
-                stops: schedule.stops.map(stop => {
-                    const { dwellTime: stopDwellTime, ...rest } = stop; // Destructure to omit any old stop.dwellTime property if it ever existed on stops
-                    return rest;
-                })
-            }));
+            // Important: Handle dwellTime for timetables
+            timetables = (data.timetables || []).map(timetable => {
+                // Determine the correct train category ID from imported data.
+                // Prioritize 'trainCategoryId' if it exists, otherwise use 'trainClassId' (for old files).
+                const actualTrainCategoryId = timetable.trainCategoryId || timetable.trainClassId;
 
-            trainClasses = data.trainClasses || [ { id: 1, name: "High-Speed", speed: 1.0 }, { id: 2, name: "Express", speed: 0.8 }, { id: 3, name: "Local", speed: 0.6 }, { id: 4, name: "Cargo", speed: 0.5 } ];
+                return {
+                    id: timetable.id,
+                    name: timetable.name,
+                    lineId: timetable.lineId,
+                    trainCategoryId: actualTrainCategoryId, // Ensure this property is consistently named
+                    travelFactor: timetable.travelFactor,
+                    dwellTime: timetable.dwellTime ?? 2, // Default dwellTime to 2 if not present
+                    stops: (timetable.stops || []).map(stop => {
+                        // Ensure stops are also clean of old dwellTime properties if they ever existed
+                        const { dwellTime: stopDwellTime, ...rest } = stop;
+                        return rest;
+                    })
+                };
+            });
+
+            // nCategoryes || [ { id: 1, name: "High-Speed", speed: 1.0 }, { id: 2, name: "Express", speed: 0.8 }, { id: 3, name: "Local", speed: 0.6 }, { id: 4, name: "Cargo", speed: 0.5 } ];
+            
+            if (data.trainCategories) {
+                if (Array.isArray(data.trainCategories)) {
+                    // Old array format: { id, name, speed } -> { id, name(code), description(old name), speed }
+                    trainCategories = data.trainCategories.map(t => ({
+                        id: t.id,
+                        name: t.name, // Use old 'name' as new 'name' (code) as a fallback
+                        description: t.name, // Use old 'name' as new 'description'
+                        speed: t.speed
+                    }));
+                    console.warn("Imported trainCategories in old array format. Converted to new format: 'name' is now code, 'description' is old 'name'. Please review and edit in UI.");
+                } else if (typeof data.trainCategories === 'object' && data.trainCategories !== null) {
+                    // New dictionary format: { "IC": { id, description, speed } }
+                    trainCategories = Object.entries(data.trainCategories).map(([name, trainData]) => ({
+                        id: trainData.id,
+                        name: name, // The key from the dictionary is the new 'name' (code)
+                        description: trainData.description,
+                        speed: trainData.speed
+                    }));
+                } else {
+                    console.warn("Unsupported trainCategories format during import. Using default categories.");
+                    // Fallback to default if format is unknown
+                    trainCategories = [
+                        { id: 1, name: "IC", description: "High-Speed", speed: 1.0 },
+                        { id: 2, name: "RE", description: "Express", speed: 0.8 },
+                        { id: 3, name: "S", description: "Local", speed: 0.6 },
+                        { id: 4, name: "C", description: "Cargo", speed: 0.5 }
+                    ];
+                }
+            } else {
+                // Default if no trainCategories in import
+                trainCategories = [
+                    { id: 1, name: "IC", description: "High-Speed", speed: 1.0 },
+                    { id: 2, name: "RE", description: "Express", speed: 0.8 },
+                    { id: 3, name: "S", description: "Local", speed: 0.6 },
+                    { id: 4, name: "C", description: "Cargo", speed: 0.5 }
+                ];
+            }
+            
             selectedCellCoords = null; validateGrid(); drawGrid(); updateSelectionUI(); exportAllDataToTextAreas(); saveState(); alert("Full layout imported successfully!"); 
         } catch (error) { console.error("Full Layout Import failed:", error); alert("Full Layout Import failed: " + error.message); } 
     }
@@ -2641,23 +2773,23 @@ def main(scenario_json, scenario_pkl):
     width = data['gridDimensions']['cols']
     height = data['gridDimensions']['rows']
 
-    number_of_agents = len(data['flatland line']['agent_positions'])
+    number_of_agents = len(data['flatlandLine']['agent_positions'])
 
-    agent_positions = [[[tuple(c) for c in coords] for coords in positions] for positions in data['flatland line']['agent_positions']]
-    agent_directions = data['flatland line']['agent_directions']
-    agent_targets = [tuple(coords) for coords in data['flatland line']['agent_targets']]
+    agent_positions = [[[tuple(c) for c in coords] for coords in positions] for positions in data['flatlandLine']['agent_positions']]
+    agent_directions = data['flatlandLine']['agent_directions']
+    agent_targets = [tuple(coords) for coords in data['flatlandLine']['agent_targets']]
     agent_waypoints = {i: [[Waypoint(p, d) for p, d in zip(pa, da)] for pa, da in zip(pas, das)] + [[Waypoint(target, None)]] for i, (pas, das, target)
                        in enumerate(zip(agent_positions, agent_directions, agent_targets))}
 
     line = Line(
         agent_waypoints=agent_waypoints,
-        agent_speeds=data['flatland line']['agent_speeds'],
+        agent_speeds=data['flatlandLine']['agent_speeds'],
     )
 
     timetable = Timetable(
-        earliest_departures=data['flatland timetable']['earliest_departures'],
-        latest_arrivals=data['flatland timetable']['latest_arrivals'],
-        max_episode_steps=data['flatland timetable']['max_episode_steps']
+        earliest_departures=data['flatlandTimetable']['earliest_departures'],
+        latest_arrivals=data['flatlandTimetable']['latest_arrivals'],
+        max_episode_steps=data['flatlandTimetable']['max_episode_steps']
     )
 
     grid = RailGridTransitionMap(width=width, height=height, transitions=RailEnvTransitions(), grid=np.array(data['grid'], dtype=np.uint16))
@@ -2713,7 +2845,7 @@ if __name__ == '__main__':
         consolidatedFileInput.addEventListener('change', (event) => { const file = event.target.files[0]; if (file) { const reader = new FileReader(); reader.onload = (e) => { importAllFromJson(e.target.result); }; reader.onerror = (e) => { console.error("File read error:", e); alert("Error reading layout file."); }; reader.readAsText(file); event.target.value = null; } });
         document.getElementById('initGridButton').addEventListener('click', () => initializeOrResizeGrid(false));
         document.getElementById('clearGridButton').addEventListener('click', () => {
-            if (window.confirm("Are you sure you want to clear the entire grid? This will delete all tracks, stations, lines, and schedules and cannot be undone.")) {
+            if (window.confirm("Are you sure you want to clear the entire grid? This will delete all tracks, stations, lines, and timetables and cannot be undone.")) {
                 initializeOrResizeGrid(true);
             }
         });
@@ -2741,7 +2873,7 @@ if __name__ == '__main__':
         
         // Tab Switching Listeners
         linesTabButton.addEventListener('click', () => showOperationsTab('lines'));
-        schedulesTabButton.addEventListener('click', () => showOperationsTab('schedules'));
+        timetablesTabButton.addEventListener('click', () => showOperationsTab('timetables'));
         trainsTabButton.addEventListener('click', () => showOperationsTab('trains'));
 
         // Lines Tab Listeners
@@ -2757,25 +2889,25 @@ if __name__ == '__main__':
         selectStartCellButton.addEventListener('click', () => startSingleCellSelectionMode('start'));
         selectEndCellButton.addEventListener('click', () => startSingleCellSelectionMode('end'));
 
-        // Schedules Tab Listeners
-        newScheduleButton.addEventListener('click', () => showScheduleEditor());
-        schedulesListContainer.addEventListener('click', handleSchedulesListClick);
-        saveScheduleButton.addEventListener('click', saveSchedule);
-        cancelScheduleEditButton.addEventListener('click', showSchedulesListView);
-        scheduleShiftButton.addEventListener('click', handleShiftTimings);
-        scheduleLineSelect.addEventListener('change', () => populateScheduleStopsTable());
-        scheduleTrainClassSelect.addEventListener('change', () => recalculateFullTimetable());
-        scheduleTravelFactorInput.addEventListener('input', () => recalculateFullTimetable());
-        scheduleDwellTimeInput.addEventListener('input', () => recalculateFullTimetable());
+        // Timetables Tab Listeners
+        newTimetableButton.addEventListener('click', () => showTimetableEditor());
+        timetablesListContainer.addEventListener('click', handleTimetablesListClick);
+        saveTimetableButton.addEventListener('click', saveTimetable);
+        cancelTimetableEditButton.addEventListener('click', showTimetablesListView);
+        timetableShiftButton.addEventListener('click', handleShiftTimings);
+        timetableLineSelect.addEventListener('change', () => populateTimetableStopsTable());
+        timetableTrainCategorySelect.addEventListener('change', () => recalculateFullTimetable());
+        timetableTravelFactorInput.addEventListener('input', () => recalculateFullTimetable());
+        timetableDwellTimeInput.addEventListener('input', () => recalculateFullTimetable());
 
         // Trains Tab Listeners
         newTrainButton.addEventListener('click', () => showTrainEditor());
         trainsListContainer.addEventListener('click', handleTrainsListClick);
-        saveTrainButton.addEventListener('click', saveTrainClass);
+        saveTrainButton.addEventListener('click', saveTrainCategory);
         cancelTrainEditButton.addEventListener('click', showTrainsListView);
         
         // BUG FIX: Attach scroll prevention listener to the list containers
-        [linesListContainer, schedulesListContainer, trainsListContainer].forEach(container => {
+        [linesListContainer, timetablesListContainer, trainsListContainer].forEach(container => {
             container.addEventListener('wheel', preventScrollLeak);
         });
 
