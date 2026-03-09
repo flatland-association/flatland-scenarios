@@ -21,7 +21,7 @@ This tool helps you to create Flatland environments and generate customized scen
 ```mermaid
 classDiagram
   class metadata {
-    timetableSpecs defaults.timetableSpecs
+    TimetableSpecs defaults.timetableSpecs
   }
   class scenario {
     timetableSpecs timetableSpecs
@@ -29,22 +29,22 @@ classDiagram
   metadata "1" --> "1..*" level
   level "1" --> "1..*" scenario
   scenario "1" --> "1..*" Service
-  class timetableSpecs {
-    timetableSpec IR
-    timetableSpec RE
-    timetableSpec S
-    timetableSpec C
+  class TimetableSpecs {
+    TimetableSpecs IR
+    TimetableSpecs RE
+    TimetableSpecs S
+    TimetableSpecs C
   }
   class TimetableSpec {
-    int "initialShift"
-    int "periodicity"
-    int "times"
-    int "travelFactor"
+    int initialShift
+    int periodicity
+    int times
+    int travelFactor
   }
   class Service {
     string name
     Scenario template
-    Optional[timetableSpec] timetableSpec
+    Optional[TimetableSpec] timetableSpec
   }
 
   class Scenario {
