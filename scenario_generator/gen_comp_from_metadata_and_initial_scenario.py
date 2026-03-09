@@ -4,11 +4,9 @@ There are 5 regions (N,E,S,W,ALL), called 'scenes' (1,2,3,4,5), with W (4) being
 """
 from pathlib import Path
 
-# from scenario_generator.scenario import Scenario, ScenarioBuilder
-# from scenario_generator.utils import load_json
+from scenario_generator.scenario import Scenario, ScenarioBuilder
+from scenario_generator.utils import load_json
 
-from scenario import Scenario, ScenarioBuilder
-from utils import load_json
 
 # get initial timetables for one of the 5 scenes / regions
 def get_scene_timetables(scenario: Scenario, scene: str) -> list[dict]:
