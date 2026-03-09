@@ -8,26 +8,26 @@ This tool helps you to create Flatland environments and generate customized scen
 
 | Term             | Description                                                                                                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Scenario         | Rail, lines, Services and malfunction parameters fixed (each train has a set of stops with routing flexibility and a time window at each stop).                                                    |
-| Initial Scenario | Defines services all starting at zero, malfunction usually empty.                                                                                                                                  |
-| Metadata         | Defines services: a service template from the initial scenario and timetable specs on how to instantiate the scenario.                                                                              |
+| Scenario         | Rail, lines, timetables and malfunction parameters fixed (each train has a set of stops with routing flexibility and a time window at each stop).                                                    |
+| Initial Scenario | Defines timetables all starting at zero, malfunction usually empty.                                                                                                                                  |
+| Metadata         | Defines tthe instatiation of the scenario from the initial scenario and timetable specs.                                                                              |
 | Line             | A line is a sequence of stops with routing flexibility at intermediates and target but not initial (in strict Flatland sense, lines are agents with stops already assigned and max speeds as well) |
 | Train Category   | Used to differentiate timetable specs for different train categories.                                                                                                                               |
-| Timetable          | Corresponds to a Flatland agent with the stops to serve in a given time-windows (Flatland Timetable).                                                                                              |
+| Timetable        | Corresponds to a Flatland agent with the stops to serve in a given time-windows (Flatland Timetable).                                                                                              |
 | Scene            | A set of lines.                                                                                                                                                                                    |
 
 ### Data Model
 
 ```mermaid
 classDiagram
-  class metadata {
+  class Metadata {
     TimetableSpecs defaults.timetableSpecs
   }
-  class scenario {
-    timetableSpecs timetableSpecs
+  class Scenario {
+    TimetableSpecs timetableSpecs
   }
-  metadata "1" --> "1..*" level
-  level "1" --> "1..*" scenario
+  Metadata "1" --> "1..*" Level
+  Level "1" --> "1..*" Scenario
   class TimetableSpecs {
     TimetableSpecs IR
     TimetableSpecs RE
