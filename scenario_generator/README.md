@@ -20,14 +20,14 @@ This tool helps you to create Flatland environments and generate customized scen
 
 ```mermaid
 classDiagram
-  class Metadata {
+  class metadata {
     TimetableSpecs defaults.timetableSpecs
   }
-  class Scenario {
+  class scenario {
     TimetableSpecs timetableSpecs
   }
-  Metadata "1" --> "1..*" Level
-  Level "1" --> "1..*" Scenario
+  metadata "1" --> "1..*" level
+  level "1" --> "1..*" scenario
 
   class TimetableSpecs {
     TimetableSpec IR
