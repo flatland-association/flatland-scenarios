@@ -5,11 +5,11 @@ from scenario_generator.run import main
 if __name__ == '__main__':
     start_time = time.time()
     for scenario, sub_scenario, NUM in [
-        ("scene_1", "scene_1_initial", 1),
-        ("scene_2", "scene_2_initial", 1),
-        ("scene_3", "scene_3_initial", 1),
-        ("scene_4", "scene_4_initial", 1),
-        ("scene_5", "scene_5_initial", 1),
+        ("level_0", "level_0_scene_1", 1),
+        ("level_0", "level_0_scene_2", 1),
+        ("level_0", "level_0_scene_3", 1),
+        ("level_0", "level_0_scene_4", 1),
+        ("level_0", "level_0_scene_5", 1),
     ]:
         main(
             num=NUM,
