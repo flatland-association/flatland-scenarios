@@ -28,7 +28,6 @@ classDiagram
   }
   metadata "1" --> "1..*" level
   level "1" --> "1..*" scenario
-  scenario "1" --> "1..*" Service
   class TimetableSpecs {
     TimetableSpecs IR
     TimetableSpecs RE
@@ -40,11 +39,6 @@ classDiagram
     int periodicity
     int times
     int travelFactor
-  }
-  class Service {
-    string name
-    Scenario template
-    Optional[TimetableSpec] timetableSpec
   }
 
   class Scenario {
@@ -92,7 +86,7 @@ flowchart LR
 | [`Initialize grid`](#initialize-grid)           |
 | [`Draw grid-world`](#draw-grid-world)           |
 | [`Create Lines`](#create-lines)                 |
-| [`Define train classes`](#define-train-classes) |
+| [`Define train categories`](#define-train-categories) |
 | [`Create Timetables`](#create-timetables)         |
 | [`Export environment`](#export-environment)     |
 
@@ -129,10 +123,10 @@ Once a Line is created, you can display the shortest path lengths between the st
 - reversed
 - deleted
 
-### Define train classes
+### Define train categories
 
-In order to choose what train is running your Lines you can create classes of trains whose sole parameter is **maximum speed**. There are 4 predefined train
-classes.
+In order to choose what train is running your Lines you can create categories of trains whose parameters are a description of the ctegory and its **maximum speed**. There are 4 predefined train
+categories.
 
 ### Create Timetables
 
