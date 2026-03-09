@@ -4,9 +4,11 @@ There are 5 regions (N,E,S,W,ALL), called 'scenes' (1,2,3,4,5), with W (4) being
 """
 from pathlib import Path
 
-from scenario_generator.scenario import Scenario, ScenarioBuilder
-from scenario_generator.utils import load_json
+# from scenario_generator.scenario import Scenario, ScenarioBuilder
+# from scenario_generator.utils import load_json
 
+from scenario import Scenario, ScenarioBuilder
+from utils import load_json
 
 # get initial timetables for one of the 5 scenes / regions
 def get_scene_timetables(scenario: Scenario, scene: str) -> list[dict]:
@@ -63,7 +65,7 @@ if __name__ == '__main__':
     display_timetables_for_scene('scene_all_initial.json')
     # main(scenario_name='scene_all_initial', config_file='config_template', create_pkl=True)
     gen_comp_from_metadata_and_initial_scenario(
-        initial_scenario_file_name='scene_all_initial.json',
+        initial_scenario_file_name='scene_sample_initial.json',
         metadata_file_name='metadata_template.json',
         levels=['level_0'],
         scenarios=['scenario_1'],
