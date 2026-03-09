@@ -19,7 +19,7 @@ from scenario_generator.utils import load_json
 
 class Scenario:
     """
-    The Scenario class takes a dict as input that is the JSON output of the Flatland Environment Drawing Tool
+    A scenario defines a Flatland env along with some raw information from the Flatland Environment Drawing Tool.
     """
 
     def __init__(self, data: dict):
