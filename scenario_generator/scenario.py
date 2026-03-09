@@ -110,6 +110,9 @@ class Scenario:
 
 
 class ScenarioBuilder:
+    """
+    The scenario builder takes the JSON output of the Flatland Environment Drawing Tool to create a scenario from the shift and scale parameters.
+    """
     def __init__(self, initial_scenario: Scenario):
         self.scenario = Scenario(copy.deepcopy(initial_scenario.data))
 
