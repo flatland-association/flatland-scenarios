@@ -8,12 +8,6 @@ from scenario_generator.scenario import Scenario, ScenarioBuilder
 from scenario_generator.utils import load_json
 
 
-def get_initial_timetable_for_template(scenario: Scenario, template: str) -> dict:
-    templates = [n for n in scenario.timetables if n['name'] == template]
-    assert len(templates) == 1
-    return templates[0]
-
-
 # get initial timetables for one of the 5 scenes / regions
 def get_scene_timetables(scenario: Scenario, scene: str) -> list[dict]:
     if scene == 'scene_1':
@@ -30,7 +24,7 @@ def get_scene_timetables(scenario: Scenario, scene: str) -> list[dict]:
         raise ValueError(f"unknown scene: {scene}")
 
 
-def display_services_for_scene(initial_scenario_file_name: str) -> dict:
+def display_timetables_for_scene(initial_scenario_file_name: str) -> dict:
     initial_scenario = Scenario.load(initial_scenario_file_name)
     for i in range(1, 6):
         region = f'scene_{i}'
@@ -54,8 +48,10 @@ def gen_comp_from_metadata_and_initial_scenario(initial_scenario_file_name: str,
             scenario_name_ = scenario["name"]
             if scenarios is not None and scenario_name_ not in scenarios:
                 continue
-            # lookup service template
-            timetables_initial_scenario = [get_initial_timetable_for_template(initial_scenario, service["template"]) for service in scenario["services"]]
+
+            # get initial timetables for scenario
+            scene = scenario["scene"]
+            timetables_initial_scenario = get_scene_timetables(initial_scenario, scene)
             # merge defaults with scenario-specific specs
             timetable_specs = {**level["defaults"]["timetableSpecs"], **scenario["timetableSpecs"]}
             scenario = ScenarioBuilder(initial_scenario).add_timetables_according_to_specs(timetables_initial_scenario, timetable_specs).build()
@@ -63,8 +59,8 @@ def gen_comp_from_metadata_and_initial_scenario(initial_scenario_file_name: str,
 
 
 if __name__ == '__main__':
-    display_services_for_scene('scene_sample_initial.json')
-    display_services_for_scene('scene_all_initial.json')
+    display_timetables_for_scene('scene_sample_initial.json')
+    display_timetables_for_scene('scene_all_initial.json')
     # main(scenario_name='scene_all_initial', config_file='config_template', create_pkl=True)
     gen_comp_from_metadata_and_initial_scenario(
         initial_scenario_file_name='scene_all_initial.json',

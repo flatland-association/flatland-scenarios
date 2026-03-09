@@ -33,6 +33,7 @@
       "scenarios": [
         {
           "name": "scenario_1",
+          "scene": "scene_1",
           "timetableSpecs": {}
         }
       ]
