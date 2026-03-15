@@ -17,7 +17,7 @@ if __name__ == '__main__':
             scenario=scenario,
             sub_scenario=sub_scenario,
             generate_movies=True,
-            base_dir="../flatland-rl/scenarios/OneDrive_1_23-02-2026"
+            base_dir="competition"
         )
     end_time = time.time()
     total = end_time - start_time
