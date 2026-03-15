@@ -60,7 +60,7 @@ def run(scenario: str,
         policy=policy,
         data_dir=data_dir,
         ep_id=sub_scenario,
-        env=RailEnvPersister.load_new(f"{base_dir if base_dir is not None else "."}/{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation(),
+        env=RailEnvPersister.load_new(f"{base_dir if base_dir is not None else '.'}/{scenario}/{sub_scenario}.pkl", obs_builder=FullEnvObservation(),
                                       rewards=BaseDefaultRewards())[0],
         callbacks=callbacks,
     )
@@ -68,9 +68,9 @@ def run(scenario: str,
     print(f"Took {end_time - start_time:.2f}s")
     all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats = data_frame_for_trajectories(
         root_data_dir=Path(data_dir))
-    print(f"normalized_reward={all_trains_arrived["normalized_reward"].sum()}")
-    print(f"mean_normalized_reward={all_trains_arrived["normalized_reward"].mean()}")
-    print(f"success_rate={all_trains_arrived["success_rate"].mean()}")
+    print(f"normalized_reward={all_trains_arrived['normalized_reward'].sum()}")
+    print(f"mean_normalized_reward={all_trains_arrived['normalized_reward'].mean()}")
+    print(f"success_rate={all_trains_arrived['success_rate'].mean()}")
     return all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats
 
 
@@ -96,12 +96,12 @@ if __name__ == '__main__':
     profiling = False
 
     for scenario, sub_scenario, NUM in [
+        ("scenario_1", "scenario_1_initial", 1),
+        ("scenario_1", "scenario_1_generated", 1),
         ("scenario_2", "scenario_2_initial", 10),
         ("scenario_2", "scenario_2_generated", 10),
         ("scenario_3", "scenario_3_initial", 10),
         ("scenario_3", "scenario_3_generated", 10),
-        ("scenario_1", "scenario_1_initial", 1),
-        ("scenario_1", "scenario_1_generated", 1),
     ]:
         if profiling:
             cProfile.run(f'main(num={NUM},start_seed=48, scenario="{scenario}", sub_scenario="{sub_scenario}")', sort='cumtime', filename="run.hprof")
