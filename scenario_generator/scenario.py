@@ -13,8 +13,8 @@ from flatland.envs.rail_env import RailEnv
 from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
 from flatland.envs.rail_trainrun_data_structures import Waypoint
 from flatland.envs.timetable_utils import Line, Timetable
-from scenario_generator.flatland_generators import rail_generator_from_grid_map, line_generator_from_line, timetable_generator_from_timetable
-from scenario_generator.utils import load_json
+from flatland_generators import rail_generator_from_grid_map, line_generator_from_line, timetable_generator_from_timetable
+from utils import load_json
 
 
 class Scenario:
@@ -209,7 +209,7 @@ class ScenarioBuilder:
         new_name = f'{prefix}.{int(suffix) + i}'
         return new_name
 
-    def add_timetables_according_to_specs(self, initial_timetable: list[dict], timetable_specs: dict) -> "ScenarioBuilder":
+    def add_timetables_from_specs(self, initial_timetable: list[dict], timetable_specs: dict) -> "ScenarioBuilder":
         for s in initial_timetable:
             name = s['name']
             train_category_name = s['trainCategoryName']
