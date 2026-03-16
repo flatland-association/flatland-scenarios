@@ -61,11 +61,11 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
 
 if __name__ == '__main__':
     display_timetables_for_scene('scene_sample_initial.json')
-    display_timetables_for_scene('scene_all_initial.json')
+    # display_timetables_for_scene('scene_all_initial.json')
     # main(scenario_name='scene_all_initial', config_file='config_template', create_pkl=True)
     generate_competition_from_metadata_and_initial_scenario(
         initial_scenario_file_name='scene_sample_initial.json',
-        metadata_file_name='metadata_competition_template.json',
+        metadata_file_name='metadata_competition_sample.json',
         levels=['level_0'],
         scenarios=['scenario_1'],
         create_pkl=True
