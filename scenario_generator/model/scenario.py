@@ -13,8 +13,7 @@ from flatland.envs.rail_env import RailEnv
 from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
 from flatland.envs.rail_trainrun_data_structures import Waypoint
 from flatland.envs.timetable_utils import Line, Timetable
-from flatland_generators import rail_generator_from_grid_map, line_generator_from_line, timetable_generator_from_timetable
-from utils import load_json
+from scenario_generator.flatland_integration.flatland_generators import rail_generator_from_grid_map, line_generator_from_line, timetable_generator_from_timetable
 
 
 class Scenario:

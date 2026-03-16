@@ -28,18 +28,18 @@ def generate_examples_from_metadata_and_initial_scenario(initial_scenario_file_n
 
 
 if __name__ == '__main__':
-    # generate_examples_from_metadata_and_initial_scenario(
-    #     initial_scenario_file_name='example_1/example_1_initial.json',
-    #     metadata_file_name='metadata_example_scenarios.json',
-    #     create_pkl=True
-    # )
+    generate_examples_from_metadata_and_initial_scenario(
+        initial_scenario_file_name='example_1/example_1_initial.json',
+        metadata_file_name='metadata_example_scenarios.json',
+        create_pkl=True
+    )
     generate_examples_from_metadata_and_initial_scenario(
         initial_scenario_file_name='example_2/example_2_initial.json',
         metadata_file_name='metadata_example_scenarios.json',
         create_pkl=True
     )
-    # generate_examples_from_metadata_and_initial_scenario(
-    #     initial_scenario_file_name='example_3/example_3_initial.json',
-    #     metadata_file_name='metadata_example_scenarios.json',
-    #     create_pkl=True,
-    # )
+    generate_examples_from_metadata_and_initial_scenario(
+        initial_scenario_file_name='example_3/example_3_initial.json',
+        metadata_file_name='metadata_example_scenarios.json',
+        create_pkl=True,
+    )
