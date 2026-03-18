@@ -25,6 +25,19 @@ def get_scene_timetables(scenario: Scenario, scene: str) -> list[dict]:
         raise ValueError(f"unknown scene: {scene}")
 
 
+def get_scene_from_timetable(n) -> str:
+    if n['name'].split(' ')[1][0] == '1':
+        return 'scene_1'
+    elif n['name'].split(' ')[1][0] == '2':
+        return 'scene_2'
+    elif n['name'].split(' ')[1][0] == '3':
+        return 'scene_3'
+    elif n['name'].split(' ')[1][0] in ('1', '3', '4'):
+        return 'scene_4'
+    else:
+        return 'scene_5'
+
+
 def display_timetables_for_scene(initial_scenario_file_name: str) -> dict:
     initial_scenario = Scenario.load(initial_scenario_file_name)
     for i in range(1, 6):
@@ -52,14 +65,22 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
             if scenarios is not None and scenario_name_ not in scenarios:
                 continue
 
-            # get initial timetables for scenario
+            # get initial timetables for scenario filtered by scene
             scene = scenario_metadata["scene"]
-            scene_timetables = get_scene_timetables(initial_scenario, scene)
+            scene_timetables = [tt for tt in initial_scenario.timetables if tt["scene"] == scene]
 
             derived_scenario = derive_scenario_from_initial_scenario_and_metadata(initial_scenario, level_metadata, scenario_metadata,
                                                                                   timetables=scene_timetables)
             derived_scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
 
+
+def add_scene_attribute(file_name='scene_sample_initial.json'):
+    with open(file_name + '.json' if not file_name.endswith(".json") else file_name, 'r') as f:
+        data = json.load(f)
+    for timetable in data["timetables"]:
+        timetable["scene"] = get_scene_from_timetable(timetable)
+    with open(file_name + '.json' if not file_name.endswith(".json") else file_name, 'w') as f:
+        json.dump(data, f)
 
 if __name__ == '__main__':
     display_timetables_for_scene('scene_sample_initial.json')
