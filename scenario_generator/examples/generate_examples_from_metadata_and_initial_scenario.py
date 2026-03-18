@@ -23,7 +23,8 @@ def generate_examples_from_metadata_and_initial_scenario(initial_scenario_file_n
 
             # merge defaults with scenario-specific specs
             timetable_specs = {**example["defaults"]["timetableSpecs"], **scenario["timetableSpecs"]}
-            scenario = ScenarioBuilder(initial_scenario).add_timetables_from_specs(initial_scenario.timetables, timetable_specs).build()
+            scenario = ScenarioBuilder(initial_scenario).add_timetables_from_specs(initial_scenario.timetables,
+                                                                                   timetable_specs).add_malfunction_from_specs().build()
             scenario.save(name=f'{example_name}_{scenario_name_}', folder=output_folder / example_name, create_pkl=create_pkl)
 
 

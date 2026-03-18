@@ -55,7 +55,10 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
             timetables_initial_scenario = get_scene_timetables(initial_scenario, scene)
             # merge defaults with scenario-specific specs
             timetable_specs = {**level["defaults"]["timetableSpecs"], **scenario["timetableSpecs"]}
-            scenario = ScenarioBuilder(initial_scenario).add_timetables_from_specs(timetables_initial_scenario, timetable_specs).build()
+            scenario = (ScenarioBuilder(initial_scenario)
+                        .add_timetables_from_specs(timetables_initial_scenario, timetable_specs)
+                        .add_malfunction_from_specs()
+                        .build())
             scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
 
 

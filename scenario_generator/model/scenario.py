@@ -8,12 +8,14 @@ from typing import Tuple, Dict
 import numpy as np
 
 from flatland.envs.grid.rail_env_grid import RailEnvTransitions
+from flatland.envs.malfunction_generators import MalfunctionParameters, ParamMalfunctionGen
 from flatland.envs.persistence import RailEnvPersister
 from flatland.envs.rail_env import RailEnv
 from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
 from flatland.envs.rail_trainrun_data_structures import Waypoint
 from flatland.envs.timetable_utils import Line, Timetable
-from scenario_generator.flatland_integration.flatland_generators import rail_generator_from_grid_map, line_generator_from_line, timetable_generator_from_timetable
+from scenario_generator.flatland_integration.flatland_generators import rail_generator_from_grid_map, line_generator_from_line, \
+    timetable_generator_from_timetable
 
 
 class Scenario:
@@ -47,7 +49,7 @@ class Scenario:
         for timetable in self.timetables:
             print(timetable['name'])
 
-    def to_rail_env(self) -> Tuple[RailEnv, Dict, Dict]:
+    def to_rail_env(self, malfunction_params: MalfunctionParameters = None) -> Tuple[RailEnv, Dict, Dict]:
         data = self.data
 
         width = data['gridDimensions']['cols']
@@ -83,6 +85,7 @@ class Scenario:
             rail_generator=rail_generator_from_grid_map(grid, level_free_positions),
             line_generator=line_generator_from_line(line),
             timetable_generator=timetable_generator_from_timetable(timetable),
+            malfunction_generator=ParamMalfunctionGen(malfunction_params) if malfunction_params is not None else None,
         )
 
         observations, info = env.reset()
@@ -113,6 +116,7 @@ class ScenarioBuilder:
     """
     The scenario builder takes the JSON output of the Flatland Environment Drawing Tool to create a scenario from the shift and scale parameters.
     """
+
     def __init__(self, initial_scenario: Scenario):
         self.scenario = Scenario(copy.deepcopy(initial_scenario.data))
 
@@ -129,6 +133,8 @@ class ScenarioBuilder:
             'latest_arrivals': [],
             'max_episode_steps': 0
         }
+
+        self.malfunction_params = None
 
     def build(self) -> Scenario:
         self.scenario.data['lines'] = self.scenario_lines
@@ -219,4 +225,8 @@ class ScenarioBuilder:
             for i in range(d.get('times', 1)):
                 new_name = self._get_new_name(name, i)
                 self.add_timetable(name, d.get('initialShift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travelFactor', 1))
+        return self
+
+    def add_malfunction_from_specs(self, malfunction_params: MalfunctionParameters = None):
+        self.malfunction_params = malfunction_params
         return self
