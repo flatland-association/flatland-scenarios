@@ -26,7 +26,7 @@ class DeadlockAvoidanceHeuristics(DeadLockAvoidancePolicy):
             audit=audit,
         )
 
-def run_dla(scenario: str,
+def run_with_dla(scenario: str,
             sub_scenario: str,
             base_dir: str = None,
             generate_movies: bool = False,
@@ -55,11 +55,11 @@ def run_dla(scenario: str,
         obs_builder=obs_builder,
     )
 
-def main(num, start_seed, scenario, sub_scenario, base_dir=None, generate_movies=False):
+def run_scenario(num, start_seed, scenario, sub_scenario, base_dir=None, generate_movies=False):
     start_time = time.time()
     ress = []
     for seed in range(start_seed, start_seed + num):
-        ress.append(run_dla(
+        ress.append(run_with_dla(
             scenario,
             sub_scenario,
             base_dir=base_dir,
@@ -87,4 +87,4 @@ if __name__ == '__main__':
         if profiling:
             cProfile.run(f'main(num={NUM},start_seed=48, scenario="{scenario}", sub_scenario="{sub_scenario}")', sort='cumtime', filename="run.hprof")
         else:
-            main(num=NUM, start_seed=48, scenario=scenario, sub_scenario=sub_scenario)
+            run_scenario(num=NUM, start_seed=48, scenario=scenario, sub_scenario=sub_scenario)

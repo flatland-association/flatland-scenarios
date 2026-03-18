@@ -1,6 +1,6 @@
 import time
 
-from scenario_generator.flatland_integration.run import main
+from scenario_generator.flatland_integration.run_dla import main
 
 if __name__ == '__main__':
     start_time = time.time()
