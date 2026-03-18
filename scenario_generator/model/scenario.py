@@ -23,18 +23,40 @@ class Scenario:
     A scenario defines a Flatland env along with some raw information from the Flatland Environment Drawing Tool.
     """
 
+    @property
+    def grid(self):
+        return self.data['grid']
+
+    @property
+    def level_free_crossings(self):
+        return self.data['overpasses']
+
+    @property
+    def stations(self):
+        return self.data['stations']
+
+    @property
+    def lines(self):
+        return self.data['lines']
+
+    @property
+    def timetables(self):
+        return self.data['timetables']
+
+    @property
+    def train_classes(self):
+        return self.data['trainCategories']
+
+    @property
+    def flatland_line(self):
+        return self.data['flatlandLine']
+
+    @property
+    def flatland_timetable(self):
+        return self.data['flatlandTimetable']
+
     def __init__(self, data: dict):
         self.data = copy.deepcopy(data)
-
-        self.grid = data['grid']
-        self.level_free_crossings = data['overpasses']
-        self.stations = data['stations']
-        self.lines = data['lines']
-        self.timetables = data['timetables']
-        self.train_classes = data['trainCategories']
-        self.flatland_line = data['flatlandLine']
-        self.flatland_timetable = data['flatlandTimetable']
-
         self.malfunction_params: MalfunctionParameters = None
 
     @staticmethod
@@ -75,12 +97,14 @@ class Scenario:
         )
         return line_generator_from_line(line)
 
-    def to_timetable_generator(self):
-        data = self.data
+    def to_timetable_generator(self, timetable_specs=None):
+        scenario = self
+        if timetable_specs is not None:
+            scenario = ScenarioBuilder(self).add_timetables_from_specs(timetable_specs).build()
         timetable = Timetable(
-            earliest_departures=data['flatlandTimetable']['earliest_departures'],
-            latest_arrivals=data['flatlandTimetable']['latest_arrivals'],
-            max_episode_steps=data['flatlandTimetable']['max_episode_steps']
+            earliest_departures=scenario.flatland_timetable['earliest_departures'],
+            latest_arrivals=scenario.flatland_timetable['latest_arrivals'],
+            max_episode_steps=scenario.flatland_timetable['max_episode_steps']
         )
         return timetable_generator_from_timetable(timetable)
 
@@ -220,6 +244,7 @@ class ScenarioBuilder:
             self.scenario_flatland_timetable['max_episode_steps'],
             2 * latest_arrivals[-1],
         )
+        print(self.scenario_flatland_timetable)
 
     # get consecutive line names by numbering
     @staticmethod
@@ -231,8 +256,10 @@ class ScenarioBuilder:
         new_name = f'{prefix}.{int(suffix) + i}'
         return new_name
 
-    def add_timetables_from_specs(self, initial_timetable: list[dict], timetable_specs: dict) -> "ScenarioBuilder":
-        for s in initial_timetable:
+    def add_timetables_from_specs(self, timetable_specs: dict, initial_timetables: list[dict] = None) -> "ScenarioBuilder":
+        if initial_timetables is None:
+            initial_timetables = self.scenario.timetables
+        for s in initial_timetables:
             name = s['name']
             train_category_name = s['trainCategoryName']
             d = timetable_specs.get(train_category_name, None)
