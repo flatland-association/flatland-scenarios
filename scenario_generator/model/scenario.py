@@ -35,6 +35,8 @@ class Scenario:
         self.flatland_line = data['flatlandLine']
         self.flatland_timetable = data['flatlandTimetable']
 
+        self.malfunction_params: MalfunctionParameters = None
+
     @staticmethod
     def load(file_name: str) -> "Scenario":
         with open(file_name + '.json' if not file_name.endswith(".json") else file_name, 'r') as f:
@@ -49,7 +51,7 @@ class Scenario:
         for timetable in self.timetables:
             print(timetable['name'])
 
-    def to_rail_env(self, malfunction_params: MalfunctionParameters = None) -> Tuple[RailEnv, Dict, Dict]:
+    def to_rail_env(self) -> Tuple[RailEnv, Dict, Dict]:
         data = self.data
 
         width = data['gridDimensions']['cols']
@@ -85,7 +87,7 @@ class Scenario:
             rail_generator=rail_generator_from_grid_map(grid, level_free_positions),
             line_generator=line_generator_from_line(line),
             timetable_generator=timetable_generator_from_timetable(timetable),
-            malfunction_generator=ParamMalfunctionGen(malfunction_params) if malfunction_params is not None else None,
+            malfunction_generator=ParamMalfunctionGen(self.malfunction_params) if self.malfunction_params is not None else None,
         )
 
         observations, info = env.reset()
@@ -141,6 +143,7 @@ class ScenarioBuilder:
         self.scenario.data['timetables'] = self.scenario_timetables
         self.scenario.data['flatlandLine'] = self.scenario_flatland_line
         self.scenario.data['flatlandTimetable'] = self.scenario_flatland_timetable
+        self.malfunction_params = self.malfunction_params
         return self.scenario
 
     def rescale_timetable(self, timetable: list[dict], travel_factor: float = 1.0) -> list[dict]:
