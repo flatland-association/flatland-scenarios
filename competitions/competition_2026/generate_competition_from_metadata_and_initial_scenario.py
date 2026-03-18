@@ -32,8 +32,9 @@ def display_timetables_for_scene(initial_scenario_file_name: str) -> dict:
         print([n["name"] for n in get_scene_timetables(initial_scenario, region)])
 
 
-def generate_competition_from_metadata_and_initial_scenario(initial_scenario_file_name: str, metadata_file_name: str, levels: list[str] = None, scenarios: list[str] = None,
-                                                create_pkl: bool = False, output_folder: Path = None):
+def generate_competition_from_metadata_and_initial_scenario(initial_scenario_file_name: str, metadata_file_name: str, levels: list[str] = None,
+                                                            scenarios: list[str] = None,
+                                                            create_pkl: bool = False, output_folder: Path = None):
     initial_scenario = Scenario.load(initial_scenario_file_name)
     with open(metadata_file_name + '.json' if not metadata_file_name.endswith(".json") else metadata_file_name, 'r') as f:
         metadata = json.load(f)
@@ -58,6 +59,7 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
             scenario = (ScenarioBuilder(initial_scenario)
                         .add_timetables_from_specs(timetables_initial_scenario, timetable_specs)
                         .add_malfunction_from_specs()
+                        .add_seed_from_specs()
                         .build())
             scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
 

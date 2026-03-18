@@ -135,15 +135,16 @@ class ScenarioBuilder:
             'latest_arrivals': [],
             'max_episode_steps': 0
         }
-
-        self.malfunction_params = None
+        self.malfunction_params: MalfunctionParameters = None
+        self.seed: int = None
 
     def build(self) -> Scenario:
         self.scenario.data['lines'] = self.scenario_lines
         self.scenario.data['timetables'] = self.scenario_timetables
         self.scenario.data['flatlandLine'] = self.scenario_flatland_line
         self.scenario.data['flatlandTimetable'] = self.scenario_flatland_timetable
-        self.malfunction_params = self.malfunction_params
+        self.scenario.malfunction_params = self.malfunction_params
+        self.scenario.seed = self.seed
         return self.scenario
 
     def rescale_timetable(self, timetable: list[dict], travel_factor: float = 1.0) -> list[dict]:
@@ -232,4 +233,8 @@ class ScenarioBuilder:
 
     def add_malfunction_from_specs(self, malfunction_params: MalfunctionParameters = None):
         self.malfunction_params = malfunction_params
+        return self
+
+    def add_seed_from_specs(self, seed=None):
+        self.seed = seed
         return self
