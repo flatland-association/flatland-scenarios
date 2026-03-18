@@ -5,8 +5,8 @@ There are 5 regions (N,E,S,W,ALL), called 'scenes' (1,2,3,4,5), with W (4) being
 import json
 from pathlib import Path
 
-from flatland.envs.malfunction_generators import MalfunctionParameters
-from scenario_generator.model.scenario import Scenario, ScenarioBuilder
+from scenario_generator.examples.generate_examples_from_metadata_and_initial_scenario import derive_scenario_from_initial_scenario_and_metadata
+from scenario_generator.model.scenario import Scenario
 
 
 # get initial timetables for one of the 5 scenes / regions
@@ -43,36 +43,22 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
     if output_folder is None:
         output_folder = Path(".")
 
-    for level in metadata["levels"]:
-        level_name = level["name"]
+    for level_metadata in metadata["levels"]:
+        level_name = level_metadata["name"]
         if levels is not None and level_name not in levels:
             continue
-        for scenario in level["scenarios"]:
-            scenario_name_ = scenario["name"]
+        for scenario_metadata in level_metadata["scenarios"]:
+            scenario_name_ = scenario_metadata["name"]
             if scenarios is not None and scenario_name_ not in scenarios:
                 continue
 
             # get initial timetables for scenario
-            scene = scenario["scene"]
-            timetables_initial_scenario = get_scene_timetables(initial_scenario, scene)
-            # merge defaults with scenario-specific specs
-            timetable_specs = {**level["defaults"]["timetableSpecs"], **scenario["timetableSpecs"]}
-            malfunction_specs = scenario.get("malfunctionSpecs", None)
-            if malfunction_specs is not None:
-                malfunction_specs = MalfunctionParameters(
-                    min_duration=malfunction_specs["malfunction_duration_min"],
-                    max_duration=malfunction_specs["malfunction_duration_max"],
-                    malfunction_rate=1 / malfunction_specs["malfunction_interval"]
-                )
-            seed = scenario.get("seed", None)
-            scenario = (
-                ScenarioBuilder(initial_scenario)
-                .add_timetables_from_specs(timetables_initial_scenario, timetable_specs)
-                .add_malfunction_from_specs(malfunction_specs)
-                .add_seed_from_specs(seed)
-                .build()
-            )
-            scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
+            scene = scenario_metadata["scene"]
+            scene_timetables = get_scene_timetables(initial_scenario, scene)
+
+            derived_scenario = derive_scenario_from_initial_scenario_and_metadata(initial_scenario, level_metadata, scenario_metadata,
+                                                                                  timetables=scene_timetables)
+            derived_scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
 
 
 if __name__ == '__main__':

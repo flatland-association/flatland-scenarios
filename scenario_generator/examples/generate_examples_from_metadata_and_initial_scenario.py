@@ -3,9 +3,10 @@ This file creates the three example scenarios.
 """
 import json
 from pathlib import Path
+from typing import List
 
-from flatland.envs.malfunction_generators import MalfunctionParameters
-from scenario_generator.model.scenario import Scenario, ScenarioBuilder
+from scenario_generator.model.metadata import derive_scenario_from_initial_scenario_and_metadata
+from scenario_generator.model.scenario import Scenario
 
 
 def generate_examples_from_metadata_and_initial_scenario(initial_scenario_file_name: str, metadata_file_name: str, create_pkl: bool = False,
@@ -17,31 +18,21 @@ def generate_examples_from_metadata_and_initial_scenario(initial_scenario_file_n
     if output_folder is None:
         output_folder = Path(".")
 
-    for example in metadata["levels"]:
-        example_name = example["name"]
+    derive_scenarios_from_initial_scenario_and_metadata(initial_scenario, metadata, output_folder, create_pkl)
 
-        for scenario in example["scenarios"]:
-            scenario_name_ = scenario["name"]
 
-            # merge defaults with scenario-specific specs
-            timetable_specs = {**example["defaults"]["timetableSpecs"], **scenario["timetableSpecs"]}
+def derive_scenarios_from_initial_scenario_and_metadata(initial_scenario: Scenario, metadata, output_folder: Path, create_pkl: bool) -> List[Scenario]:
+    scenarios = []
+    for level_metadata in metadata["levels"]:
+        example_name = level_metadata["name"]
 
-            malfunction_specs = scenario.get("malfunctionSpecs", None)
-            if malfunction_specs is not None:
-                malfunction_specs = MalfunctionParameters(
-                    min_duration=malfunction_specs["malfunction_duration_min"],
-                    max_duration=malfunction_specs["malfunction_duration_max"],
-                    malfunction_rate=1 / malfunction_specs["malfunction_interval"]
-                )
-            seed = scenario.get("seed", None)
-            scenario = (
-                ScenarioBuilder(initial_scenario)
-                .add_timetables_from_specs(initial_scenario.timetables, timetable_specs)
-                .add_malfunction_from_specs(malfunction_specs)
-                .add_seed_from_specs(seed)
-                .build()
-            )
-            scenario.save(name=f'{example_name}_{scenario_name_}', folder=output_folder / example_name, create_pkl=create_pkl)
+        for scenario_metadata in level_metadata["scenarios"]:
+            scenario_name_ = scenario_metadata["name"]
+
+            derived_scenario = derive_scenario_from_initial_scenario_and_metadata(initial_scenario, level_metadata, scenario_metadata)
+            derived_scenario.save(name=f'{example_name}_{scenario_name_}', folder=output_folder / example_name, create_pkl=create_pkl)
+            scenarios.append(derived_scenario)
+    return scenarios
 
 
 if __name__ == '__main__':

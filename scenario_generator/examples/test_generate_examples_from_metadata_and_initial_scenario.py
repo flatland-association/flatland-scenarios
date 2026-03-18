@@ -13,13 +13,13 @@ def test_generate_examples_from_metadata_and_initial_scenario():
         examples_path = resources.files("scenario_generator.examples")
 
         with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
-             resources.as_file(examples_path.joinpath("metadata_example_scenarios_test.json")) as metadata_file_name:
-                generate_examples_from_metadata_and_initial_scenario(
-                    initial_scenario_file_name=str(initial_scenario_file_name),
-                    metadata_file_name=str(metadata_file_name),
-                    create_pkl=True,
-                    output_folder=tmpdir
-                )
+                resources.as_file(examples_path.joinpath("metadata_example_scenarios_test.json")) as metadata_file_name:
+            generate_examples_from_metadata_and_initial_scenario(
+                initial_scenario_file_name=str(initial_scenario_file_name),
+                metadata_file_name=str(metadata_file_name),
+                create_pkl=True,
+                output_folder=tmpdir
+            )
 
         files = {str(f.relative_to(tmpdirname)) for f in tmpdir.rglob("**/*") if f.is_file()}
         assert files == {"example_2/example_2_test.pkl", "example_2/example_2_test.json"}
