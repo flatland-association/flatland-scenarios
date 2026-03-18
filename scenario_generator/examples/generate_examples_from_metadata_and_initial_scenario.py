@@ -4,6 +4,7 @@ This file creates the three example scenarios.
 import json
 from pathlib import Path
 
+from flatland.envs.malfunction_generators import MalfunctionParameters
 from scenario_generator.model.scenario import Scenario, ScenarioBuilder
 
 
@@ -24,12 +25,22 @@ def generate_examples_from_metadata_and_initial_scenario(initial_scenario_file_n
 
             # merge defaults with scenario-specific specs
             timetable_specs = {**example["defaults"]["timetableSpecs"], **scenario["timetableSpecs"]}
-            scenario = (ScenarioBuilder(initial_scenario)
-                        .add_timetables_from_specs(initial_scenario.timetables, timetable_specs)
-                        .add_malfunction_from_specs()
-                        .add_seed_from_specs()
-                        .build()
-                        )
+
+            malfunction_specs = scenario.get("malfunctionSpecs", None)
+            if malfunction_specs is not None:
+                malfunction_specs = MalfunctionParameters(
+                    min_duration=malfunction_specs["malfunction_duration_min"],
+                    max_duration=malfunction_specs["malfunction_duration_max"],
+                    malfunction_rate=1 / malfunction_specs["malfunction_interval"]
+                )
+            seed = scenario.get("seed", None)
+            scenario = (
+                ScenarioBuilder(initial_scenario)
+                .add_timetables_from_specs(initial_scenario.timetables, timetable_specs)
+                .add_malfunction_from_specs(malfunction_specs)
+                .add_seed_from_specs(seed) if seed is not None else None
+                .build()
+            )
             scenario.save(name=f'{example_name}_{scenario_name_}', folder=output_folder / example_name, create_pkl=create_pkl)
 
 

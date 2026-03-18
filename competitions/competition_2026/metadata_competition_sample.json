@@ -34,7 +34,13 @@
         {
           "name": "scenario_1",
           "scene": "scene_1",
-          "timetableSpecs": {}
+          "timetableSpecs": {},
+          "malfunctionSpecs": {
+            "malfunction_duration_min": 20,
+            "malfunction_duration_max": 50,
+            "malfunction_interval": 540
+          },
+          "seed": 42
         }
       ]
     }
