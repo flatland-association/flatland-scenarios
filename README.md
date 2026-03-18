@@ -6,10 +6,22 @@ Collection of scenarios for [Flatland](https://github.com/flatland-association/f
 
 | description                                  |
 |----------------------------------------------|
-| [`scenario_olten`](#scenario-olten)          |
+| [`competitions`](#competitions)              |
 | [`scenario_generator`](#scenario-generator)  |
+| [`scenario_olten`](#scenario-olten)          |
 | [`scenarios`](#scenarios-randomly-generated) |
 | [`trajectories`](#Trajectories)              |
+
+
+## competitions
+
+Contains public scenarios of Flatland competitions.
+
+
+## Scenario generator
+
+Use the drawing tool to create grid topologies, lines and schedules to then create your own scenarios. Check out the readme file within the folder. 
+
 
 ## Scenario Olten
 
@@ -68,9 +80,6 @@ Only 3/10 lines open:
 | v2      | Generated with 4.1.0 |
 | v1      | Generated with 4.0.6 |
 
-## Scenario generator
-
-Use the drawing tool to create grid topologies, lines and schedules to create your own scenarios. Check out the readme file within the folder. 
 
 ## Scenarios (randomly generated)
 
