@@ -3,7 +3,7 @@ import json
 import math
 import uuid
 from pathlib import Path
-from typing import Tuple, Dict
+from typing import Tuple, Dict, List
 
 import numpy as np
 
@@ -51,13 +51,17 @@ class Scenario:
         for timetable in self.timetables:
             print(timetable['name'])
 
-    def to_rail_env(self) -> Tuple[RailEnv, Dict, Dict]:
+    def to_rail_generator(self):
+        width = self.data['gridDimensions']['cols']
+        height = self.data['gridDimensions']['rows']
+        grid = RailGridTransitionMap(width=width, height=height, transitions=RailEnvTransitions(), grid=np.array(self.data['grid'], dtype=np.uint16))
+
+        level_free_positions: List[Tuple[int, int]] = [tuple(item) for item in self.data['overpasses']]
+
+        return rail_generator_from_grid_map(grid, level_free_positions)
+
+    def to_line_generator(self):
         data = self.data
-
-        width = data['gridDimensions']['cols']
-        height = data['gridDimensions']['rows']
-
-        number_of_agents = len(data['flatlandLine']['agent_positions'])
 
         agent_positions = [[[tuple(c) for c in coords] for coords in positions] for positions in data['flatlandLine']['agent_positions']]
         agent_directions = data['flatlandLine']['agent_directions']
@@ -69,24 +73,32 @@ class Scenario:
             agent_waypoints=agent_waypoints,
             agent_speeds=data['flatlandLine']['agent_speeds'],
         )
+        return line_generator_from_line(line)
 
+    def to_timetable_generator(self):
+        data = self.data
         timetable = Timetable(
             earliest_departures=data['flatlandTimetable']['earliest_departures'],
             latest_arrivals=data['flatlandTimetable']['latest_arrivals'],
             max_episode_steps=data['flatlandTimetable']['max_episode_steps']
         )
+        return timetable_generator_from_timetable(timetable)
 
-        grid = RailGridTransitionMap(width=width, height=height, transitions=RailEnvTransitions(), grid=np.array(data['grid'], dtype=np.uint16))
+    def to_rail_env(self) -> Tuple[RailEnv, Dict, Dict]:
+        data = self.data
 
-        level_free_positions = [tuple(item) for item in data['overpasses']]
+        width = data['gridDimensions']['cols']
+        height = data['gridDimensions']['rows']
+
+        number_of_agents = len(data['flatlandLine']['agent_positions'])
 
         env = RailEnv(
             width=width,
             height=height,
             number_of_agents=number_of_agents,
-            rail_generator=rail_generator_from_grid_map(grid, level_free_positions),
-            line_generator=line_generator_from_line(line),
-            timetable_generator=timetable_generator_from_timetable(timetable),
+            rail_generator=self.to_rail_generator(),
+            line_generator=self.to_line_generator(),
+            timetable_generator=self.to_timetable_generator(),
             malfunction_generator=ParamMalfunctionGen(self.malfunction_params) if self.malfunction_params is not None else None,
         )
 
