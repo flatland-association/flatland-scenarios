@@ -1,13 +1,14 @@
 import time
 
-from scenario_generator.flatland_integration.run_dla import main
+from scenario_generator.flatland_integration.run_dla import run_scenario
+
 
 if __name__ == '__main__':
     start_time = time.time()
     for scenario, sub_scenario, NUM in [
         ("level_0", "level_0_scenario_1", 1)
     ]:
-        main(
+        run_scenario(
             num=NUM,
             start_seed=42,
             scenario=scenario,

@@ -1,6 +1,6 @@
 import time
 
-from scenario_generator.flatland_integration.run_dla import main
+from scenario_generator.flatland_integration.run_dla import run_scenario
 
 
 if __name__ == '__main__':
@@ -10,7 +10,7 @@ if __name__ == '__main__':
         ("example_2", "example_2_scenario", 1),
         ("example_3", "example_3_scenario", 1)
     ]:
-        main(
+        run_scenario(
             num=NUM,
             start_seed=42,
             scenario=scenario,
