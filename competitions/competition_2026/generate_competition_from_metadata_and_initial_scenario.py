@@ -69,7 +69,7 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
                 ScenarioBuilder(initial_scenario)
                 .add_timetables_from_specs(timetables_initial_scenario, timetable_specs)
                 .add_malfunction_from_specs(malfunction_specs)
-                .add_seed_from_specs(seed) if seed is not None else None
+                .add_seed_from_specs(seed)
                 .build()
             )
             scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)

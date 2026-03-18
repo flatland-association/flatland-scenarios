@@ -38,7 +38,7 @@ def generate_examples_from_metadata_and_initial_scenario(initial_scenario_file_n
                 ScenarioBuilder(initial_scenario)
                 .add_timetables_from_specs(initial_scenario.timetables, timetable_specs)
                 .add_malfunction_from_specs(malfunction_specs)
-                .add_seed_from_specs(seed) if seed is not None else None
+                .add_seed_from_specs(seed)
                 .build()
             )
             scenario.save(name=f'{example_name}_{scenario_name_}', folder=output_folder / example_name, create_pkl=create_pkl)
