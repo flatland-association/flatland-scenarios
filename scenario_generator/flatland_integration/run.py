@@ -12,14 +12,15 @@ from flatland.trajectories.policy_runner import PolicyRunner
 
 def run_with_policy(scenario: str,
                     sub_scenario: str,
-                    base_dir: str = None,
+                    base_dir: Path = None,
+                    results_dir: Path = Path("results"),
                     generate_movies: bool = False,
                     seed: int = None,
                     policy = None,
                     callbacks = None,
                     obs_builder = None,
                     ):
-    data_dir = Path(f"./results/results_{sub_scenario}_{seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
+    data_dir = results_dir / f"results_{sub_scenario}_{seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     data_dir.mkdir(exist_ok=False, parents=True)
 
     if generate_movies:
@@ -32,7 +33,7 @@ def run_with_policy(scenario: str,
         policy=policy,
         data_dir=data_dir,
         ep_id=sub_scenario,
-        env=RailEnvPersister.load_new(f"{base_dir if base_dir is not None else '.'}/{scenario}/{sub_scenario}.pkl", obs_builder=obs_builder,
+        env=RailEnvPersister.load_new(str((base_dir if base_dir is not None else Path(".")) / scenario / f"{sub_scenario}.pkl"), obs_builder=obs_builder,
                                       rewards=BaseDefaultRewards())[0],
         callbacks=callbacks,
     )

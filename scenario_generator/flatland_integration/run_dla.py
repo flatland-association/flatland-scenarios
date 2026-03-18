@@ -1,5 +1,6 @@
 import cProfile
 import time
+from pathlib import Path
 
 from scenario_generator.flatland_integration.run import run_with_policy
 
@@ -28,7 +29,8 @@ class DeadlockAvoidanceHeuristics(DeadLockAvoidancePolicy):
 
 def run_with_dla(scenario: str,
             sub_scenario: str,
-            base_dir: str = None,
+            base_dir: Path = None,
+            results_dir: Path = Path("results"),
             generate_movies: bool = False,
             seed: int = None,
             use_alternative_at_first_intermediate_and_then_always_first_strategy: int = 2,
@@ -48,6 +50,7 @@ def run_with_dla(scenario: str,
         scenario=scenario,
         sub_scenario=sub_scenario,
         base_dir=base_dir,
+        results_dir=results_dir,
         generate_movies=generate_movies,
         seed=seed,
         policy=policy,
@@ -55,7 +58,7 @@ def run_with_dla(scenario: str,
         obs_builder=obs_builder,
     )
 
-def run_scenario(num, start_seed, scenario, sub_scenario, base_dir=None, generate_movies=False):
+def run_scenario(num, start_seed, scenario, sub_scenario, base_dir=None, results_dir=Path("results"), generate_movies=False):
     start_time = time.time()
     ress = []
     for seed in range(start_seed, start_seed + num):
@@ -63,6 +66,7 @@ def run_scenario(num, start_seed, scenario, sub_scenario, base_dir=None, generat
             scenario,
             sub_scenario,
             base_dir=base_dir,
+            results_dir=results_dir,
             seed=seed,
             generate_movies=generate_movies,
             audit=True,
