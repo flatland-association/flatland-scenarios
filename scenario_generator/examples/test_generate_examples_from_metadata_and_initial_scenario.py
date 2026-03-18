@@ -1,12 +1,12 @@
 import json
 import tempfile
-from pathlib import Path
 from importlib import resources
+from pathlib import Path
 
 from scenario_generator.examples.generate_examples_from_metadata_and_initial_scenario import generate_examples_from_metadata_and_initial_scenario
 
 
-def test_gen_comp_from_metadata_and_initial_scenario():
+def test_generate_examples_from_metadata_and_initial_scenario():
     with tempfile.TemporaryDirectory() as tmpdirname:
         tmpdir = Path(tmpdirname)
 
