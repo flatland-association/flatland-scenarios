@@ -1,0 +1,170 @@
+{
+  "levels": [
+    {
+      "name": "example_1",
+      "defaults": {
+        "timetableSpecs": {
+          "IC": {
+            "initialShift": 0,
+            "periodicity": 30,
+            "times": 20,
+            "travelFactor": 1.05
+          },
+          "RE": {
+            "initialShift": 0,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          },
+          "RE10": {
+            "initialShift": 10,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          },
+          "RE20": {
+            "initialShift": 20,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          },
+          "RE30": {
+            "initialShift": 30,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          },
+          "RE40": {
+            "initialShift": 40,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          },
+          "RE15": {
+            "initialShift": 15,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          },
+          "RE45": {
+            "initialShift": 45,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          },
+          "S": {
+            "initialShift": 0,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          }
+        }
+      },
+      "scenarios": [
+        {
+          "name": "scenario",
+          "timetableSpecs": {}
+        }
+      ]
+    },
+    {
+      "name": "example_2",
+      "defaults": {
+        "timetableSpecs": {
+          "IC": {
+            "initialShift": 0,
+            "periodicity": 30,
+            "times": 20,
+            "travelFactor": 1.05
+          },
+          "RE": {
+            "initialShift": 0,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          }
+        }
+      },
+      "scenarios": [
+        {
+          "name": "scenario",
+          "timetableSpecs": {}
+        }
+      ]
+    },
+    {
+      "name": "example_3",
+      "defaults": {
+        "timetableSpecs": {
+          "IC": {
+            "initialShift": 0,
+            "periodicity": 30,
+            "times": 20,
+            "travelFactor": 1.05
+          },
+          "RE": {
+            "initialShift": 0,
+            "periodicity": 30,
+            "times": 20,
+            "travelFactor": 1.1
+          },
+          "RE16": {
+            "initialShift": 15,
+            "periodicity": 30,
+            "times": 16,
+            "travelFactor": 1.1
+          },
+          "RE6": {
+            "initialShift": 15,
+            "periodicity": 30,
+            "times": 6,
+            "travelFactor": 1.1
+          },
+          "S": {
+            "initialShift": 5,
+            "periodicity": 60,
+            "times": 10,
+            "travelFactor": 1.1
+          },
+          "S8": {
+            "initialShift": 5,
+            "periodicity": 60,
+            "times": 8,
+            "travelFactor": 1.1
+          },
+          "S6": {
+            "initialShift": 5,
+            "periodicity": 60,
+            "times": 6,
+            "travelFactor": 1.1
+          },
+          "S5": {
+            "initialShift": 5,
+            "periodicity": 60,
+            "times": 5,
+            "travelFactor": 1.1
+          },
+          "C": {
+            "initialShift": 0,
+            "periodicity": 120,
+            "times": 4,
+            "travelFactor": 1.15
+          },
+          "C60": {
+            "initialShift": 60,
+            "periodicity": 120,
+            "times": 2,
+            "travelFactor": 1.15
+          }
+        }
+      },
+      "scenarios": [
+        {
+          "name": "scenario",
+          "timetableSpecs": {}
+        }
+      ]
+    }
+  ]
+}
+
