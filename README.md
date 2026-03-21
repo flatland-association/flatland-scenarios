@@ -252,7 +252,7 @@ The configurations are taken from [metadata.csv](scenarios/metadata.csv):
 |------------------------------------------------------|----------------------------------------------------------------------------------------------|
 | [environments_v1.zip](scenarios/environments_v1.zip) | Generated with 4.0.6                                                                         |
 | [environments_v2.zip](scenarios/environments_v2.zip) | Generated with 4.2.1                                                                         |
-| [environments_v3.zip](scenarios/environments_v3.zip) | Generated with pre-4.2.4 ([pr](https://github.com/flatland-association/flatland-rl/pull/341) |
+| [environments_v3.zip](scenarios/environments_v3.zip) | Generated with pre-4.2.4 ([pr](https://github.com/flatland-association/flatland-rl/pull/341)) |
 
 ## Trajectories
 
