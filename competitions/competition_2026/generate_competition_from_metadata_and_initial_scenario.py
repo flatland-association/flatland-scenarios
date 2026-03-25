@@ -4,6 +4,7 @@ There are 5 regions (N,E,S,W,ALL), called 'scenes' (1,2,3,4,5), with W (4) being
 """
 import json
 from pathlib import Path
+from typing import List
 
 from scenario_generator.examples.generate_examples_from_metadata_and_initial_scenario import derive_scenario_from_initial_scenario_and_metadata
 from scenario_generator.model.scenario import Scenario
@@ -25,17 +26,19 @@ def get_scene_timetables(scenario: Scenario, scene: str) -> list[dict]:
         raise ValueError(f"unknown scene: {scene}")
 
 
-def get_scene_from_timetable(n) -> str:
+def get_scenes_from_timetable(n) -> List[str]:
+    scenes = []
     if n['name'].split(' ')[1][0] == '1':
-        return 'scene_1'
+        scenes.append('scene_1')
     elif n['name'].split(' ')[1][0] == '2':
-        return 'scene_2'
+        scenes.append('scene_2')
     elif n['name'].split(' ')[1][0] == '3':
-        return 'scene_3'
+        scenes.append('scene_3')
     elif n['name'].split(' ')[1][0] in ('1', '3', '4'):
-        return 'scene_4'
+        scenes.append('scene_4')
     else:
-        return 'scene_5'
+        scenes.append('scene_5')
+    return scenes
 
 
 def display_timetables_for_scene(initial_scenario_file_name: str) -> dict:
@@ -49,7 +52,7 @@ def display_timetables_for_scene(initial_scenario_file_name: str) -> dict:
 def generate_competition_from_metadata_and_initial_scenario(initial_scenario_file_name: str, metadata_file_name: str, levels: list[str] = None,
                                                             scenarios: list[str] = None,
                                                             create_pkl: bool = False, output_folder: Path = None):
-    initial_scenario = Scenario.load(initial_scenario_file_name)
+    initial_scenario = Scenario.load(initial_scenario_file_name, m=add_scenes_attribute)
     with open(metadata_file_name + '.json' if not metadata_file_name.endswith(".json") else metadata_file_name, 'r') as f:
         metadata = json.load(f)
 
@@ -74,13 +77,10 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
             derived_scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
 
 
-def add_scene_attribute(file_name='scene_sample_initial.json'):
-    with open(file_name + '.json' if not file_name.endswith(".json") else file_name, 'r') as f:
-        data = json.load(f)
+def add_scenes_attribute(data):
     for timetable in data["timetables"]:
-        timetable["scene"] = get_scene_from_timetable(timetable)
-    with open(file_name + '.json' if not file_name.endswith(".json") else file_name, 'w') as f:
-        json.dump(data, f)
+        timetable["scene"] = get_scenes_from_timetable(timetable)
+
 
 if __name__ == '__main__':
     display_timetables_for_scene('scene_sample_initial.json')

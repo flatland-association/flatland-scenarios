@@ -18975,8 +18975,7 @@
           "earliestDeparture": 146,
           "latestArrival": 142
         }
-      ],
-      "scene": "scene_1"
+      ]
     },
     {
       "id": 1771831935997,
@@ -19012,8 +19011,7 @@
           "earliestDeparture": 457,
           "latestArrival": 175
         }
-      ],
-      "scene": "scene_1"
+      ]
     },
     {
       "id": 1771832717764,
@@ -19039,8 +19037,7 @@
           "earliestDeparture": 102,
           "latestArrival": 99
         }
-      ],
-      "scene": "scene_2"
+      ]
     },
     {
       "id": 1771832720812,
@@ -19071,8 +19068,7 @@
           "earliestDeparture": 112,
           "latestArrival": 147
         }
-      ],
-      "scene": "scene_2"
+      ]
     },
     {
       "id": 1771833328719,
@@ -19108,8 +19104,7 @@
           "earliestDeparture": 206,
           "latestArrival": 200
         }
-      ],
-      "scene": "scene_3"
+      ]
     },
     {
       "id": 1771833332272,
@@ -19150,8 +19145,7 @@
           "earliestDeparture": 524,
           "latestArrival": 247
         }
-      ],
-      "scene": "scene_3"
+      ]
     }
   ],
   "trainCategories": {

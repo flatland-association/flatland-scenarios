@@ -60,9 +60,11 @@ class Scenario:
         self.malfunction_params: MalfunctionParameters = None
 
     @staticmethod
-    def load(file_name: str) -> "Scenario":
+    def load(file_name: str, m=None) -> "Scenario":
         with open(file_name + '.json' if not file_name.endswith(".json") else file_name, 'r') as f:
             data = json.load(f)
+            if m is not None:
+                data = m(data)
         return Scenario(data)
 
     def print_lines(self):
