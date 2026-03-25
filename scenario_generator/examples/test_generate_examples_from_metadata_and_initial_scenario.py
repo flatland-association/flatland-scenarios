@@ -42,3 +42,38 @@ def test_generate_examples_from_metadata_and_initial_scenario():
                 'latest_arrivals': [[None, 26, 73], [None, 45, 75], [None, 29, 63], [None, 32, 63]],
                 'max_episode_steps': 150
             }
+
+
+def test_generate_examples_from_metadata_and_initial_scenario_empty_filter():
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        tmpdir = Path(tmpdirname)
+
+        examples_path = resources.files("scenario_generator.examples")
+
+        with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
+                resources.as_file(examples_path.joinpath("metadata_example_scenarios_test_empty_filter.json")) as metadata_file_name:
+            generate_examples_from_metadata_and_initial_scenario(
+                initial_scenario_file_name=str(initial_scenario_file_name),
+                metadata_file_name=str(metadata_file_name),
+                create_pkl=True,
+                output_folder=tmpdir
+            )
+
+        files = {str(f.relative_to(tmpdirname)) for f in tmpdir.rglob("**/*") if f.is_file()}
+        assert files == {"example_2/example_2_test.pkl", "example_2/example_2_test.json"}
+
+        with (tmpdir / "example_2/example_2_test.json").open() as f:
+            data = json.load(f)
+            print(data)
+
+            assert data['flatlandLine'] == {
+                'agent_positions': [],
+                'agent_directions': [],
+                'agent_targets': [],
+                'agent_speeds': []
+            }
+            assert data['flatlandTimetable'] == {
+                'earliest_departures': [],
+                'latest_arrivals': [],
+                'max_episode_steps': 0
+            }

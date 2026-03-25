@@ -17,7 +17,7 @@ def derive_scenario_from_initial_scenario_and_metadata(initial_scenario: Scenari
     derived_scenario = (
         ScenarioBuilder(initial_scenario)
         # take timetables passed to override (all) timetables from initial scenario
-        .add_timetables_from_specs(timetable_specs["trainCategories"], timetables)
+        .add_timetables_from_specs(timetable_specs, timetables)
         .add_malfunction_from_specs(malfunction_specs)
         .add_seed_from_specs(seed)
         .build()

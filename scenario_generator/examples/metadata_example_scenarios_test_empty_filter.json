@@ -26,10 +26,7 @@
           "timetableSpecs": {
             "attributeFilter": {
               "key": "trainCategoryId",
-              "val": [
-                1,
-                2
-              ]
+              "val": 2
             },
             "trainCategories": {
               "IC": {

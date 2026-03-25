@@ -3,7 +3,7 @@ import json
 import math
 import uuid
 from pathlib import Path
-from typing import Tuple, Dict, List
+from typing import Tuple, Dict, List, Iterable
 
 import numpy as np
 
@@ -261,10 +261,19 @@ class ScenarioBuilder:
     def add_timetables_from_specs(self, timetable_specs: dict, initial_timetables: list[dict] = None) -> "ScenarioBuilder":
         if initial_timetables is None:
             initial_timetables = self.scenario.timetables
+        attribute_filter = timetable_specs.get("attributeFilter", None)
+        if attribute_filter is not None:
+            key = attribute_filter["key"]
+            val = attribute_filter["val"]
+            if isinstance(val, Iterable):
+                comp = lambda val, vals: val in vals
+            else:
+                comp = lambda v1, v2: v1 == v2
+            initial_timetables = [s for s in initial_timetables if comp(s[key], val)]
         for s in initial_timetables:
             name = s['name']
             train_category_name = s['trainCategoryName']
-            d = timetable_specs.get(train_category_name, None)
+            d = timetable_specs["trainCategories"].get(train_category_name, None)
             if d is None:
                 continue
             for i in range(d.get('times', 1)):
