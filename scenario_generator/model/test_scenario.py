@@ -28,17 +28,19 @@ def test_scenario_to_timetable_generator_with_specs():
     with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name:
         initial_scenario = Scenario.load(str(initial_scenario_file_name))
     timetable_specs = {
-        "IC": {
-            "initialShift": 0,
-            "periodicity": 30,
-            "times": 20,
-            "travelFactor": 1.05
-        },
-        "RE": {
-            "initialShift": 0,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
+        "trainCategories": {
+            "IC": {
+                "initialShift": 0,
+                "periodicity": 30,
+                "times": 20,
+                "travelFactor": 1.05
+            },
+            "RE": {
+                "initialShift": 0,
+                "periodicity": 60,
+                "times": 10,
+                "travelFactor": 1.1
+            }
         }
     }
     timetable = initial_scenario.to_timetable_generator(timetable_specs)()

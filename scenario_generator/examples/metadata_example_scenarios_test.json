@@ -4,17 +4,19 @@
       "name": "example_2",
       "defaults": {
         "timetableSpecs": {
-          "IC": {
-            "initialShift": 0,
-            "periodicity": 30,
-            "times": 20,
-            "travelFactor": 1.05
-          },
-          "RE": {
-            "initialShift": 0,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
+          "trainCategories": {
+            "IC": {
+              "initialShift": 0,
+              "periodicity": 30,
+              "times": 20,
+              "travelFactor": 1.05
+            },
+            "RE": {
+              "initialShift": 0,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            }
           }
         }
       },
@@ -22,11 +24,13 @@
         {
           "name": "test",
           "timetableSpecs": {
-            "IC": {
-              "times": 1
-            },
-            "RE": {
-              "times": 0
+            "trainCategories": {
+              "IC": {
+                "times": 1
+              },
+              "RE": {
+                "times": 0
+              }
             }
           }
         }

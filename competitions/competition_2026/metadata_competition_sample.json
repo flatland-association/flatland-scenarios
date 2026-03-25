@@ -4,29 +4,31 @@
       "name": "level_0",
       "defaults": {
         "timetableSpecs": {
-          "IC": {
-            "initialShift": 0,
-            "periodicity": 0,
-            "times": 1,
-            "travelFactor": 1
-          },
-          "RE": {
-            "initialShift": 0,
-            "periodicity": 0,
-            "times": 1,
-            "travelFactor": 1
-          },
-          "S": {
-            "initialShift": 0,
-            "periodicity": 0,
-            "times": 1,
-            "travelFactor": 1
-          },
-          "C": {
-            "initialShift": 0,
-            "periodicity": 0,
-            "times": 1,
-            "travelFactor": 1
+          "trainCategories": {
+            "IC": {
+              "initialShift": 0,
+              "periodicity": 0,
+              "times": 1,
+              "travelFactor": 1
+            },
+            "RE": {
+              "initialShift": 0,
+              "periodicity": 0,
+              "times": 1,
+              "travelFactor": 1
+            },
+            "S": {
+              "initialShift": 0,
+              "periodicity": 0,
+              "times": 1,
+              "travelFactor": 1
+            },
+            "C": {
+              "initialShift": 0,
+              "periodicity": 0,
+              "times": 1,
+              "travelFactor": 1
+            }
           }
         }
       },

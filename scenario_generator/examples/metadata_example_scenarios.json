@@ -4,59 +4,61 @@
       "name": "example_1",
       "defaults": {
         "timetableSpecs": {
-          "IC": {
-            "initialShift": 0,
-            "periodicity": 30,
-            "times": 20,
-            "travelFactor": 1.05
-          },
-          "RE": {
-            "initialShift": 0,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
-          },
-          "RE10": {
-            "initialShift": 10,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
-          },
-          "RE20": {
-            "initialShift": 20,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
-          },
-          "RE30": {
-            "initialShift": 30,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
-          },
-          "RE40": {
-            "initialShift": 40,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
-          },
-          "RE15": {
-            "initialShift": 15,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
-          },
-          "RE45": {
-            "initialShift": 45,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
-          },
-          "S": {
-            "initialShift": 0,
-            "periodicity": 60,
-            "times": 10,
-            "travelFactor": 1.1
+          "trainCategories": {
+            "IC": {
+              "initialShift": 0,
+              "periodicity": 30,
+              "times": 20,
+              "travelFactor": 1.05
+            },
+            "RE": {
+              "initialShift": 0,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            },
+            "RE10": {
+              "initialShift": 10,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            },
+            "RE20": {
+              "initialShift": 20,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            },
+            "RE30": {
+              "initialShift": 30,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            },
+            "RE40": {
+              "initialShift": 40,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            },
+            "RE15": {
+              "initialShift": 15,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            },
+            "RE45": {
+              "initialShift": 45,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            },
+            "S": {
+              "initialShift": 0,
+              "periodicity": 60,
+              "times": 10,
+              "travelFactor": 1.1
+            }
           }
         }
       },
@@ -71,6 +73,7 @@
       "name": "example_2",
       "defaults": {
         "timetableSpecs": {
+          "trainCategories": {
           "IC": {
             "initialShift": 0,
             "periodicity": 30,
@@ -84,6 +87,7 @@
             "travelFactor": 1.1
           }
         }
+        }
       },
       "scenarios": [
         {
@@ -96,6 +100,7 @@
       "name": "example_3",
       "defaults": {
         "timetableSpecs": {
+          "trainCategories": {
           "IC": {
             "initialShift": 0,
             "periodicity": 30,
@@ -155,6 +160,7 @@
             "periodicity": 120,
             "times": 2,
             "travelFactor": 1.15
+          }
           }
         }
       },
