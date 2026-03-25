@@ -17,7 +17,7 @@ def test_generate_examples_from_metadata_and_initial_scenario():
         examples_path = resources.files("scenario_generator.examples")
 
         with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
-                resources.as_file(examples_path.joinpath("metadata_example_scenarios_test.json")) as metadata_file_name:
+                resources.as_file(examples_path.joinpath("tests/metadata_example_scenarios_test.json")) as metadata_file_name:
             generate_examples_from_metadata_and_initial_scenario(
                 initial_scenario_file_name=str(initial_scenario_file_name),
                 metadata_file_name=str(metadata_file_name),
@@ -55,7 +55,7 @@ def test_generate_examples_from_metadata_and_initial_scenario_empty_filter():
         examples_path = resources.files("scenario_generator.examples")
 
         with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
-                resources.as_file(examples_path.joinpath("metadata_example_scenarios_test_empty_filter.json")) as metadata_file_name:
+                resources.as_file(examples_path.joinpath("tests/metadata_example_scenarios_test_empty_filter.json")) as metadata_file_name:
             generate_examples_from_metadata_and_initial_scenario(
                 initial_scenario_file_name=str(initial_scenario_file_name),
                 metadata_file_name=str(metadata_file_name),
@@ -90,7 +90,7 @@ def test_generate_examples_from_metadata_and_initial_scenario_post_sample():
         examples_path = resources.files("scenario_generator.examples")
 
         with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
-                resources.as_file(examples_path.joinpath("metadata_example_scenarios_test_post_sampler.json")) as metadata_file_name:
+                resources.as_file(examples_path.joinpath("tests/metadata_example_scenarios_test_post_sampler.json")) as metadata_file_name:
             generate_examples_from_metadata_and_initial_scenario(
                 initial_scenario_file_name=str(initial_scenario_file_name),
                 metadata_file_name=str(metadata_file_name),
@@ -137,7 +137,7 @@ def test_generate_examples_from_metadata_and_initial_scenario_ranges():
         examples_path = resources.files("scenario_generator.examples")
 
         with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
-                resources.as_file(examples_path.joinpath("metadata_example_scenarios_test_ranges.json")) as metadata_file_name:
+                resources.as_file(examples_path.joinpath("tests/metadata_example_scenarios_test_ranges.json")) as metadata_file_name:
             generate_examples_from_metadata_and_initial_scenario(
                 initial_scenario_file_name=str(initial_scenario_file_name),
                 metadata_file_name=str(metadata_file_name),
@@ -167,7 +167,7 @@ def test_generate_examples_from_metadata_and_initial_scenario_malfunction():
         examples_path = resources.files("scenario_generator.examples")
 
         with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
-                resources.as_file(examples_path.joinpath("metadata_example_scenarios_test_malfunction.json")) as metadata_file_name:
+                resources.as_file(examples_path.joinpath("tests/metadata_example_scenarios_test_malfunction.json")) as metadata_file_name:
             scenarios = generate_examples_from_metadata_and_initial_scenario(
                 initial_scenario_file_name=str(initial_scenario_file_name),
                 metadata_file_name=str(metadata_file_name),
