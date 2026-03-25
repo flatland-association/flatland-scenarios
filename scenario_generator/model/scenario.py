@@ -58,6 +58,7 @@ class Scenario:
     def __init__(self, data: dict):
         self.data = copy.deepcopy(data)
         self.malfunction_params: MalfunctionParameters = None
+        self.departure_malfunction_params: MalfunctionParameters = None
 
     @staticmethod
     def load(file_name: str, m=None) -> "Scenario":
@@ -174,6 +175,7 @@ class ScenarioBuilder:
             'max_episode_steps': 0
         }
         self.malfunction_params: MalfunctionParameters = None
+        self.departure_malfunction_params: MalfunctionParameters = None
         self.seed: int = None
 
     def build(self) -> Scenario:
@@ -182,6 +184,7 @@ class ScenarioBuilder:
         self.scenario.data['flatlandLine'] = self.scenario_flatland_line
         self.scenario.data['flatlandTimetable'] = self.scenario_flatland_timetable
         self.scenario.malfunction_params = self.malfunction_params
+        self.scenario.departure_malfunction_params = self.departure_malfunction_params
         self.scenario.seed = self.seed
         return self.scenario
 

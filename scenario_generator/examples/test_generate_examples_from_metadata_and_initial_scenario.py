@@ -3,6 +3,10 @@ import tempfile
 from importlib import resources
 from pathlib import Path
 
+import numpy as np
+
+from flatland.envs.persistence import RailEnvPersister
+from flatland.envs.rail_env import RailEnv
 from scenario_generator.examples.generate_examples_from_metadata_and_initial_scenario import generate_examples_from_metadata_and_initial_scenario
 
 
@@ -154,3 +158,29 @@ def test_generate_examples_from_metadata_and_initial_scenario_ranges():
         assert len(data['flatlandLine']['agent_speeds']) == 20
         assert len(data['flatlandTimetable']['earliest_departures']) == 20
         assert len(data['flatlandTimetable']['latest_arrivals']) == 20
+
+
+def test_generate_examples_from_metadata_and_initial_scenario_malfunction():
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        tmpdir = Path(tmpdirname)
+
+        examples_path = resources.files("scenario_generator.examples")
+
+        with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
+                resources.as_file(examples_path.joinpath("metadata_example_scenarios_test_malfunction.json")) as metadata_file_name:
+            generate_examples_from_metadata_and_initial_scenario(
+                initial_scenario_file_name=str(initial_scenario_file_name),
+                metadata_file_name=str(metadata_file_name),
+                create_pkl=True,
+                output_folder=tmpdir
+            )
+
+        files = {str(f.relative_to(tmpdirname)) for f in tmpdir.rglob("**/*") if f.is_file()}
+        assert files == {"example_2/example_2_test.pkl", "example_2/example_2_test.json"}
+
+        env, _ = RailEnvPersister.load_new(tmpdir / "example_2/example_2_test.pkl")
+        env: RailEnv
+
+        assert env.malfunction_process_data.min_duration == 20
+        assert env.malfunction_process_data.max_duration == 50
+        assert np.isclose(env.malfunction_process_data.malfunction_rate, 1 / 540)
