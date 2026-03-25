@@ -295,13 +295,27 @@ class ScenarioBuilder:
             d = timetable_specs["trainCategories"].get(train_category_name, None)
             if d is None:
                 continue
-            for i in range(d.get('times', 1)):
+            times = d.get('times', 1)
+            times = self.sample_from_optional_range(times)
+            for i in range(times):
                 new_name = self._get_new_name(name, i)
-                self.add_timetable(name, d.get('initialShift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travelFactor', 1))
+                initial_shift = d.get('initialShift', 0)
+                initial_shift = self.sample_from_optional_range(initial_shift)
+                periodicty = d.get('periodicity', 0)
+                periodicty = self.sample_from_optional_range(periodicty)
+                travel_factor = d.get('travelFactor', 1)
+                travel_factor = self.sample_from_optional_range(travel_factor)
+                self.add_timetable(name, initial_shift + i * periodicty, new_name, travel_factor=travel_factor)
         post_sampler = timetable_specs.get("postSampler", None)
         if post_sampler is not None:
             self.sample_timables(**post_sampler)
         return self
+
+    @staticmethod
+    def sample_from_optional_range(initial_shift: int | Iterable[int]) -> int:
+        if isinstance(initial_shift, Iterable):
+            initial_shift = np.random.randint(initial_shift[0], initial_shift[1])
+        return initial_shift
 
     def add_malfunction_from_specs(self, malfunction_params: MalfunctionParameters = None):
         self.malfunction_params = malfunction_params
