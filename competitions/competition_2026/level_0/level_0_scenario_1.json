@@ -18901,8 +18901,7 @@
           "earliestDeparture": null,
           "latestArrival": 142
         }
-      ],
-      "scene": "scene_1"
+      ]
     },
     {
       "id": 11249542441888074292,
@@ -18938,8 +18937,7 @@
           "earliestDeparture": null,
           "latestArrival": 175
         }
-      ],
-      "scene": "scene_1"
+      ]
     }
   ],
   "trainCategories": {
