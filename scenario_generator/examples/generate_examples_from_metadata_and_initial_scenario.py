@@ -18,7 +18,7 @@ def generate_examples_from_metadata_and_initial_scenario(initial_scenario_file_n
     if output_folder is None:
         output_folder = Path(".")
 
-    derive_scenarios_from_initial_scenario_and_metadata(initial_scenario, metadata, output_folder, create_pkl)
+    return derive_scenarios_from_initial_scenario_and_metadata(initial_scenario, metadata, output_folder, create_pkl)
 
 
 def derive_scenarios_from_initial_scenario_and_metadata(initial_scenario: Scenario, metadata, output_folder: Path, create_pkl: bool) -> List[Scenario]:

@@ -168,12 +168,23 @@ def test_generate_examples_from_metadata_and_initial_scenario_malfunction():
 
         with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name, \
                 resources.as_file(examples_path.joinpath("metadata_example_scenarios_test_malfunction.json")) as metadata_file_name:
-            generate_examples_from_metadata_and_initial_scenario(
+            scenarios = generate_examples_from_metadata_and_initial_scenario(
                 initial_scenario_file_name=str(initial_scenario_file_name),
                 metadata_file_name=str(metadata_file_name),
                 create_pkl=True,
                 output_folder=tmpdir
             )
+
+        assert len(scenarios) == 1
+        scenario = scenarios[0]
+
+        assert scenario.malfunction_params.min_duration == 20
+        assert scenario.malfunction_params.max_duration == 50
+        assert np.isclose(scenario.malfunction_params.malfunction_rate, 1 / 540)
+
+        assert scenario.departure_malfunction_params.min_duration == 2
+        assert scenario.departure_malfunction_params.max_duration == 5
+        assert np.isclose(scenario.departure_malfunction_params.malfunction_rate, 1 / 5)
 
         files = {str(f.relative_to(tmpdirname)) for f in tmpdir.rglob("**/*") if f.is_file()}
         assert files == {"example_2/example_2_test.pkl", "example_2/example_2_test.json"}

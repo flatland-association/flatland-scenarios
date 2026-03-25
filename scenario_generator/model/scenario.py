@@ -324,6 +324,10 @@ class ScenarioBuilder:
         self.malfunction_params = malfunction_params
         return self
 
+    def add_departure_malfunction_from_specs(self, malfunction_params: MalfunctionParameters = None):
+        self.departure_malfunction_params = malfunction_params
+        return self
+
     def add_seed_from_specs(self, seed=None):
         self.seed = seed
         return self
