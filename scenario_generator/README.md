@@ -23,39 +23,60 @@ the [deadlock avoidance heuristic](https://github.com/flatland-association/flatl
 
 ```mermaid
 classDiagram
-    class metadata {
-        TimetableSpecs defaults.timetableSpecs
-    }
-    class scenario {
-        TimetableSpecs timetableSpecs
-    }
-    metadata "1" --> "1..*" level
-    level "1" --> "1..*" scenario
+  class metadata {
+    TimetableSpecs defaults.timetableSpecs
+    MalfunctionSpecs defaults.malfunctionSpecs
+    MalfunctionSpecs defaults.departureMalfunctionSpecs
+  }
+  class scenario {
+    TimetableSpecs timetableSpecs
+    MalfunctionSpecs malfunctionSpecs
+    MalfunctionSpecs departureMalfunctionSpecs
+  }
+  metadata "1" --> "1..*" level
+  level "1" --> "1..*" scenario
 
-    class TimetableSpecs {
-        TimetableSpec IR
-        TimetableSpec RE
-        TimetableSpec S
-        TimetableSpec C
-    }
-    class TimetableSpec {
-        int initialShift
-        int periodicity
-        int times
-        int travelFactor
-    }
-    class Scenario {
-        gridDimensions
-        grid
-        overpasses
-        stations
-        nextStationId
-        lines
-        timetables
-        trainCategories
-        flatlandLine
-        flatlandTimetable
-    }
+  class TimetableSpecs {
+    AttributeFilter attributeFilter
+    TimetableTrainCategorySpecs trainCategories
+    PostSampler postSampler
+  }
+  class TimetableTrainCategorySpecs {
+    TimetableSpec IR
+    TimetableSpec RE
+    TimetableSpec S
+    TimetableSpec C
+  }
+  class TimetableSpec {
+    int initialShift
+    int periodicity
+    int times
+    int travelFactor
+  }
+  class AttributeFilter {
+    str key
+    int | [int, int) val
+  }
+  class PostSampler {
+    int num
+  }
+  class MalfunctionSpecs {
+    int malfunction_duration_min
+    int malfunction_duration_max
+    int malfunction_interval
+  }
+  class Scenario {
+    gridDimensions
+    grid
+    overpasses
+    stations
+    nextStationId
+    lines
+    timetables
+    trainCategories
+    flatlandLine
+    flatlandTimetable
+  }
 
 ```
 
