@@ -248,6 +248,25 @@ class ScenarioBuilder:
         )
         print(self.scenario_flatland_timetable)
 
+    def sample_timables(self, num=None):
+        if num is None:
+            indices = list(range(len(self.scenario.timetables)))
+        else:
+            indices = np.random.choice(range(len(self.scenario_timetables)), size=num, replace=False)
+
+        self.scenario_timetables = [self.scenario_timetables[i] for i in indices]
+
+        self.scenario_flatland_timetable['earliest_departures'] = [self.scenario_flatland_timetable['earliest_departures'][i] for i in indices]
+        self.scenario_flatland_timetable['latest_arrivals'] = [self.scenario_flatland_timetable['latest_arrivals'][i] for i in indices]
+
+        self.scenario_flatland_line['agent_positions'] = [self.scenario_flatland_line['agent_positions'][i] for i in indices]
+        self.scenario_flatland_line['agent_directions'] = [self.scenario_flatland_line['agent_directions'][i] for i in indices]
+        self.scenario_flatland_line['agent_targets'] = [self.scenario_flatland_line['agent_targets'][i] for i in indices]
+        self.scenario_flatland_line['agent_speeds'] = [self.scenario_flatland_line['agent_speeds'][i] for i in indices]
+
+        self.scenario_flatland_timetable['max_episode_steps'] = max(
+            [latest_arrivals[-1] for latest_arrivals in self.scenario_flatland_timetable['latest_arrivals']])
+
     # get consecutive line names by numbering
     @staticmethod
     def _get_new_name(name: str, i: int) -> str:
@@ -279,6 +298,9 @@ class ScenarioBuilder:
             for i in range(d.get('times', 1)):
                 new_name = self._get_new_name(name, i)
                 self.add_timetable(name, d.get('initialShift', 0) + i * d.get('periodicity', 0), new_name, travel_factor=d.get('travelFactor', 1))
+        post_sampler = timetable_specs.get("postSampler", None)
+        if post_sampler is not None:
+            self.sample_timables(**post_sampler)
         return self
 
     def add_malfunction_from_specs(self, malfunction_params: MalfunctionParameters = None):
