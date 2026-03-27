@@ -11,7 +11,6 @@ def test_scenario_to_flatland_generators():
         scenario = Scenario.load(str(initial_scenario_file_name))
 
     rail, optionals = scenario.to_rail_generator()()
-    print(optionals)
     assert np.array_equal(rail.grid, scenario.grid)
     assert optionals["level_free_positions"] == [tuple(v) for v in scenario.level_free_crossings]
 

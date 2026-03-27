@@ -149,7 +149,7 @@ Once a Line is created, you can display the shortest path lengths between the st
 
 ### Define train categories
 
-In order to choose what train is running your Lines you can create categories of trains whose parameters are a description of the ctegory and its **maximum
+In order to choose what train is running your Lines you can create categories of trains whose parameters are a description of the category and its **maximum
 speed**. There are 4 predefined train
 categories.
 

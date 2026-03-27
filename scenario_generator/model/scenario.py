@@ -249,7 +249,6 @@ class ScenarioBuilder:
             self.scenario_flatland_timetable['max_episode_steps'],
             2 * latest_arrivals[-1],
         )
-        print(self.scenario_flatland_timetable)
 
     def sample_timables(self, num=None):
         if num is None:
