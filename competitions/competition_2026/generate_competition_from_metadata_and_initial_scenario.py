@@ -30,14 +30,13 @@ def get_scenes_from_timetable(n) -> List[str]:
     scenes = []
     if n['name'].split(' ')[1][0] == '1':
         scenes.append('scene_1')
-    elif n['name'].split(' ')[1][0] == '2':
+    if n['name'].split(' ')[1][0] == '2':
         scenes.append('scene_2')
-    elif n['name'].split(' ')[1][0] == '3':
+    if n['name'].split(' ')[1][0] == '3':
         scenes.append('scene_3')
-    elif n['name'].split(' ')[1][0] in ('1', '3', '4'):
+    if n['name'].split(' ')[1][0] in ('1', '3', '4'):
         scenes.append('scene_4')
-    else:
-        scenes.append('scene_5')
+    scenes.append('scene_5')
     return scenes
 
 
