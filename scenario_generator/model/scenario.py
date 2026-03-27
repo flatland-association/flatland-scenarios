@@ -315,10 +315,11 @@ class ScenarioBuilder:
         return self
 
     @staticmethod
-    def sample_from_optional_range(initial_shift: int | Iterable[int]) -> int:
-        if isinstance(initial_shift, Iterable):
-            initial_shift = np.random.randint(initial_shift[0], initial_shift[1])
-        return initial_shift
+    def sample_from_optional_range(sample_range: int | Iterable[int]) -> int:
+        sample = sample_range
+        if isinstance(sample_range, Iterable):
+            sample = np.random.randint(sample_range[0], sample_range[1])
+        return sample
 
     def add_malfunction_from_specs(self, malfunction_params: MalfunctionParameters = None):
         self.malfunction_params = malfunction_params
