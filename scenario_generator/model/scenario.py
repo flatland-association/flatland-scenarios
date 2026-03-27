@@ -279,6 +279,14 @@ class ScenarioBuilder:
         new_name = f'{prefix}.{int(suffix) + i}'
         return new_name
 
+    @staticmethod
+    def _compare(v1, v2):
+        if not isinstance(v1, List):
+            v1 = [v1]
+        if not isinstance(v2, List):
+            v2 = [v2]
+        return len(set(v1).intersection(set(v2)))
+
     def add_timetables_from_specs(self, timetable_specs: dict, initial_timetables: list[dict] = None) -> "ScenarioBuilder":
         if initial_timetables is None:
             initial_timetables = self.scenario.timetables
@@ -286,11 +294,7 @@ class ScenarioBuilder:
         if attribute_filter is not None:
             key = attribute_filter["key"]
             val = attribute_filter["val"]
-            if isinstance(val, Iterable):
-                comp = lambda val, vals: val in vals
-            else:
-                comp = lambda v1, v2: v1 == v2
-            initial_timetables = [s for s in initial_timetables if comp(val, s[key])]
+            initial_timetables = [s for s in initial_timetables if self._compare(val, s[key])]
         for s in initial_timetables:
             name = s['name']
             train_category_name = s['trainCategoryName']
