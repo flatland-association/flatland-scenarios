@@ -291,7 +291,7 @@ class ScenarioBuilder:
                 comp = lambda val, vals: val in vals
             else:
                 comp = lambda v1, v2: v1 == v2
-            initial_timetables = [s for s in initial_timetables if comp(s[key], val)]
+            initial_timetables = [s for s in initial_timetables if comp(val, s[key])]
         for s in initial_timetables:
             name = s['name']
             train_category_name = s['trainCategoryName']

@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import List
 
-from scenario_generator.examples.generate_examples_from_metadata_and_initial_scenario import derive_scenario_from_initial_scenario_and_metadata
+from scenario_generator.model.metadata import derive_scenarios_from_initial_scenario_and_metadata
 from scenario_generator.model.scenario import Scenario
 
 
@@ -55,30 +55,24 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
     with open(metadata_file_name + '.json' if not metadata_file_name.endswith(".json") else metadata_file_name, 'r') as f:
         metadata = json.load(f)
 
-    if output_folder is None:
-        output_folder = Path(".")
-
     for level_metadata in metadata["levels"]:
         level_name = level_metadata["name"]
         if levels is not None and level_name not in levels:
-            continue
+            del levels[level_name]
         for scenario_metadata in level_metadata["scenarios"]:
             scenario_name_ = scenario_metadata["name"]
             if scenarios is not None and scenario_name_ not in scenarios:
-                continue
+                del scenarios[scenario_name_]
+    if output_folder is None:
+        output_folder = Path(".")
 
-            # get initial timetables for scenario filtered by scene
-            scene = scenario_metadata["scene"]
-            scene_timetables = [tt for tt in initial_scenario.timetables if tt["scene"] == scene]
-
-            derived_scenario = derive_scenario_from_initial_scenario_and_metadata(initial_scenario, level_metadata, scenario_metadata,
-                                                                                  timetables=scene_timetables)
-            derived_scenario.save(name=f'{level_name}_{scenario_name_}', folder=output_folder / level_name, create_pkl=create_pkl)
+    return derive_scenarios_from_initial_scenario_and_metadata(initial_scenario, metadata, output_folder, create_pkl)
 
 
 def add_scenes_attribute(data):
     for timetable in data["timetables"]:
         timetable["scene"] = get_scenes_from_timetable(timetable)
+    return data
 
 
 if __name__ == '__main__':

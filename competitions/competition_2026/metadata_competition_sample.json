@@ -35,8 +35,12 @@
       "scenarios": [
         {
           "name": "scenario_1",
-          "scene": "scene_1",
-          "timetableSpecs": {},
+          "timetableSpecs": {
+            "attributeFilter": {
+              "key": "scene",
+              "val": "scene_1"
+            }
+          },
           "malfunctionSpecs": {
             "malfunction_duration_min": 20,
             "malfunction_duration_max": 50,
