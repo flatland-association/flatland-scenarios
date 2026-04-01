@@ -250,7 +250,7 @@ class ScenarioBuilder:
             2 * latest_arrivals[-1],
         )
 
-    def sample_timables(self, num=None):
+    def sample_timetables(self, num=None):
         if num is None:
             indices = list(range(len(self.scenario.timetables)))
         else:
@@ -314,7 +314,7 @@ class ScenarioBuilder:
                 self.add_timetable(name, initial_shift + i * periodicty, new_name, travel_factor=travel_factor)
         post_sampler = timetable_specs.get("postSampler", None)
         if post_sampler is not None:
-            self.sample_timables(**post_sampler)
+            self.sample_timetables(**post_sampler)
         return self
 
     @staticmethod
