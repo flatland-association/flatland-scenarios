@@ -2,21 +2,22 @@
 
 This is a tool to help you create Flatland environments and generate customized scenarios.
 
-The examples folder contains 3 examples that were used as playground examples to test the drawing tool and the [deadlock avoidance heuristic](https://github.com/flatland-association/flatland-baselines/tree/main/flatland_baselines/deadlock_avoidance_heuristic). 
+The examples folder contains 3 examples that were used as playground examples to test the drawing tool and
+the [deadlock avoidance heuristic](https://github.com/flatland-association/flatland-baselines/tree/main/flatland_baselines/deadlock_avoidance_heuristic).
 
 ## Data Model and Data Flow
 
 ### Glossary
 
-| Term             | Description                                                                                                                                                                                        |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Scenario         | Rail, lines, timetables and malfunction parameters fixed (each train has a set of stops with routing flexibility and a time window at each stop).                                                  |
-| Initial Scenario | Defines timetables all starting at zero, malfunction usually empty.                                                                                                                                |
+| Term             | Description                                                                                                                                                                                         |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Scenario         | Rail, lines, timetables and malfunction parameters fixed (each train has a set of stops with routing flexibility and a time window at each stop).                                                   |
+| Initial Scenario | Defines timetables all starting at zero, malfunction usually empty.                                                                                                                                 |
 | Metadata         | Defines the instantiation of the scenario from the initial scenario and timetable specs.                                                                                                            |
-| Line             | A line is a sequence of stops with routing flexibility at intermediates and target but not initial (in strict Flatland sense, lines are agents with stops already assigned and max speeds as well).|
-| Train Category   | Used to differentiate timetable specs for different train categories.                                                                                                                              |
-| Timetable        | Corresponds to a Flatland agent with the stops to serve in a given time-windows (Flatland Timetable).                                                                                              |
-| Scene            | A set of lines.                                                                                                                                                                                    |
+| Line             | A line is a sequence of stops with routing flexibility at intermediates and target but not initial (in strict Flatland sense, lines are agents with stops already assigned and max speeds as well). |
+| Train Category   | Used to differentiate timetable specs for different train categories.                                                                                                                               |
+| Timetable        | Corresponds to a Flatland agent with the stops to serve in given time-windows (Flatland Timetable).                                                                                                 |
+| Scene            | A set of lines.                                                                                                                                                                                     |
 
 ### Data Model
 
@@ -24,14 +25,23 @@ The examples folder contains 3 examples that were used as playground examples to
 classDiagram
   class metadata {
     TimetableSpecs defaults.timetableSpecs
+    MalfunctionSpecs defaults.malfunctionSpecs
+    MalfunctionSpecs defaults.departureMalfunctionSpecs
   }
   class scenario {
     TimetableSpecs timetableSpecs
+    MalfunctionSpecs malfunctionSpecs
+    MalfunctionSpecs departureMalfunctionSpecs
   }
   metadata "1" --> "1..*" level
   level "1" --> "1..*" scenario
 
   class TimetableSpecs {
+    AttributeFilter attributeFilter
+    TimetableTrainCategorySpecs trainCategories
+    PostSampler postSampler
+  }
+  class TimetableTrainCategorySpecs {
     TimetableSpec IR
     TimetableSpec RE
     TimetableSpec S
@@ -42,6 +52,18 @@ classDiagram
     int periodicity
     int times
     int travelFactor
+  }
+  class AttributeFilter {
+    str key
+    int | [int, int) val
+  }
+  class PostSampler {
+    int num
+  }
+  class MalfunctionSpecs {
+    int malfunction_duration_min
+    int malfunction_duration_max
+    int malfunction_interval
   }
   class Scenario {
     gridDimensions
@@ -62,35 +84,35 @@ classDiagram
 
 ```mermaid
 flowchart LR
-  H(tbd.py) --> F
-  B(flatland_environment_drawing_tool.html) --> C[scenario_initial.json]
-  C --> D(gen_comp_from_metadata_and_initial_scenario.py)
-  F[metadata.json] --> D
-  D --> E[level_X/level_X_scenario_Y.json]
-  D --> f[level_X/level_X_scenario_Y.pkl]
+    H(tbd.py) --> F
+    B(flatland_environment_drawing_tool.html) --> C[scenario_initial.json]
+    C --> D(gen_comp_from_metadata_and_initial_scenario.py)
+    F[metadata.json] --> D
+    D --> E[level_X/level_X_scenario_Y.json]
+    D --> f[level_X/level_X_scenario_Y.pkl]
 ```
 
 ### From Initial Scenario to `RailEnv` (`reset` drawing from distribution in metadata)
 
 ```mermaid
 flowchart LR
-  H(tbd.py) --> F
-  B(flatland_environment_drawing_tool.html) --> C[scenario_initial.json]
-  C --> D(tbd.py)
-  F[metadata.json] --> D
-  D --> I[RailEnv with rail/line/timetable generator]
+    H(tbd.py) --> F
+    B(flatland_environment_drawing_tool.html) --> C[scenario_initial.json]
+    C --> D(tbd.py)
+    F[metadata.json] --> D
+    D --> I[RailEnv with rail/line/timetable generator]
 ```
 
 ## Drawing Tool
 
-| workflow                                        |
-|-------------------------------------------------|
-| [`Initialize grid`](#initialize-grid)           |
-| [`Draw grid-world`](#draw-grid-world)           |
-| [`Create Lines`](#create-lines)                 |
+| workflow                                              |
+|-------------------------------------------------------|
+| [`Initialize grid`](#initialize-grid)                 |
+| [`Draw grid-world`](#draw-grid-world)                 |
+| [`Create Lines`](#create-lines)                       |
 | [`Define train categories`](#define-train-categories) |
-| [`Create Timetables`](#create-timetables)         |
-| [`Export environment`](#export-environment)     |
+| [`Create Timetables`](#create-timetables)             |
+| [`Export environment`](#export-environment)           |
 
 ### Initialize grid
 
@@ -127,7 +149,8 @@ Once a Line is created, you can display the shortest path lengths between the st
 
 ### Define train categories
 
-In order to choose what train is running your Lines you can create categories of trains whose parameters are a description of the ctegory and its **maximum speed**. There are 4 predefined train
+In order to choose what train is running your Lines you can create categories of trains whose parameters are a description of the category and its **maximum
+speed**. There are 4 predefined train
 categories.
 
 ### Create Timetables
