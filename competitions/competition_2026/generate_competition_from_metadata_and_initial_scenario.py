@@ -55,14 +55,12 @@ def generate_competition_from_metadata_and_initial_scenario(initial_scenario_fil
     with open(metadata_file_name + '.json' if not metadata_file_name.endswith(".json") else metadata_file_name, 'r') as f:
         metadata = json.load(f)
 
-    for level_metadata in metadata["levels"]:
-        level_name = level_metadata["name"]
-        if levels is not None and level_name not in levels:
-            del levels[level_name]
-        for scenario_metadata in level_metadata["scenarios"]:
-            scenario_name_ = scenario_metadata["name"]
-            if scenarios is not None and scenario_name_ not in scenarios:
-                del scenarios[scenario_name_]
+    if levels is not None:
+        metadata["levels"] = [level_metadata for level_metadata in metadata["levels"] if level_metadata["name"] in levels]
+    if scenarios is not None:
+        for level_metadata in metadata["levels"]:
+            level_metadata["scenarios"] = [scenario_metadata for scenario_metadata in level_metadata["scenarios"] if scenario_metadata["name"] in scenarios]
+
     if output_folder is None:
         output_folder = Path(".")
 
