@@ -29,12 +29,13 @@ def run_with_policy(scenario: str,
 
     start_time = time.time()
 
+    env = RailEnvPersister.load_new(str((base_dir if base_dir is not None else Path(".")) / scenario / f"{sub_scenario}.pkl"), obs_builder=obs_builder,
+                                    rewards=BaseDefaultRewards())[0]
     PolicyRunner.create_from_policy(
         policy=policy,
         data_dir=data_dir,
         ep_id=sub_scenario,
-        env=RailEnvPersister.load_new(str((base_dir if base_dir is not None else Path(".")) / scenario / f"{sub_scenario}.pkl"), obs_builder=obs_builder,
-                                      rewards=BaseDefaultRewards())[0],
+        env=env,
         callbacks=callbacks,
     )
     end_time = time.time()
