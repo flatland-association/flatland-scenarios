@@ -18872,7 +18872,7 @@
       "name": "IC 1.3.1",
       "lineId": 1771412862121,
       "trainCategoryId": 1,
-      "trainCategoryName": "IC",
+      "trainCategory": "IC",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [
@@ -18913,7 +18913,7 @@
       "name": "IC 1.4.1",
       "lineId": 1771412886143,
       "trainCategoryId": 1,
-      "trainCategoryName": "IC",
+      "trainCategory": "IC",
       "travelFactor": 1.1,
       "dwellTime": 2,
       "stops": [

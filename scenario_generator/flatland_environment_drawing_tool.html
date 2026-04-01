@@ -2431,7 +2431,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 name: timetable.name,
                 lineId: timetable.lineId,
                 trainCategoryId: timetable.trainCategoryId, // Explicitly include the ID
-                trainCategoryName: trainCategory ? trainCategory.name : 'Unknown', // NEW: Add the name (code) here
+                trainCategory: trainCategory ? trainCategory.name : 'Unknown', // NEW: Add the name (code) here
                 travelFactor: timetable.travelFactor,
                 dwellTime: timetable.dwellTime,
                 stops: timetable.stops

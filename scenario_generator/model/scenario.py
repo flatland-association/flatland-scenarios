@@ -297,7 +297,7 @@ class ScenarioBuilder:
             initial_timetables = [s for s in initial_timetables if self._compare(val, s[key])]
         for s in initial_timetables:
             name = s['name']
-            train_category_name = s['trainCategoryName']
+            train_category_name = s['trainCategory']
             d = timetable_specs["trainCategories"].get(train_category_name, None)
             if d is None:
                 continue

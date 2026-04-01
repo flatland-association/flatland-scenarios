@@ -4503,7 +4503,7 @@
       "name": "IC 1.1",
       "lineId": 1769434242532,
       "trainCategoryId": 1,
-      "trainCategoryName": "IC",
+      "trainCategory": "IC",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4529,7 +4529,7 @@
       "name": "IC 2.1",
       "lineId": 1769434272133,
       "trainCategoryId": 1,
-      "trainCategoryName": "IC",
+      "trainCategory": "IC",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4555,7 +4555,7 @@
       "name": "IC 3.1",
       "lineId": 1769434319804,
       "trainCategoryId": 1,
-      "trainCategoryName": "IC",
+      "trainCategory": "IC",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4581,7 +4581,7 @@
       "name": "IC 4.1",
       "lineId": 1769434324500,
       "trainCategoryId": 1,
-      "trainCategoryName": "IC",
+      "trainCategory": "IC",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4607,7 +4607,7 @@
       "name": "RE 1.1",
       "lineId": 1769434393260,
       "trainCategoryId": 2,
-      "trainCategoryName": "RE",
+      "trainCategory": "RE",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4638,7 +4638,7 @@
       "name": "RE 2.1",
       "lineId": 1769434395365,
       "trainCategoryId": 2,
-      "trainCategoryName": "RE",
+      "trainCategory": "RE",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4669,7 +4669,7 @@
       "name": "RE 3.1",
       "lineId": 1769434476524,
       "trainCategoryId": 2,
-      "trainCategoryName": "RE",
+      "trainCategory": "RE",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4700,7 +4700,7 @@
       "name": "RE 4.1",
       "lineId": 1769434479485,
       "trainCategoryId": 2,
-      "trainCategoryName": "RE",
+      "trainCategory": "RE",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4731,7 +4731,7 @@
       "name": "RE 5.1",
       "lineId": 1769434527845,
       "trainCategoryId": 2,
-      "trainCategoryName": "RE",
+      "trainCategory": "RE",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
@@ -4757,7 +4757,7 @@
       "name": "RE 6.1",
       "lineId": 1769434529900,
       "trainCategoryId": 2,
-      "trainCategoryName": "RE",
+      "trainCategory": "RE",
       "travelFactor": 1,
       "dwellTime": 2,
       "stops": [
