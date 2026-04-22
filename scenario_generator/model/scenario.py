@@ -8,6 +8,7 @@ from typing import Tuple, Dict, List, Iterable
 import numpy as np
 
 from flatland.envs.grid.rail_env_grid import RailEnvTransitions
+from flatland.envs.malfunction_effects_generators import MalfunctionEffectsGenerator
 from flatland.envs.malfunction_generators import MalfunctionParameters, ParamMalfunctionGen
 from flatland.envs.persistence import RailEnvPersister
 from flatland.envs.rail_env import RailEnv
@@ -127,6 +128,8 @@ class Scenario:
             line_generator=self.to_line_generator(),
             timetable_generator=self.to_timetable_generator(),
             malfunction_generator=ParamMalfunctionGen(self.malfunction_params) if self.malfunction_params is not None else None,
+            effects_generator=MalfunctionEffectsGenerator(
+                ParamMalfunctionGen(MalfunctionParameters(self.departure_malfunction_params))) if self.departure_malfunction_params is not None else None,
         )
 
         observations, info = env.reset()
