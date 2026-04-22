@@ -2,7 +2,7 @@ name: Checks
 
 env:
   # DEPENDENCY SWITCH:
-  flatland-rl-ref: main
+  flatland-rl-ref: 394-persistence
   # DEPENDENCY SWITCH:
   flatland-baselines-ref: main
 on:

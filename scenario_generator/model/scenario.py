@@ -129,7 +129,7 @@ class Scenario:
             timetable_generator=self.to_timetable_generator(),
             malfunction_generator=ParamMalfunctionGen(self.malfunction_params) if self.malfunction_params is not None else None,
             effects_generator=MalfunctionEffectsGenerator(
-                ParamMalfunctionGen(MalfunctionParameters(self.departure_malfunction_params))) if self.departure_malfunction_params is not None else None,
+                ParamMalfunctionGen(self.departure_malfunction_params)) if self.departure_malfunction_params is not None else None,
         )
 
         observations, info = env.reset()

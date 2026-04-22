@@ -46,6 +46,11 @@
             "malfunction_duration_max": 50,
             "malfunction_interval": 540
           },
+          "departureMalfunctionSpecs": {
+            "malfunction_duration_min": 2,
+            "malfunction_duration_max": 5,
+            "malfunction_interval": 10
+          },
           "seed": 42
         }
       ]
