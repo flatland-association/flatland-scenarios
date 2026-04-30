@@ -5,7 +5,7 @@ from flatland.envs.rail_env import RailEnv
 from flatland.envs.timetable_generators import timetable_generator
 
 
-def sampling_env_gnerator(env: RailEnv):
+def sampling_env_gnerator(env: RailEnv, line_length: int = 2) -> RailEnv:
 
     _previous_rail_generator = env.rail_generator
 
@@ -30,7 +30,7 @@ def sampling_env_gnerator(env: RailEnv):
         return rail, optionals
 
     env.rail_generator = rail_generator
-    env.line_generator = sparse_line_generator()
+    env.line_generator = sparse_line_generator(line_length=line_length)
     env.timetable_generator = timetable_generator
 
-    return env
+    return env   
