@@ -45,9 +45,4 @@ def run_with_policy(scenario: str,
     print(f"normalized_reward={all_trains_arrived['normalized_reward'].sum()}")
     print(f"mean_normalized_reward={all_trains_arrived['normalized_reward'].mean()}")
     print(f"success_rate={all_trains_arrived['success_rate'].mean()}")
-    with open('results/private_results_local.txt', 'a') as f:
-        print(sub_scenario, file=f)
-        print(f"  Took {end_time - start_time:.2f}s", file=f)
-        print(f"  normalized_reward = {all_trains_arrived['normalized_reward'].sum()}", file=f)
-        print(f"  success_rate = {all_trains_arrived['success_rate'].mean()}", file=f)
     return all_actions, all_trains_positions, all_trains_arrived, all_trains_rewards_dones_infos, env_stats, agent_stats
