@@ -1,7 +1,8 @@
 import pickle
-from typing import List
 import numpy as np
+from typing import List
 from numpy.random.mtrand import RandomState
+from importlib.resources import files
 
 from flatland.envs.line_generators import sparse_line_generator
 from flatland.envs.rail_env import RailEnv
@@ -132,6 +133,7 @@ def timetable_generator(agents: List[EnvAgent], distance_map: DistanceMap,
     return Timetable(earliest_departures=earliest_departures, latest_arrivals=latest_arrivals,
                      max_episode_steps=max_episode_steps)
 
+
 def filter_by_scene(data: dict, scene: str) -> dict:
     scenes = data['scenes_with_station']
     
@@ -147,11 +149,12 @@ def filter_by_scene(data: dict, scene: str) -> dict:
 
     return filtered_data
 
-def sampling_env_gnerator(env: RailEnv, line_length: int = 2, scene: str = None) -> RailEnv:
+
+def sampling_env_generator(env: RailEnv, line_length: int = 2, scene: str = None) -> RailEnv:
 
     _previous_rail_generator = env.rail_generator
-
-    with open('stations.pkl', 'rb') as f:
+ 
+    with files('competitions.competition_2026').joinpath('stations.pkl').open('rb') as f:
         data = pickle.load(f)
 
     assert scene is None or scene in {"scene_1", "scene_2", "scene_3", "scene_4", "scene_5"}, "Scene should be 'scene_1', 'scene_2', 'scene_3', 'scene_4', 'scene_5' or None (equivalent to 'scene_5', i.e. all stations)"
