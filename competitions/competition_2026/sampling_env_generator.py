@@ -13,7 +13,7 @@ from flatland.envs.timetable_utils import Timetable
 from flatland.envs.timetable_generators import len_handle_none
 
 
-# adaptaion of timetable generator for lines with length > 2
+# adaptation of timetable generator for lines with length > 2
 def timetable_generator(agents: List[EnvAgent], distance_map: DistanceMap,
                         agents_hints: dict, np_random: RandomState = None) -> Timetable:
     """
