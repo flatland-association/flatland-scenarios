@@ -5,7 +5,7 @@ from pathlib import Path
 from flatland.callbacks.callbacks import make_multi_callbacks
 from flatland.callbacks.generate_movie_callbacks import GenerateMovieCallbacks
 from flatland.envs.persistence import RailEnvPersister
-from flatland.envs.rewards import BaseDefaultRewards
+from flatland.envs.rewards import ECML2026Rewards
 from flatland.evaluators.trajectory_analysis import data_frame_for_trajectories
 from flatland.trajectories.policy_runner import PolicyRunner
 
@@ -30,7 +30,7 @@ def run_with_policy(scenario: str,
     start_time = time.time()
 
     env = RailEnvPersister.load_new(str((base_dir if base_dir is not None else Path(".")) / scenario / f"{sub_scenario}.pkl"), obs_builder=obs_builder,
-                                    rewards=BaseDefaultRewards())[0]
+                                    rewards=ECML2026Rewards())[0]
     PolicyRunner.create_from_policy(
         policy=policy,
         data_dir=data_dir,
