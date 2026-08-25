@@ -1,2 +1,2 @@
-episode_id	env_time	success_rate	mean_normalized_reward
-Test_00_Level_8	172	1.0	1.0
+episode_id	env_time	success_rate	normalized_reward
+Test_00_Level_8	193	1.0	0.9967969250480462
