@@ -269,7 +269,7 @@ export PYTHONPATH=../flatland-baselines:../flatland-rl:$PWD
 python trajectories/gen_trajectories.py
 
 cd trajectories/
-VERSION="_v6"
+VERSION="_v7"
 zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip 30x30\ map -x "*.DS_Store"
 zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip malfunction_deadlock_avoidance_heuristics -x "*.DS_Store"
 ```
@@ -278,7 +278,8 @@ zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip malfunction_deadlock_avo
 
 | Version                                                                                             | Description                                                                                                                                                                                                                                               |
 |-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [FLATLAND_BENCHMARK_EPISODES_FOLDER_v6.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v6.zip) | Actions are applied at cell entry  [pr](https://github.com/flatland-association/flatland-rl/pull/501)                                                                                                                                                     |
+| [FLATLAND_BENCHMARK_EPISODES_FOLDER_v7.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v7.zip) | Old recordings could no longer be reused this time, so the affected episodes were regenerated directly. [pr](https://github.com/flatland-association/flatland-rl/issues/178)                                                                             |
+| [FLATLAND_BENCHMARK_EPISODES_FOLDER_v6.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v6.zip) | Old recordings could still be reused by translating their actions to the new timing, avoiding a full regeneration. [pr](https://github.com/flatland-association/flatland-rl/pull/501)                                                                    |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER_v5.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v5.zip) | Re-generate with modified dla using k shortest paths.  [pr](https://github.com/flatland-association/flatland-baselines/pull/41/)                                                                                                                          |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER_v4.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v4.zip) | Re-generate with rewards, dones, infos  [pr](https://github.com/flatland-association/flatland-rl/pull/222/)                                                                                                                                               |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER_v3.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v3.zip) | Re-generate malfunction scenarios after bugfixing of step function [pr](https://github.com/flatland-association/flatland-rl/pull/171) / [sha](https://github.com/flatland-association/flatland-scenarios/commit/a90661093e1b7d365bc81c6bc020ac9906bb548d) |
