@@ -1,1274 +1,4 @@
 env_time	agent_id	episode_id	position
-1	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-1	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-1	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-1	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-1	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-1	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-1	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-1	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-1	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-1	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-2	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-2	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-2	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-2	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-2	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-2	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-2	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-2	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-2	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-2	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-3	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-3	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-3	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-3	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-3	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-3	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-3	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-3	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-3	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 16), 1)
-3	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-4	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-4	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-4	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-4	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-4	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-4	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-4	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-4	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-4	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 17), 1)
-4	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-5	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-5	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-5	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-5	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-5	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 16), 3)
-5	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-5	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-5	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-5	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 18), 1)
-5	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-6	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-6	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-6	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-6	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-6	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 15), 3)
-6	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-6	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-6	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-6	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 19), 1)
-6	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 5), 1)
-7	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((5, 6), 0)
-7	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-7	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-7	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-7	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 3)
-7	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-7	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-7	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-7	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 20), 1)
-7	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 6), 1)
-8	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 6), 0)
-8	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-8	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-8	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-8	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 3)
-8	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-8	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-8	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-8	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 21), 1)
-8	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 7), 1)
-9	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((3, 6), 0)
-9	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-9	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-9	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-9	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 3)
-9	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-9	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-9	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-9	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 21), 0)
-9	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 8), 1)
-10	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((2, 6), 0)
-10	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-10	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-10	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-10	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 3)
-10	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-10	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-10	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-10	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 21), 0)
-10	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 9), 1)
-11	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((1, 6), 0)
-11	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-11	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-11	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-11	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 3)
-11	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-11	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-11	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-11	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 21), 0)
-11	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 10), 1)
-12	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 6), 0)
-12	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-12	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-12	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-12	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 3)
-12	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-12	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-12	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-12	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 21), 0)
-12	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 11), 1)
-13	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 7), 1)
-13	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-13	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-13	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-13	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 3)
-13	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-13	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-13	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-13	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 21), 0)
-13	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 0)
-14	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 8), 1)
-14	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-14	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-14	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-14	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 3)
-14	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-14	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-14	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-14	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 21), 0)
-14	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 1)
-15	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 9), 1)
-15	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-15	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-15	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-15	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 3)
-15	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-15	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-15	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-15	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 21), 0)
-15	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 1)
-16	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 10), 1)
-16	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-16	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-16	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-16	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-16	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-16	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-16	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-16	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 20), 3)
-16	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 1)
-17	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((1, 10), 2)
-17	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-17	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-17	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-17	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-17	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-17	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-17	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-17	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 19), 3)
-17	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 14), 0)
-18	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((2, 10), 2)
-18	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-18	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-18	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-18	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-18	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-18	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-18	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-18	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 18), 3)
-18	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 15), 1)
-19	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((3, 10), 2)
-19	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-19	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-19	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-19	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-19	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-19	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-19	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 16), 3)
-19	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 17), 3)
-19	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-20	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 10), 2)
-20	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-20	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-20	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-20	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-20	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-20	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-20	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 15), 3)
-20	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 16), 3)
-20	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-21	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((5, 10), 2)
-21	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-21	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-21	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-21	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-21	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-21	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-21	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 3)
-21	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 15), 3)
-21	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-22	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 10), 2)
-22	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-22	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((5, 4), 0)
-22	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-22	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-22	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-22	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-22	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 3)
-22	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 14), 3)
-22	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-23	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((7, 10), 2)
-23	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-23	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 4), 0)
-23	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-23	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-23	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-23	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-23	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 3)
-23	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 13), 3)
-23	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-24	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 10), 2)
-24	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-24	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 5), 1)
-24	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-24	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-24	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-24	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-24	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 3)
-24	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 12), 3)
-24	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-25	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((9, 10), 2)
-25	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-25	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((3, 5), 0)
-25	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-25	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-25	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-25	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-25	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 11), 2)
-25	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 11), 3)
-25	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-26	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 10), 2)
-26	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-26	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((2, 5), 0)
-26	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-26	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-26	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-26	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-26	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 10), 3)
-26	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 3)
-26	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-27	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 10), 2)
-27	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-27	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((1, 5), 0)
-27	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-27	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-27	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-27	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-27	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 9), 3)
-27	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 9), 3)
-27	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-28	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 10), 2)
-28	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-28	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 5), 0)
-28	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-28	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-28	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-28	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-28	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 8), 3)
-28	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 8), 3)
-28	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-29	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 2)
-29	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-29	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 6), 1)
-29	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-29	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-29	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-29	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-29	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 7), 3)
-29	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 7), 3)
-29	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-30	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
-30	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-30	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 7), 1)
-30	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-30	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-30	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-30	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-30	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 6), 3)
-30	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 7), 0)
-30	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-31	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 10), 2)
-31	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-31	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 8), 1)
-31	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-31	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-31	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-31	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-31	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((22, 6), 2)
-31	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 7), 0)
-31	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-32	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 10), 2)
-32	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-32	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 9), 1)
-32	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-32	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-32	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-32	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-32	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-32	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 7), 0)
-32	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-33	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 10), 2)
-33	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-33	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 10), 1)
-33	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 5), 3)
-33	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-33	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-33	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-33	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-33	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 6), 3)
-33	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-34	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 10), 2)
-34	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-34	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((1, 10), 2)
-34	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 4), 3)
-34	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-34	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-34	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-34	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-34	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 5), 3)
-34	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-35	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 10), 2)
-35	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-35	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((2, 10), 2)
-35	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 4), 2)
-35	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-35	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-35	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-35	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-35	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 4), 3)
-35	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-36	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 2)
-36	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-36	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((3, 10), 2)
-36	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 3), 3)
-36	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-36	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-36	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-36	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-36	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 4), 2)
-36	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-37	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 3)
-37	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-37	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 10), 2)
-37	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 2), 3)
-37	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-37	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-37	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-37	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-37	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 4), 2)
-37	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-38	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 3)
-38	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-38	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((5, 10), 2)
-38	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 1), 3)
-38	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-38	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-38	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-38	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-38	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 4), 2)
-38	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-39	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 3)
-39	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-39	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 10), 2)
-39	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 0), 3)
-39	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-39	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-39	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-39	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-39	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 4), 2)
-39	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-40	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 3)
-40	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 5), 1)
-40	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((7, 10), 2)
-40	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 0), 0)
-40	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-40	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-40	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-40	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-40	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 3), 3)
-40	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-41	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-41	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 6), 1)
-41	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 10), 2)
-41	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 0), 0)
-41	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-41	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-41	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-41	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-41	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 2), 3)
-41	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-42	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-42	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 2)
-42	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((9, 10), 2)
-42	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 0), 0)
-42	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-42	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-42	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-42	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-42	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 1), 3)
-42	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-43	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-43	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 1)
-43	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 10), 2)
-43	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 0), 0)
-43	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-43	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-43	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-43	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-43	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 1), 3)
-43	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-44	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-44	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 1)
-44	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 10), 2)
-44	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 0), 0)
-44	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-44	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-44	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-44	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-44	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 0), 3)
-44	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-45	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-45	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 1)
-45	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 10), 2)
-45	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 1), 1)
-45	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-45	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-45	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-45	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-45	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 0), 2)
-45	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-46	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-46	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 1)
-46	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 2)
-46	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 2), 1)
-46	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-46	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-46	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-46	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-46	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 0), 2)
-46	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-47	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-47	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 10), 0)
-47	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 2)
-47	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 3), 1)
-47	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-47	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-47	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-47	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-47	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 0), 2)
-47	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-48	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-48	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 10), 0)
-48	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 2)
-48	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 4), 1)
-48	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-48	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-48	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-48	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-48	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 0), 2)
-48	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-49	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-49	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 10), 0)
-49	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 2)
-49	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 5), 1)
-49	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-49	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-49	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 5), 1)
-49	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-49	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 0), 2)
-49	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-50	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-50	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 10), 0)
-50	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
-50	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 5), 0)
-50	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-50	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 5), 1)
-50	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 6), 1)
-50	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-50	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 0), 2)
-50	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-51	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-51	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 10), 0)
-51	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
-51	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 5), 0)
-51	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-51	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 6), 1)
-51	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 7), 1)
-51	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-51	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 0), 2)
-51	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-52	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-52	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 9), 3)
-52	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 10), 2)
-52	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 5), 0)
-52	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-52	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 2)
-52	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 8), 1)
-52	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-52	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 1), 1)
-52	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-53	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-53	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 8), 3)
-53	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 10), 2)
-53	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 5), 0)
-53	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-53	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 1)
-53	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 0)
-53	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-53	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 2), 1)
-53	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-54	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-54	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 7), 3)
-54	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 10), 2)
-54	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 5), 0)
-54	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-54	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 1)
-54	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 1)
-54	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-54	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 3), 1)
-54	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-55	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-55	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 6), 3)
-55	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 10), 2)
-55	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((9, 5), 0)
-55	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-55	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 1)
-55	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 1)
-55	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-55	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 4), 1)
-55	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-56	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-56	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 6), 0)
-56	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 10), 2)
-56	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 5), 0)
-56	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-56	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 1)
-56	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 1)
-56	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-56	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((22, 4), 2)
-56	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-57	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-57	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 6), 0)
-57	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 2)
-57	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 6), 1)
-57	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-57	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 1)
-57	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 1)
-57	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-57	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-57	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-58	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-58	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 6), 0)
-58	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 3)
-58	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((7, 6), 0)
-58	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-58	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 1)
-58	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 1)
-58	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-58	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-58	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-59	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-59	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 6), 0)
-59	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 3)
-59	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 6), 0)
-59	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-59	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 1)
-59	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 1)
-59	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-59	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-59	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-60	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-60	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 6), 0)
-60	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 3)
-60	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 7), 1)
-60	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-60	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 1)
-60	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 14), 0)
-60	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-60	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-60	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-61	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-61	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((9, 6), 0)
-61	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 3)
-61	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-61	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-61	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 14), 0)
-61	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 15), 1)
-61	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-61	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-61	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-62	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-62	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 6), 0)
-62	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-62	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-62	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-62	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 15), 1)
-62	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-62	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-62	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-62	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-63	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-63	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((7, 6), 0)
-63	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-63	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-63	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-63	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-63	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-63	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-63	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-63	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-64	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-64	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 6), 0)
-64	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-64	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-64	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-64	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-64	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-64	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-64	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-64	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-65	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-65	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 7), 1)
-65	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-65	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-65	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-65	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-65	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-65	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-65	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-65	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-66	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-66	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-66	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 0)
-66	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-66	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-66	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-66	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-66	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 3)
-66	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-66	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	(None, 1)
-1	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-1	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-1	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-1	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-1	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-1	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-1	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-1	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-1	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-1	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-2	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-2	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-2	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-2	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-2	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-2	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-2	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-2	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-2	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-2	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-3	0	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 5), 3)
-3	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-3	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-3	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-3	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-3	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-3	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-3	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-3	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-3	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-4	0	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 4), 3)
-4	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-4	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-4	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-4	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-4	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-4	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-4	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-4	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-4	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-5	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 4), 2)
-5	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-5	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-5	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-5	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-5	5	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 5), 3)
-5	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-5	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-5	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-5	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-6	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 3), 3)
-6	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-6	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-6	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-6	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-6	5	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 4), 3)
-6	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-6	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-6	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-6	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-7	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 2), 3)
-7	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-7	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-7	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-7	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-7	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 4), 2)
-7	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-7	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-7	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-7	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-8	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 1), 3)
-8	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-8	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-8	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-8	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-8	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 3), 3)
-8	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-8	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-8	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 3)
-8	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-9	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 0), 3)
-9	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-9	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-9	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-9	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-9	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 2), 3)
-9	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-9	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-9	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 18), 3)
-9	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-10	0	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 0), 0)
-10	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-10	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-10	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-10	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-10	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 1), 3)
-10	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-10	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-10	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 17), 3)
-10	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-11	0	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 0), 0)
-11	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-11	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-11	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-11	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-11	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 0), 3)
-11	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-11	7	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 5), 1)
-11	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 3)
-11	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-12	0	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 0), 0)
-12	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-12	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-12	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-12	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-12	5	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 0), 0)
-12	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-12	7	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 6), 1)
-12	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 3)
-12	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-13	0	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 0), 0)
-13	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-13	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-13	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-13	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-13	5	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 0), 0)
-13	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-13	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 6), 2)
-13	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 3)
-13	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-14	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 0), 0)
-14	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-14	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-14	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-14	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-14	5	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 0), 0)
-14	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-14	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 7), 1)
-14	8	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 14), 0)
-14	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-15	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 1), 1)
-15	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-15	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-15	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-15	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-15	5	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 0), 0)
-15	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-15	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 8), 1)
-15	8	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 14), 0)
-15	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-16	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 2), 1)
-16	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-16	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-16	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-16	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-16	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 0), 0)
-16	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-16	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 9), 1)
-16	8	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 14), 0)
-16	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-17	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 3), 1)
-17	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 3)
-17	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-17	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-17	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-17	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 1), 1)
-17	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-17	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 10), 1)
-17	8	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 14), 0)
-17	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-18	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 4), 1)
-18	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 18), 3)
-18	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-18	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-18	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-18	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 2), 1)
-18	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-18	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 11), 1)
-18	8	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 0)
-18	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-19	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 5), 1)
-19	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 17), 3)
-19	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-19	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-19	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-19	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 3), 1)
-19	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-19	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 12), 1)
-19	8	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 14), 0)
-19	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-20	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 6), 1)
-20	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 3)
-20	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-20	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-20	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-20	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 4), 1)
-20	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-20	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 13), 1)
-20	8	4affa89b-72f6-4305-aeca-e5182efbe467	((13, 14), 0)
-20	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-21	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 7), 1)
-21	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 3)
-21	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-21	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-21	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-21	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 5), 1)
-21	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-21	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 14), 1)
-21	8	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 14), 0)
-21	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-22	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 8), 1)
-22	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 3)
-22	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-22	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-22	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-22	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 6), 1)
-22	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-22	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 15), 1)
-22	8	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 15), 1)
-22	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-23	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 9), 1)
-23	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 13), 3)
-23	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-23	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-23	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-23	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 7), 1)
-23	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-23	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 16), 1)
-23	8	4affa89b-72f6-4305-aeca-e5182efbe467	((11, 15), 0)
-23	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-24	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 10), 1)
-24	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 12), 3)
-24	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-24	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-24	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-24	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 8), 1)
-24	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-24	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 17), 1)
-24	8	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 15), 0)
-24	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-25	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 11), 1)
-25	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 11), 3)
-25	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-25	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-25	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 3)
-25	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 9), 1)
-25	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-25	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 18), 1)
-25	8	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 16), 1)
-25	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-26	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 12), 1)
-26	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 10), 3)
-26	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-26	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-26	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 18), 3)
-26	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 10), 1)
-26	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-26	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-26	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-26	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-27	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 12), 0)
-27	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 10), 2)
-27	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-27	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-27	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 17), 3)
-27	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 11), 1)
-27	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-27	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-27	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-27	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-28	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 13), 1)
-28	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 9), 3)
-28	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-28	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-28	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 3)
-28	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 12), 1)
-28	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-28	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-28	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-28	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-29	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 1)
-29	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 8), 3)
-29	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-29	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-29	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 3)
-29	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 12), 0)
-29	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-29	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-29	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-29	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-30	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 15), 1)
-30	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 7), 3)
-30	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-30	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 1)
-30	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 3)
-30	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 13), 1)
-30	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-30	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-30	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-30	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-31	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 16), 1)
-31	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 6), 3)
-31	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-31	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 20), 1)
-31	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 13), 3)
-31	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 1)
-31	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-31	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-31	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-31	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-32	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 17), 1)
-32	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-32	2	4affa89b-72f6-4305-aeca-e5182efbe467	((9, 13), 2)
-32	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 21), 1)
-32	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 12), 3)
-32	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 15), 1)
-32	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-32	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-32	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-32	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-33	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 18), 1)
-33	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-33	2	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 13), 2)
-33	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 22), 1)
-33	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 11), 3)
-33	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 16), 1)
-33	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-33	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-33	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-33	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-34	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 19), 1)
-34	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-34	2	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 14), 1)
-34	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 23), 1)
-34	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 10), 3)
-34	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 17), 1)
-34	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-34	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-34	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-34	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-35	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 20), 1)
-35	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-35	2	4affa89b-72f6-4305-aeca-e5182efbe467	((11, 14), 2)
-35	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 24), 1)
-35	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 10), 2)
-35	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 18), 1)
-35	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-35	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-35	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-35	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-36	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 21), 1)
-36	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-36	2	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 14), 2)
-36	3	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 24), 0)
-36	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 9), 3)
-36	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 19), 1)
-36	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-36	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-36	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-36	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-37	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 22), 1)
-37	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-37	2	4affa89b-72f6-4305-aeca-e5182efbe467	((13, 14), 2)
-37	3	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 24), 0)
-37	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 8), 3)
-37	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 20), 1)
-37	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-37	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-37	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-37	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-38	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 22), 1)
-38	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-38	2	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 14), 2)
-38	3	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 24), 0)
-38	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 7), 3)
-38	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 21), 1)
-38	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-38	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-38	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-38	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-39	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 22), 1)
-39	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-39	2	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 2)
-39	3	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 24), 0)
-39	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 6), 3)
-39	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 21), 1)
-39	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-39	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-39	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-39	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-40	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 23), 1)
-40	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-40	2	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 14), 2)
-40	3	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 24), 0)
-40	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-40	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 22), 1)
-40	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-40	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-40	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-40	9	4affa89b-72f6-4305-aeca-e5182efbe467	((9, 13), 2)
-41	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 24), 1)
-41	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-41	2	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 14), 2)
-41	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 24), 0)
-41	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-41	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 23), 1)
-41	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-41	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-41	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-41	9	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 13), 2)
-42	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 24), 2)
-42	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-42	2	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 14), 2)
-42	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 23), 3)
-42	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-42	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 24), 1)
-42	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-42	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-42	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-42	9	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 14), 1)
-43	0	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 24), 2)
-43	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-43	2	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 14), 2)
-43	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 22), 3)
-43	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-43	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 24), 2)
-43	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-43	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-43	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-43	9	4affa89b-72f6-4305-aeca-e5182efbe467	((11, 14), 2)
-44	0	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 24), 2)
-44	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-44	2	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 2)
-44	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 21), 3)
-44	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-44	5	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 24), 2)
-44	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-44	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-44	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-44	9	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 14), 2)
-45	0	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 24), 2)
-45	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-45	2	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 1)
-45	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 20), 3)
-45	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-45	5	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 24), 2)
-45	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-45	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-45	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-45	9	4affa89b-72f6-4305-aeca-e5182efbe467	((13, 14), 2)
-46	0	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 24), 2)
-46	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-46	2	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 1)
-46	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 19), 3)
-46	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-46	5	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 24), 2)
-46	6	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 3)
-46	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-46	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-46	9	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 14), 2)
-47	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 24), 2)
-47	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-47	2	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 16), 2)
-47	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 18), 3)
-47	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-47	5	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 24), 2)
-47	6	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 18), 3)
-47	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-47	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-47	9	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 2)
-48	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 23), 3)
-48	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-48	2	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 17), 1)
-48	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 17), 3)
-48	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-48	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 24), 2)
-48	6	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 17), 3)
-48	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-48	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-48	9	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 14), 2)
-49	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 22), 3)
-49	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-49	2	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 18), 1)
-49	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 16), 3)
-49	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-49	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 23), 3)
-49	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 17), 2)
-49	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-49	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-49	9	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 14), 2)
-50	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 21), 3)
-50	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-50	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-50	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 15), 3)
-50	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-50	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 22), 3)
-50	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 16), 3)
-50	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-50	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-50	9	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 14), 2)
-51	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 20), 3)
-51	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-51	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-51	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 14), 3)
-51	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-51	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 21), 3)
-51	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 15), 3)
-51	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-51	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-51	9	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 14), 2)
-52	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-52	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-52	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-52	3	4affa89b-72f6-4305-aeca-e5182efbe467	((13, 14), 0)
-52	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-52	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 20), 3)
-52	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 14), 3)
-52	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-52	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-52	9	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 2)
-53	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-53	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-53	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-53	3	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 14), 0)
-53	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-53	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-53	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 13), 3)
-53	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-53	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-53	9	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 1)
-54	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-54	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-54	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-54	3	4affa89b-72f6-4305-aeca-e5182efbe467	((11, 14), 0)
-54	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-54	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-54	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 12), 3)
-54	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-54	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-54	9	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 1)
-55	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-55	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-55	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-55	3	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 14), 0)
-55	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-55	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-55	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 11), 3)
-55	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-55	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-55	9	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 16), 2)
-56	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-56	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-56	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-56	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-56	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-56	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-56	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 10), 3)
-56	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-56	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-56	9	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 17), 1)
-57	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-57	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-57	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-57	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-57	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-57	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-57	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 9), 3)
-57	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-57	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-57	9	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 18), 1)
-58	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-58	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-58	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-58	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-58	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-58	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-58	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 8), 3)
-58	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-58	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-58	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-59	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-59	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-59	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-59	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-59	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-59	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-59	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 7), 3)
-59	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-59	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-59	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-60	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-60	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-60	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-60	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-60	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-60	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-60	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 6), 3)
-60	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-60	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-60	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-61	0	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-61	1	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-61	2	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
-61	3	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-61	4	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-61	5	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-61	6	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-61	7	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 1)
-61	8	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 3)
-61	9	4affa89b-72f6-4305-aeca-e5182efbe467	(None, 2)
 1	0	6274be74-e859-4445-9d77-97a5966704d8	(None, 2)
 1	1	6274be74-e859-4445-9d77-97a5966704d8	(None, 2)
 1	2	6274be74-e859-4445-9d77-97a5966704d8	(None, 0)
@@ -14709,3 +13439,1273 @@ env_time	agent_id	episode_id	position
 68	7	6e7e8453-a311-43ae-91a4-f2604951a69e	(None, 0)
 68	8	6e7e8453-a311-43ae-91a4-f2604951a69e	(None, 3)
 68	9	6e7e8453-a311-43ae-91a4-f2604951a69e	(None, 2)
+1	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+2	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+3	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 16), 1)
+3	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+4	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 17), 1)
+4	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+5	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+5	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+5	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+5	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+5	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 16), 3)
+5	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+5	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+5	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+5	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 18), 1)
+5	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+6	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+6	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+6	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+6	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+6	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 15), 3)
+6	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+6	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+6	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+6	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 19), 1)
+6	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 5), 1)
+7	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((5, 6), 0)
+7	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+7	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+7	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+7	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 3)
+7	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+7	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+7	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+7	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 20), 1)
+7	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 6), 1)
+8	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 6), 0)
+8	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+8	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+8	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+8	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 3)
+8	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+8	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+8	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+8	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 21), 1)
+8	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 7), 1)
+9	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((3, 6), 0)
+9	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+9	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+9	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+9	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 3)
+9	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+9	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+9	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+9	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 21), 0)
+9	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 8), 1)
+10	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((2, 6), 0)
+10	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+10	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+10	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+10	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 3)
+10	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+10	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+10	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+10	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 21), 0)
+10	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 9), 1)
+11	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((1, 6), 0)
+11	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+11	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+11	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+11	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 3)
+11	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+11	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+11	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+11	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 21), 0)
+11	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 10), 1)
+12	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 6), 0)
+12	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+12	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+12	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+12	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 3)
+12	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+12	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+12	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+12	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 21), 0)
+12	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 11), 1)
+13	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 7), 1)
+13	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+13	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+13	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+13	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 3)
+13	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+13	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+13	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+13	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 21), 0)
+13	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 0)
+14	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 8), 1)
+14	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+14	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+14	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+14	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 3)
+14	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+14	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+14	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+14	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 21), 0)
+14	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 1)
+15	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 9), 1)
+15	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+15	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+15	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+15	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 3)
+15	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+15	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+15	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+15	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 21), 0)
+15	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 1)
+16	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 10), 1)
+16	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+16	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+16	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+16	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+16	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+16	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+16	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+16	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 20), 3)
+16	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 1)
+17	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((1, 10), 2)
+17	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+17	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+17	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+17	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+17	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+17	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+17	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+17	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 19), 3)
+17	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 14), 0)
+18	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((2, 10), 2)
+18	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+18	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+18	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+18	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+18	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+18	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+18	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+18	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 18), 3)
+18	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 15), 1)
+19	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((3, 10), 2)
+19	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+19	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+19	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+19	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+19	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+19	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+19	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 16), 3)
+19	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 17), 3)
+19	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+20	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 10), 2)
+20	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+20	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+20	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+20	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+20	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+20	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+20	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 15), 3)
+20	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 16), 3)
+20	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+21	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((5, 10), 2)
+21	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+21	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+21	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+21	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+21	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+21	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+21	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 3)
+21	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 15), 3)
+21	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+22	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 10), 2)
+22	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+22	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((5, 4), 0)
+22	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+22	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+22	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+22	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+22	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 3)
+22	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 14), 3)
+22	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+23	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((7, 10), 2)
+23	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+23	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 4), 0)
+23	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+23	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+23	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+23	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+23	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 3)
+23	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 13), 3)
+23	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+24	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 10), 2)
+24	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+24	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 5), 1)
+24	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+24	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+24	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+24	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+24	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 3)
+24	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 12), 3)
+24	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+25	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((9, 10), 2)
+25	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+25	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((3, 5), 0)
+25	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+25	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+25	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+25	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+25	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 11), 2)
+25	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 11), 3)
+25	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+26	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 10), 2)
+26	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+26	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((2, 5), 0)
+26	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+26	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+26	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+26	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+26	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 10), 3)
+26	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 3)
+26	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+27	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 10), 2)
+27	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+27	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((1, 5), 0)
+27	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+27	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+27	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+27	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+27	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 9), 3)
+27	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 9), 3)
+27	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+28	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 10), 2)
+28	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+28	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 5), 0)
+28	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+28	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+28	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+28	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+28	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 8), 3)
+28	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 8), 3)
+28	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+29	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 2)
+29	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+29	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 6), 1)
+29	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+29	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+29	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+29	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+29	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 7), 3)
+29	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 7), 3)
+29	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+30	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
+30	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+30	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 7), 1)
+30	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+30	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+30	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+30	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+30	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 6), 3)
+30	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 7), 0)
+30	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+31	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 10), 2)
+31	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+31	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 8), 1)
+31	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+31	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+31	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+31	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+31	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((22, 6), 2)
+31	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 7), 0)
+31	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+32	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 10), 2)
+32	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+32	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 9), 1)
+32	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+32	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+32	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+32	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+32	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+32	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 7), 0)
+32	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+33	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 10), 2)
+33	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+33	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((0, 10), 1)
+33	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 5), 3)
+33	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+33	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+33	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+33	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+33	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 6), 3)
+33	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+34	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 10), 2)
+34	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+34	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((1, 10), 2)
+34	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 4), 3)
+34	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+34	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+34	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+34	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+34	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 5), 3)
+34	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+35	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 10), 2)
+35	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+35	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((2, 10), 2)
+35	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 4), 2)
+35	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+35	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+35	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+35	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+35	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 4), 3)
+35	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+36	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 2)
+36	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+36	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((3, 10), 2)
+36	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 3), 3)
+36	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+36	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+36	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+36	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+36	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 4), 2)
+36	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+37	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 3)
+37	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+37	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((4, 10), 2)
+37	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 2), 3)
+37	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+37	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+37	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+37	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+37	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 4), 2)
+37	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+38	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 3)
+38	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+38	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((5, 10), 2)
+38	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 1), 3)
+38	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+38	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+38	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+38	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+38	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 4), 2)
+38	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+39	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 3)
+39	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+39	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 10), 2)
+39	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 0), 3)
+39	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+39	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+39	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+39	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+39	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 4), 2)
+39	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+40	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 3)
+40	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 5), 1)
+40	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((7, 10), 2)
+40	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 0), 0)
+40	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+40	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+40	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+40	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+40	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 3), 3)
+40	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+41	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+41	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 6), 1)
+41	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 10), 2)
+41	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 0), 0)
+41	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+41	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+41	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+41	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+41	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 2), 3)
+41	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+42	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+42	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 2)
+42	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((9, 10), 2)
+42	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 0), 0)
+42	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+42	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+42	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+42	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+42	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 1), 3)
+42	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+43	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+43	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 1)
+43	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 10), 2)
+43	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 0), 0)
+43	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+43	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+43	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+43	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+43	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 0), 3)
+43	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+44	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+44	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 1)
+44	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 10), 2)
+44	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 0), 0)
+44	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+44	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+44	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+44	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+44	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 0), 3)
+44	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+45	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+45	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 1)
+45	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 10), 2)
+45	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 1), 1)
+45	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+45	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+45	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+45	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+45	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 0), 2)
+45	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+46	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+46	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 1)
+46	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 10), 2)
+46	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 2), 1)
+46	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+46	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+46	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+46	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+46	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 0), 2)
+46	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+47	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+47	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 10), 0)
+47	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
+47	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 3), 1)
+47	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+47	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+47	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+47	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+47	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 0), 2)
+47	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+48	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+48	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 10), 0)
+48	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
+48	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 4), 1)
+48	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+48	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+48	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+48	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+48	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 0), 2)
+48	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+49	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+49	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 10), 0)
+49	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
+49	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 5), 1)
+49	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+49	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+49	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 5), 1)
+49	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+49	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 0), 2)
+49	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+50	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+50	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 10), 0)
+50	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
+50	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 5), 0)
+50	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+50	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 5), 1)
+50	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 6), 1)
+50	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+50	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 0), 2)
+50	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+51	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+51	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 10), 0)
+51	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 10), 2)
+51	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 5), 0)
+51	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+51	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 6), 1)
+51	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 7), 1)
+51	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+51	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 0), 2)
+51	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+52	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+52	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 9), 3)
+52	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 10), 2)
+52	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 5), 0)
+52	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+52	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 2)
+52	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 8), 1)
+52	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+52	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 1), 1)
+52	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+53	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+53	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 8), 3)
+53	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((16, 10), 2)
+53	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 5), 0)
+53	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+53	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 1)
+53	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 0)
+53	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+53	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 2), 1)
+53	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+54	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+54	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 7), 3)
+54	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((17, 10), 2)
+54	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 5), 0)
+54	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+54	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 1)
+54	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 1)
+54	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+54	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 3), 1)
+54	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+55	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+55	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((15, 6), 3)
+55	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((18, 10), 2)
+55	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((9, 5), 0)
+55	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+55	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 1)
+55	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 1)
+55	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+55	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((21, 4), 1)
+55	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+56	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+56	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((14, 6), 0)
+56	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 10), 2)
+56	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 5), 0)
+56	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+56	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 1)
+56	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 1)
+56	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+56	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((22, 4), 2)
+56	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+57	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+57	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((13, 6), 0)
+57	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 10), 2)
+57	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 6), 1)
+57	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+57	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 11), 1)
+57	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 1)
+57	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+57	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+57	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+58	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+58	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((12, 6), 0)
+58	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 9), 3)
+58	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((7, 6), 0)
+58	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+58	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 12), 1)
+58	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 1)
+58	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+58	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+58	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+59	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+59	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((11, 6), 0)
+59	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 8), 3)
+59	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 6), 0)
+59	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+59	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 13), 1)
+59	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 1)
+59	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+59	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+59	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+60	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+60	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((10, 6), 0)
+60	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 7), 3)
+60	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 7), 1)
+60	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+60	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 14), 1)
+60	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 14), 0)
+60	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+60	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+60	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+61	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+61	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((9, 6), 0)
+61	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((20, 6), 3)
+61	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+61	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+61	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 14), 0)
+61	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 15), 1)
+61	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+61	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+61	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+62	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+62	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((8, 6), 0)
+62	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+62	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+62	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+62	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((19, 15), 1)
+62	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+62	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+62	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+62	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((7, 6), 0)
+63	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+63	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 6), 0)
+64	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+64	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	((6, 7), 1)
+65	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+65	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	0	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	1	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	2	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	3	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	4	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	5	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	6	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	7	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	8	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+66	9	1649ef98-e3a8-4dd3-a289-bbfff12876ce	
+1	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+1	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+2	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	0	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 5), 3)
+3	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+3	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	0	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 4), 3)
+4	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+4	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+5	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 4), 2)
+5	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+5	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+5	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+5	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+5	5	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 5), 3)
+5	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+5	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+5	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+5	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+6	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 3), 3)
+6	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+6	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+6	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+6	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+6	5	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 4), 3)
+6	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+6	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+6	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+6	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+7	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 2), 3)
+7	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+7	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+7	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+7	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+7	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 4), 2)
+7	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+7	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+7	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+7	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+8	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 1), 3)
+8	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+8	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+8	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+8	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+8	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 3), 3)
+8	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+8	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+8	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 3)
+8	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+9	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 0), 3)
+9	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+9	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+9	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+9	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+9	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 2), 3)
+9	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+9	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+9	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 18), 3)
+9	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+10	0	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 0), 0)
+10	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+10	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+10	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+10	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+10	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 1), 3)
+10	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+10	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+10	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 17), 3)
+10	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+11	0	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 0), 0)
+11	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+11	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+11	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+11	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+11	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 0), 3)
+11	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+11	7	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 5), 1)
+11	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 3)
+11	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+12	0	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 0), 0)
+12	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+12	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+12	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+12	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+12	5	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 0), 0)
+12	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+12	7	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 6), 1)
+12	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 3)
+12	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+13	0	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 0), 0)
+13	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+13	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+13	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+13	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+13	5	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 0), 0)
+13	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+13	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 6), 2)
+13	8	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 3)
+13	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+14	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 0), 0)
+14	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+14	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+14	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+14	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+14	5	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 0), 0)
+14	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+14	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 7), 1)
+14	8	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 14), 0)
+14	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+15	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 1), 1)
+15	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+15	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+15	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+15	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+15	5	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 0), 0)
+15	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+15	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 8), 1)
+15	8	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 14), 0)
+15	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+16	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 2), 1)
+16	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+16	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+16	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+16	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+16	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 0), 0)
+16	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+16	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 9), 1)
+16	8	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 14), 0)
+16	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+17	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 3), 1)
+17	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 3)
+17	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+17	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+17	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+17	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 1), 1)
+17	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+17	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 10), 1)
+17	8	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 14), 0)
+17	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+18	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 4), 1)
+18	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 18), 3)
+18	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+18	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+18	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+18	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 2), 1)
+18	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+18	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 11), 1)
+18	8	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 0)
+18	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+19	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 5), 1)
+19	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 17), 3)
+19	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+19	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+19	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+19	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 3), 1)
+19	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+19	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 12), 1)
+19	8	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 14), 0)
+19	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+20	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 6), 1)
+20	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 3)
+20	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+20	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+20	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+20	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 4), 1)
+20	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+20	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 13), 1)
+20	8	4affa89b-72f6-4305-aeca-e5182efbe467	((13, 14), 0)
+20	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+21	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 7), 1)
+21	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 3)
+21	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+21	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+21	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+21	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 5), 1)
+21	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+21	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 14), 1)
+21	8	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 14), 0)
+21	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+22	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 8), 1)
+22	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 3)
+22	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+22	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+22	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+22	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 6), 1)
+22	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+22	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 15), 1)
+22	8	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 15), 1)
+22	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+23	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 9), 1)
+23	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 13), 3)
+23	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+23	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+23	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+23	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 7), 1)
+23	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+23	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 16), 1)
+23	8	4affa89b-72f6-4305-aeca-e5182efbe467	((11, 15), 0)
+23	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+24	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 10), 1)
+24	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 12), 3)
+24	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+24	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+24	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+24	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 8), 1)
+24	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+24	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 17), 1)
+24	8	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 15), 0)
+24	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+25	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 11), 1)
+25	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 11), 3)
+25	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+25	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+25	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 3)
+25	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 9), 1)
+25	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+25	7	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 18), 1)
+25	8	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 16), 1)
+25	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+26	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 12), 1)
+26	1	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 10), 3)
+26	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+26	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+26	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 18), 3)
+26	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 10), 1)
+26	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+26	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+26	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+26	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+27	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 12), 0)
+27	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 10), 2)
+27	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+27	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+27	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 17), 3)
+27	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 11), 1)
+27	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+27	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+27	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+27	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+28	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 13), 1)
+28	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 9), 3)
+28	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+28	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+28	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 3)
+28	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 12), 1)
+28	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+28	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+28	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+28	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+29	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 1)
+29	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 8), 3)
+29	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+29	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+29	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 3)
+29	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 12), 0)
+29	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+29	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+29	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+29	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+30	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 15), 1)
+30	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 7), 3)
+30	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+30	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 1)
+30	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 3)
+30	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 13), 1)
+30	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+30	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+30	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+30	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+31	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 16), 1)
+31	1	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 6), 3)
+31	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+31	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 20), 1)
+31	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 13), 3)
+31	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 1)
+31	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+31	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+31	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+31	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+32	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 17), 1)
+32	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+32	2	4affa89b-72f6-4305-aeca-e5182efbe467	((9, 13), 2)
+32	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 21), 1)
+32	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 12), 3)
+32	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 15), 1)
+32	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+32	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+32	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+32	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+33	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 18), 1)
+33	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+33	2	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 13), 2)
+33	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 22), 1)
+33	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 11), 3)
+33	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 16), 1)
+33	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+33	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+33	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+33	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+34	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 19), 1)
+34	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+34	2	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 14), 1)
+34	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 23), 1)
+34	4	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 10), 3)
+34	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 17), 1)
+34	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+34	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+34	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+34	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+35	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 20), 1)
+35	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+35	2	4affa89b-72f6-4305-aeca-e5182efbe467	((11, 14), 2)
+35	3	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 24), 1)
+35	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 10), 2)
+35	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 18), 1)
+35	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+35	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+35	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+35	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+36	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 21), 1)
+36	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+36	2	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 14), 2)
+36	3	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 24), 0)
+36	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 9), 3)
+36	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 19), 1)
+36	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+36	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+36	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+36	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+37	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 22), 1)
+37	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+37	2	4affa89b-72f6-4305-aeca-e5182efbe467	((13, 14), 2)
+37	3	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 24), 0)
+37	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 8), 3)
+37	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 20), 1)
+37	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+37	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+37	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+37	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+38	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 23), 1)
+38	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+38	2	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 14), 2)
+38	3	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 24), 0)
+38	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 7), 3)
+38	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 21), 1)
+38	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+38	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+38	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+38	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+39	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 23), 1)
+39	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+39	2	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 2)
+39	3	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 24), 0)
+39	4	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 6), 3)
+39	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 22), 1)
+39	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+39	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+39	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+39	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+40	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 23), 1)
+40	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+40	2	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 14), 2)
+40	3	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 24), 0)
+40	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+40	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 22), 1)
+40	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+40	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+40	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+40	9	4affa89b-72f6-4305-aeca-e5182efbe467	((9, 13), 2)
+41	0	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 24), 1)
+41	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+41	2	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 14), 2)
+41	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 24), 0)
+41	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+41	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 23), 1)
+41	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+41	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+41	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+41	9	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 13), 2)
+42	0	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 24), 2)
+42	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+42	2	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 14), 2)
+42	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 23), 3)
+42	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+42	5	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 24), 1)
+42	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+42	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+42	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+42	9	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 14), 1)
+43	0	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 24), 2)
+43	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+43	2	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 14), 2)
+43	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 22), 3)
+43	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+43	5	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 24), 2)
+43	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+43	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+43	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+43	9	4affa89b-72f6-4305-aeca-e5182efbe467	((11, 14), 2)
+44	0	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 24), 2)
+44	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+44	2	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 2)
+44	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 21), 3)
+44	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+44	5	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 24), 2)
+44	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+44	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+44	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+44	9	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 14), 2)
+45	0	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 24), 2)
+45	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+45	2	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 1)
+45	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 20), 3)
+45	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+45	5	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 24), 2)
+45	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+45	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+45	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+45	9	4affa89b-72f6-4305-aeca-e5182efbe467	((13, 14), 2)
+46	0	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 24), 2)
+46	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+46	2	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 1)
+46	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 19), 3)
+46	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+46	5	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 24), 2)
+46	6	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 19), 3)
+46	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+46	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+46	9	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 14), 2)
+47	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 24), 2)
+47	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+47	2	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 16), 2)
+47	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 18), 3)
+47	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+47	5	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 24), 2)
+47	6	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 18), 3)
+47	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+47	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+47	9	4affa89b-72f6-4305-aeca-e5182efbe467	((15, 14), 2)
+48	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 23), 3)
+48	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+48	2	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 17), 1)
+48	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 17), 3)
+48	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+48	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 24), 2)
+48	6	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 17), 3)
+48	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+48	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+48	9	4affa89b-72f6-4305-aeca-e5182efbe467	((16, 14), 2)
+49	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 22), 3)
+49	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+49	2	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 18), 1)
+49	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 16), 3)
+49	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+49	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 23), 3)
+49	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 17), 2)
+49	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+49	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+49	9	4affa89b-72f6-4305-aeca-e5182efbe467	((17, 14), 2)
+50	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 21), 3)
+50	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+50	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+50	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 15), 3)
+50	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+50	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 22), 3)
+50	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 16), 3)
+50	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+50	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+50	9	4affa89b-72f6-4305-aeca-e5182efbe467	((18, 14), 2)
+51	0	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 20), 3)
+51	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+51	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+51	3	4affa89b-72f6-4305-aeca-e5182efbe467	((14, 14), 3)
+51	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+51	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 21), 3)
+51	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 15), 3)
+51	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+51	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+51	9	4affa89b-72f6-4305-aeca-e5182efbe467	((19, 14), 2)
+52	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+52	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+52	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+52	3	4affa89b-72f6-4305-aeca-e5182efbe467	((13, 14), 0)
+52	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+52	5	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 20), 3)
+52	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 14), 3)
+52	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+52	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+52	9	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 14), 2)
+53	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+53	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+53	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+53	3	4affa89b-72f6-4305-aeca-e5182efbe467	((12, 14), 0)
+53	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+53	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+53	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 13), 3)
+53	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+53	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+53	9	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 15), 1)
+54	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+54	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+54	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+54	3	4affa89b-72f6-4305-aeca-e5182efbe467	((11, 14), 0)
+54	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+54	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+54	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 12), 3)
+54	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+54	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+54	9	4affa89b-72f6-4305-aeca-e5182efbe467	((20, 16), 1)
+55	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+55	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+55	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+55	3	4affa89b-72f6-4305-aeca-e5182efbe467	((10, 14), 0)
+55	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+55	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+55	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 11), 3)
+55	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+55	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+55	9	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 16), 2)
+56	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+56	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+56	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+56	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+56	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+56	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+56	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 10), 3)
+56	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+56	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+56	9	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 17), 1)
+57	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+57	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+57	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+57	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+57	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+57	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+57	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 9), 3)
+57	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+57	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+57	9	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 18), 1)
+58	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+58	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+58	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+58	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+58	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+58	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+58	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 8), 3)
+58	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+58	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+58	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 7), 3)
+59	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+59	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	6	4affa89b-72f6-4305-aeca-e5182efbe467	((21, 6), 3)
+60	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+60	9	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	0	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	1	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	2	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	3	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	4	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	5	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	6	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	7	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	8	4affa89b-72f6-4305-aeca-e5182efbe467	
+61	9	4affa89b-72f6-4305-aeca-e5182efbe467	
