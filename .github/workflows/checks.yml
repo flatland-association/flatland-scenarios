@@ -2,9 +2,9 @@ name: Checks
 
 env:
   # DEPENDENCY SWITCH:
-  flatland-rl-ref: 4.3.0
+  flatland-rl-ref: v4.3.0
   # DEPENDENCY SWITCH:
-  flatland-baselines-ref: 4.3.0
+  flatland-baselines-ref: v4.3.0
 on:
   workflow_dispatch:
   pull_request:
