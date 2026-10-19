@@ -101,7 +101,8 @@ jobs:
       - name: Install Flatland
         run: |
           python -m pip install --upgrade pip                                                                                                                                                            
-          pip install git+https://github.com/flatland-association/flatland-rl.git@${{ env.flatland-rl-ref }} notebook osmnx folium mapclassify matplotlib ipyleaflet
+          #pip install git+https://github.com/flatland-association/flatland-rl.git@${{ env.flatland-rl-ref }} notebook osmnx folium mapclassify matplotlib ipyleaflet
+          pip install git+https://github.com/flatland-association/flatland-rl.git@main notebook osmnx folium mapclassify matplotlib ipyleaflet
       # OSM downloads are served from osmnx_graph_import/cache (osmnx's default cache folder relative to the notebook)
       - name: Run osmnx graph import notebook
         run: python -m jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to notebook --inplace osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb
