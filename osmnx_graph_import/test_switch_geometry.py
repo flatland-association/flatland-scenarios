@@ -1,8 +1,11 @@
+import logging
+
 import networkx as nx
 import osmnx as ox
 import pytest
 from shapely.geometry import LineString, Point
 
+import switch_geometry
 from switch_geometry import (legs_from_geometry, oriented_geometry, switch_legs, switch_probes, through_leg_from_geometry,
                              through_leg_from_osm_tags)
 
@@ -117,6 +120,29 @@ def test_switch_legs_through_leg_from_osm_tags(tags: dict[int, dict], mirrored: 
 
     assert through_leg_from_osm_tags(G, SWITCH, POINT, [FORWARD, DIVERGING]) == DIVERGING
     assert switch_legs(G, SWITCH, POINT) == (DIVERGING, FORWARD, diverges_right)
+
+
+@pytest.mark.parametrize("clear_angle_difference,warned", [(5, False), (1, True)])
+def test_switch_legs_osm_tags_contradict_geometry(clear_angle_difference: float, warned: bool,
+                                                  monkeypatch: pytest.MonkeyPatch, caplog: pytest.LogCaptureFixture):
+    """The switch with OSM tags making the less straight leg the through leg, whose legs deviate from straight by 0.1
+    and 1.3 degrees: the tags win either way, but contradicting a clear geometry is warned about - not with the
+    default CLEAR_ANGLE_DIFFERENCE (5 degrees), but with 1 degree.
+
+    A real switch warned about with the default (in download_rail_graph("Walenstadt", dist=15000)):
+    https://www.openstreetmap.org/node/1338901961 - coming from its point (way
+    https://www.openstreetmap.org/way/119090386, service=yard, ref=884), the tags make the leg on way
+    https://www.openstreetmap.org/way/119090347 (service=yard, ref=884, 5.9 degrees from straight) the through leg, but
+    the leg on way https://www.openstreetmap.org/way/497863617 (service=yard, no ref, 0.8 degrees) is straighter.
+    Visually (on the map), the geometry is right: way 497863617 goes straight on, way 119090347 diverges to the left -
+    the tags are misleading there (probably a missing ref=884 on way 497863617), see the caveat in switch_legs()."""
+    monkeypatch.setattr(switch_geometry, "CLEAR_ANGLE_DIFFERENCE", clear_angle_difference)
+    G = switch_graph(False, {POINT: {"osmid": 1}, FORWARD: {"osmid": 2}, DIVERGING: {"osmid": [3, 1]}})
+
+    with caplog.at_level(logging.WARNING, logger="switch_geometry"):
+        assert switch_legs(G, SWITCH, POINT)[:2] == (DIVERGING, FORWARD)
+
+    assert (f"switch {SWITCH}: OSM tags make {DIVERGING} the through leg" in caplog.text) == warned
 
 
 @pytest.mark.parametrize("tags", [
