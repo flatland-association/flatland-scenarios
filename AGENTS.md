@@ -24,7 +24,7 @@ pytest -s competitions
 # scenario_olten verifies the trajectories written by executing its notebook first:
 PYTHONPATH=$PWD/../flatland-baselines python -m jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to notebook --inplace scenario_olten/scenario_olten.ipynb
 pytest -s scenario_olten
-pytest osmnx_graph_import
+pytest osmnx_graph_import  # test_double_vertex_graph_to_env.py needs flatland-rl branch 526-edge-lengths
 # single test
 pytest "osmnx_graph_import/test_track_graph.py::test_build_double_vertex_graph[walensee.graphml]"
 ```
@@ -47,8 +47,14 @@ from that folder, pytest puts it on the path):
    (flatland rejects floats), a single-train `GraphRailEnv` from source to target vertex, and
    `GraphShortestPathPolicy`. A target without outgoing edge (dead end) is rejected: flatland's `step()` fails there.
 
-`switch_geometry.py` decides a switch's legs (the two tracks that stay closest, probed 10 m from the switch on the
-projected graph) and point, and whether it diverges left or right.
+`switch_geometry.py` decides a switch's legs from geometry (the two tracks that stay closest, probed 10 m from the
+switch on the projected graph), and its through leg - from OSM tags first (the leg continuing the point's way, else the
+only one with the point's `service`/`ref`), else from geometry (the straighter leg) - and so whether it diverges left or
+right. A warning is logged when the tags contradict a clear geometry; see the caveat in `switch_legs`.
+
+The osmnx_graph_import tests must not download anything: they use the committed GraphML files or hard-coded OSM data
+(e.g. `test_switch_geometry.py`). Live downloads (notebook, `osm_to_track_graph`) go through osmnx's cache in `./cache`
+and the public Overpass API, which rate-limits heavy use.
 
 The notebook is the exploration around this pipeline: it calls the modules, and still contains the earlier GGG
 construction attempts (implementations 1-3, marked `TODO fix`, superseded) - `GG`/`GGG` are notebook names only, the
