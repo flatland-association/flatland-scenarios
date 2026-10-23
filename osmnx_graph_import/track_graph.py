@@ -14,7 +14,7 @@ import osmnx as ox
 from osmnx.simplification import _get_paths_to_simplify
 
 from osm_to_track_graph import true_switches
-from switch_geometry import closest_neighbors
+from switch_geometry import legs_from_geometry
 
 
 def load_track_graph(filepath: str | Path) -> nx.DiGraph:
@@ -97,7 +97,7 @@ def track_node(vertex: str) -> int:
 
 def track_sides(track_graph: nx.DiGraph, track_graph_proj: nx.MultiDiGraph | nx.DiGraph) -> dict[int, dict[int, int]]:
     """Side (0 or 1) of every node's tracks, per node and neighbour: a train passing a node enters from one side and
-    leaves to the other. At a switch, its legs (see `switch_geometry.closest_neighbors`) are on side 0 and its point on
+    leaves to the other. At a switch, its legs (see `switch_geometry.legs_from_geometry`) are on side 0 and its point on
     side 1; any other node has its first track (out-edges before in-edges, i.e. along the OSM way's direction for a
     node with one of each) on side 0 and its second track, if any, on side 1. `track_graph_proj` is `track_graph`
     projected to a metric CRS."""
@@ -105,7 +105,7 @@ def track_sides(track_graph: nx.DiGraph, track_graph_proj: nx.MultiDiGraph | nx.
     for n in track_graph.nodes:
         neighbors = list(track_graph.successors(n)) + list(track_graph.predecessors(n))
         if len(neighbors) == 3:
-            legs = set(closest_neighbors(track_graph_proj, n))
+            legs = set(legs_from_geometry(track_graph_proj, n))
             sides[n] = {nb: 0 if nb in legs else 1 for nb in neighbors}
         else:
             sides[n] = {nb: side for side, nb in enumerate(neighbors)}

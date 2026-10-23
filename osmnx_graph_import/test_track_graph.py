@@ -8,7 +8,7 @@ import osmnx as ox
 import pytest
 
 from osm_to_track_graph import true_switches
-from switch_geometry import closest_neighbors
+from switch_geometry import legs_from_geometry
 from track_graph import build_double_vertex_graph, load_track_graph, opposite_vertex, track_node
 
 DATA_DIR = Path(__file__).parent
@@ -27,7 +27,7 @@ def valid_moves(track_graph: nx.DiGraph) -> set[tuple[int, int, int]]:
     switches = true_switches(track_graph)
     moves = set()
     for b in undirected.nodes:
-        legs = set(closest_neighbors(track_graph_proj, b)) if b in switches else None
+        legs = set(legs_from_geometry(track_graph_proj, b)) if b in switches else None
         for a in undirected.neighbors(b):
             for c in undirected.neighbors(b):
                 if a != c and {a, c} != legs:
@@ -82,7 +82,7 @@ def notebook_functions(*names: str) -> dict:
     library, so execute their definitions (only) from the notebook."""
     cells = ["".join(c["source"]) for c in json.loads(NOTEBOOK.read_text())["cells"] if c["cell_type"] == "code"]
     # imported in other cells of the notebook
-    namespace = {"nx": nx, "deque": deque, "closest_neighbors": closest_neighbors}
+    namespace = {"nx": nx, "deque": deque, "legs_from_geometry": legs_from_geometry}
     for name in names:
         (cell,) = [c for c in cells if f"def {name}(" in c]
         tree = ast.parse(cell)
@@ -92,7 +92,7 @@ def notebook_functions(*names: str) -> dict:
 
 
 def close_neighbor_pairs(track_graph: nx.DiGraph, track_graph_proj: nx.MultiDiGraph) -> dict[int, set[int]]:
-    return {s: set(closest_neighbors(track_graph_proj, s)) for s in true_switches(track_graph)}
+    return {s: set(legs_from_geometry(track_graph_proj, s)) for s in true_switches(track_graph)}
 
 
 # TODO fix: the notebook's implementation 2 raises on a reversing loop (and, depending on the graph, completes without

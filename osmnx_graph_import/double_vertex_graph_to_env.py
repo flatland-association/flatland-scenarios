@@ -25,7 +25,7 @@ from flatland.envs.timetable_utils import Timetable
 from flatland.trajectories.policy_runner import PolicyRunner
 from flatland.trajectories.trajectories import Trajectory
 
-from switch_geometry import closest_neighbors, switch_legs
+from switch_geometry import legs_from_geometry, switch_legs
 from track_graph import track_node
 
 
@@ -35,7 +35,7 @@ def add_actions(double_vertex_graph: nx.DiGraph, track_graph: nx.DiGraph) -> Non
 
     * at a dead end, all actions are prohibited (`prohibited_actions` vertex attribute);
     * a single outgoing edge (non-switch, or switch passed from a leg into its point) gets all actions;
-    * at a switch passed from its point into its two legs (see `switch_geometry.closest_neighbors`), the diverging leg
+    * at a switch passed from its point into its two legs (see `switch_geometry.legs_from_geometry`), the diverging leg
       gets MOVE_RIGHT (right switch) or MOVE_LEFT (left switch) and the forward leg all other actions (see
       `switch_geometry.switch_legs`).
 
@@ -53,7 +53,7 @@ def add_actions(double_vertex_graph: nx.DiGraph, track_graph: nx.DiGraph) -> Non
             continue
         switch = track_node(v)
         legs = {track_node(leg): leg for leg in successors}
-        assert set(legs) == set(closest_neighbors(track_graph_proj, switch)), (
+        assert set(legs) == set(legs_from_geometry(track_graph_proj, switch)), (
             f"outgoing edges of switch {v} don't lead to its legs"
         )
         (point,) = set(undirected.neighbors(switch)) - set(legs)
