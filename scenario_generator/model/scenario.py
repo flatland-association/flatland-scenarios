@@ -84,7 +84,7 @@ class Scenario:
 
         level_free_positions: List[Tuple[int, int]] = [tuple(item) for item in self.data['overpasses']]
 
-        return rail_generator_from_grid_map(grid, level_free_positions)
+        return rail_generator_from_grid_map(grid, level_free_positions, self.stations)
 
     def to_line_generator(self):
         data = self.data

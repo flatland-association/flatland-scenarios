@@ -2,6 +2,7 @@ from importlib import resources
 
 import numpy as np
 
+from scenario_generator.flatland_integration.flatland_generators import stations_to_agents_hints
 from scenario_generator.model.scenario import Scenario, ScenarioBuilder
 
 
@@ -13,6 +14,11 @@ def test_scenario_to_flatland_generators():
     rail, optionals = scenario.to_rail_generator()()
     assert np.array_equal(rail.grid, scenario.grid)
     assert optionals["level_free_positions"] == [tuple(v) for v in scenario.level_free_crossings]
+    assert optionals["agents_hints"] == stations_to_agents_hints(scenario.stations)
+    # every city has at least one platform, and city_positions/orientations/train_stations stay in lockstep
+    assert len(optionals["agents_hints"]["city_positions"]) == len(scenario.stations)
+    assert len(optionals["agents_hints"]["city_orientations"]) == len(scenario.stations)
+    assert len(optionals["agents_hints"]["train_stations"]) == len(scenario.stations)
 
     line = scenario.to_line_generator()()
     assert scenario.flatland_line["agent_speeds"] == line.agent_speeds
