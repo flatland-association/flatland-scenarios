@@ -1,4 +1,7 @@
-from scenario_generator.flatland_integration.flatland_generators import rail_generator_from_grid_map, stations_to_agents_hints
+from flatland.envs.stations_links import StoppingPoint
+
+from scenario_generator.flatland_integration.flatland_generators import rail_generator_from_grid_map, stations_to_agents_hints, \
+    stations_to_stations_links
 
 
 def test_stations_to_agents_hints():
@@ -53,3 +56,23 @@ def test_rail_generator_from_grid_map_with_stations_populates_agents_hints():
     grid_map, optionals = rail_generator()
 
     assert optionals['agents_hints'] == stations_to_agents_hints(stations)
+    assert optionals['stations_links'] == stations_to_stations_links(stations)
+
+
+def test_stations_to_stations_links():
+    stations = [
+        {'id': 2, 'city_position': [5, 2], 'city_orientation': 1, 'station_cells': [[[5, 1], 0], [[5, 2], 1], [[5, 3], 2]]},
+        {'id': 1, 'city_position': [2, 3], 'city_orientation': 0, 'station_cells': [[[1, 3], 0], [[2, 3], 1]]},
+    ]
+
+    stations_links = stations_to_stations_links(stations)
+
+    # keyed and named by the tool's station id, sorted by id like agents_hints
+    assert list(stations_links.stations.keys()) == ['1', '2']
+    station = stations_links.stations['1']
+    assert station.name == '1'
+    assert station.stopping_points == [StoppingPoint(name='1.0', node=(1, 3)), StoppingPoint(name='1.1', node=(2, 3))]
+    assert station.edges == [(1, 3), (2, 3)]
+    # the tool does not capture station extents yet
+    assert station.gates == {}
+    assert stations_links.links == []
