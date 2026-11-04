@@ -115,6 +115,8 @@ flowchart LR
 | [`Create Timetables`](#create-timetables)             |
 | [`Export environment`](#export-environment)           |
 
+To turn an export into a Flatland `.pkl`, see [Build a scenario from a drawing and a config.json](#build-a-scenario-from-a-drawing-and-a-configjson).
+
 ### Initialize grid
 
 Choose the number of rows and columns and how large they should be displayed on the screen. You can always resize both cell size and grid dimensions.
@@ -212,6 +214,38 @@ You can use the *raw data import* at the bottom to only export the grid, overpas
 
 Click the *Flatland Download* button to download `flatland_import.py` to create the Flatland environment and save it as .pkl to then run your simulation. (If
 you use `generate_scenario.py` to generate your scenario, do this before running `flatland_import.py`.)
+
+## Build a scenario from a drawing and a config.json
+
+`scenario_generator/model/config.py` turns a drawing-tool export and a small `config.json` into one scenario: the scenario `.json` and the Flatland
+`.pkl` (`RailEnvPersister` format). Example `config.json`:
+
+```json
+{
+  "malfunctions": {
+    "scheduled": [
+      {"train": "Z-W-1-S", "step": 28, "duration": 12},
+      {"handle": 2, "step": 40, "duration": 5}
+    ]
+  },
+  "seed": 42
+}
+```
+
+- **`malfunctions.scheduled`**: a train breaks down at `step` for `duration` steps. Name it by its timetable name in the tool (`train`) or by its
+  handle (`handle`, the timetable's position in the tool, from 0).
+- **`malfunctions.breakdown`** / **`malfunctions.departure`** (optional): random malfunctions,
+  `{"malfunction_interval": 540, "malfunction_duration_min": 20, "malfunction_duration_max": 50}`. Leave them out for a reproducible scenario.
+- **`timetableSpecs`** (optional): generate the timetables as in `metadata.json`; without it the tool's timetables are taken as they are.
+- **`seed`** (optional).
+
+Run from the repository root:
+
+```shell
+PYTHONPATH=. python -m scenario_generator.model.config drawn_environment_export.json config.json my_scenario --output-folder out
+```
+
+This writes `out/my_scenario.json` and `out/my_scenario.pkl`. Add `--no-pkl` to write only the `.json`.
 
 ## Generate scenario
 
