@@ -65,19 +65,26 @@ def _tag_values(graph: nx.MultiDiGraph | nx.DiGraph, switch: int, neighbour: int
     return frozenset(str(v) for v in (value if isinstance(value, list) else [value]))
 
 
-def through_leg_from_osm_tags(graph: nx.MultiDiGraph | nx.DiGraph, switch: int, point: int, legs: list[int]) -> int | None:
-    """The leg the point's track continues into according to OSM: the one continuing the point's OSM way (`osmid`) or,
-    else, the only one with the same `service` and `ref` tags (e.g. the main line, not the siding) - None if that
-    doesn't decide."""
+def through_leg_from_way_continuity(graph: nx.MultiDiGraph | nx.DiGraph, switch: int, point: int, legs: list[int]) -> int | None:
+    """The only leg continuing the point's OSM way (`osmid`) - None if that doesn't decide."""
     point_ways = _tag_values(graph, switch, point, "osmid")
     continuing = [leg for leg in legs if point_ways & _tag_values(graph, switch, leg, "osmid")]
-    if len(continuing) == 1:
-        return continuing[0]
+    return continuing[0] if len(continuing) == 1 else None
+
+
+def through_leg_from_service_ref(graph: nx.MultiDiGraph | nx.DiGraph, switch: int, point: int, legs: list[int]) -> int | None:
+    """The only leg with the point's `service` and `ref` tags (e.g. the main line, not the siding) - None if that
+    doesn't decide."""
     same_tags = [leg for leg in legs
                  if all(_tag_values(graph, switch, point, tag) == _tag_values(graph, switch, leg, tag) for tag in ("service", "ref"))]
-    if len(same_tags) == 1:
-        return same_tags[0]
-    return None
+    return same_tags[0] if len(same_tags) == 1 else None
+
+
+def through_leg_from_osm_tags(graph: nx.MultiDiGraph | nx.DiGraph, switch: int, point: int, legs: list[int]) -> int | None:
+    """The leg the point's track continues into according to OSM: the one continuing the point's OSM way (`osmid`) or,
+    else, the only one with the same `service` and `ref` tags - None if that doesn't decide."""
+    continuing = through_leg_from_way_continuity(graph, switch, point, legs)
+    return continuing if continuing is not None else through_leg_from_service_ref(graph, switch, point, legs)
 
 
 # The probes of switch_probes() all lie on a circle around the switch. Coming from the point, going straight through
@@ -95,20 +102,26 @@ def through_leg_from_geometry(probes: dict[int, Point], center: Point, point: in
     return min(legs, key=lambda leg: deviation_from_straight(probes, center, point, leg))
 
 
-# The forward leg is the through leg: from OSM tags if they tell (see through_leg_from_osm_tags()) - in a curve, it may
-# well be the less straight one -, else from geometry (see through_leg_from_geometry()). If the tags contradict a
-# clear geometry (one leg straighter by more than CLEAR_ANGLE_DIFFERENCE), either is probably wrong in OSM: logged as
-# a warning, the tags still win. The diverging leg branches off to the right if it lies clockwise of the forward leg
+# The forward leg is the through leg, decided by the first of these that tells:
+# 1. the point's OSM way continuing into one leg (see through_leg_from_way_continuity()) - in a curve, it may well be
+#    the less straight one;
+# 2. a clear geometry: one leg straighter by more than CLEAR_ANGLE_DIFFERENCE (see through_leg_from_geometry());
+# 3. the OSM `service`/`ref` tags (see through_leg_from_service_ref()) - they can be incomplete, hence after 2.;
+# 4. the geometry, also when not clear.
+# If the OSM tags contradict a clear geometry, either is probably wrong in OSM: logged as a warning, naming the leg
+# taken. The diverging leg branches off to the right if it lies clockwise of the forward leg
 # (seen from the switch, in the projected CRS with x east and y north), i.e. it's a right switch - otherwise to the
 # left.
 def switch_legs(graph: nx.MultiDiGraph | nx.DiGraph, switch: int, point: int, distance: float = DISTANCE) -> tuple[int, int, bool]:
     """Return `(forward_leg, diverging_leg, diverges_right)` when passing `switch` from `point` into its legs - the
-    through leg from OSM tags, else from geometry (see note above).
+    through leg from way continuity, else a clear geometry, else the `service`/`ref` tags, else the geometry (see note
+    above).
 
-    Caveat: the `service`/`ref` rule of `through_leg_from_osm_tags` can be misled by incomplete tags. E.g. at switch
+    Why a clear geometry comes before the `service`/`ref` tags: they can be incomplete. E.g. at switch
     [1338901961](https://www.openstreetmap.org/node/1338901961) (in `download_rail_graph("Walenstadt", dist=15000)`),
     on the map, way 497863617 goes straight on and way 119090347 diverges to the left - but as way 497863617 lacks
-    `ref=884`, the tags make way 119090347 the through leg, so the switch is taken as a right one (warned about):
+    `ref=884`, the tags make way 119090347 the through leg. The geometry is clear (5.1 degrees), so it is taken as a
+    left switch, and the contradicting tags are warned about:
 
     | Track                    | Way                                                    | Next node                                                | Tags                         | From straight |
     |--------------------------|--------------------------------------------------------|----------------------------------------------------------|------------------------------|---------------|
@@ -116,23 +129,26 @@ def switch_legs(graph: nx.MultiDiGraph | nx.DiGraph, switch: int, point: int, di
     | through leg by the tags  | [119090347](https://www.openstreetmap.org/way/119090347) | [1338901959](https://www.openstreetmap.org/node/1338901959) | `service=yard`, `ref=884`    | 5.9 degrees   |
     | through leg on the map   | [497863617](https://www.openstreetmap.org/way/497863617) | [1339651418](https://www.openstreetmap.org/node/1339651418) | `service=yard`               | 0.8 degrees   |
 
-    Future refinement: let a clear geometry (one leg straighter by more than `CLEAR_ANGLE_DIFFERENCE`) override the
-    `service`/`ref` rule, keeping way continuity (`osmid`) first - this would get the switch above right, and changes
-    nothing for the 8 switches tagged with `railway:turnout_side` checked so far (whose legs differ by less)."""
+    Way continuity still comes first: where the point's way continues into the less straight leg, the tags win, also
+    against a clear geometry (warned about). The 8 switches tagged with `railway:turnout_side` checked so far have legs
+    differing by less than `CLEAR_ANGLE_DIFFERENCE`, so their tags decide as before."""
     probes = switch_probes(graph, switch, distance)
     center = Point(graph.nodes[switch]["x"], graph.nodes[switch]["y"])
     legs = [neighbour for neighbour in probes if neighbour != point]
     assert len(legs) == 2, f"switch {switch} with point {point} has legs {legs}"
     from_geometry = through_leg_from_geometry(probes, center, point, legs)
-    forward = through_leg_from_osm_tags(graph, switch, point, legs)
-    if forward is None:
-        forward = from_geometry
-    elif forward != from_geometry:
-        difference = abs(deviation_from_straight(probes, center, point, legs[0])
-                         - deviation_from_straight(probes, center, point, legs[1]))
-        if difference > CLEAR_ANGLE_DIFFERENCE:
-            logger.warning(f"switch {switch}: OSM tags make {forward} the through leg, but {from_geometry} is "
-                           f"{difference:.1f} degrees straighter - taking {forward}")
+    difference = abs(deviation_from_straight(probes, center, point, legs[0])
+                     - deviation_from_straight(probes, center, point, legs[1]))
+    geometry_is_clear = difference > CLEAR_ANGLE_DIFFERENCE
+    from_tags = through_leg_from_way_continuity(graph, switch, point, legs)
+    if from_tags is not None:
+        forward = from_tags
+    else:
+        from_tags = through_leg_from_service_ref(graph, switch, point, legs)
+        forward = from_tags if from_tags is not None and not geometry_is_clear else from_geometry
+    if geometry_is_clear and from_tags not in (None, from_geometry):
+        logger.warning(f"switch {switch}: OSM tags make {from_tags} the through leg, but {from_geometry} is "
+                       f"{difference:.1f} degrees straighter - taking {forward}")
     diverging = next(leg for leg in legs if leg != forward)
     f, d = probes[forward], probes[diverging]
     cross = (f.x - center.x) * (d.y - center.y) - (f.y - center.y) * (d.x - center.x)

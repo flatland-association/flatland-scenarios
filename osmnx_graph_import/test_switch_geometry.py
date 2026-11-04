@@ -145,6 +145,60 @@ def test_switch_legs_osm_tags_contradict_geometry(clear_angle_difference: float,
     assert (f"switch {SWITCH}: OSM tags make {DIVERGING} the through leg" in caplog.text) == warned
 
 
+@pytest.mark.parametrize("clear_angle_difference,forward,warned", [(5, DIVERGING, False), (1, FORWARD, True)])
+def test_switch_legs_clear_geometry_overrides_service_ref(clear_angle_difference: float, forward: int, warned: bool,
+                                                          monkeypatch: pytest.MonkeyPatch,
+                                                          caplog: pytest.LogCaptureFixture):
+    """The switch with `service`/`ref` tags (not way continuity) making the less straight leg the through leg, whose
+    legs deviate from straight by 0.1 and 1.3 degrees: with the default CLEAR_ANGLE_DIFFERENCE (5 degrees), the
+    geometry is not clear and the tags win; with 1 degree, the clear geometry wins, and the contradicting tags are
+    warned about."""
+    monkeypatch.setattr(switch_geometry, "CLEAR_ANGLE_DIFFERENCE", clear_angle_difference)
+    G = switch_graph(False, {POINT: {"osmid": 1, "ref": "890"}, FORWARD: {"osmid": 2, "service": "siding"},
+                             DIVERGING: {"osmid": 3, "ref": "890"}})
+
+    with caplog.at_level(logging.WARNING, logger="switch_geometry"):
+        assert switch_legs(G, SWITCH, POINT)[0] == forward
+
+    assert (f"switch {SWITCH}: OSM tags make {DIVERGING} the through leg" in caplog.text) == warned
+    assert (f"taking {forward}" in caplog.text) == warned
+
+
+# Switch 1338901961 (near Sargans, see the docstring of switch_legs()) with its three tracks as in OSM on 2026-11-04:
+# the point on way 119090386 (service=yard, ref=884), the legs on ways 119090347 (service=yard, ref=884, diverging to
+# the left on the map) and 497863617 (service=yard, no ref, straight on).
+OSM_SWITCH = 1338901961
+OSM_POINT = 1338901980
+OSM_TAGGED_LEG = 1338901959
+OSM_STRAIGHT_LEG = 1339651418
+OSM_TRACKS = [
+    (OSM_POINT, OSM_SWITCH,
+     [(9.4777463, 47.17464), (9.477935, 47.1743001), (9.4779638, 47.1742381), (9.4779896, 47.1741733),
+      (9.4783732, 47.1730841)],
+     {"osmid": 119090386, "service": "yard", "ref": "884"}),
+    (OSM_SWITCH, OSM_TAGGED_LEG, [(9.4783732, 47.1730841), (9.4785795, 47.1726856)],
+     {"osmid": 119090347, "service": "yard", "ref": "884"}),
+    (OSM_SWITCH, OSM_STRAIGHT_LEG, [(9.4783732, 47.1730841), (9.4787701, 47.1720213)],
+     {"osmid": 497863617, "service": "yard"}),
+]
+
+
+def test_switch_legs_incomplete_osm_tags(caplog: pytest.LogCaptureFixture):
+    """Switch 1338901961, whose straight leg lacks the point's ref=884: the clear geometry wins over the misleading
+    tags, it is a left switch as on the map - and the contradicting tags are warned about."""
+    G = nx.MultiDiGraph(crs="epsg:4326")
+    for u, v, coords, tags in OSM_TRACKS:
+        G.add_node(u, x=coords[0][0], y=coords[0][1])
+        G.add_node(v, x=coords[-1][0], y=coords[-1][1])
+        G.add_edge(u, v, geometry=LineString(coords), **tags)
+    G = ox.projection.project_graph(G)
+
+    with caplog.at_level(logging.WARNING, logger="switch_geometry"):
+        assert switch_legs(G, OSM_SWITCH, OSM_POINT) == (OSM_STRAIGHT_LEG, OSM_TAGGED_LEG, False)
+
+    assert f"switch {OSM_SWITCH}: OSM tags make {OSM_TAGGED_LEG} the through leg" in caplog.text
+
+
 @pytest.mark.parametrize("tags", [
     # the point's OSM way continues into both legs (e.g. a simplified track made of several ways)
     {POINT: {"osmid": [1, 2]}, FORWARD: {"osmid": 1}, DIVERGING: {"osmid": 2}},

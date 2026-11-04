@@ -48,9 +48,10 @@ from that folder, pytest puts it on the path):
    `GraphShortestPathPolicy`. A target without outgoing edge (dead end) is rejected: flatland's `step()` fails there.
 
 `switch_geometry.py` decides a switch's legs from geometry (the two tracks that stay closest, probed 10 m from the
-switch on the projected graph), and its through leg - from OSM tags first (the leg continuing the point's way, else the
-only one with the point's `service`/`ref`), else from geometry (the straighter leg) - and so whether it diverges left or
-right. A warning is logged when the tags contradict a clear geometry; see the caveat in `switch_legs`.
+switch on the projected graph), and its through leg - the leg continuing the point's OSM way, else the straighter leg if
+the geometry is clear (`CLEAR_ANGLE_DIFFERENCE`), else the only one with the point's `service`/`ref`, else the
+straighter leg - and so whether it diverges left or right. A warning is logged when the tags contradict a clear
+geometry; see `switch_legs`.
 
 The osmnx_graph_import tests must not download anything: they use the committed GraphML files or hard-coded OSM data
 (e.g. `test_switch_geometry.py`). Live downloads (notebook, `osm_to_track_graph`) go through osmnx's cache in `./cache`
