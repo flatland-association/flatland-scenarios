@@ -56,11 +56,9 @@ The osmnx_graph_import tests must not download anything: they use the committed 
 (e.g. `test_switch_geometry.py`). Live downloads (notebook, `osm_to_track_graph`) go through osmnx's cache in `./cache`
 and the public Overpass API, which rate-limits heavy use.
 
-The notebook is the exploration around this pipeline: it calls the modules, and still contains the earlier GGG
-construction attempts (implementations 1-3, marked `TODO fix`, superseded) - `GG`/`GGG` are notebook names only, the
+The notebook is the exploration around this pipeline: it calls the modules - `GG`/`GGG` are notebook names only, the
 library says track graph / double vertex graph. Test fixtures: `walensee.graphml` (Walenstadt, no reversing loop) and
-`sargans_reversing_loop.graphml` (a reversing loop, on which implementations 2 and 3 fail - `xfail` tests in
-`test_track_graph.py`).
+`sargans_reversing_loop.graphml` (a reversing loop).
 
 ## Git
 
