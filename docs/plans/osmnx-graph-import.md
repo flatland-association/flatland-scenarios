@@ -35,7 +35,7 @@ is imported with its timetables in #30 (Q1). The open items of the PR's "Remaini
 | 1 | C1.3 | `feat: add the simplified Bologna track graph (airport monorail and Bologna Centrale) as a test fixture.` | moved to #30 (Q1) |
 | 2 | C2.1 | `feat: map the vertices and train positions of the graph rail env to lat/lon.` | open |
 | 2 | C2.2 | `feat: assign grid cells to the vertices of the double vertex graph.` | dropped (Q3) |
-| 3 | C3.1 | `refactor: drop the superseded GGG implementations from the notebook.` | open |
+| 3 | C3.1 | `refactor: drop the superseded GGG implementations from the notebook.` | 269ccca |
 | 3 | C3.2 | `fix: color GGG nodes by switch category in explore_categorized.` | open |
 | 3 | C3.3 | `chore: add requirements for the osmnx graph import and run its tests in CI again.` | open |
 | 3 | C3.4 | `chore: depend on flatland-rl main for the osmnx graph import.` | blocked by rl#542 |
@@ -136,7 +136,7 @@ Goal: issue item 2 - lat/lon of every vertex and train position. The grid part o
 
 | ID | Finding | Change | Tests |
 |---|---|---|---|
-| C3.1 | 13, 14, 15 | Drop the notebook's GGG implementations 1-3, their "Results" section and the two `xfail` tests in `test_track_graph.py`, and AGENTS.md's paragraph on them (Q5); the boundary-path and `rstrip` TODOs go with them. | The remaining tests; the notebook runs to the end. |
+| C3.1 ✓ | 13, 14, 15 | Drop the notebook's GGG implementations 1-3, their "Results" section and the two `xfail` tests in `test_track_graph.py`, and AGENTS.md's paragraph on them (Q5); the boundary-path and `rstrip` TODOs go with them. | The remaining tests; the notebook runs to the end. |
 | C3.2 | 19 | `explore_categorized` maps a double vertex graph's string vertex to its track node (`track_graph.track_node`) before looking up the switch category. | Notebook only (no test for map styling). |
 | C3.3 | 17 | `osmnx_graph_import/requirements.txt` from the notebook's first cell (flatland-rl from branch `526-edge-lengths` until C3.4); the notebook installs from it; AGENTS.md points to it, and no longer says "not run in CI". The job `run-osmnx-graph-import` comes back into `checks.yml`, with the setup of 1a637c8 (ubuntu-22.04, Python 3.13), installing from `requirements.txt` and running `pytest osmnx_graph_import` - offline, not the notebook, which 99d5641 took out of CI after Overpass 502s (Q4). | `pip install -r` into a fresh env, then `pytest osmnx_graph_import`; the new CI job is green. |
 | C3.4 | 12 | Once rl#542 is merged: flatland-rl `main` (then a release) in the requirements, the notebook, the module docstring and AGENTS.md "Dependencies"; the CI job of C3.3 picks it up through `requirements.txt`. | The CI job of C3.3. |
@@ -152,7 +152,6 @@ Not in phases 1-3: findings 16, 18, 20, 21, 23 - follow-ups, see there.
 - No persistence: `run_shortest_path_policy` runs with `no_save=True`; trajectories with graph node ids cannot be read
   back (upstream, findings 20, 21).
 - `GraphShortestPathPolicy` takes the path with the fewest edges, not the shortest in metres.
-- The notebook's implementations 1-3 are wrong on reversing loops (C3.1).
 - The tests are not in CI until C3.3, and the notebook stays out of CI (Overpass downloads); needs an unreleased
   flatland-rl branch (C3.4).
 
@@ -227,7 +226,7 @@ in C3.3, the existing jobs stay as they are.
 
 ## Findings
 
-PR review comments, TODOs added in the PR and the PR's "Remaining" table, as of c2bc7b4 (`main` 2e20db2). No code
+PR review comments, TODOs added in the PR and the PR's "Remaining" table, as of 269ccca (`main` 2e20db2). No code
 review has been run yet (`/custom-code-review`).
 
 - PR review comments (1-11) were added on 2026-11-04 from the threads of 2026-09-21 to 2026-10-21. Their line numbers
@@ -248,11 +247,11 @@ review has been run yet (`/custom-code-review`).
 | ✓ | 7 | [PR comment](https://github.com/flatland-association/flatland-scenarios/pull/36#discussion_r4083046158), resolved | design | medium | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:310`: as finding 6, second place. Fixed in 6dfdd4f. | `feat: partition rail env actions in GGG and derive left/right switches from geometry.` |
 | ✓ | 8 | [PR comment](https://github.com/flatland-association/flatland-scenarios/pull/36#discussion_r4083062040), resolved | correctness | high | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:245`: what is needed to derive a digraph with only traversable transitions (no wrong-way moves through a switch)? Fixed in c4bf7e4, 0b9ff80: the double vertex graph. | `feat: build the double vertex graph (Montigel) from the track graph with a side-based construction.` |
 | ✓ | 9 | [PR comment](https://github.com/flatland-association/flatland-scenarios/pull/36#discussion_r4083065544), resolved | correctness | medium | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:271`: verify what is lost when converting the MultiDiGraph to a DiGraph. Fixed in 489db5a, 28cb743: no parallel edges asserted, checks 1-2 of `load_track_graph`. | `feat: load_rail_graph loads and verifies the preprocessed rail graph from GraphML as DiGraph, use it in osmnx_graph_import notebook.` |
+| ✓ | 13 | TODO, also PR Remaining | maintainability | low | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:992`, `:1240`, `:1289`, `:1465`, `:1521`, `osmnx_graph_import/test_track_graph.py:98`, `:114`, `:124`, `AGENTS.md:60`: the notebook's GGG implementations 1-3 are wrong on reversing loops (and on a dead-end start), superseded by `build_double_vertex_graph`; `xfail` tests pin them. Fixed in 269ccca (C3.1 ✓): implementations 1-3, their verification and comparison sections, the two `xfail` tests and the AGENTS.md paragraph removed (Q5). | `refactor: drop the superseded GGG implementations from the notebook.` |
+| ✓ | 14 | TODO, also PR Remaining | correctness | low | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:875`: the boundary paths do not come back round a reversing loop. Fixed in 269ccca (C3.1 ✓): the boundary paths are removed with implementation 1; the notebook checks edge duality only, the moves are checked in `test_track_graph.py`. | `refactor: drop the superseded GGG implementations from the notebook.` |
+| ✓ | 15 | TODO, also PR Remaining | bug | low | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:891`: `rstrip("_prime")` strips characters, not the suffix; use `track_graph.opposite_vertex()`. Fixed in 269ccca (C3.1 ✓): `prime()` is removed; the remaining duality check uses `opposite_vertex()`. | `refactor: drop the superseded GGG implementations from the notebook.` |
 |  | 10 | [PR comment](https://github.com/flatland-association/flatland-scenarios/pull/36#discussion_r4326224033) | robustness | high | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:345` (444 at 0373c59): verify the pipeline on other topologies; fail verbosely on degree > 3 or doubtful leg detection. Partly addressed: `load_track_graph` check 3 raises on degree > 3 (28cb743), tags contradicting geometry warn (71abe7f); only Walenstadt and Sargans are tested. Open: planned in C1.1, C1.2; the run on Bologna (C1.3) moves to follow-up #30 (Q1). | `feat: name the OSM node type of nodes with degree > 3 in the track graph verification.` |
 |  | 12 | TODO, also PR Remaining | dependencies | medium | `osmnx_graph_import/double_vertex_graph_to_env.py:5`, `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:51`, `:432`, `AGENTS.md:12`: depend on flatland-rl `main`, then a release, once branch `526-edge-lengths` (rl#542) is merged. Open: planned in C3.4, blocked by rl#542. | `chore: depend on flatland-rl main for the osmnx graph import.` |
-|  | 13 | TODO, also PR Remaining | maintainability | low | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:992`, `:1240`, `:1289`, `:1465`, `:1521`, `osmnx_graph_import/test_track_graph.py:98`, `:114`, `:124`, `AGENTS.md:60`: the notebook's GGG implementations 1-3 are wrong on reversing loops (and on a dead-end start), superseded by `build_double_vertex_graph`; `xfail` tests pin them. Decided (Q5): drop them. Open: planned in C3.1. | `refactor: drop the superseded GGG implementations from the notebook.` |
-|  | 14 | TODO, also PR Remaining | correctness | low | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:875`: the boundary paths do not come back round a reversing loop. Open: planned in C3.1 (dropped with implementation 1). | `refactor: drop the superseded GGG implementations from the notebook.` |
-|  | 15 | TODO, also PR Remaining | bug | low | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:891`: `rstrip("_prime")` strips characters, not the suffix; use `track_graph.opposite_vertex()`. Open: planned in C3.1 (dropped with implementation 1). | `refactor: drop the superseded GGG implementations from the notebook.` |
 |  | 16 | PR Remaining | feature | medium | `osmnx_graph_import/double_vertex_graph_to_env.py:112`: a hard-coded single-train timetable; generate a (multi-train) timetable. Open: proposed as follow-up #30. | `feat: generate a timetable for the osmnx graph rail env.` |
 |  | 17 | PR Remaining | dependencies | medium | `osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb:51`: no requirements file for the import; decide on flatland-book. Decided (Q4): a requirements file and the CI job again (tests only), no flatland-book page. Open: planned in C3.3. | `chore: add requirements for the osmnx graph import and run its tests in CI again.` |
 |  | 18 | PR Remaining | feature | low | `osmnx_graph_import/double_vertex_graph_to_env.py:208`: no snapshot visualization; preferably an osmnx export with railway features. Open: proposed as follow-up. | `feat: export snapshots of the graph rail env with railway features.` |
