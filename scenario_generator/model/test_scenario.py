@@ -43,6 +43,29 @@ def test_rail_env_exposes_and_persists_stations_links(tmp_path):
     assert loaded_env.stations_links == env.stations_links
 
 
+def test_rail_env_stations_links_with_name_area_and_gates(tmp_path):
+    examples_path = resources.files("scenario_generator.examples")
+    with resources.as_file(examples_path.joinpath("example_2/example_2_initial.json")) as initial_scenario_file_name:
+        scenario = Scenario.load(str(initial_scenario_file_name))
+    # station 1 is four parallel vertical platforms at (9, 28..31); as the tool exports a named station with its area
+    scenario.stations[0].update({
+        'name': 'Nord',
+        'area': [8, 28, 10, 31],
+        'edges': [[r, c] for r in range(8, 11) for c in range(28, 32)],
+        'gates': [{'name': 'N', 'pins': [[8, 28], [8, 29], [8, 30], [8, 31]]}, {'name': 'S', 'pins': [[10, 28], [10, 29], [10, 30], [10, 31]]}],
+    })
+
+    env, _, _ = scenario.to_rail_env()
+    station = env.stations_links.stations['Nord']
+    assert [p.name for p in station.gates['N'].pins.values()] == ['Nord.N.0', 'Nord.N.1', 'Nord.N.2', 'Nord.N.3']
+    assert len(station.edges) == 12
+    assert station.stopping_points[0].name == 'Nord.0'
+
+    RailEnvPersister.save(env, str(tmp_path / "env.pkl"))
+    loaded_env, _ = RailEnvPersister.load_new(str(tmp_path / "env.pkl"))
+    assert loaded_env.stations_links == env.stations_links
+
+
 def test_scenario_to_timetable_generator_with_specs():
     examples_path = resources.files("scenario_generator.examples")
 

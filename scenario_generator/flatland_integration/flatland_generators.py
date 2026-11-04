@@ -1,7 +1,7 @@
 from typing import Dict, List, Tuple
 
 from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
-from flatland.envs.stations_links import StationsLinks, Station, StoppingPoint
+from flatland.envs.stations_links import StationsLinks, Station, StoppingPoint, Gate, Pin
 from flatland.envs.timetable_utils import Timetable, Line
 
 
@@ -20,25 +20,38 @@ def stations_to_agents_hints(stations: List[dict]) -> Dict:
     }
 
 
+def station_name(station: dict) -> str:
+    """The station's name from the tool, else its id."""
+    return station.get('name') or str(station['id'])
+
+
 def stations_to_stations_links(stations: List[dict]) -> StationsLinks:
     """
     Convert the Flatland Environment Drawing Tool's grouped station export into
     flatland's stations and links data model
     (https://flatland-association.github.io/flatland-book/environment/environment/stations_links.html).
 
-    Only stations and their stopping points are covered: the station name is
-    the tool's station id, stopping points are named <station>.<index> as in
-    sparse_rail_generator, and edges are the station cells. The tool does not
-    capture station extents yet, so gates, pins and links stay empty.
+    Stations are named by the tool's station name, else by its id. Stopping
+    points are named <station>.<index> as in sparse_rail_generator, gates
+    <station>.<gate> and pins <station>.<gate>.<k>. The tool derives a station's
+    tracks (edges), gates and pins from the station area it exports; this only
+    names them. Without an area, edges are the station cells. Links are not
+    captured yet and stay empty.
     """
     stations_by_id = sorted(stations, key=lambda s: s['id'])
     return StationsLinks(
         stations={
-            str(s['id']): Station(
-                name=str(s['id']),
-                gates={},
-                stopping_points=[StoppingPoint(name=f"{s['id']}.{index}", node=tuple(position)) for position, index in s['station_cells']],
-                edges=[tuple(position) for position, _ in s['station_cells']],
+            station_name(s): Station(
+                name=station_name(s),
+                gates={
+                    gate['name']: Gate(
+                        name=f"{station_name(s)}.{gate['name']}",
+                        pins={k: Pin(name=f"{station_name(s)}.{gate['name']}.{k}", node=tuple(node)) for k, node in enumerate(gate['pins'])},
+                    )
+                    for gate in s.get('gates', [])
+                },
+                stopping_points=[StoppingPoint(name=f"{station_name(s)}.{index}", node=tuple(position)) for position, index in s['station_cells']],
+                edges=[tuple(cell) for cell in s['edges']] if s.get('edges') else [tuple(position) for position, _ in s['station_cells']],
             )
             for s in stations_by_id
         },

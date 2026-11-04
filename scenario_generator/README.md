@@ -109,6 +109,7 @@ flowchart LR
 |-------------------------------------------------------|
 | [`Initialize grid`](#initialize-grid)                 |
 | [`Draw grid-world`](#draw-grid-world)                 |
+| [`Name stations and mark their areas`](#name-stations-and-mark-their-areas) |
 | [`Create Lines`](#create-lines)                       |
 | [`Define train categories`](#define-train-categories) |
 | [`Create Timetables`](#create-timetables)             |
@@ -132,12 +133,33 @@ Use the arrow keys to navigate on the grid and the keyboard shortcuts listed in 
 
 :bulb: Station-cells adjacent to each other have the same station-id, i.e. belong to the same station.
 
+### Name stations and mark their areas
+
+Stations keep their numeric id internally (lines and timetables refer to it). Select a station cell and press *Name Station* (D) to give it a name, e.g.
+*Ziegelbrücke*. Names must be unique and must not contain `.`; an empty name goes back to the id. The export names a station by its name, else by its id.
+
+Press *Station Area* (A) and drag a rectangle around a station, including its switches; the rectangle runs through the mid-points of its border cells.
+The area must span at least two rows and two columns, contain all platform cells of exactly one station and must not overlap another station's area;
+dragging again replaces it, *Remove Station Area* removes it. From the area the tool derives the station's gates
+and pins and draws them:
+
+- the station's **tracks** are the cells connected to its platforms by track inside the area, in either direction of travel, so passing loops off its
+  switches count (tinted); a through track without a switch to the platforms inside the area is not part of the station
+- a **pin** is a cell of the station's tracks where a track leaves the area
+- a **gate** is a run of adjacent pins on one side, named by the side (`N`, `E`, `S`, `W`), or `E1`, `E2`, ... along the border when a side has several
+
+An area that no longer fits its station (e.g. after editing the platforms) is drawn red, and the export refuses until it is fixed.
+
+In the generated Flatland environment (`env.stations_links`) stations are named by their name, stopping points `<station>.<index>`, gates
+`<station>.<gate>` and pins `<station>.<gate>.<k>`. A station's edges are its tracks in the area (without area: its platform cells). Links between
+stations are not derived yet.
+
 ### Create Lines
 
 To create Lines click the *Lines & Timetables* button. Each Line has
 
 - a unique **name**
-- an **ordered list of stations** (can be created by clicking on the map or comma separated manual input)
+- an **ordered list of stations** (selected by clicking them on the map, shown with their ids and names)
 - **start cell** and **end cell** (intermediate stations are identified through all corresponding cells to allow for the use of this flexibility)
 
 Once a Line is created, you can display the shortest path lengths between the stations and the Line can be

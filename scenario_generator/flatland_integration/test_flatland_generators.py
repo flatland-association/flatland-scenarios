@@ -1,4 +1,4 @@
-from flatland.envs.stations_links import StoppingPoint
+from flatland.envs.stations_links import Gate, Pin, StoppingPoint
 
 from scenario_generator.flatland_integration.flatland_generators import rail_generator_from_grid_map, stations_to_agents_hints, \
     stations_to_stations_links
@@ -73,6 +73,41 @@ def test_stations_to_stations_links():
     assert station.name == '1'
     assert station.stopping_points == [StoppingPoint(name='1.0', node=(1, 3)), StoppingPoint(name='1.1', node=(2, 3))]
     assert station.edges == [(1, 3), (2, 3)]
-    # the tool does not capture station extents yet
+    # without an area there are no gates, and links are not captured yet
     assert station.gates == {}
     assert stations_links.links == []
+
+
+def test_stations_to_stations_links_uses_the_tool_name():
+    stations = [
+        {'id': 3, 'name': 'Ziegelbrücke', 'city_position': [2, 4], 'city_orientation': 1, 'station_cells': [[[2, 4], 0], [[3, 4], 1]]},
+        {'id': 5, 'city_position': [3, 56], 'city_orientation': 1, 'station_cells': [[[3, 56], 0]]},
+    ]
+
+    stations_links = stations_to_stations_links(stations)
+
+    # a named station is keyed by its name, an unnamed one keeps its id
+    assert list(stations_links.stations.keys()) == ['Ziegelbrücke', '5']
+    assert stations_links.stations['Ziegelbrücke'].stopping_points == [
+        StoppingPoint(name='Ziegelbrücke.0', node=(2, 4)), StoppingPoint(name='Ziegelbrücke.1', node=(3, 4)),
+    ]
+
+
+def test_stations_to_stations_links_with_area_and_gates():
+    # as the tool exports a station with an area: its tracks as edges, its gates with their pins
+    stations = [{
+        'id': 1, 'name': 'A', 'city_position': [1, 2], 'city_orientation': 1, 'station_cells': [[[1, 2], 0]],
+        'area': [0, 1, 2, 3],
+        'edges': [[1, 1], [1, 2], [1, 3], [2, 3]],
+        'gates': [{'name': 'W', 'pins': [[1, 1]]}, {'name': 'E1', 'pins': [[1, 3]]}, {'name': 'E2', 'pins': [[2, 3]]}],
+    }]
+
+    station = stations_to_stations_links(stations).stations['A']
+
+    assert station.gates == {
+        'W': Gate(name='A.W', pins={0: Pin(name='A.W.0', node=(1, 1))}),
+        'E1': Gate(name='A.E1', pins={0: Pin(name='A.E1.0', node=(1, 3))}),
+        'E2': Gate(name='A.E2', pins={0: Pin(name='A.E2.0', node=(2, 3))}),
+    }
+    assert station.edges == [(1, 1), (1, 2), (1, 3), (2, 3)]
+    assert station.stopping_points == [StoppingPoint(name='A.0', node=(1, 2))]
