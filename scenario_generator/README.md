@@ -150,9 +150,23 @@ and pins and draws them:
 
 An area that no longer fits its station (e.g. after editing the platforms) is drawn red, and the export refuses until it is fixed.
 
-In the generated Flatland environment (`env.stations_links`) stations are named by their name, stopping points `<station>.<index>`, gates
-`<station>.<gate>` and pins `<station>.<gate>.<k>`. A station's edges are its tracks in the area (without area: its platform cells). Links between
-stations are not derived yet.
+The export describes each station in the vocabulary of Flatland's
+[stations and links](https://flatland-association.github.io/flatland-book/environment/environment/stations_links.html), with fully qualified names, plus
+the tool's `id`, `area` and the `city_position`/`city_orientation` hints:
+
+```json
+{
+  "id": 3, "name": "Ziegelbrücke", "city_position": [3, 4], "city_orientation": 1,
+  "stopping_points": [{"name": "Ziegelbrücke.0", "node": [2, 4]}, {"name": "Ziegelbrücke.1", "node": [3, 4]}],
+  "edges": [[2, 3], [2, 4], [2, 5], [3, 3], [3, 4], [3, 5], [4, 3], [4, 4], [4, 5]],
+  "gates": {"W": {"name": "Ziegelbrücke.W", "pins": {"0": {"name": "Ziegelbrücke.W.0", "node": [2, 3]}, "1": {"name": "Ziegelbrücke.W.1", "node": [3, 3]}}},
+            "E": {"name": "Ziegelbrücke.E", "pins": {"0": {"name": "Ziegelbrücke.E.0", "node": [2, 5]}, "1": {"name": "Ziegelbrücke.E.1", "node": [3, 5]}}}},
+  "area": [2, 3, 4, 5]
+}
+```
+
+An unnamed station is named by its id; without an area, its edges are its stopping points and it has no gates. The generated Flatland environment
+(`env.stations_links`) takes these as they are. Links between stations are not derived yet. Older exports (`station_cells`) still import.
 
 ### Create Lines
 

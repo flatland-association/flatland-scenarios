@@ -2440,18 +2440,32 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             cells.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
             const [rMid, cMid] = cells[Math.floor(cells.length / 2)];
             const isHorizontal = gridData[rMid][cMid].caseIndex === CI.H_STRAIGHT;
-            const station = { id, city_position: [rMid, cMid], city_orientation: isHorizontal ? 1 : 0, station_cells: cells.map((cell, i) => [cell, i]) };
-            if (stationNames[id]) station.name = stationNames[id];
+            // flatland's Station vocabulary (stations_links), with fully qualified names
+            const name = exportedStationName(id);
+            const station = {
+                id, name, city_position: [rMid, cMid], city_orientation: isHorizontal ? 1 : 0,
+                stopping_points: cells.map((cell, i) => ({ name: `${name}.${i}`, node: cell })),
+                edges: cells,
+                gates: {},
+            };
             const area = stationAreas[id];
             if (area && !stationAreaError(id, area)) {
                 station.area = [...area];
                 station.edges = stationTracks(id, area).edges;
-                station.gates = stationGates(id, area).map(({ name, pins }) => ({ name, pins }));
+                stationGates(id, area).forEach(gate => {
+                    station.gates[gate.name] = { name: `${name}.${gate.name}`, pins: Object.fromEntries(gate.pins.map((node, k) => [k, { name: `${name}.${gate.name}.${k}`, node }])) };
+                });
             }
             return station;
         });
         stations.sort((a, b) => a.id - b.id);
         return stations;
+    }
+    // A station's platform cells from an export: stopping_points, or older station_cells / r, c.
+    function importedStationCells(s) {
+        if (s.stopping_points) return s.stopping_points.map(({ node: [r, c] }) => ({ r, c }));
+        if (s.station_cells) return s.station_cells.map(([[r, c]]) => ({ r, c }));
+        return [{ r: s.r, c: s.c }];
     }
     function performNameStation() {
         if (!selectedCellCoords || nameStationButton.disabled) return;
@@ -2675,11 +2689,9 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             dataToImport.forEach(s => {
                 const id = s.id;
                 if (id > maxImportedId) maxImportedId = id;
-                if (s.name) stationNames[id] = s.name;
+                if (s.name && s.name !== String(id)) stationNames[id] = s.name;
                 if (s.area) stationAreas[id] = [...s.area];
-                const cellsToApply = s.station_cells
-                    ? s.station_cells.map(([[r, c]]) => ({ r, c }))
-                    : [{ r: s.r, c: s.c }];
+                const cellsToApply = importedStationCells(s);
                 cellsToApply.forEach(({ r, c }) => {
                     if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) {
                         gridData[r][c].isStation = true; gridData[r][c].stationId = id; appliedCount++;
@@ -2946,11 +2958,9 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             (data.stations || []).forEach(s => {
                 const id = s.id;
                 if (id > maxImportedId) maxImportedId = id;
-                if (s.name) stationNames[id] = s.name;
+                if (s.name && s.name !== String(id)) stationNames[id] = s.name;
                 if (s.area) stationAreas[id] = [...s.area];
-                const cellsToApply = s.station_cells
-                    ? s.station_cells.map(([[r, c]]) => ({ r, c }))
-                    : [{ r: s.r, c: s.c }];
+                const cellsToApply = importedStationCells(s);
                 cellsToApply.forEach(({ r, c }) => {
                     if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) {
                         gridData[r][c].isStation = true;

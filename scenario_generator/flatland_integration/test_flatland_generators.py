@@ -59,7 +59,8 @@ def test_rail_generator_from_grid_map_with_stations_populates_agents_hints():
     assert optionals['stations_links'] == stations_to_stations_links(stations)
 
 
-def test_stations_to_stations_links():
+def test_stations_to_stations_links_from_an_older_export():
+    # station_cells and no names: named by the tool's station id, sorted by id like agents_hints
     stations = [
         {'id': 2, 'city_position': [5, 2], 'city_orientation': 1, 'station_cells': [[[5, 1], 0], [[5, 2], 1], [[5, 3], 2]]},
         {'id': 1, 'city_position': [2, 3], 'city_orientation': 0, 'station_cells': [[[1, 3], 0], [[2, 3], 1]]},
@@ -67,47 +68,49 @@ def test_stations_to_stations_links():
 
     stations_links = stations_to_stations_links(stations)
 
-    # keyed and named by the tool's station id, sorted by id like agents_hints
     assert list(stations_links.stations.keys()) == ['1', '2']
     station = stations_links.stations['1']
     assert station.name == '1'
     assert station.stopping_points == [StoppingPoint(name='1.0', node=(1, 3)), StoppingPoint(name='1.1', node=(2, 3))]
     assert station.edges == [(1, 3), (2, 3)]
-    # without an area there are no gates, and links are not captured yet
     assert station.gates == {}
     assert stations_links.links == []
 
 
-def test_stations_to_stations_links_uses_the_tool_name():
+def test_stations_to_stations_links_reads_the_export():
+    # as the tool exports a named station with an area: flatland's Station fields with fully qualified names
     stations = [
-        {'id': 3, 'name': 'Ziegelbrücke', 'city_position': [2, 4], 'city_orientation': 1, 'station_cells': [[[2, 4], 0], [[3, 4], 1]]},
-        {'id': 5, 'city_position': [3, 56], 'city_orientation': 1, 'station_cells': [[[3, 56], 0]]},
+        {
+            'id': 3, 'name': 'Ziegelbrücke', 'city_position': [3, 4], 'city_orientation': 1, 'area': [2, 3, 4, 5],
+            'stopping_points': [{'name': 'Ziegelbrücke.0', 'node': [2, 4]}, {'name': 'Ziegelbrücke.1', 'node': [3, 4]}],
+            'edges': [[2, 3], [2, 4], [2, 5], [3, 3], [3, 4], [3, 5]],
+            'gates': {
+                'W': {'name': 'Ziegelbrücke.W', 'pins': {'0': {'name': 'Ziegelbrücke.W.0', 'node': [2, 3]}, '1': {'name': 'Ziegelbrücke.W.1', 'node': [3, 3]}}},
+                'E1': {'name': 'Ziegelbrücke.E1', 'pins': {'0': {'name': 'Ziegelbrücke.E1.0', 'node': [2, 5]}}},
+            },
+        },
+        {
+            'id': 1, 'name': '1', 'city_position': [3, 56], 'city_orientation': 1,
+            'stopping_points': [{'name': '1.0', 'node': [3, 56]}], 'edges': [[3, 56]], 'gates': {},
+        },
     ]
 
     stations_links = stations_to_stations_links(stations)
 
-    # a named station is keyed by its name, an unnamed one keeps its id
-    assert list(stations_links.stations.keys()) == ['Ziegelbrücke', '5']
-    assert stations_links.stations['Ziegelbrücke'].stopping_points == [
-        StoppingPoint(name='Ziegelbrücke.0', node=(2, 4)), StoppingPoint(name='Ziegelbrücke.1', node=(3, 4)),
-    ]
-
-
-def test_stations_to_stations_links_with_area_and_gates():
-    # as the tool exports a station with an area: its tracks as edges, its gates with their pins
-    stations = [{
-        'id': 1, 'name': 'A', 'city_position': [1, 2], 'city_orientation': 1, 'station_cells': [[[1, 2], 0]],
-        'area': [0, 1, 2, 3],
-        'edges': [[1, 1], [1, 2], [1, 3], [2, 3]],
-        'gates': [{'name': 'W', 'pins': [[1, 1]]}, {'name': 'E1', 'pins': [[1, 3]]}, {'name': 'E2', 'pins': [[2, 3]]}],
-    }]
-
-    station = stations_to_stations_links(stations).stations['A']
-
+    assert list(stations_links.stations.keys()) == ['1', 'Ziegelbrücke']
+    station = stations_links.stations['Ziegelbrücke']
     assert station.gates == {
-        'W': Gate(name='A.W', pins={0: Pin(name='A.W.0', node=(1, 1))}),
-        'E1': Gate(name='A.E1', pins={0: Pin(name='A.E1.0', node=(1, 3))}),
-        'E2': Gate(name='A.E2', pins={0: Pin(name='A.E2.0', node=(2, 3))}),
+        'W': Gate(name='Ziegelbrücke.W', pins={0: Pin(name='Ziegelbrücke.W.0', node=(2, 3)), 1: Pin(name='Ziegelbrücke.W.1', node=(3, 3))}),
+        'E1': Gate(name='Ziegelbrücke.E1', pins={0: Pin(name='Ziegelbrücke.E1.0', node=(2, 5))}),
     }
-    assert station.edges == [(1, 1), (1, 2), (1, 3), (2, 3)]
-    assert station.stopping_points == [StoppingPoint(name='A.0', node=(1, 2))]
+    assert station.stopping_points == [StoppingPoint(name='Ziegelbrücke.0', node=(2, 4)), StoppingPoint(name='Ziegelbrücke.1', node=(3, 4))]
+    assert station.edges == [(2, 3), (2, 4), (2, 5), (3, 3), (3, 4), (3, 5)]
+    assert stations_links.stations['1'].gates == {}
+    assert stations_links.links == []
+
+
+def test_stations_to_agents_hints_reads_stopping_points():
+    stations = [{'id': 1, 'name': 'A', 'city_position': [2, 3], 'city_orientation': 0,
+                 'stopping_points': [{'name': 'A.0', 'node': [1, 3]}, {'name': 'A.1', 'node': [2, 3]}], 'edges': [[1, 3], [2, 3]], 'gates': {}}]
+
+    assert stations_to_agents_hints(stations)['train_stations'] == [[((1, 3), 0), ((2, 3), 1)]]
