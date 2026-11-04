@@ -77,6 +77,15 @@ def test_stations_to_stations_links_from_an_older_export():
     assert stations_links.links == []
 
 
+def test_stations_to_stations_links_keeps_the_name_of_an_older_export():
+    # exported with station names but still as station_cells
+    stations = [{'id': 3, 'name': 'Ziegelbrücke', 'city_position': [3, 4], 'city_orientation': 1, 'station_cells': [[[2, 4], 0], [[3, 4], 1]]}]
+
+    station = stations_to_stations_links(stations).stations['Ziegelbrücke']
+
+    assert station.stopping_points == [StoppingPoint(name='Ziegelbrücke.0', node=(2, 4)), StoppingPoint(name='Ziegelbrücke.1', node=(3, 4))]
+
+
 def test_stations_to_stations_links_reads_the_export():
     # as the tool exports a named station with an area: flatland's Station fields with fully qualified names
     stations = [

@@ -36,8 +36,9 @@ def stations_to_stations_links(stations: List[dict]) -> StationsLinks:
     The export uses the model's vocabulary: per station name, stopping_points,
     edges and gates (with pins), named <station>.<index>, <station>.<gate> and
     <station>.<gate>.<k>; the tool derives them from the station area, this
-    only reads them. Older exports (station_cells, no names) are named here:
-    the station by its id, edges are its stopping points and it has no gates.
+    only reads them. Older exports (station_cells) are named here: the station
+    by its name if it has one, else by its id; edges are its stopping points
+    and it has no gates.
     Links are not captured yet and stay empty.
     """
     return StationsLinks(stations={station.name: station for station in (_station(s) for s in sorted(stations, key=lambda s: s['id']))}, links=[])
@@ -45,7 +46,8 @@ def stations_to_stations_links(stations: List[dict]) -> StationsLinks:
 
 def _station(s: dict) -> Station:
     if 'stopping_points' not in s:
-        name = str(s['id'])
+        # Exported before the stations_links vocabulary: named if the tool had a name for it.
+        name = s.get('name') or str(s['id'])
         nodes = _stopping_point_nodes(s)
         return Station(name=name, gates={}, stopping_points=[StoppingPoint(name=f"{name}.{i}", node=node) for i, node in enumerate(nodes)], edges=nodes)
     return Station(
