@@ -28,7 +28,7 @@
         .io-section { margin-top:10px; width: 90%; max-width: 950px; }
         .io-section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;}
         .io-section-header h3 { color: #2c3e50; margin-bottom: 0; font-size: 1em; }
-        textarea.io-text, textarea.line-editor-stations { width: calc(100% - 24px); white-space: pre-wrap; word-wrap: break-word; background-color: #ffffff; border: 1px solid #d1d9e6; padding: 10px 12px; min-height: 40px; max-height: 100px; overflow-y: auto; border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-size: 0.8em; box-shadow: inset 0 1px 2px rgba(0,0,0,0.04); }
+        textarea.io-text, .line-editor-stations { width: calc(100% - 24px); white-space: pre-wrap; word-wrap: break-word; background-color: #ffffff; border: 1px solid #d1d9e6; padding: 10px 12px; min-height: 40px; max-height: 100px; overflow-y: auto; border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-size: 0.8em; box-shadow: inset 0 1px 2px rgba(0,0,0,0.04); }
         .info, .tooltip-main { font-size: 0.85em; color: #555; margin-top: 4px; margin-bottom: 8px; max-width: 90%; text-align: center;}
         .tooltip-main { background-color: #fff; padding: 4px 8px; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
         #consolidatedFileInput { display: none; }
@@ -72,10 +72,10 @@
         
         .list-item { display: flex; align-items: center; justify-content: space-between; padding: 8px; border-radius: 4px; margin-bottom: 5px; background-color: #f8f9fa; }
         .list-item:nth-child(odd) { background-color: #f1f3f5; }
-        .list-item-main-content { display: flex; align-items: center; gap: 8px; }
-        .list-item-name { font-weight: bold; }
-        .list-item-details { font-family: monospace; font-size: 0.9em; color: #555; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin: 0 10px; flex-grow: 1;}
-        .list-item-actions { display: flex; gap: 5px; }
+        .list-item-main-content { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .list-item-name { font-weight: bold; white-space: nowrap; }
+        .list-item-details { font-family: monospace; font-size: 0.9em; color: #555; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin: 0 10px; flex-grow: 1; min-width: 0; }
+        .list-item-actions { display: flex; gap: 5px; flex-shrink: 0; }
         .list-item-actions button { padding: 4px 8px; font-size: 0.8em; }
         .reorder-button {
             padding: 0 5px;
@@ -102,6 +102,7 @@
         .editor-field label { display: block; margin-bottom: 4px; font-weight: 500; font-size: 0.9em; }
         .line-editor-stations-wrapper { display: flex; align-items: center; gap: 10px; }
         .line-editor-stations { flex-grow: 1; }
+        .line-editor-stations.is-empty { color: #888; font-style: italic; }
 
         .timetable-editor-top-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 20px; margin-bottom: 15px; }
         .timetable-editor-top-grid .editor-field { margin-bottom: 0; }
@@ -139,6 +140,8 @@
             font-size: 0.9em;
         }
         #lineSelectionBar button { font-size: 0.8em; padding: 6px 12px; }
+        #stationAreaBar { display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: rgba(44, 62, 80, 0.9); color: white; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1001; align-items: center; gap: 15px; font-size: 0.9em; font-weight: 500; }
+        #stationAreaBar button { font-size: 0.8em; padding: 6px 12px; }
         #selectionBarInfo { font-weight: 500; }
         
         /* Collapsible Data Section */
@@ -176,6 +179,9 @@
             <input type="file" id="consolidatedFileInput" accept=".json">
             <button id="exportAllJsonButton" title="Download Grid, Overpasses & Stations as JSON File">Export All (.json)</button>
         </div>
+        <div id="stationControls" class="controls-group">
+             <button id="stationAreaButton" title="Drag a rectangle around exactly one station">Station Area (A)</button>
+        </div>
         <div id="operationsControls" class="controls-group">
              <button id="openOperationsManagerButton">Lines & Timetables</button>
         </div>
@@ -184,9 +190,15 @@
        </div>
     </div>
 
-    <p class="info">LClick+Drag: Draw, RClick+Drag: Erase. Click: Select. Keys (Global): Q=Undo, W=Redo. Keys (Selected Cell): R=Rotate, F=Flip, S=Station, D=Rename, C=Overpass, X/Y=Cycle Type, Arrows=Move.</p>
+    <p class="info">LClick+Drag: Draw, RClick+Drag: Erase. Click: Select. Keys (Global): Q=Undo, W=Redo, A=Station Area. Keys (Selected Cell): R=Rotate, F=Flip, S=Station, D=Name, C=Overpass, X/Y=Cycle Type, Arrows=Move.</p>
     <div id="tooltipMain" class="tooltip-main" style="visibility: hidden;">Selected: None</div>
     <canvas id="railCanvas"></canvas>
+
+    <!-- Station Area Bar -->
+    <div id="stationAreaBar">
+        <span>Drag a rectangle around exactly one station (all its platform cells and switches). Esc cancels.</span>
+        <button id="cancelStationAreaButton" class="secondary">Cancel</button>
+    </div>
 
     <!-- Line Station Selection Bar -->
     <div id="lineSelectionBar">
@@ -206,7 +218,8 @@
             <div id="paletteActionsContainer">
                 <button id="toggleStationButton" disabled>Toggle Station (S)</button>
                 <button id="toggleOverpassButton" disabled>Toggle Overpass (C)</button>
-                <button id="renameStationButton" disabled>Rename Station (D)</button>
+                <button id="nameStationButton" disabled>Name Station (D)</button>
+                <button id="removeStationAreaButton" disabled>Remove Station Area</button>
                 <button id="rotatePieceButton" disabled>Rotate Piece (R)</button>
                 <button id="flipPieceButton" disabled>Flip Piece (F)</button>
             </div>
@@ -239,9 +252,9 @@
                         <input type="text" id="lineNameInput" placeholder="e.g., U1, Express Line">
                     </div>
                     <div class="editor-field">
-                        <label for="lineStationsInput">Station IDs (comma-separated):</label>
+                        <label>Stations:</label>
                         <div class="line-editor-stations-wrapper">
-                             <textarea id="lineStationsInput" class="line-editor-stations" rows="2" placeholder="e.g., 1, 5, 2, 8"></textarea>
+                             <div id="lineStationsDisplay" class="line-editor-stations"></div>
                              <button id="selectStationsOnMapButton" class="secondary" title="Select stations by clicking them on the map">Select on Map</button>
                         </div>
                     </div>
@@ -308,7 +321,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Station ID</th>
+                                <th>Station</th>
                                 <th>Distance</th>
                                 <th>Travel Time</th>
                                 <th>Arrival</th>
@@ -399,7 +412,7 @@
     const pageOverlay = document.getElementById('pageOverlay');
     const importExportText = document.getElementById('importExportText'); const overpassImportExportText = document.getElementById('overpassImportExportText'); const stationImportExportText = document.getElementById('stationImportExportText');
     const tooltipMain = document.getElementById('tooltipMain'); const consolidatedFileInput = document.getElementById('consolidatedFileInput');
-    const contextPalette = document.getElementById('contextPalette'); const palettePiecesContainer = document.getElementById('palettePiecesContainer'); const toggleStationButton = document.getElementById('toggleStationButton'); const toggleOverpassButton = document.getElementById('toggleOverpassButton'); const closePaletteButton = document.getElementById('closePaletteButton'); const renameStationButton = document.getElementById('renameStationButton'); const rotatePieceButton = document.getElementById('rotatePieceButton'); const flipPieceButton = document.getElementById('flipPieceButton');
+    const contextPalette = document.getElementById('contextPalette'); const palettePiecesContainer = document.getElementById('palettePiecesContainer'); const toggleStationButton = document.getElementById('toggleStationButton'); const toggleOverpassButton = document.getElementById('toggleOverpassButton'); const closePaletteButton = document.getElementById('closePaletteButton'); const nameStationButton = document.getElementById('nameStationButton'); const removeStationAreaButton = document.getElementById('removeStationAreaButton'); const stationAreaButton = document.getElementById('stationAreaButton'); const stationAreaBar = document.getElementById('stationAreaBar'); const rightPanelWrapper = document.getElementById('rightPanelWrapper'); const rotatePieceButton = document.getElementById('rotatePieceButton'); const flipPieceButton = document.getElementById('flipPieceButton');
     const undoButton = document.getElementById('undoButton'); const redoButton = document.getElementById('redoButton');
     const flatlandDownloadButton = document.getElementById('flatlandDownloadButton');
     
@@ -422,7 +435,7 @@
     const lineEditorTitle = document.getElementById('lineEditorTitle');
     const lineIdInput = document.getElementById('lineIdInput');
     const lineNameInput = document.getElementById('lineNameInput');
-    const lineStationsInput = document.getElementById('lineStationsInput');
+    const lineStationsDisplay = document.getElementById('lineStationsDisplay');
     const saveLineButton = document.getElementById('saveLineButton');
     const cancelLineEditButton = document.getElementById('cancelLineEditButton');
     const selectStationsOnMapButton = document.getElementById('selectStationsOnMapButton');
@@ -482,6 +495,13 @@
     let lastCell = null;
     let selectedCellCoords = null;
     let nextStationId = 1;
+    // Station names and areas, keyed by station id. Ids stay the internal key; a name is
+    // what the export calls the station. An area is [r0, c0, r1, c1], inclusive.
+    let stationNames = {};
+    let stationAreas = {};
+    let isDrawingStationArea = false;
+    let stationAreaDrag = null; // { start: {r, c}, end: {r, c} } while dragging
+    let suppressNextCanvasClick = false;
     let historyStack = [], historyIndex = -1;
     let isEditingInOpsManager = false;
     let isSelectingStationsForLine = false;
@@ -489,7 +509,9 @@
     let isSelectingEndCell = false;   
     let currentCellSelectionTarget = null; // 'start' or 'end'
     // UPDATED: lineBuilderData is a temporary holding area for line editing. It gets reset/populated when showLineEditor is called.
-    let lineBuilderData = { stations: [], originalStations: '', startCell: null, endCell: null };
+    let lineBuilderData = { stations: [], originalStations: [], startCell: null, endCell: null };
+    // The edited line's stations (ids), chosen on the map only.
+    let lineEditorStationIds = [];
 
     // --- DATA MODELS ---
     let lines = [];
@@ -511,6 +533,9 @@
     const STATION_PLATFORM_COLOR = '#dc3545'; 
     const STATION_ID_COLOR = '#333333';
     const SELECTION_HIGHLIGHT_COLOR = 'rgba(0, 123, 255, 0.4)';
+    const STATION_AREA_COLOR = '#6f42c1';
+    const STATION_AREA_INVALID_COLOR = '#dc3545';
+    const STATION_GATE_COLOR = '#fd7e14';
 
     const CYCLEABLE_CASE_INDEXES = [ CI.EMPTY, CI.V_STRAIGHT, CI.H_STRAIGHT, CI.S_N_L, CI.S_N_R, CI.DIAMOND_X, CI.SLIP_SW, CI.DBL_SLIP_NW_SE, CI.SYM_N, CI.DEAD_N, CI.TURN_N_E ];
     const TILE_DEFINITIONS = {[CI.EMPTY]:{N:!1,E:!1,S:!1,W:!1},[CI.V_STRAIGHT]:{N:!0,E:!1,S:!0,W:!1},[CI.H_STRAIGHT]:{N:!1,E:!0,S:!1,W:!0},[CI.S_N_L]:{N:!0,E:!0,S:!0,W:!1},[CI.S_E_L]:{N:!1,E:!0,S:!0,W:!0},[CI.S_S_L]:{N:!0,E:!1,S:!0,W:!0},[CI.S_W_L]:{N:!0,E:!0,S:!1,W:!0},[CI.S_N_R]:{N:!0,E:!1,S:!0,W:!0},[CI.S_E_R]:{N:!0,E:!0,S:!1,W:!0},[CI.S_S_R]:{N:!0,E:!0,S:!0,W:!1},[CI.S_W_R]:{N:!1,E:!0,S:!0,W:!0},[CI.DIAMOND_X]:{N:!0,E:!0,S:!0,W:!0},[CI.SLIP_SW]:{N:!0,E:!0,S:!0,W:!0},[CI.SLIP_NW]:{N:!0,E:!0,S:!0,W:!0},[CI.SLIP_NE]:{N:!0,E:!0,S:!0,W:!0},[CI.SLIP_SE]:{N:!0,E:!0,S:!0,W:!0},[CI.DBL_SLIP_NW_SE]:{N:!0,E:!0,S:!0,W:!0},[CI.DBL_SLIP_NE_SW]:{N:!0,E:!0,S:!0,W:!0},[CI.SYM_S]:{N:!1,E:!0,S:!0,W:!0},[CI.SYM_W]:{N:!0,E:!1,S:!0,W:!0},[CI.SYM_N]:{N:!0,E:!0,S:!1,W:!0},[CI.SYM_E]:{N:!0,E:!0,S:!0,W:!1},[CI.DEAD_S]:{N:!1,E:!1,S:!0,W:!1},[CI.DEAD_W]:{N:!1,E:!1,S:!1,W:!0},[CI.DEAD_N]:{N:!0,E:!1,S:!1,W:!1},[CI.DEAD_E]:{N:!1,E:!0,S:!1,W:!1},[CI.TURN_S_E]:{N:!1,E:!0,S:!0,W:!1},[CI.TURN_S_W]:{N:!1,E:!1,S:!0,W:!0},[CI.TURN_N_W]:{N:!0,E:!1,S:!1,W:!0},[CI.TURN_N_E]:{N:!0,E:!0,S:!1,W:!1}};
@@ -559,6 +584,8 @@
         const state = { 
             gridData: JSON.parse(JSON.stringify(gridData)), 
             nextStationId: nextStationId, 
+            stationNames: { ...stationNames },
+            stationAreas: JSON.parse(JSON.stringify(stationAreas)),
             numRows: numRows, 
             numCols: numCols, 
             cellSize: cellSize, 
@@ -572,6 +599,8 @@
     function loadState(state) { 
         gridData = JSON.parse(JSON.stringify(state.gridData)); 
         nextStationId = state.nextStationId; 
+        stationNames = { ...(state.stationNames || {}) };
+        stationAreas = JSON.parse(JSON.stringify(state.stationAreas || {}));
         lines = JSON.parse(JSON.stringify(state.lines)); 
         timetables = (state.timetables || []).map(timetable => {
             const actualTrainCategoryId = timetable.trainCategoryId || timetable.trainClassId;
@@ -1011,9 +1040,8 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         setOpsManagerEditingMode(true); 
 
         // Store original state for cancellation
-        lineBuilderData.originalStations = lineStationsInput.value;
-        const currentStations = lineStationsInput.value.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n) && Number.isInteger(n));
-        lineBuilderData.stations = currentStations;
+        lineBuilderData.originalStations = [...lineEditorStationIds];
+        lineBuilderData.stations = [...lineEditorStationIds];
 
         // Activate focus mode UI
         pageOverlay.style.display = 'block';
@@ -1034,11 +1062,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
     }
 
     function endStationSelectionMode(isCancel = false) {
-        if (!isCancel) {
-            lineStationsInput.value = lineBuilderData.stations.join(', ');
-        } else {
-            lineStationsInput.value = lineBuilderData.originalStations;
-        }
+        setLineEditorStations(isCancel ? lineBuilderData.originalStations : lineBuilderData.stations);
 
         isSelectingStationsForLine = false;
         pageOverlay.style.display = 'none';
@@ -1056,7 +1080,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         if (lineBuilderData.stations.length === 0) {
             selectionBarInfo.textContent = 'Click on stations on the map to add them...';
         } else {
-            selectionBarInfo.textContent = `Path: ${lineBuilderData.stations.join(' → ')}`;
+            selectionBarInfo.textContent = `Path: ${lineBuilderData.stations.map(stationLabel).join(' → ')}`;
         }
         undoStationSelectionButton.disabled = lineBuilderData.stations.length === 0;
     }
@@ -1088,7 +1112,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             return;
         }
 
-        const stationIds = lineStationsInput.value.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n) && Number.isInteger(n));
+        const stationIds = lineEditorStationIds;
 
         if (targetType === 'start' && stationIds.length === 0) {
             alert("Please add at least one station to the line before selecting a start cell.");
@@ -1200,7 +1224,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                     <button class="reorder-button" data-action="move-down" data-id="${line.id}" title="Move Down" ${disableDown ? 'disabled' : ''}>▼</button>
                     <span class="list-item-name">${line.name}</span> 
                 </div>
-                <span class="list-item-details">${line.stationIds.join(' → ')}${startCellInfo}${endCellInfo}</span> 
+                <span class="list-item-details" title="${line.stationIds.map(stationLabel).join(' → ')}${startCellInfo}${endCellInfo}">${line.stationIds.map(stationLabel).join(' → ')}${startCellInfo}${endCellInfo}</span> 
                 <div class="list-item-actions"> 
                     <button data-action="test" data-id="${line.id}">Path Lengths</button> 
                     <button data-action="edit" data-id="${line.id}">Edit</button> 
@@ -1307,9 +1331,17 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         }
     }
 
+    // Set the edited line's stations and show them with their names.
+    function setLineEditorStations(ids) {
+        lineEditorStationIds = [...ids];
+        lineStationsDisplay.textContent = ids.length > 0 ? ids.map(stationLabel).join(' → ') : 'None yet: select them on the map.';
+        lineStationsDisplay.classList.toggle('is-empty', ids.length === 0);
+        updateLineEditorCellButtons();
+    }
+
     // function to enable/disable the new cell selection buttons
     function updateLineEditorCellButtons() {
-        const stationIds = lineStationsInput.value.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n) && Number.isInteger(n));
+        const stationIds = lineEditorStationIds;
         selectStartCellButton.disabled = stationIds.length === 0;
         selectEndCellButton.disabled = stationIds.length < 2; // End cell only makes sense if there are at least two stations
     }
@@ -1321,7 +1353,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
 
         // IMPORTANT: Reset lineBuilderData for the new/edited line
         lineBuilderData.stations = [];
-        lineBuilderData.originalStations = '';
+        lineBuilderData.originalStations = [];
         lineBuilderData.startCell = null;
         lineBuilderData.endCell = null;
 
@@ -1329,11 +1361,11 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             lineEditorTitle.textContent = 'Edit Line'; 
             lineIdInput.value = line.id; 
             lineNameInput.value = line.name; 
-            lineStationsInput.value = line.stationIds.join(', '); 
+            setLineEditorStations(line.stationIds); 
             
             // Populate lineBuilderData with the current line's data
             lineBuilderData.stations = [...line.stationIds]; // Deep copy array to prevent accidental modification of original line.stationIds
-            lineBuilderData.originalStations = line.stationIds.join(', '); 
+            lineBuilderData.originalStations = [...line.stationIds]; 
             lineBuilderData.startCell = line.startCell ? { ...line.startCell } : null; // Deep copy cell object
             lineBuilderData.endCell = line.endCell ? { ...line.endCell } : null; // Deep copy cell object
 
@@ -1343,7 +1375,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             lineEditorTitle.textContent = 'Create New Line'; 
             lineIdInput.value = ''; 
             lineNameInput.value = ''; 
-            lineStationsInput.value = ''; 
+            setLineEditorStations([]); 
             // lineBuilderData already reset above for new lines, displays already updated to '(Not selected)' by previous calls.
         } 
         updateLineEditorCellButtons(); 
@@ -1354,7 +1386,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
 
         const id = lineIdInput.value ? parseInt(lineIdInput.value) : null; 
         const name = lineNameInput.value.trim() || 'Untitled Line'; 
-        const stationIds = lineStationsInput.value.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n) && Number.isInteger(n)); 
+        const stationIds = [...lineEditorStationIds]; 
         
         const newLineData = {
             id: id || Date.now(),
@@ -1397,7 +1429,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                     <button class="reorder-button" data-action="move-down" data-id="${timetable.id}" title="Move Down" ${disableDown ? 'disabled' : ''}>▼</button>
                     <span class="list-item-name">${timetable.name}</span> 
                 </div>
-                <span class="list-item-details">${details}</span> 
+                <span class="list-item-details" title="${details}">${details}</span> 
                 <div class="list-item-actions">
                     <button data-action="edit" data-id="${timetable.id}">Edit</button> 
                     <button data-action="copy" data-id="${timetable.id}" class="secondary">Copy</button> 
@@ -1573,7 +1605,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
 
             tr.innerHTML = `
                 <td>${index + 1}</td>
-                <td>${stationId}</td>
+                <td>${stationLabel(stationId)}</td>
                 <td class="distance-value">-</td>
                 <td class="calculated-value travel-time-cell">-</td>
                 <td class="calculated-value arrival-time-cell">-</td>
@@ -1929,7 +1961,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
 
     // --- Station and Safety Functions ---
     function confirmStationOverwrite(r, c) { if (r < 0 || r >= numRows || c < 0 || c >= numCols) return true; const cell = gridData[r][c]; if (cell.isStation) { return window.confirm(`You are about to modify/delete part of Station #${cell.stationId}. Are you sure?`); } return true; }
-    function unifyAdjacentStations(r, c) { const adjacentIds = new Set(); const neighbors = [{r: r-1, c: c}, {r: r+1, c: c}, {r: r, c: c-1}, {r: r, c: c+1}]; neighbors.forEach(n => { if (n.r >= 0 && n.r < numRows && n.c >= 0 && n.c < numCols) { const neighborCell = gridData[n.r][n.c]; if (neighborCell.isStation && neighborCell.stationId != null) { adjacentIds.add(neighborCell.stationId); } } }); if (adjacentIds.size === 0) { gridData[r][c].stationId = nextStationId++; return; } const targetId = Math.min(...adjacentIds); gridData[r][c].stationId = targetId; const queue = [{r, c}]; const visited = new Set([`${r},${c}`]); adjacentIds.forEach(id => { if(id !== targetId) { for (const neighbor of neighbors) { if (neighbor.r >= 0 && neighbor.r < numRows && neighbor.c >= 0 && neighbor.c < numCols && gridData[neighbor.r][neighbor.c].stationId === id) { const key = `${neighbor.r},${neighbor.c}`; if (!visited.has(key)) { queue.push({ r: neighbor.r, c: neighbor.c }); visited.add(key); } } } } }); while (queue.length > 0) { const {r: currentR, c: currentC} = queue.shift(); gridData[currentR][currentC].stationId = targetId; const currentNeighbors = [{r: currentR-1, c: currentC}, {r: currentR+1, c: currentC}, {r: currentR, c: currentC-1}, {r: currentR, c: currentC+1}]; currentNeighbors.forEach(n => { const key = `${n.r},${n.c}`; if (n.r >= 0 && n.r < numRows && n.c >= 0 && n.c < numCols && !visited.has(key) && gridData[n.r][n.c].isStation) { visited.add(key); queue.push({r: n.r, c: n.c}); } }); } }
+    function unifyAdjacentStations(r, c) { const adjacentIds = new Set(); const neighbors = [{r: r-1, c: c}, {r: r+1, c: c}, {r: r, c: c-1}, {r: r, c: c+1}]; neighbors.forEach(n => { if (n.r >= 0 && n.r < numRows && n.c >= 0 && n.c < numCols) { const neighborCell = gridData[n.r][n.c]; if (neighborCell.isStation && neighborCell.stationId != null) { adjacentIds.add(neighborCell.stationId); } } }); if (adjacentIds.size === 0) { gridData[r][c].stationId = nextStationId++; return; } const targetId = Math.min(...adjacentIds); gridData[r][c].stationId = targetId; adjacentIds.forEach(id => { if (id !== targetId) { if (!stationNames[targetId] && stationNames[id]) stationNames[targetId] = stationNames[id]; if (!stationAreas[targetId] && stationAreas[id]) stationAreas[targetId] = stationAreas[id]; } }); const queue = [{r, c}]; const visited = new Set([`${r},${c}`]); adjacentIds.forEach(id => { if(id !== targetId) { for (const neighbor of neighbors) { if (neighbor.r >= 0 && neighbor.r < numRows && neighbor.c >= 0 && neighbor.c < numCols && gridData[neighbor.r][neighbor.c].stationId === id) { const key = `${neighbor.r},${neighbor.c}`; if (!visited.has(key)) { queue.push({ r: neighbor.r, c: neighbor.c }); visited.add(key); } } } } }); while (queue.length > 0) { const {r: currentR, c: currentC} = queue.shift(); gridData[currentR][currentC].stationId = targetId; const currentNeighbors = [{r: currentR-1, c: currentC}, {r: currentR+1, c: currentC}, {r: currentR, c: currentC-1}, {r: currentR, c: currentC+1}]; currentNeighbors.forEach(n => { const key = `${n.r},${n.c}`; if (n.r >= 0 && n.r < numRows && n.c >= 0 && n.c < numCols && !visited.has(key) && gridData[n.r][n.c].isStation) { visited.add(key); queue.push({r: n.r, c: n.c}); } }); } }
 
     // --- Core Application Functions ---
     function createEmptyCell() { return { N: false, E: false, S: false, W: false, caseIndex: CI.EMPTY, isInvalid: false, isOverpass: false, isStation: false, stationId: null }; }
@@ -1953,15 +1985,19 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                 } 
             } 
             gridData = newGrid; 
+            // areas move with the grid; one cropped away no longer holds its station and shows as invalid
+            Object.values(stationAreas).forEach(area => { area[0] += rowOffset; area[1] += colOffset; area[2] += rowOffset; area[3] += colOffset; });
         } else { 
             gridData = newGrid; 
         } 
         if (clearOnly) { 
             nextStationId = 1; 
+            stationNames = {}; 
+            stationAreas = {}; 
             lines = []; 
             timetables = []; 
             // Clear lineBuilderData as well when clearing grid
-            lineBuilderData = { stations: [], originalStations: '', startCell: null, endCell: null }; 
+            lineBuilderData = { stations: [], originalStations: [], startCell: null, endCell: null }; 
         } 
         selectedCellCoords = null; 
         updateSelectionUI(); 
@@ -2000,9 +2036,11 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             if (selectedCellCoords && selectedCellCoords.r === r && selectedCellCoords.c === c) { ctx.strokeStyle = '#007bff'; ctx.lineWidth = 2.5; ctx.strokeRect(x + 1.5, y + 1.5, cellSize - 3, cellSize - 3); }
         }}
 
+        drawStationOverlays();
+
         // Highlight allowed cells when in single cell selection mode
         if (isSelectingStartCell || isSelectingEndCell) {
-            const stationIds = lineStationsInput.value.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n) && Number.isInteger(n));
+            const stationIds = lineEditorStationIds;
             let targetStationId = null;
 
             if (isSelectingStartCell && stationIds.length > 0) {
@@ -2116,7 +2154,17 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             cell.isOverpass = false; 
         } 
     }
+    function cellFromMouse(e) {
+        const rect = canvas.getBoundingClientRect();
+        return { r: Math.min(numRows - 1, Math.max(0, Math.floor((e.clientY - rect.top) / cellSize))), c: Math.min(numCols - 1, Math.max(0, Math.floor((e.clientX - rect.left) / cellSize))) };
+    }
     canvas.addEventListener('mousedown', (e) => { 
+
+        suppressNextCanvasClick = false;
+        if (isDrawingStationArea) {
+            if (e.button === 0) { const cell = cellFromMouse(e); stationAreaDrag = { start: cell, end: cell }; drawGrid(); }
+            return;
+        }
 
         if (isSelectingStationsForLine || isSelectingStartCell || isSelectingEndCell || isEditingInOpsManager) return; 
 
@@ -2154,6 +2202,9 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         const c_click = Math.floor(x_click / cellSize); 
         const r_click = Math.floor(y_click / cellSize);
 
+        // the click that ends dragging a station area
+        if (suppressNextCanvasClick || isDrawingStationArea) { suppressNextCanvasClick = false; return; }
+
         // If selecting stations for a line (the original functionality)
         if (isSelectingStationsForLine) {
             handleStationSelectionClick(r_click, c_click);
@@ -2165,7 +2216,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             if (r_click < 0 || r_click >= numRows || c_click < 0 || c_click >= numCols) return;
 
             const cell = gridData[r_click][c_click];
-            const stationIds = lineStationsInput.value.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n) && Number.isInteger(n));
+            const stationIds = lineEditorStationIds;
 
             let targetStationId;
             if (isSelectingStartCell) {
@@ -2208,6 +2259,10 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         drawGrid(); 
     });
     canvas.addEventListener('mousemove', (e) => { 
+        if (isDrawingStationArea) {
+            if (stationAreaDrag) { const cell = cellFromMouse(e); if (cell.r !== stationAreaDrag.end.r || cell.c !== stationAreaDrag.end.c) { stationAreaDrag.end = cell; drawGrid(); } }
+            return;
+        }
         if (!isDrawing && !isErasing || isEditingInOpsManager) return; 
         if (selectedCellCoords) { selectedCellCoords = null; updateSelectionUI(); } 
         const rect = canvas.getBoundingClientRect(); 
@@ -2238,6 +2293,10 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         } 
         lastCell = { r: r_move, c: c_move }; 
         if (isDrawing) { validateGrid(); drawGrid(); } });
+    // An area drag ends on mouse-up anywhere on the page, not when the pointer leaves the map.
+    window.addEventListener('mouseup', () => {
+        if (isDrawingStationArea && stationAreaDrag) { suppressNextCanvasClick = true; finishStationArea(); }
+    });
     function handleInteractionEnd() { 
         if (isDrawing || isErasing) { 
             isDrawing = false; 
@@ -2252,47 +2311,273 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
     function flipSelectedCell() { if (!selectedCellCoords || flipPieceButton.disabled) return; const { r, c } = selectedCellCoords; if (FLIP_MAP[gridData[r][c].caseIndex]) { applyPieceChangeToCell(r, c, FLIP_MAP[gridData[r][c].caseIndex]); } }
     function cycleSelectedCell(forward) { if (!selectedCellCoords) return; const { r, c } = selectedCellCoords; const cell = gridData[r][c]; let currentCase = cell.caseIndex; let currentIndexInCycle = CYCLEABLE_CASE_INDEXES.indexOf(currentCase); if (currentIndexInCycle === -1 && currentCase !== CI.EMPTY) { for(const base of CYCLEABLE_CASE_INDEXES){ if(isRotationalOrFlipVariant(base, currentCase)) {currentIndexInCycle = CYCLEABLE_CASE_INDEXES.indexOf(base); break;} } if (currentIndexInCycle === -1) currentIndexInCycle = 0; } if (forward) { currentIndexInCycle = (currentIndexInCycle + 1) % CYCLEABLE_CASE_INDEXES.length; } else { currentIndexInCycle = (currentIndexInCycle - 1 + CYCLEABLE_CASE_INDEXES.length) % CYCLEABLE_CASE_INDEXES.length; } applyPieceChangeToCell(r, c, CYCLEABLE_CASE_INDEXES[currentIndexInCycle]); }
     
-    function performRenameStation() {
-        if (!selectedCellCoords || renameStationButton.disabled) return;
+    // --- STATION NAMES, AREAS, GATES AND PINS ---
+    function existingStationIds() {
+        const ids = new Set();
+        for (let r = 0; r < numRows; r++) for (let c = 0; c < numCols; c++) { const cell = gridData[r][c]; if (cell.isStation && cell.stationId != null) ids.add(cell.stationId); }
+        return ids;
+    }
+    // The station's name in the export: its name, else its id.
+    function exportedStationName(id) { return stationNames[id] || String(id); }
+    // How lists show a station: "3 Ziegelbrücke", or "3" without a name.
+    function stationLabel(id) { return stationNames[id] ? `${id} ${stationNames[id]}` : `${id}`; }
+    // Drop names and areas of stations that no longer exist.
+    function pruneStationMeta() {
+        const ids = existingStationIds();
+        Object.keys(stationNames).forEach(id => { if (!ids.has(Number(id))) delete stationNames[id]; });
+        Object.keys(stationAreas).forEach(id => { if (!ids.has(Number(id))) delete stationAreas[id]; });
+    }
+    function stationNameError(id, name) {
+        if (name.includes('.')) return 'A station name must not contain "." (stopping points, gates and pins are named <station>.<...>).';
+        const clash = [...existingStationIds()].find(other => other !== id && exportedStationName(other) === name);
+        if (clash !== undefined) return `The name "${name}" is already used by station #${clash}.`;
+        return null;
+    }
+    function cellInArea(r, c, area) { return r >= area[0] && r <= area[2] && c >= area[1] && c <= area[3]; }
+    function areasOverlap(a, b) { return a[0] <= b[2] && b[0] <= a[2] && a[1] <= b[3] && b[1] <= a[3]; }
+    // Station ids with platform cells inside the rectangle.
+    function stationIdsInArea(area) {
+        const ids = new Set();
+        for (let r = Math.max(0, area[0]); r <= Math.min(numRows - 1, area[2]); r++) for (let c = Math.max(0, area[1]); c <= Math.min(numCols - 1, area[3]); c++) { const cell = gridData[r][c]; if (cell.isStation && cell.stationId != null) ids.add(cell.stationId); }
+        return ids;
+    }
+    // Why an area cannot belong to the station, or null: it must lie on the grid, hold all of the
+    // station's platform cells and no other station's, and not overlap another station's area.
+    function stationAreaError(id, area) {
+        if (area[2] <= area[0] || area[3] <= area[1]) return `The area of station ${stationLabel(id)} must span at least two rows and two columns.`;
+        if (area[0] < 0 || area[1] < 0 || area[2] >= numRows || area[3] >= numCols) return `The area of station ${stationLabel(id)} reaches outside the grid.`;
+        const others = [...stationIdsInArea(area)].filter(other => other !== id);
+        if (others.length > 0) return `The area of station ${stationLabel(id)} also contains station ${others.map(stationLabel).join(', ')}; an area must contain exactly one station.`;
+        const outside = findStationCells(id).filter(({ r, c }) => !cellInArea(r, c, area));
+        if (outside.length > 0) return `The area of station ${stationLabel(id)} does not contain all its platform cells, e.g. (${outside[0].r}, ${outside[0].c}).`;
+        const overlapping = Object.keys(stationAreas).map(Number).find(other => other !== id && areasOverlap(area, stationAreas[other]));
+        if (overlapping !== undefined) return `The area of station ${stationLabel(id)} overlaps the area of station ${stationLabel(overlapping)}.`;
+        return null;
+    }
+    // The station's tracks in its area: the cells connected to its platforms by track inside the
+    // area, in either direction of travel (so passing loops off its switches count, the two tracks
+    // of a diamond crossing stay apart), and the points where such a track leaves the area. A
+    // through track without a switch to the platforms is not part of the station, even when it
+    // lies inside the rectangle. Works on cell sides: two sides of a cell are joined by a transition
+    // between them, a side is joined to the facing side of its neighbour.
+    function stationTracks(id, area) {
+        // a cell's connections come from its flags: TRANSITION_MAP keys buffer stops by the opposite side
+        const sidesOf = (r, c) => new Set(['N', 'E', 'S', 'W'].filter(side => gridData[r][c][side]));
+        const joined = (r, c, side) => {
+            const transitions = TRANSITION_MAP[gridData[r][c].caseIndex] || {};
+            return Object.keys(transitions).filter(other => other !== side && ((transitions[side] || []).includes(other) || transitions[other].includes(side)));
+        };
+        const cells = new Set();
+        const exits = []; // { r, c, side }
+        const seen = new Set();
+        const queue = [];
+        const push = (r, c, side) => { const key = `${r},${c},${side}`; if (!seen.has(key)) { seen.add(key); queue.push({ r, c, side }); } };
+        findStationCells(id).forEach(({ r, c }) => sidesOf(r, c).forEach(side => push(r, c, side)));
+        while (queue.length > 0) {
+            const { r, c, side } = queue.shift();
+            cells.add(`${r},${c}`);
+            joined(r, c, side).forEach(other => push(r, c, other));
+            const nr = r + DIRECTION_DELTA[side].r, nc = c + DIRECTION_DELTA[side].c;
+            if (nr < 0 || nr >= numRows || nc < 0 || nc >= numCols || !sidesOf(nr, nc).has(OPPOSITE_DIRECTION[side])) continue;
+            if (cellInArea(nr, nc, area)) push(nr, nc, OPPOSITE_DIRECTION[side]);
+            else exits.push({ r, c, side });
+        }
+        const edges = [...cells].map(k => k.split(',').map(Number)).sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+        return { edges, exits };
+    }
+    // Gates and pins of a station area. A pin is a cell of the station's tracks where a track
+    // leaves the area; a gate is a run of adjacent pins on one side. A side with one gate names
+    // it by the side (N, E, S, W), several gates are numbered along the border (E1, E2, ...).
+    function stationGates(id, area) {
+        const [r0, c0, r1, c1] = area;
+        const { exits } = stationTracks(id, area);
+        const along = {
+            N: Array.from({ length: c1 - c0 + 1 }, (_, i) => [r0, c0 + i]),
+            E: Array.from({ length: r1 - r0 + 1 }, (_, i) => [r0 + i, c1]),
+            S: Array.from({ length: c1 - c0 + 1 }, (_, i) => [r1, c0 + i]),
+            W: Array.from({ length: r1 - r0 + 1 }, (_, i) => [r0 + i, c0]),
+        };
+        const gates = [];
+        Object.entries(along).forEach(([side, cells]) => {
+            const runs = [];
+            let run = null;
+            cells.forEach(([r, c]) => {
+                if (exits.some(e => e.r === r && e.c === c && e.side === side)) { if (!run) { run = []; runs.push(run); } run.push([r, c]); }
+                else run = null;
+            });
+            runs.forEach((pins, i) => gates.push({ name: runs.length === 1 ? side : `${side}${i + 1}`, side, pins }));
+        });
+        return gates;
+    }
+    // Problems that keep the export from naming stations consistently.
+    function stationMetaProblems() {
+        const problems = [];
+        const ids = [...existingStationIds()].sort((a, b) => a - b);
+        const seen = {};
+        ids.forEach(id => {
+            const name = exportedStationName(id);
+            if (name.includes('.')) problems.push(`Station #${id}: the name "${name}" contains ".".`);
+            if (seen[name] !== undefined) problems.push(`Stations #${seen[name]} and #${id} are both exported as "${name}".`);
+            else seen[name] = id;
+            if (stationAreas[id]) { const error = stationAreaError(id, stationAreas[id]); if (error) problems.push(error); }
+        });
+        return problems;
+    }
+    // The grouped station export, shared by the text area and the JSON export.
+    function buildStationsExport() {
+        const stationsMap = {};
+        for (let r = 0; r < numRows; r++) {
+            for (let c = 0; c < numCols; c++) {
+                const cell = gridData[r][c];
+                if (cell.isStation && cell.stationId != null) {
+                    if (!stationsMap[cell.stationId]) stationsMap[cell.stationId] = [];
+                    stationsMap[cell.stationId].push([r, c]);
+                }
+            }
+        }
+        const stations = Object.entries(stationsMap).map(([idStr, cells]) => {
+            const id = Number(idStr);
+            cells.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+            const [rMid, cMid] = cells[Math.floor(cells.length / 2)];
+            const isHorizontal = gridData[rMid][cMid].caseIndex === CI.H_STRAIGHT;
+            // flatland's Station vocabulary (stations_links), with fully qualified names
+            const name = exportedStationName(id);
+            const station = {
+                id, name, city_position: [rMid, cMid], city_orientation: isHorizontal ? 1 : 0,
+                stopping_points: cells.map((cell, i) => ({ name: `${name}.${i}`, node: cell })),
+                edges: cells,
+                gates: {},
+            };
+            const area = stationAreas[id];
+            if (area && !stationAreaError(id, area)) {
+                station.area = [...area];
+                station.edges = stationTracks(id, area).edges;
+                stationGates(id, area).forEach(gate => {
+                    station.gates[gate.name] = { name: `${name}.${gate.name}`, pins: Object.fromEntries(gate.pins.map((node, k) => [k, { name: `${name}.${gate.name}.${k}`, node }])) };
+                });
+            }
+            return station;
+        });
+        stations.sort((a, b) => a.id - b.id);
+        return stations;
+    }
+    // A station's platform cells from an export: stopping_points, or older station_cells / r, c.
+    function importedStationCells(s) {
+        if (s.stopping_points) return s.stopping_points.map(({ node: [r, c] }) => ({ r, c }));
+        if (s.station_cells) return s.station_cells.map(([[r, c]]) => ({ r, c }));
+        return [{ r: s.r, c: s.c }];
+    }
+    function performNameStation() {
+        if (!selectedCellCoords || nameStationButton.disabled) return;
         const { r, c } = selectedCellCoords;
-        const cell = gridData[r][c];
-        const oldId = cell.stationId;
-        const newIdStr = prompt(`Rename all connected parts of Station #${oldId} to a new ID:`, oldId);
-        if (newIdStr === null || newIdStr.trim() === "") return;
-        const newId = parseInt(newIdStr, 10);
-        if (isNaN(newId) || !Number.isInteger(newId) || newId < 0) {
-            alert("Invalid ID. Please enter a non-negative integer.");
-            return;
+        const id = gridData[r][c].stationId;
+        const input = prompt(`Name for station #${id} (empty: use the ID):`, stationNames[id] || '');
+        if (input === null) return;
+        const name = input.trim();
+        if (name === '') {
+            const error = stationNameError(id, String(id));
+            if (error) { alert(error); return; }
+            delete stationNames[id];
+        } else {
+            const error = stationNameError(id, name);
+            if (error) { alert(error); return; }
+            stationNames[id] = name;
         }
-        let idInUse = false;
-        if (newId !== oldId) {
-            for (let row of gridData) {
-                for (let currentCell of row) {
-                    if (currentCell.isStation && currentCell.stationId === newId) {
-                        idInUse = true;
-                        break;
-                    }
-                }
-                if (idInUse) break;
-            }
+        drawGrid(); updateSelectionUI(); exportAllDataToTextAreas(); saveState();
+    }
+    function removeStationArea() {
+        if (!selectedCellCoords || removeStationAreaButton.disabled) return;
+        const { r, c } = selectedCellCoords;
+        delete stationAreas[gridData[r][c].stationId];
+        drawGrid(); updateSelectionUI(); exportAllDataToTextAreas(); saveState();
+    }
+    // Focus mode as in the line station selection: the page greyed out, the map on top, panels hidden.
+    let panelsHiddenForStationArea = null;
+    function setStationAreaMode(on) {
+        if (on === isDrawingStationArea) return;
+        isDrawingStationArea = on;
+        stationAreaDrag = null;
+        if (on) {
+            selectedCellCoords = null; updateSelectionUI();
+            panelsHiddenForStationArea = rightPanelWrapper.style.display;
+            rightPanelWrapper.style.display = 'none';
+            pageOverlay.style.display = 'block';
+            canvas.classList.add('is-selecting');
+            stationAreaBar.style.display = 'flex';
+        } else {
+            rightPanelWrapper.style.display = panelsHiddenForStationArea || '';
+            pageOverlay.style.display = 'none';
+            canvas.classList.remove('is-selecting');
+            stationAreaBar.style.display = 'none';
+            updateSelectionUI();
         }
-        if (idInUse) {
-            alert(`Error: Station ID #${newId} is already in use.`);
-            return;
-        }
-        for (let row of gridData) {
-            for (let currentCell of row) {
-                if (currentCell.isStation && currentCell.stationId === oldId) {
-                    currentCell.stationId = newId;
-                }
-            }
-        }
-        nextStationId = Math.max(nextStationId, newId + 1);
-        validateGrid();
         drawGrid();
-        updateSelectionUI();
-        exportAllDataToTextAreas();
-        saveState();
+    }
+    function dragArea(drag) { return [Math.min(drag.start.r, drag.end.r), Math.min(drag.start.c, drag.end.c), Math.max(drag.start.r, drag.end.r), Math.max(drag.start.c, drag.end.c)]; }
+    function finishStationArea() {
+        const area = dragArea(stationAreaDrag);
+        setStationAreaMode(false);
+        if (area[2] <= area[0] || area[3] <= area[1]) { alert('An area must span at least two rows and two columns.'); return; }
+        const ids = [...stationIdsInArea(area)];
+        if (ids.length === 0) { alert('The area contains no station.'); return; }
+        if (ids.length > 1) { alert(`The area contains stations ${ids.map(stationLabel).join(', ')}; an area must contain exactly one station.`); return; }
+        const error = stationAreaError(ids[0], area);
+        if (error) { alert(error); return; }
+        stationAreas[ids[0]] = area;
+        drawGrid(); exportAllDataToTextAreas(); saveState();
+    }
+    function drawStationOverlays() {
+        ctx.save();
+        const s = cellSize;
+        const labelFont = `bold ${Math.max(10, Math.min(Math.floor(s * 0.4), 14))}px Arial`;
+        const drawLabel = (text, x, y, color) => {
+            ctx.font = labelFont; ctx.textAlign = 'left'; ctx.textBaseline = 'bottom';
+            const w = ctx.measureText(text).width;
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.85)'; ctx.fillRect(x, y - Math.max(12, s * 0.45), w + 6, Math.max(12, s * 0.45));
+            ctx.fillStyle = color; ctx.fillText(text, x + 3, y - 1);
+        };
+        // The area's border runs through the mid-points of its border cells, so it cuts exactly the pin cells.
+        const strokeArea = (area) => ctx.strokeRect((area[1] + 0.5) * s, (area[0] + 0.5) * s, (area[3] - area[1]) * s, (area[2] - area[0]) * s);
+        existingStationIds().forEach(id => {
+            const area = stationAreas[id];
+            if (!area) {
+                if (stationNames[id]) { const first = findStationCells(id)[0]; drawLabel(stationNames[id], first.c * s, first.r * s, STATION_ID_COLOR); }
+                return;
+            }
+            const valid = !stationAreaError(id, area);
+            const color = valid ? STATION_AREA_COLOR : STATION_AREA_INVALID_COLOR;
+            ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
+            strokeArea(area);
+            ctx.setLineDash([]);
+            drawLabel(valid ? exportedStationName(id) : `${exportedStationName(id)} (invalid area)`, (area[1] + 0.5) * s, area[0] * s, color);
+            if (!valid) return;
+            ctx.fillStyle = 'rgba(111, 66, 193, 0.15)';
+            stationTracks(id, area).edges.forEach(([r, c]) => ctx.fillRect(c * s, r * s, s, s));
+            stationGates(id, area).forEach(gate => {
+                // the gate: a frame around its pin cells, labelled outside the area
+                const rows = gate.pins.map(([r]) => r), cols = gate.pins.map(([, c]) => c);
+                const x = Math.min(...cols) * s, y = Math.min(...rows) * s;
+                const w = (Math.max(...cols) - Math.min(...cols) + 1) * s, h = (Math.max(...rows) - Math.min(...rows) + 1) * s;
+                ctx.strokeStyle = STATION_GATE_COLOR; ctx.lineWidth = 2.5;
+                ctx.strokeRect(x + 2, y + 2, w - 4, h - 4);
+                ctx.fillStyle = STATION_GATE_COLOR;
+                gate.pins.forEach(([r, c]) => { ctx.beginPath(); ctx.arc((c + 0.5) * s, (r + 0.5) * s, Math.max(2.5, s * 0.1), 0, 2 * Math.PI); ctx.fill(); });
+                if (s > 15) {
+                    ctx.font = `bold ${Math.max(8, Math.min(Math.floor(s * 0.3), 11))}px Arial`;
+                    const at = { N: [x + w / 2, y - 2, 'center', 'bottom'], S: [x + w / 2, y + h + 2, 'center', 'top'], E: [x + w + 3, y + h / 2, 'left', 'middle'], W: [x - 3, y + h / 2, 'right', 'middle'] }[gate.side];
+                    ctx.textAlign = at[2]; ctx.textBaseline = at[3];
+                    ctx.fillText(gate.name, at[0], at[1]);
+                }
+            });
+        });
+        if (stationAreaDrag) {
+            const area = dragArea(stationAreaDrag);
+            ctx.fillStyle = 'rgba(111, 66, 193, 0.15)';
+            ctx.fillRect((area[1] + 0.5) * s, (area[0] + 0.5) * s, (area[3] - area[1]) * s, (area[2] - area[0]) * s);
+            ctx.strokeStyle = STATION_AREA_COLOR; ctx.lineWidth = 2;
+            strokeArea(area);
+        }
+        ctx.restore();
     }
 
     window.addEventListener('keydown', (e) => {
@@ -2301,6 +2586,11 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         
         // Escape key to exit overlay/selection modes
         if (e.key === 'Escape') {
+            if (isDrawingStationArea) {
+                setStationAreaMode(false);
+                e.preventDefault();
+                return;
+            }
             if (isSelectingStationsForLine) {
                 endStationSelectionMode(true);
                 e.preventDefault();
@@ -2333,11 +2623,12 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         }
         if (key === 'q') { undoButton.click(); return; }
         if (key === 'w') { redoButton.click(); return; }
+        if (key === 'a') { setStationAreaMode(!isDrawingStationArea); return; }
         if (!selectedCellCoords) return;
         if (key === 'r') { rotateSelectedCell(); }
         else if (key === 'f') { flipSelectedCell(); } 
         else if (key === 's') { toggleStationButton.click(); }
-        else if (key === 'd') { performRenameStation(); } 
+        else if (key === 'd') { performNameStation(); }
         else if (key === 'c') { toggleOverpassButton.click(); }
         else if (key === 'x') { cycleSelectedCell(true); }
         else if (key === 'y') { cycleSelectedCell(false); }
@@ -2348,15 +2639,14 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
     closePaletteButton.addEventListener('click', () => { if (selectedCellCoords) { selectedCellCoords = null; updateSelectionUI(); drawGrid(); } });
     toggleStationButton.addEventListener('click', () => { if (!selectedCellCoords || toggleStationButton.disabled) return; const { r, c } = selectedCellCoords; const cell = gridData[r][c]; cell.isStation = !cell.isStation; if (cell.isStation) { unifyAdjacentStations(r, c); } else { cell.stationId = null; } validateGrid(); drawGrid(); updateSelectionUI(); exportAllDataToTextAreas(); saveState(); });
     toggleOverpassButton.addEventListener('click', () => { if (!selectedCellCoords || toggleOverpassButton.disabled) return; const { r, c } = selectedCellCoords; gridData[r][c].isOverpass = !gridData[r][c].isOverpass; validateGrid(); drawGrid(); updateSelectionUI(); exportOverpassesToText(); saveState(); });
-    renameStationButton.addEventListener('click', () => { if(!renameStationButton.disabled) performRenameStation(); }); 
     function updateSelectionUI() { 
-        if(isSelectingStationsForLine || isSelectingStartCell || isSelectingEndCell) return; 
+        if(isSelectingStationsForLine || isSelectingStartCell || isSelectingEndCell || isDrawingStationArea) return; 
         if (selectedCellCoords) { 
             const {r, c} = selectedCellCoords; 
             const cell = gridData[r][c]; 
             let typeName = Object.keys(CI).find(key => CI[key] === cell.caseIndex) || `Unknown(${cell.caseIndex})`; 
             let stationText = ''; 
-            if (cell.isStation && cell.stationId != null) stationText = ` (Station #${cell.stationId})`; 
+            if (cell.isStation && cell.stationId != null) stationText = ` (Station #${stationLabel(cell.stationId)}${stationAreas[cell.stationId] ? ', with area' : ''})`; 
             else if (cell.stationId != null) stationText = ` (ID #${cell.stationId} - Inactive)`; 
             else if (cell.isStation) stationText = ' (Station)'; 
             tooltipMain.textContent = `Cell:[${r},${c}] Type:${typeName}${stationText}${cell.isOverpass?' (Overpass)':''}${cell.isInvalid?' INVALID!':''}`; 
@@ -2364,7 +2654,8 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             contextPalette.style.display = 'block'; 
             toggleStationButton.disabled = !(cell.caseIndex === CI.V_STRAIGHT || cell.caseIndex === CI.H_STRAIGHT); 
             toggleOverpassButton.disabled = !(cell.caseIndex === CI.DIAMOND_X); 
-            renameStationButton.disabled = !(cell.isStation && cell.stationId != null); 
+            nameStationButton.disabled = !(cell.isStation && cell.stationId != null); 
+            removeStationAreaButton.disabled = !(cell.isStation && cell.stationId != null && stationAreas[cell.stationId]); 
             rotatePieceButton.disabled = !ROTATION_MAP[cell.caseIndex]; 
             flipPieceButton.disabled = !FLIP_MAP[cell.caseIndex]; 
         } else { 
@@ -2373,42 +2664,61 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             contextPalette.style.display = 'none'; 
             toggleStationButton.disabled = true; 
             toggleOverpassButton.disabled = true; 
-            renameStationButton.disabled = true; 
+            nameStationButton.disabled = true; 
+            removeStationAreaButton.disabled = true; 
             rotatePieceButton.disabled = true; 
             flipPieceButton.disabled = true; 
         } 
     }
     
-    function exportAllDataToTextAreas() { exportGridToText(); exportOverpassesToText(); exportStationsToText(); }
+    function exportAllDataToTextAreas() { pruneStationMeta(); exportGridToText(); exportOverpassesToText(); exportStationsToText(); }
     function exportGridToText() { if (!gridData || gridData.length === 0) { importExportText.value = ""; return; } const exportArray = gridData.map(row => row.map(cell => cell.caseIndex)); importExportText.value = JSON.stringify(exportArray, null, 2); }
     function importGridFromText() { try { const importedNumericArray = JSON.parse(importExportText.value); if (!Array.isArray(importedNumericArray) || (importedNumericArray.length > 0 && !Array.isArray(importedNumericArray[0])) || importedNumericArray.some(row => !Array.isArray(row) || row.some(val => typeof val !== 'number'))) { throw new Error("Invalid grid data format."); } const newNumRows = importedNumericArray.length; const newNumCols = newNumRows > 0 ? importedNumericArray[0].length : 0; if (newNumRows === 0 || newNumCols === 0) { initializeOrResizeGrid(true); alert("Imported empty grid. Grid cleared."); return; } document.getElementById('rows').value = newNumRows; document.getElementById('cols').value = newNumCols; initializeOrResizeGrid(true); for (let r = 0; r < numRows; r++) { for (let c = 0; c < numCols; c++) { if (importedNumericArray[r] && importedNumericArray[r][c] !== undefined) { const cell = gridData[r][c]; cell.caseIndex = importedNumericArray[r][c]; const expected = getExpectedConnections(cell.caseIndex); cell.N = expected.N; cell.E = expected.E; cell.S = expected.S; cell.W = expected.W; } } } selectedCellCoords = null; validateGrid(); drawGrid(); updateSelectionUI(); saveState(); alert("Grid imported. Station/Overpass data cleared. History reset."); } catch (error) { console.error("Grid Import failed:", error); alert("Grid Import failed: " + error.message); } }
     function exportOverpassesToText() { const overpassCoords = []; if (gridData && gridData.length > 0) { for (let r = 0; r < numRows; r++) { for (let c = 0; c < numCols; c++) { if (gridData[r][c].isOverpass && gridData[r][c].caseIndex === CI.DIAMOND_X) { overpassCoords.push([r, c]); } } } } overpassImportExportText.value = JSON.stringify(overpassCoords, null, 2); }
     function importOverpassesFromText() { try { const coordsToImport = JSON.parse(overpassImportExportText.value); if (!Array.isArray(coordsToImport) || !coordsToImport.every(item => Array.isArray(item) && item.length === 2 && typeof item[0] === 'number' && typeof item[1] === 'number')) { throw new Error("Invalid overpass data format."); } gridData.forEach(row => row.forEach(cell => cell.isOverpass = false )); let appliedCount = 0; coordsToImport.forEach(([r, c]) => { if (r >= 0 && r < numRows && c >= 0 && c < numCols && gridData[r][c].caseIndex === CI.DIAMOND_X) { gridData[r][c].isOverpass = true; appliedCount++; } else { console.warn(`Cannot apply overpass to [${r},${c}]`); } }); validateGrid(); drawGrid(); updateSelectionUI(); saveState(); alert(`Imported ${appliedCount} overpass(es). Existing overpasses cleared first.`); } catch (error) { console.error("Overpass import failed:", error); alert("Overpass import: " + error.message); } }
-    function exportStationsToText() { const stationData = []; if (gridData && gridData.length > 0) { const uniqueStations = new Set(); for (let r = 0; r < numRows; r++) { for (let c = 0; c < numCols; c++) { const cell = gridData[r][c]; if (cell.isStation && cell.stationId != null) { uniqueStations.add(JSON.stringify([cell.stationId, r, c])); } } } stationData.push(...Array.from(uniqueStations).map(s => JSON.parse(s))); stationData.sort((a,b) => a[0] - b[0] || a[1] - b[1] || a[2] - b[2]); } stationImportExportText.value = JSON.stringify(stationData, null, 2); }
-    function importStationsFromText() { try { const dataToImport = JSON.parse(stationImportExportText.value); if (!Array.isArray(dataToImport) || !dataToImport.every(item => Array.isArray(item) && item.length === 3 && typeof item[0] === 'number' && typeof item[1] === 'number' && typeof item[2] === 'number')) { throw new Error("Invalid station data format."); } gridData.forEach(row => row.forEach(cell => { cell.isStation = false; })); let appliedCount = 0; let maxImportedId = 0; dataToImport.forEach(([id, r, c]) => { if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) { gridData[r][c].isStation = true; gridData[r][c].stationId = id; if (id > maxImportedId) maxImportedId = id; appliedCount++; } else { console.warn(`Cannot apply station ID ${id} from JSON to [${r},${c}]`); } }); nextStationId = Math.max(nextStationId, maxImportedId + 1); validateGrid(); drawGrid(); updateSelectionUI(); saveState(); alert(`Imported ${appliedCount} station(s). Existing active stations cleared first. Station IDs updated.`); } catch (error) { console.error("Station import failed:", error); alert("Station import: " + error.message); } }
+    function exportStationsToText() {
+        stationImportExportText.value = JSON.stringify(gridData && gridData.length > 0 ? buildStationsExport() : [], null, 2);
+    }
+    function importStationsFromText() {
+        try {
+            const dataToImport = JSON.parse(stationImportExportText.value);
+            if (!Array.isArray(dataToImport)) { throw new Error("Invalid station data format."); }
+            gridData.forEach(row => row.forEach(cell => { cell.isStation = false; }));
+            stationNames = {}; stationAreas = {};
+            let appliedCount = 0; let maxImportedId = 0;
+            dataToImport.forEach(s => {
+                const id = s.id;
+                if (id > maxImportedId) maxImportedId = id;
+                if (s.name && s.name !== String(id)) stationNames[id] = s.name;
+                if (s.area) stationAreas[id] = [...s.area];
+                const cellsToApply = importedStationCells(s);
+                cellsToApply.forEach(({ r, c }) => {
+                    if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) {
+                        gridData[r][c].isStation = true; gridData[r][c].stationId = id; appliedCount++;
+                    } else { console.warn(`Cannot apply station ID ${id} from JSON to [${r},${c}]`); }
+                });
+            });
+            nextStationId = Math.max(nextStationId, maxImportedId + 1);
+            validateGrid(); drawGrid(); updateSelectionUI(); exportAllDataToTextAreas(); saveState();
+            alert(`Imported ${appliedCount} station cell(s). Existing active stations cleared first. Station IDs updated.`);
+        } catch (error) { console.error("Station import failed:", error); alert("Station import: " + error.message); }
+    }
     
     function exportAllToJson() {
         if (!gridData || gridData.length === 0) { alert("Grid is not initialized."); return; }
         
         // --- Standard Export Data ---
+        pruneStationMeta();
+        const stationProblems = stationMetaProblems();
+        if (stationProblems.length > 0) { alert("Cannot export, fix the stations first:\n\n" + stationProblems.join("\n")); return; }
         const gridLayout = gridData.map(row => row.map(cell => cell.caseIndex));
         const overpasses = [];
-        const stations = [];
-        const exportedStationCells = new Set();
         for (let r = 0; r < numRows; r++) {
             for (let c = 0; c < numCols; c++) {
-                const cell = gridData[r][c];
-                if (cell.isOverpass) { overpasses.push([r, c]); }
-                if (cell.isStation && cell.stationId != null) {
-                    const key = `${cell.stationId}-${r}-${c}`;
-                    if (!exportedStationCells.has(key)) {
-                        stations.push({ id: cell.stationId, r: r, c: c });
-                        exportedStationCells.add(key);
-                    }
-                }
+                if (gridData[r][c].isOverpass) { overpasses.push([r, c]); }
             }
         }
-        stations.sort((a, b) => a.id - b.id || a.r - b.r || a.c - b.c);
+        const stations = buildStationsExport();
 
         // --- Flatland Export Data ---
         const flatlandLine = {
@@ -2644,16 +2954,21 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                     gridData[r][c].isOverpass = true; 
                 } else { console.warn(`Cannot apply overpass from JSON to [${r},${c}]`); } 
             }); 
-            let maxImportedId = 0; 
-            (data.stations || []).forEach(s => { 
-                const {id, r, c} = s; 
-                if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) { 
-                    gridData[r][c].isStation = true; 
-                    gridData[r][c].stationId = id; 
-                    if (id > maxImportedId) maxImportedId = id; 
-                } else { console.warn(`Cannot apply station ID ${id} from JSON to [${r},${c}]`); } 
-            }); 
-            nextStationId = data.nextStationId !== undefined ? data.nextStationId : ((data.stations || []).length > 0 ? Math.max(1, maxImportedId + 1) : 1); 
+            let maxImportedId = 0;
+            (data.stations || []).forEach(s => {
+                const id = s.id;
+                if (id > maxImportedId) maxImportedId = id;
+                if (s.name && s.name !== String(id)) stationNames[id] = s.name;
+                if (s.area) stationAreas[id] = [...s.area];
+                const cellsToApply = importedStationCells(s);
+                cellsToApply.forEach(({ r, c }) => {
+                    if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) {
+                        gridData[r][c].isStation = true;
+                        gridData[r][c].stationId = id;
+                    } else { console.warn(`Cannot apply station ID ${id} from JSON to [${r},${c}]`); }
+                });
+            });
+            nextStationId = data.nextStationId !== undefined ? data.nextStationId : ((data.stations || []).length > 0 ? Math.max(1, maxImportedId + 1) : 1);
             
             // Handle line properties during import
             lines = (data.lines || []).map(line => ({
@@ -2859,7 +3174,10 @@ if __name__ == '__main__':
         redoButton.addEventListener('click', redo);
         rotatePieceButton.addEventListener('click', rotateSelectedCell);
         flipPieceButton.addEventListener('click', flipSelectedCell); 
-        renameStationButton.addEventListener('click', () => { if(!renameStationButton.disabled) performRenameStation(); }); 
+        nameStationButton.addEventListener('click', performNameStation);
+        removeStationAreaButton.addEventListener('click', removeStationArea);
+        stationAreaButton.addEventListener('click', () => setStationAreaMode(true));
+        document.getElementById('cancelStationAreaButton').addEventListener('click', () => setStationAreaMode(false));
         
         // Collapsible Data Section Listener
         dataContainerHeader.addEventListener('click', () => {

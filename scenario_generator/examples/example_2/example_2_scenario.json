@@ -8979,153 +8979,529 @@
   "stations": [
     {
       "id": 1,
-      "r": 61,
-      "c": 19
-    },
-    {
-      "id": 1,
-      "r": 62,
-      "c": 19
-    },
-    {
-      "id": 1,
-      "r": 63,
-      "c": 19
+      "name": "1",
+      "city_position": [
+        62,
+        19
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "1.0",
+          "node": [
+            61,
+            19
+          ]
+        },
+        {
+          "name": "1.1",
+          "node": [
+            62,
+            19
+          ]
+        },
+        {
+          "name": "1.2",
+          "node": [
+            63,
+            19
+          ]
+        }
+      ],
+      "edges": [
+        [
+          61,
+          19
+        ],
+        [
+          62,
+          19
+        ],
+        [
+          63,
+          19
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 2,
-      "r": 16,
-      "c": 88
-    },
-    {
-      "id": 2,
-      "r": 17,
-      "c": 88
-    },
-    {
-      "id": 2,
-      "r": 18,
-      "c": 88
+      "name": "2",
+      "city_position": [
+        17,
+        88
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "2.0",
+          "node": [
+            16,
+            88
+          ]
+        },
+        {
+          "name": "2.1",
+          "node": [
+            17,
+            88
+          ]
+        },
+        {
+          "name": "2.2",
+          "node": [
+            18,
+            88
+          ]
+        }
+      ],
+      "edges": [
+        [
+          16,
+          88
+        ],
+        [
+          17,
+          88
+        ],
+        [
+          18,
+          88
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 3,
-      "r": 22,
-      "c": 36
-    },
-    {
-      "id": 3,
-      "r": 23,
-      "c": 36
+      "name": "3",
+      "city_position": [
+        23,
+        36
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "3.0",
+          "node": [
+            22,
+            36
+          ]
+        },
+        {
+          "name": "3.1",
+          "node": [
+            23,
+            36
+          ]
+        }
+      ],
+      "edges": [
+        [
+          22,
+          36
+        ],
+        [
+          23,
+          36
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 4,
-      "r": 40,
-      "c": 61
-    },
-    {
-      "id": 4,
-      "r": 41,
-      "c": 61
+      "name": "4",
+      "city_position": [
+        41,
+        61
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "4.0",
+          "node": [
+            40,
+            61
+          ]
+        },
+        {
+          "name": "4.1",
+          "node": [
+            41,
+            61
+          ]
+        }
+      ],
+      "edges": [
+        [
+          40,
+          61
+        ],
+        [
+          41,
+          61
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 5,
-      "r": 33,
-      "c": 49
-    },
-    {
-      "id": 5,
-      "r": 33,
-      "c": 50
+      "name": "5",
+      "city_position": [
+        33,
+        50
+      ],
+      "city_orientation": 1,
+      "stopping_points": [
+        {
+          "name": "5.0",
+          "node": [
+            33,
+            49
+          ]
+        },
+        {
+          "name": "5.1",
+          "node": [
+            33,
+            50
+          ]
+        }
+      ],
+      "edges": [
+        [
+          33,
+          49
+        ],
+        [
+          33,
+          50
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 6,
-      "r": 39,
-      "c": 28
-    },
-    {
-      "id": 6,
-      "r": 39,
-      "c": 29
+      "name": "6",
+      "city_position": [
+        39,
+        29
+      ],
+      "city_orientation": 1,
+      "stopping_points": [
+        {
+          "name": "6.0",
+          "node": [
+            39,
+            28
+          ]
+        },
+        {
+          "name": "6.1",
+          "node": [
+            39,
+            29
+          ]
+        }
+      ],
+      "edges": [
+        [
+          39,
+          28
+        ],
+        [
+          39,
+          29
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 7,
-      "r": 17,
-      "c": 61
-    },
-    {
-      "id": 7,
-      "r": 18,
-      "c": 61
+      "name": "7",
+      "city_position": [
+        18,
+        61
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "7.0",
+          "node": [
+            17,
+            61
+          ]
+        },
+        {
+          "name": "7.1",
+          "node": [
+            18,
+            61
+          ]
+        }
+      ],
+      "edges": [
+        [
+          17,
+          61
+        ],
+        [
+          18,
+          61
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 8,
-      "r": 38,
-      "c": 4
-    },
-    {
-      "id": 8,
-      "r": 38,
-      "c": 5
+      "name": "8",
+      "city_position": [
+        38,
+        5
+      ],
+      "city_orientation": 1,
+      "stopping_points": [
+        {
+          "name": "8.0",
+          "node": [
+            38,
+            4
+          ]
+        },
+        {
+          "name": "8.1",
+          "node": [
+            38,
+            5
+          ]
+        }
+      ],
+      "edges": [
+        [
+          38,
+          4
+        ],
+        [
+          38,
+          5
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 9,
-      "r": 3,
-      "c": 11
-    },
-    {
-      "id": 9,
-      "r": 4,
-      "c": 11
+      "name": "9",
+      "city_position": [
+        4,
+        11
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "9.0",
+          "node": [
+            3,
+            11
+          ]
+        },
+        {
+          "name": "9.1",
+          "node": [
+            4,
+            11
+          ]
+        }
+      ],
+      "edges": [
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          11
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 10,
-      "r": 43,
-      "c": 95
-    },
-    {
-      "id": 10,
-      "r": 44,
-      "c": 95
+      "name": "10",
+      "city_position": [
+        44,
+        95
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "10.0",
+          "node": [
+            43,
+            95
+          ]
+        },
+        {
+          "name": "10.1",
+          "node": [
+            44,
+            95
+          ]
+        }
+      ],
+      "edges": [
+        [
+          43,
+          95
+        ],
+        [
+          44,
+          95
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 12,
-      "r": 2,
-      "c": 97
-    },
-    {
-      "id": 12,
-      "r": 3,
-      "c": 97
+      "name": "12",
+      "city_position": [
+        3,
+        97
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "12.0",
+          "node": [
+            2,
+            97
+          ]
+        },
+        {
+          "name": "12.1",
+          "node": [
+            3,
+            97
+          ]
+        }
+      ],
+      "edges": [
+        [
+          2,
+          97
+        ],
+        [
+          3,
+          97
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 13,
-      "r": 56,
-      "c": 100
-    },
-    {
-      "id": 13,
-      "r": 56,
-      "c": 101
+      "name": "13",
+      "city_position": [
+        56,
+        101
+      ],
+      "city_orientation": 1,
+      "stopping_points": [
+        {
+          "name": "13.0",
+          "node": [
+            56,
+            100
+          ]
+        },
+        {
+          "name": "13.1",
+          "node": [
+            56,
+            101
+          ]
+        }
+      ],
+      "edges": [
+        [
+          56,
+          100
+        ],
+        [
+          56,
+          101
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 14,
-      "r": 71,
-      "c": 54
-    },
-    {
-      "id": 14,
-      "r": 72,
-      "c": 54
+      "name": "14",
+      "city_position": [
+        72,
+        54
+      ],
+      "city_orientation": 0,
+      "stopping_points": [
+        {
+          "name": "14.0",
+          "node": [
+            71,
+            54
+          ]
+        },
+        {
+          "name": "14.1",
+          "node": [
+            72,
+            54
+          ]
+        }
+      ],
+      "edges": [
+        [
+          71,
+          54
+        ],
+        [
+          72,
+          54
+        ]
+      ],
+      "gates": {}
     },
     {
       "id": 15,
-      "r": 51,
-      "c": 73
-    },
-    {
-      "id": 15,
-      "r": 51,
-      "c": 74
+      "name": "15",
+      "city_position": [
+        51,
+        74
+      ],
+      "city_orientation": 1,
+      "stopping_points": [
+        {
+          "name": "15.0",
+          "node": [
+            51,
+            73
+          ]
+        },
+        {
+          "name": "15.1",
+          "node": [
+            51,
+            74
+          ]
+        }
+      ],
+      "edges": [
+        [
+          51,
+          73
+        ],
+        [
+          51,
+          74
+        ]
+      ],
+      "gates": {}
     }
   ],
   "nextStationId": 16,
