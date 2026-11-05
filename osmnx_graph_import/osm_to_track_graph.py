@@ -29,11 +29,13 @@ def download_rail_graph(
     (`ox.graph.graph_from_address`).
 
     Every OSM way becomes a single directed edge in OSM node order (`ox.settings.all_oneway = True`, restored
-    afterwards). Only the largest weakly connected component is kept, and nodes outside the boundary are kept
-    if one of their neighbours lies within it.
+    afterwards). Nodes keep the OSM tag `railway:switch` too (e.g. `double_slip`), for `track_graph.load_track_graph`'s
+    messages (`ox.settings.useful_tags_node`, restored afterwards). Only the largest weakly connected component is
+    kept, and nodes outside the boundary are kept if one of their neighbours lies within it.
     """
-    all_oneway = ox.settings.all_oneway
+    all_oneway, useful_tags_node = ox.settings.all_oneway, ox.settings.useful_tags_node
     ox.settings.all_oneway = True
+    ox.settings.useful_tags_node = [*useful_tags_node, "railway:switch"]
     try:
         kwargs = dict(
             retain_all=False,  # only the largest weakly connected component
@@ -45,7 +47,7 @@ def download_rail_graph(
             return ox.graph.graph_from_place(place, **kwargs)
         return ox.graph.graph_from_address(place, dist=dist, **kwargs)
     finally:
-        ox.settings.all_oneway = all_oneway
+        ox.settings.all_oneway, ox.settings.useful_tags_node = all_oneway, useful_tags_node
 
 
 def true_switches(G: nx.MultiDiGraph) -> set[int]:

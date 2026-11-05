@@ -16,6 +16,26 @@ DATA_DIR = Path(__file__).parent
 GRAPHS = {"walensee.graphml": False, "sargans_reversing_loop.graphml": True}
 
 
+@pytest.mark.parametrize("tags,named", [
+    ({"railway": "railway_crossing"}, "railway=railway_crossing"),
+    ({"railway": "switch", "railway:switch": "double_slip"}, "railway=switch, railway:switch=double_slip"),
+])
+def test_load_track_graph_degree_over_3(tmp_path: Path, tags: dict, named: str):
+    """A crossing or a double slip - node 1 with four tracks to the buffer stops 2-5 - is rejected, with its OSM tags
+    and a link to it on openstreetmap.org."""
+    G = nx.MultiDiGraph(crs="epsg:4326")
+    G.add_node(1, x=9.0, y=47.0, **tags)
+    for n, (dx, dy) in zip(range(2, 6), [(1, 0), (-1, 0), (0, 1), (0, -1)]):
+        G.add_node(n, x=9.0 + dx * 0.001, y=47.0 + dy * 0.001, railway="buffer_stop")
+        G.add_edge(1, n, length=100.0)
+    ox.io.save_graphml(G, filepath=tmp_path / "crossing.graphml")
+
+    with pytest.raises(ValueError, match="crossings and double slips are not supported") as e:
+        load_track_graph(tmp_path / "crossing.graphml")
+
+    assert f"1 ({named}, in+out degree 4, https://www.openstreetmap.org/node/1)" in str(e.value)
+
+
 def valid_moves(track_graph: nx.DiGraph) -> set[tuple[int, int, int]]:
     """All (a, b, c) such that a train can go from a via b to c: not leg to leg through a switch b."""
     track_graph_proj = ox.projection.project_graph(nx.MultiDiGraph(track_graph))

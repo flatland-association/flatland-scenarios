@@ -28,7 +28,7 @@ def load_track_graph(filepath: str | Path) -> nx.DiGraph:
     |---|------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | 1 | No parallel edges: one key per `(u, v)`                                                  | Converting to a DiGraph would merge parallel edges (two tracks between the same pair of nodes).                                                            |
     | 2 | No self-loops, no edge in both directions (`u -> v` and `v -> u`)                        | `to_undirected()` (used by the GraphRailEnv conversion) would merge such edges.                                                                             |
-    | 3 | Every node has in+out degree <= 3                                                        | A switch has exactly one point and two legs.                                                                                                                |
+    | 3 | Every node has in+out degree <= 3                                                        | A switch has exactly one point and two legs. Crossings and double slips are not supported: the message names them, choose an extent without them.           |
     | 4 | Every switch has the OSM tag `railway=switch`                                            | Consistency of the OSM tags with the topology (see the comment in the code).                                                                                |
     | 5 | No interstitial nodes, except a single one between two switches                         | The graph is simplified; `simplify_graph_keep_switch_intermediate` keeps one interstitial node between two switches on purpose.                            |
     | 6 | Every node has coordinates `x`, `y`; every edge has a `length` > 0                       | Switch geometry (left/right, closest legs) and edge lengths in metres.                                                                                      |
@@ -51,7 +51,10 @@ def load_track_graph(filepath: str | Path) -> nx.DiGraph:
     # 3
     over_degree = {n: G.in_degree(n) + G.out_degree(n) for n in G.nodes if G.in_degree(n) + G.out_degree(n) > 3}
     if over_degree:
-        raise ValueError(f"node(s) with in+out degree > 3: {over_degree}")
+        nodes = "; ".join(f"{n} ({_osm_node_tags(G.nodes[n])}, in+out degree {degree}, https://www.openstreetmap.org/node/{n})"
+                          for n, degree in over_degree.items())
+        raise ValueError(f"node(s) with in+out degree > 3 - crossings and double slips are not supported, choose a place "
+                         f"or radius without them: {nodes}")
 
     # 4
     # N.B. this checks the OSM tagging, not the topology, and might fail for other places than the ones we have looked
@@ -80,6 +83,12 @@ def load_track_graph(filepath: str | Path) -> nx.DiGraph:
         raise ValueError(f"edge(s) without a length > 0: {bad_lengths}")
 
     return nx.DiGraph(G)
+
+
+def _osm_node_tags(data: dict) -> str:
+    """The OSM tags telling a node's type (e.g. `railway=railway_crossing`, `railway:switch=double_slip`)."""
+    tags = [f"{tag}={data[tag]}" for tag in ("railway", "railway:switch") if data.get(tag) is not None]
+    return ", ".join(tags) if tags else "no railway tag"
 
 
 PRIME_SUFFIX = "_prime"
