@@ -1,0 +1,90 @@
+from pathlib import Path
+
+import networkx as nx
+import osmnx as ox
+import pytest
+
+from osm_to_track_graph import true_switches
+from switch_geometry import legs_from_geometry
+from track_graph import build_double_vertex_graph, load_track_graph, opposite_vertex, track_node
+
+DATA_DIR = Path(__file__).parent
+
+# walensee.graphml: Walenstadt (download_rail_graph_fixed("Walenstadt")), no reversing loop.
+# sargans_reversing_loop.graphml: a reversing loop around Sargans (from download_rail_graph("Walenstadt", dist=15000)),
+# with all tracks attached to it.
+GRAPHS = {"walensee.graphml": False, "sargans_reversing_loop.graphml": True}
+
+
+@pytest.mark.parametrize("tags,named", [
+    ({"railway": "railway_crossing"}, "railway=railway_crossing"),
+    ({"railway": "switch", "railway:switch": "double_slip"}, "railway=switch, railway:switch=double_slip"),
+])
+def test_load_track_graph_degree_over_3(tmp_path: Path, tags: dict, named: str):
+    """A crossing or a double slip - node 1 with four tracks to the buffer stops 2-5 - is rejected, with its OSM tags
+    and a link to it on openstreetmap.org."""
+    G = nx.MultiDiGraph(crs="epsg:4326")
+    G.add_node(1, x=9.0, y=47.0, **tags)
+    for n, (dx, dy) in zip(range(2, 6), [(1, 0), (-1, 0), (0, 1), (0, -1)]):
+        G.add_node(n, x=9.0 + dx * 0.001, y=47.0 + dy * 0.001, railway="buffer_stop")
+        G.add_edge(1, n, length=100.0)
+    ox.io.save_graphml(G, filepath=tmp_path / "crossing.graphml")
+
+    with pytest.raises(ValueError, match="crossings and double slips are not supported") as e:
+        load_track_graph(tmp_path / "crossing.graphml")
+
+    assert f"1 ({named}, in+out degree 4, https://www.openstreetmap.org/node/1)" in str(e.value)
+
+
+def valid_moves(track_graph: nx.DiGraph) -> set[tuple[int, int, int]]:
+    """All (a, b, c) such that a train can go from a via b to c: not leg to leg through a switch b."""
+    track_graph_proj = ox.projection.project_graph(nx.MultiDiGraph(track_graph))
+    undirected = track_graph.to_undirected()
+    switches = true_switches(track_graph)
+    moves = set()
+    for b in undirected.nodes:
+        legs = set(legs_from_geometry(track_graph_proj, b)) if b in switches else None
+        for a in undirected.neighbors(b):
+            for c in undirected.neighbors(b):
+                if a != c and {a, c} != legs:
+                    moves.add((a, b, c))
+    return moves
+
+
+def assert_double_vertex_graph(track_graph: nx.DiGraph, double_vertex_graph: nx.DiGraph):
+    """Assert `double_vertex_graph` is a correct double vertex graph of `track_graph`."""
+    assert double_vertex_graph.number_of_nodes() == 2 * track_graph.number_of_nodes()
+    assert double_vertex_graph.number_of_edges() == 2 * track_graph.number_of_edges()
+    # edge duality
+    for a, b in double_vertex_graph.edges:
+        assert double_vertex_graph.has_edge(opposite_vertex(b), opposite_vertex(a)), (a, b)
+    # every edge is a track
+    for a, b in double_vertex_graph.edges:
+        assert track_graph.has_edge(track_node(a), track_node(b)) or track_graph.has_edge(track_node(b), track_node(a)), (a, b)
+    # the double vertex graph has exactly the valid moves of the track graph - as each direction of a track is a single
+    # edge, it follows that every track graph path made of valid moves is a double vertex graph path, and vice versa
+    moves = {(track_node(a), track_node(b), track_node(c)) for a, b in double_vertex_graph.edges for c in double_vertex_graph.successors(b)}
+    assert moves == valid_moves(track_graph)
+
+
+@pytest.mark.parametrize("filename", GRAPHS)
+def test_build_double_vertex_graph(filename: str):
+    track_graph = load_track_graph(DATA_DIR / filename)
+
+    double_vertex_graph = build_double_vertex_graph(track_graph)
+
+    assert_double_vertex_graph(track_graph, double_vertex_graph)
+
+
+@pytest.mark.parametrize("filename,reversing", GRAPHS.items())
+def test_build_double_vertex_graph_reversing_loop(filename: str, reversing: bool):
+    double_vertex_graph = build_double_vertex_graph(load_track_graph(DATA_DIR / filename))
+
+    # with a reversing loop, a train can come back to a node facing the other way
+    assert any(nx.has_path(double_vertex_graph, v, opposite_vertex(v)) for v in double_vertex_graph.nodes) == reversing
+
+
+def test_build_double_vertex_graph_deterministic():
+    track_graph = load_track_graph(DATA_DIR / "sargans_reversing_loop.graphml")
+
+    assert list(build_double_vertex_graph(track_graph).edges) == list(build_double_vertex_graph(track_graph).edges)

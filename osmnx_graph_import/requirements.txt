@@ -1,0 +1,19 @@
+# Dependencies of the osmnx graph import: its modules, tests and notebook (pip install -r osmnx_graph_import/requirements.txt).
+# TODO depend on flatland-rl main, and finally a released version, once branch 526-edge-lengths (edge lengths,
+# `GraphRailEnv.from_graph`) is merged and released - for now it requires that branch.
+flatland-rl @ git+https://github.com/flatland-association/flatland-rl.git@526-edge-lengths
+# track_graph uses osmnx's simplification internals (`_get_paths_to_simplify`) of osmnx 2
+osmnx>=2,<3
+geopandas
+networkx
+pandas
+shapely
+pytest
+# notebook
+jupyter
+matplotlib
+folium>=0.12
+mapclassify
+ipyleaflet>=0.19
+ipywidgets
+pillow
