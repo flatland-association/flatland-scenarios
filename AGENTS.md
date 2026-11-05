@@ -10,8 +10,9 @@ There is no `pyproject.toml`/`requirements.txt`: flatland-rl (and, for some part
 from git. CI (`.github/workflows/checks.yml`) pins both to the refs marked `# DEPENDENCY SWITCH` (currently `v4.3.0`).
 
 `osmnx_graph_import` is the exception: it needs flatland-rl's branch `526-edge-lengths` (TODO: main, then a release,
-once merged), plus osmnx etc. - its dependencies are listed in the first code cell of
-`osmnx_graph_import/flatland_osmnx_import_pipeline.ipynb`. It is not run in CI.
+once merged), plus osmnx etc. - its dependencies are in `osmnx_graph_import/requirements.txt`. CI's job
+`run-osmnx-graph-import` installs them and runs its tests (offline); the notebook is not run in CI, as its live Overpass
+downloads fail too often.
 
 ## Tests
 
