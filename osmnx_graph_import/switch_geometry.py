@@ -19,9 +19,9 @@ DISTANCE = 10  # metres along the edge, measured from the switch
 CLEAR_ANGLE_DIFFERENCE = 5
 
 
-def oriented_geometry(graph: nx.MultiDiGraph, u: int, v: int, k: int, start: int) -> LineString:
-    """Geometry of edge (u, v, k) as a LineString that starts at node `start`."""
-    geom = graph.edges[u, v, k].get("geometry")
+def oriented_geometry(graph: nx.MultiDiGraph | nx.DiGraph, u: int | str, v: int | str, k: int | None, start: int | str) -> LineString:
+    """Geometry of edge (u, v, k) - (u, v) with `k` None, in a DiGraph - as a LineString that starts at node `start`."""
+    geom = (graph.edges[u, v] if k is None else graph.edges[u, v, k]).get("geometry")
     if geom is None:
         # unsimplified graph: the edge is the straight segment between its two nodes
         geom = LineString([(graph.nodes[u]["x"], graph.nodes[u]["y"]),

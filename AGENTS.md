@@ -54,6 +54,9 @@ the geometry is clear (`CLEAR_ANGLE_DIFFERENCE`), else the only one with the poi
 straighter leg - and so whether it diverges left or right. A warning is logged when the tags contradict a clear
 geometry; see `switch_legs`.
 
+`coordinates.py` places the vertices and trains of a graph rail env on the map, as (lat, lon): a vertex at its OSM
+node, a train along its edge's geometry at its offset on the edge. There is no grid representation.
+
 The osmnx_graph_import tests must not download anything: they use the committed GraphML files or hard-coded OSM data
 (e.g. `test_switch_geometry.py`). Live downloads (notebook, `osm_to_track_graph`) go through osmnx's cache in `./cache`
 and the public Overpass API, which rate-limits heavy use.
