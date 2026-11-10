@@ -224,7 +224,7 @@ you use `generate_scenario.py` to generate your scenario, do this before running
 {
   "malfunctions": {
     "scheduled": [
-      {"train": "Z-W-1-S", "step": 28, "duration": 12},
+      {"train": "IC3", "step": 28, "duration": 12},
       {"handle": 2, "step": 40, "duration": 5}
     ]
   },
