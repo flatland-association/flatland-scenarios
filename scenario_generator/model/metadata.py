@@ -1,27 +1,15 @@
 from pathlib import Path
 from typing import List, Any
 
-from flatland.envs.malfunction_generators import MalfunctionParameters
+from scenario_generator.model.config import to_malfunction_parameters
 from scenario_generator.model.scenario import Scenario, ScenarioBuilder
 
 
 def derive_scenario_from_initial_scenario_and_metadata(initial_scenario: Scenario, level_metadata, scenario_metadata, timetables=None) -> Scenario:
     # merge defaults with scenario-specific specs
     timetable_specs = _merge(level_metadata, scenario_metadata, "timetableSpecs")
-    malfunction_specs = _merge(level_metadata, scenario_metadata, "malfunctionSpecs")
-    if malfunction_specs is not None:
-        malfunction_specs = MalfunctionParameters(
-            min_duration=malfunction_specs["malfunction_duration_min"],
-            max_duration=malfunction_specs["malfunction_duration_max"],
-            malfunction_rate=1 / malfunction_specs["malfunction_interval"]
-        )
-    departure_malfunction_specs = _merge(level_metadata, scenario_metadata, "departureMalfunctionSpecs")
-    if departure_malfunction_specs is not None:
-        departure_malfunction_specs = MalfunctionParameters(
-            min_duration=departure_malfunction_specs["malfunction_duration_min"],
-            max_duration=departure_malfunction_specs["malfunction_duration_max"],
-            malfunction_rate=1 / departure_malfunction_specs["malfunction_interval"]
-        )
+    malfunction_specs = to_malfunction_parameters(_merge(level_metadata, scenario_metadata, "malfunctionSpecs"))
+    departure_malfunction_specs = to_malfunction_parameters(_merge(level_metadata, scenario_metadata, "departureMalfunctionSpecs"))
     seed = scenario_metadata.get("seed", None)
     derived_scenario = (
         ScenarioBuilder(initial_scenario)

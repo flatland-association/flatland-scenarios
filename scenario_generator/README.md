@@ -109,10 +109,13 @@ flowchart LR
 |-------------------------------------------------------|
 | [`Initialize grid`](#initialize-grid)                 |
 | [`Draw grid-world`](#draw-grid-world)                 |
+| [`Name stations and mark their areas`](#name-stations-and-mark-their-areas) |
 | [`Create Lines`](#create-lines)                       |
 | [`Define train categories`](#define-train-categories) |
 | [`Create Timetables`](#create-timetables)             |
 | [`Export environment`](#export-environment)           |
+
+To turn an export into a Flatland `.pkl`, see [Build a scenario from a drawing and a config.json](#build-a-scenario-from-a-drawing-and-a-configjson).
 
 ### Initialize grid
 
@@ -132,12 +135,47 @@ Use the arrow keys to navigate on the grid and the keyboard shortcuts listed in 
 
 :bulb: Station-cells adjacent to each other have the same station-id, i.e. belong to the same station.
 
+### Name stations and mark their areas
+
+Stations keep their numeric id internally (lines and timetables refer to it). Select a station cell and press *Name Station* (D) to give it a name, e.g.
+*Ziegelbrücke*. Names must be unique and must not contain `.`; an empty name goes back to the id. The export names a station by its name, else by its id.
+
+Press *Station Area* (A) and drag a rectangle around a station, including its switches; the rectangle runs through the mid-points of its border cells.
+The area must span at least two rows and two columns, contain all platform cells of exactly one station and must not overlap another station's area;
+dragging again replaces it, *Remove Station Area* removes it. From the area the tool derives the station's gates
+and pins and draws them:
+
+- the station's **tracks** are the cells connected to its platforms by track inside the area, in either direction of travel, so passing loops off its
+  switches count (tinted); a through track without a switch to the platforms inside the area is not part of the station
+- a **pin** is a cell of the station's tracks where a track leaves the area
+- a **gate** is a run of adjacent pins on one side, named by the side (`N`, `E`, `S`, `W`), or `E1`, `E2`, ... along the border when a side has several
+
+An area that no longer fits its station (e.g. after editing the platforms) is drawn red, and the export refuses until it is fixed.
+
+The export describes each station in the vocabulary of Flatland's
+[stations and links](https://flatland-association.github.io/flatland-book/environment/environment/stations_links.html), with fully qualified names, plus
+the tool's `id`, `area` and the `city_position`/`city_orientation` hints:
+
+```json
+{
+  "id": 3, "name": "Ziegelbrücke", "city_position": [3, 4], "city_orientation": 1,
+  "stopping_points": [{"name": "Ziegelbrücke.0", "node": [2, 4]}, {"name": "Ziegelbrücke.1", "node": [3, 4]}],
+  "edges": [[2, 3], [2, 4], [2, 5], [3, 3], [3, 4], [3, 5], [4, 3], [4, 4], [4, 5]],
+  "gates": {"W": {"name": "Ziegelbrücke.W", "pins": {"0": {"name": "Ziegelbrücke.W.0", "node": [2, 3]}, "1": {"name": "Ziegelbrücke.W.1", "node": [3, 3]}}},
+            "E": {"name": "Ziegelbrücke.E", "pins": {"0": {"name": "Ziegelbrücke.E.0", "node": [2, 5]}, "1": {"name": "Ziegelbrücke.E.1", "node": [3, 5]}}}},
+  "area": [2, 3, 4, 5]
+}
+```
+
+An unnamed station is named by its id; without an area, its edges are its stopping points and it has no gates. The generated Flatland environment
+(`env.stations_links`) takes these as they are. Links between stations are not derived yet. Older exports (`station_cells`) still import.
+
 ### Create Lines
 
 To create Lines click the *Lines & Timetables* button. Each Line has
 
 - a unique **name**
-- an **ordered list of stations** (can be created by clicking on the map or comma separated manual input)
+- an **ordered list of stations** (selected by clicking them on the map, shown with their ids and names)
 - **start cell** and **end cell** (intermediate stations are identified through all corresponding cells to allow for the use of this flexibility)
 
 Once a Line is created, you can display the shortest path lengths between the stations and the Line can be
@@ -176,6 +214,38 @@ You can use the *raw data import* at the bottom to only export the grid, overpas
 
 Click the *Flatland Download* button to download `flatland_import.py` to create the Flatland environment and save it as .pkl to then run your simulation. (If
 you use `generate_scenario.py` to generate your scenario, do this before running `flatland_import.py`.)
+
+## Build a scenario from a drawing and a config.json
+
+`scenario_generator/model/config.py` turns a drawing-tool export and a small `config.json` into one scenario: the scenario `.json` and the Flatland
+`.pkl` (`RailEnvPersister` format). Example `config.json`:
+
+```json
+{
+  "malfunctions": {
+    "scheduled": [
+      {"train": "IC3", "step": 28, "duration": 12},
+      {"handle": 2, "step": 40, "duration": 5}
+    ]
+  },
+  "seed": 42
+}
+```
+
+- **`malfunctions.scheduled`**: a train breaks down at `step` for `duration` steps. Name it by its timetable name in the tool (`train`) or by its
+  handle (`handle`, the timetable's position in the tool, from 0).
+- **`malfunctions.breakdown`** / **`malfunctions.departure`** (optional): random malfunctions,
+  `{"malfunction_interval": 540, "malfunction_duration_min": 20, "malfunction_duration_max": 50}`. Leave them out for a reproducible scenario.
+- **`timetableSpecs`** (optional): generate the timetables as in `metadata.json`; without it the tool's timetables are taken as they are.
+- **`seed`** (optional).
+
+Run from the repository root:
+
+```shell
+PYTHONPATH=. python -m scenario_generator.model.config drawn_environment_export.json config.json my_scenario --output-folder out
+```
+
+This writes `out/my_scenario.json` and `out/my_scenario.pkl`. Add `--no-pkl` to write only the `.json`.
 
 ## Generate scenario
 
