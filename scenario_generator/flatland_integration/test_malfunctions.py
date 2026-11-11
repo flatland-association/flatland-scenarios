@@ -71,3 +71,17 @@ def test_scheduled_malfunction_effects_generator_state_round_trip():
 
     assert isinstance(restored, ScheduledMalfunctionEffectsGenerator)
     assert restored.malfunctions == malfunctions
+
+
+def test_scheduled_malfunction_effects_generator_is_stored_under_flatlands_class_path():
+    # The .pkls must load where only flatland (or ui-hub's compat copy) provides the class.
+    state = ScheduledMalfunctionEffectsGenerator([ScheduledMalfunction(handle=0, step=5, duration=3)]).__getstate__()
+
+    assert state["cls"] == "flatland.envs.malfunction_effects_generators.ScheduledMalfunctionEffectsGenerator"
+
+
+def test_scheduled_malfunction_rejects_invalid_step_and_duration():
+    with pytest.raises(ValueError, match="step"):
+        ScheduledMalfunctionEffectsGenerator([ScheduledMalfunction(handle=0, step=0, duration=3)])
+    with pytest.raises(ValueError, match="duration"):
+        ScheduledMalfunctionEffectsGenerator([ScheduledMalfunction(handle=0, step=1, duration=0)])
