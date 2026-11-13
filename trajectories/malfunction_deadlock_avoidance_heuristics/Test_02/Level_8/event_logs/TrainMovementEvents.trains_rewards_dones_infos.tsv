@@ -1271,7 +1271,7 @@ Test_02_Level_8	64	8	0.0	{'action_required': False, 'malfunction': 0, 'speed': F
 Test_02_Level_8	64	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.WAITING: 0>}	False
 Test_02_Level_8	64	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 4), 'state': <TrainState.WAITING: 0>}	False
 Test_02_Level_8	64	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
-Test_02_Level_8	64	12	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	64	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	64	13	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.WAITING: 0>}	False
 Test_02_Level_8	64	14	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	64	15	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.MOVING: 3>}	False
@@ -4472,12 +4472,12 @@ Test_02_Level_8	224	9	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	224	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	224	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	224	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	224	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	224	13	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	224	14	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	224	15	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	224	15	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	224	16	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 4), 'state': <TrainState.WAITING: 0>}	False
 Test_02_Level_8	224	17	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	224	18	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	224	18	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	224	19	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	225	0	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	225	1	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.MOVING: 3>}	False
@@ -4492,12 +4492,12 @@ Test_02_Level_8	225	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': 
 Test_02_Level_8	225	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	225	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	225	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	225	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	225	13	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	225	14	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	225	15	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	225	15	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	225	16	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 4), 'state': <TrainState.WAITING: 0>}	False
 Test_02_Level_8	225	17	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	225	18	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	225	18	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	225	19	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	226	0	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	226	1	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.MOVING: 3>}	False
@@ -5961,7 +5961,7 @@ Test_02_Level_8	298	18	0.0	{'action_required': False, 'malfunction': 0, 'speed':
 Test_02_Level_8	298	19	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	299	0	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	299	1	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	299	2	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	299	2	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	299	3	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	299	4	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	299	5	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
@@ -5969,7 +5969,7 @@ Test_02_Level_8	299	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	299	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	299	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	299	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	299	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	299	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	299	11	0.0	{'action_required': False, 'malfunction': 6, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	299	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	299	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
@@ -5981,7 +5981,7 @@ Test_02_Level_8	299	18	0.0	{'action_required': False, 'malfunction': 0, 'speed':
 Test_02_Level_8	299	19	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	300	0	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	300	1	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	300	2	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	300	2	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	300	3	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	300	4	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	300	5	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
@@ -5989,7 +5989,7 @@ Test_02_Level_8	300	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	300	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	300	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	300	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	300	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	300	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	300	11	0.0	{'action_required': False, 'malfunction': 5, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	300	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	300	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
@@ -6009,7 +6009,7 @@ Test_02_Level_8	301	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	301	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	301	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	301	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	301	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	301	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	301	11	0.0	{'action_required': False, 'malfunction': 4, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	301	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	301	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
@@ -6029,7 +6029,7 @@ Test_02_Level_8	302	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	302	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	302	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	302	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	302	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	302	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	302	11	0.0	{'action_required': False, 'malfunction': 3, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	302	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	302	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
@@ -6049,7 +6049,7 @@ Test_02_Level_8	303	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	303	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	303	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	303	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	303	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	303	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	303	11	0.0	{'action_required': False, 'malfunction': 2, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	303	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	303	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
@@ -6069,7 +6069,7 @@ Test_02_Level_8	304	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	304	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	304	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	304	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	304	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	304	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	304	11	0.0	{'action_required': False, 'malfunction': 1, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	304	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	304	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
@@ -6089,7 +6089,7 @@ Test_02_Level_8	305	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	305	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	305	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	305	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	305	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	305	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	305	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	305	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	305	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
@@ -6109,7 +6109,7 @@ Test_02_Level_8	306	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	306	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	306	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	306	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	306	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	306	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	306	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	306	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	306	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
@@ -6129,7 +6129,7 @@ Test_02_Level_8	307	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	307	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	307	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	307	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	307	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	307	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	307	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	307	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	307	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
@@ -6149,7 +6149,7 @@ Test_02_Level_8	308	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	308	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	308	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	308	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	308	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	308	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	308	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	308	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	308	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
@@ -6169,7 +6169,7 @@ Test_02_Level_8	309	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	309	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	309	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	309	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	309	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	309	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	309	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	309	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	309	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
@@ -6189,7 +6189,7 @@ Test_02_Level_8	310	6	0.0	{'action_required': True, 'malfunction': 0, 'speed': F
 Test_02_Level_8	310	7	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	310	8	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	310	9	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	310	10	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
+Test_02_Level_8	310	10	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	310	11	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	310	12	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	310	13	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 1), 'state': <TrainState.MOVING: 3>}	False
@@ -6201,7 +6201,7 @@ Test_02_Level_8	310	18	0.0	{'action_required': False, 'malfunction': 0, 'speed':
 Test_02_Level_8	310	19	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	311	0	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	311	1	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	311	2	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.MOVING: 3>}	False
+Test_02_Level_8	311	2	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	311	3	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	311	4	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	311	5	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
@@ -6221,7 +6221,7 @@ Test_02_Level_8	311	18	0.0	{'action_required': False, 'malfunction': 0, 'speed':
 Test_02_Level_8	311	19	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	312	0	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	312	1	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
-Test_02_Level_8	312	2	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.MOVING: 3>}	False
+Test_02_Level_8	312	2	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(0, 1), 'state': <TrainState.STOPPED: 4>}	False
 Test_02_Level_8	312	3	0.0	{'action_required': True, 'malfunction': 0, 'speed': Fraction(1, 3), 'state': <TrainState.MOVING: 3>}	False
 Test_02_Level_8	312	4	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
 Test_02_Level_8	312	5	0.0	{'action_required': False, 'malfunction': 0, 'speed': Fraction(1, 2), 'state': <TrainState.DONE: 6>}	True
