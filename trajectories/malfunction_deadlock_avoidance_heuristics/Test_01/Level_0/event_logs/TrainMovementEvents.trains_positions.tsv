@@ -1,1275 +1,1338 @@
 episode_id	env_time	agent_id	position
-Test_01_Level_0	1	0	(None, 0)
-Test_01_Level_0	1	1	(None, 0)
-Test_01_Level_0	1	2	(None, 2)
-Test_01_Level_0	1	3	(None, 0)
-Test_01_Level_0	1	4	(None, 2)
-Test_01_Level_0	1	5	(None, 0)
-Test_01_Level_0	1	6	(None, 0)
-Test_01_Level_0	2	0	(None, 0)
-Test_01_Level_0	2	1	(None, 0)
-Test_01_Level_0	2	2	(None, 2)
-Test_01_Level_0	2	3	(None, 0)
-Test_01_Level_0	2	4	(None, 2)
-Test_01_Level_0	2	5	(None, 0)
-Test_01_Level_0	2	6	(None, 0)
-Test_01_Level_0	3	0	(None, 0)
-Test_01_Level_0	3	1	(None, 0)
-Test_01_Level_0	3	2	(None, 2)
-Test_01_Level_0	3	3	(None, 0)
-Test_01_Level_0	3	4	(None, 2)
-Test_01_Level_0	3	5	(None, 0)
-Test_01_Level_0	3	6	(None, 0)
-Test_01_Level_0	4	0	(None, 0)
-Test_01_Level_0	4	1	(None, 0)
-Test_01_Level_0	4	2	(None, 2)
-Test_01_Level_0	4	3	(None, 0)
-Test_01_Level_0	4	4	(None, 2)
-Test_01_Level_0	4	5	(None, 0)
-Test_01_Level_0	4	6	(None, 0)
-Test_01_Level_0	5	0	(None, 0)
-Test_01_Level_0	5	1	(None, 0)
-Test_01_Level_0	5	2	(None, 2)
-Test_01_Level_0	5	3	(None, 0)
-Test_01_Level_0	5	4	(None, 2)
-Test_01_Level_0	5	5	(None, 0)
-Test_01_Level_0	5	6	(None, 0)
-Test_01_Level_0	6	0	(None, 0)
-Test_01_Level_0	6	1	(None, 0)
-Test_01_Level_0	6	2	(None, 2)
-Test_01_Level_0	6	3	(None, 0)
-Test_01_Level_0	6	4	(None, 2)
-Test_01_Level_0	6	5	(None, 0)
-Test_01_Level_0	6	6	(None, 0)
-Test_01_Level_0	7	0	(None, 0)
-Test_01_Level_0	7	1	(None, 0)
-Test_01_Level_0	7	2	(None, 2)
-Test_01_Level_0	7	3	((10, 7), 0)
-Test_01_Level_0	7	4	(None, 2)
-Test_01_Level_0	7	5	(None, 0)
-Test_01_Level_0	7	6	(None, 0)
-Test_01_Level_0	8	0	(None, 0)
-Test_01_Level_0	8	1	(None, 0)
-Test_01_Level_0	8	2	(None, 2)
-Test_01_Level_0	8	3	((9, 7), 0)
-Test_01_Level_0	8	4	(None, 2)
-Test_01_Level_0	8	5	(None, 0)
-Test_01_Level_0	8	6	(None, 0)
-Test_01_Level_0	9	0	((10, 7), 0)
-Test_01_Level_0	9	1	(None, 0)
-Test_01_Level_0	9	2	(None, 2)
-Test_01_Level_0	9	3	((8, 7), 0)
-Test_01_Level_0	9	4	(None, 2)
-Test_01_Level_0	9	5	(None, 0)
-Test_01_Level_0	9	6	(None, 0)
-Test_01_Level_0	10	0	((10, 7), 0)
-Test_01_Level_0	10	1	(None, 0)
-Test_01_Level_0	10	2	(None, 2)
-Test_01_Level_0	10	3	((7, 7), 0)
-Test_01_Level_0	10	4	(None, 2)
-Test_01_Level_0	10	5	(None, 0)
-Test_01_Level_0	10	6	(None, 0)
-Test_01_Level_0	11	0	((10, 7), 0)
-Test_01_Level_0	11	1	(None, 0)
-Test_01_Level_0	11	2	(None, 2)
-Test_01_Level_0	11	3	((6, 7), 0)
-Test_01_Level_0	11	4	(None, 2)
-Test_01_Level_0	11	5	(None, 0)
-Test_01_Level_0	11	6	(None, 0)
-Test_01_Level_0	12	0	((10, 7), 0)
-Test_01_Level_0	12	1	(None, 0)
-Test_01_Level_0	12	2	(None, 2)
-Test_01_Level_0	12	3	((5, 7), 0)
-Test_01_Level_0	12	4	(None, 2)
-Test_01_Level_0	12	5	(None, 0)
-Test_01_Level_0	12	6	(None, 0)
-Test_01_Level_0	13	0	((9, 7), 0)
-Test_01_Level_0	13	1	(None, 0)
-Test_01_Level_0	13	2	((24, 12), 2)
-Test_01_Level_0	13	3	((5, 8), 1)
-Test_01_Level_0	13	4	(None, 2)
-Test_01_Level_0	13	5	((10, 7), 0)
-Test_01_Level_0	13	6	(None, 0)
-Test_01_Level_0	14	0	((9, 7), 0)
-Test_01_Level_0	14	1	(None, 0)
-Test_01_Level_0	14	2	((24, 12), 2)
-Test_01_Level_0	14	3	((5, 9), 1)
-Test_01_Level_0	14	4	(None, 2)
-Test_01_Level_0	14	5	((10, 7), 0)
-Test_01_Level_0	14	6	(None, 0)
-Test_01_Level_0	15	0	((9, 7), 0)
-Test_01_Level_0	15	1	(None, 0)
-Test_01_Level_0	15	2	((24, 12), 2)
-Test_01_Level_0	15	3	((5, 10), 1)
-Test_01_Level_0	15	4	(None, 2)
-Test_01_Level_0	15	5	((10, 7), 0)
-Test_01_Level_0	15	6	(None, 0)
-Test_01_Level_0	16	0	((9, 7), 0)
-Test_01_Level_0	16	1	(None, 0)
-Test_01_Level_0	16	2	((24, 12), 2)
-Test_01_Level_0	16	3	((5, 11), 1)
-Test_01_Level_0	16	4	(None, 2)
-Test_01_Level_0	16	5	((10, 7), 0)
-Test_01_Level_0	16	6	(None, 0)
-Test_01_Level_0	17	0	((8, 7), 0)
-Test_01_Level_0	17	1	(None, 0)
-Test_01_Level_0	17	2	((25, 12), 2)
-Test_01_Level_0	17	3	((5, 12), 1)
-Test_01_Level_0	17	4	(None, 2)
-Test_01_Level_0	17	5	((9, 7), 0)
-Test_01_Level_0	17	6	(None, 0)
-Test_01_Level_0	18	0	((8, 7), 0)
-Test_01_Level_0	18	1	(None, 0)
-Test_01_Level_0	18	2	((25, 12), 2)
-Test_01_Level_0	18	3	((6, 12), 2)
-Test_01_Level_0	18	4	(None, 2)
-Test_01_Level_0	18	5	((9, 7), 0)
-Test_01_Level_0	18	6	(None, 0)
-Test_01_Level_0	19	0	((8, 7), 0)
-Test_01_Level_0	19	1	(None, 0)
-Test_01_Level_0	19	2	((25, 12), 2)
-Test_01_Level_0	19	3	((7, 12), 2)
-Test_01_Level_0	19	4	(None, 2)
-Test_01_Level_0	19	5	((9, 7), 0)
-Test_01_Level_0	19	6	(None, 0)
-Test_01_Level_0	20	0	((8, 7), 0)
-Test_01_Level_0	20	1	(None, 0)
-Test_01_Level_0	20	2	((25, 12), 2)
-Test_01_Level_0	20	3	((8, 12), 2)
-Test_01_Level_0	20	4	(None, 2)
-Test_01_Level_0	20	5	((9, 7), 0)
-Test_01_Level_0	20	6	(None, 0)
-Test_01_Level_0	21	0	((7, 7), 0)
-Test_01_Level_0	21	1	(None, 0)
-Test_01_Level_0	21	2	((26, 12), 2)
-Test_01_Level_0	21	3	((9, 12), 2)
-Test_01_Level_0	21	4	(None, 2)
-Test_01_Level_0	21	5	((8, 7), 0)
-Test_01_Level_0	21	6	(None, 0)
-Test_01_Level_0	22	0	((7, 7), 0)
-Test_01_Level_0	22	1	(None, 0)
-Test_01_Level_0	22	2	((26, 12), 2)
-Test_01_Level_0	22	3	((10, 12), 2)
-Test_01_Level_0	22	4	(None, 2)
-Test_01_Level_0	22	5	((8, 7), 0)
-Test_01_Level_0	22	6	(None, 0)
-Test_01_Level_0	23	0	((7, 7), 0)
-Test_01_Level_0	23	1	(None, 0)
-Test_01_Level_0	23	2	((26, 12), 2)
-Test_01_Level_0	23	3	((11, 12), 2)
-Test_01_Level_0	23	4	(None, 2)
-Test_01_Level_0	23	5	((8, 7), 0)
-Test_01_Level_0	23	6	(None, 0)
-Test_01_Level_0	24	0	((7, 7), 0)
-Test_01_Level_0	24	1	(None, 0)
-Test_01_Level_0	24	2	((26, 12), 2)
-Test_01_Level_0	24	3	((12, 12), 2)
-Test_01_Level_0	24	4	(None, 2)
-Test_01_Level_0	24	5	((8, 7), 0)
-Test_01_Level_0	24	6	(None, 0)
-Test_01_Level_0	25	0	((6, 7), 0)
-Test_01_Level_0	25	1	(None, 0)
-Test_01_Level_0	25	2	((27, 12), 2)
-Test_01_Level_0	25	3	((13, 12), 2)
-Test_01_Level_0	25	4	(None, 2)
-Test_01_Level_0	25	5	((8, 7), 0)
-Test_01_Level_0	25	6	(None, 0)
-Test_01_Level_0	26	0	((6, 7), 0)
-Test_01_Level_0	26	1	(None, 0)
-Test_01_Level_0	26	2	((27, 12), 2)
-Test_01_Level_0	26	3	((14, 12), 2)
-Test_01_Level_0	26	4	(None, 2)
-Test_01_Level_0	26	5	((8, 7), 0)
-Test_01_Level_0	26	6	(None, 0)
-Test_01_Level_0	27	0	((6, 7), 0)
-Test_01_Level_0	27	1	(None, 0)
-Test_01_Level_0	27	2	((27, 12), 2)
-Test_01_Level_0	27	3	((15, 12), 2)
-Test_01_Level_0	27	4	(None, 2)
-Test_01_Level_0	27	5	((8, 7), 0)
-Test_01_Level_0	27	6	(None, 0)
-Test_01_Level_0	28	0	((6, 7), 0)
-Test_01_Level_0	28	1	(None, 0)
-Test_01_Level_0	28	2	((27, 12), 2)
-Test_01_Level_0	28	3	((16, 12), 2)
-Test_01_Level_0	28	4	(None, 2)
-Test_01_Level_0	28	5	((8, 7), 0)
-Test_01_Level_0	28	6	(None, 0)
-Test_01_Level_0	29	0	((5, 7), 0)
-Test_01_Level_0	29	1	(None, 0)
-Test_01_Level_0	29	2	((28, 12), 2)
-Test_01_Level_0	29	3	((17, 12), 2)
-Test_01_Level_0	29	4	(None, 2)
-Test_01_Level_0	29	5	((8, 7), 0)
-Test_01_Level_0	29	6	(None, 0)
-Test_01_Level_0	30	0	((5, 7), 0)
-Test_01_Level_0	30	1	(None, 0)
-Test_01_Level_0	30	2	((28, 12), 2)
-Test_01_Level_0	30	3	((18, 12), 2)
-Test_01_Level_0	30	4	(None, 2)
-Test_01_Level_0	30	5	((8, 7), 0)
-Test_01_Level_0	30	6	(None, 0)
-Test_01_Level_0	31	0	((5, 7), 0)
-Test_01_Level_0	31	1	(None, 0)
-Test_01_Level_0	31	2	((28, 12), 2)
-Test_01_Level_0	31	3	((19, 12), 2)
-Test_01_Level_0	31	4	(None, 2)
-Test_01_Level_0	31	5	((8, 7), 0)
-Test_01_Level_0	31	6	((10, 7), 0)
-Test_01_Level_0	32	0	((5, 7), 0)
-Test_01_Level_0	32	1	(None, 0)
-Test_01_Level_0	32	2	((28, 12), 2)
-Test_01_Level_0	32	3	((20, 12), 2)
-Test_01_Level_0	32	4	(None, 2)
-Test_01_Level_0	32	5	((8, 7), 0)
-Test_01_Level_0	32	6	((10, 7), 0)
-Test_01_Level_0	33	0	((5, 8), 1)
-Test_01_Level_0	33	1	(None, 0)
-Test_01_Level_0	33	2	((29, 12), 2)
-Test_01_Level_0	33	3	((21, 12), 2)
-Test_01_Level_0	33	4	(None, 2)
-Test_01_Level_0	33	5	((8, 7), 0)
-Test_01_Level_0	33	6	((9, 7), 0)
-Test_01_Level_0	34	0	((5, 8), 1)
-Test_01_Level_0	34	1	(None, 0)
-Test_01_Level_0	34	2	((29, 12), 2)
-Test_01_Level_0	34	3	((21, 13), 1)
-Test_01_Level_0	34	4	(None, 2)
-Test_01_Level_0	34	5	((8, 7), 0)
-Test_01_Level_0	34	6	((9, 7), 0)
-Test_01_Level_0	35	0	((5, 8), 1)
-Test_01_Level_0	35	1	(None, 0)
-Test_01_Level_0	35	2	((29, 12), 2)
-Test_01_Level_0	35	3	((22, 13), 2)
-Test_01_Level_0	35	4	(None, 2)
-Test_01_Level_0	35	5	((8, 7), 0)
-Test_01_Level_0	35	6	((9, 7), 0)
-Test_01_Level_0	36	0	((5, 8), 1)
-Test_01_Level_0	36	1	(None, 0)
-Test_01_Level_0	36	2	((29, 12), 2)
-Test_01_Level_0	36	3	((23, 13), 2)
-Test_01_Level_0	36	4	(None, 2)
-Test_01_Level_0	36	5	((8, 7), 0)
-Test_01_Level_0	36	6	((9, 7), 0)
-Test_01_Level_0	37	0	((5, 9), 1)
-Test_01_Level_0	37	1	(None, 0)
-Test_01_Level_0	37	2	((29, 11), 3)
-Test_01_Level_0	37	3	(None, 2)
-Test_01_Level_0	37	4	(None, 2)
-Test_01_Level_0	37	5	((8, 7), 0)
-Test_01_Level_0	37	6	((9, 7), 0)
-Test_01_Level_0	38	0	((5, 9), 1)
-Test_01_Level_0	38	1	(None, 0)
-Test_01_Level_0	38	2	((29, 11), 3)
-Test_01_Level_0	38	3	(None, 2)
-Test_01_Level_0	38	4	(None, 2)
-Test_01_Level_0	38	5	((8, 7), 0)
-Test_01_Level_0	38	6	((9, 7), 0)
-Test_01_Level_0	39	0	((5, 9), 1)
-Test_01_Level_0	39	1	(None, 0)
-Test_01_Level_0	39	2	((29, 11), 3)
-Test_01_Level_0	39	3	(None, 2)
-Test_01_Level_0	39	4	(None, 2)
-Test_01_Level_0	39	5	((8, 7), 0)
-Test_01_Level_0	39	6	((9, 7), 0)
-Test_01_Level_0	40	0	((5, 9), 1)
-Test_01_Level_0	40	1	(None, 0)
-Test_01_Level_0	40	2	((29, 11), 3)
-Test_01_Level_0	40	3	(None, 2)
-Test_01_Level_0	40	4	(None, 2)
-Test_01_Level_0	40	5	((8, 7), 0)
-Test_01_Level_0	40	6	((9, 7), 0)
-Test_01_Level_0	41	0	((5, 10), 1)
-Test_01_Level_0	41	1	(None, 0)
-Test_01_Level_0	41	2	((29, 10), 3)
-Test_01_Level_0	41	3	(None, 2)
-Test_01_Level_0	41	4	(None, 2)
-Test_01_Level_0	41	5	((8, 7), 0)
-Test_01_Level_0	41	6	((9, 7), 0)
-Test_01_Level_0	42	0	((5, 10), 1)
-Test_01_Level_0	42	1	(None, 0)
-Test_01_Level_0	42	2	((29, 10), 3)
-Test_01_Level_0	42	3	(None, 2)
-Test_01_Level_0	42	4	(None, 2)
-Test_01_Level_0	42	5	((8, 7), 0)
-Test_01_Level_0	42	6	((9, 7), 0)
-Test_01_Level_0	43	0	((5, 10), 1)
-Test_01_Level_0	43	1	(None, 0)
-Test_01_Level_0	43	2	((29, 10), 3)
-Test_01_Level_0	43	3	(None, 2)
-Test_01_Level_0	43	4	(None, 2)
-Test_01_Level_0	43	5	((8, 7), 0)
-Test_01_Level_0	43	6	((9, 7), 0)
-Test_01_Level_0	44	0	((5, 10), 1)
-Test_01_Level_0	44	1	(None, 0)
-Test_01_Level_0	44	2	((29, 10), 3)
-Test_01_Level_0	44	3	(None, 2)
-Test_01_Level_0	44	4	(None, 2)
-Test_01_Level_0	44	5	((8, 7), 0)
-Test_01_Level_0	44	6	((9, 7), 0)
-Test_01_Level_0	45	0	((5, 11), 1)
-Test_01_Level_0	45	1	(None, 0)
-Test_01_Level_0	45	2	((29, 9), 3)
-Test_01_Level_0	45	3	(None, 2)
-Test_01_Level_0	45	4	(None, 2)
-Test_01_Level_0	45	5	((8, 7), 0)
-Test_01_Level_0	45	6	((9, 7), 0)
-Test_01_Level_0	46	0	((5, 11), 1)
-Test_01_Level_0	46	1	(None, 0)
-Test_01_Level_0	46	2	((29, 9), 3)
-Test_01_Level_0	46	3	(None, 2)
-Test_01_Level_0	46	4	(None, 2)
-Test_01_Level_0	46	5	((8, 7), 0)
-Test_01_Level_0	46	6	((9, 7), 0)
-Test_01_Level_0	47	0	((5, 11), 1)
-Test_01_Level_0	47	1	(None, 0)
-Test_01_Level_0	47	2	((29, 9), 3)
-Test_01_Level_0	47	3	(None, 2)
-Test_01_Level_0	47	4	(None, 2)
-Test_01_Level_0	47	5	((8, 7), 0)
-Test_01_Level_0	47	6	((9, 7), 0)
-Test_01_Level_0	48	0	((5, 11), 1)
-Test_01_Level_0	48	1	(None, 0)
-Test_01_Level_0	48	2	((29, 9), 3)
-Test_01_Level_0	48	3	(None, 2)
-Test_01_Level_0	48	4	(None, 2)
-Test_01_Level_0	48	5	((8, 7), 0)
-Test_01_Level_0	48	6	((9, 7), 0)
-Test_01_Level_0	49	0	((5, 12), 1)
-Test_01_Level_0	49	1	(None, 0)
-Test_01_Level_0	49	2	((29, 8), 3)
-Test_01_Level_0	49	3	(None, 2)
-Test_01_Level_0	49	4	(None, 2)
-Test_01_Level_0	49	5	((8, 7), 0)
-Test_01_Level_0	49	6	((9, 7), 0)
-Test_01_Level_0	50	0	((5, 12), 1)
-Test_01_Level_0	50	1	(None, 0)
-Test_01_Level_0	50	2	((29, 8), 3)
-Test_01_Level_0	50	3	(None, 2)
-Test_01_Level_0	50	4	(None, 2)
-Test_01_Level_0	50	5	((8, 7), 0)
-Test_01_Level_0	50	6	((9, 7), 0)
-Test_01_Level_0	51	0	((5, 12), 1)
-Test_01_Level_0	51	1	(None, 0)
-Test_01_Level_0	51	2	((29, 8), 3)
-Test_01_Level_0	51	3	(None, 2)
-Test_01_Level_0	51	4	(None, 2)
-Test_01_Level_0	51	5	((8, 7), 0)
-Test_01_Level_0	51	6	((9, 7), 0)
-Test_01_Level_0	52	0	((5, 12), 1)
-Test_01_Level_0	52	1	(None, 0)
-Test_01_Level_0	52	2	((29, 8), 3)
-Test_01_Level_0	52	3	(None, 2)
-Test_01_Level_0	52	4	(None, 2)
-Test_01_Level_0	52	5	((8, 7), 0)
-Test_01_Level_0	52	6	((9, 7), 0)
-Test_01_Level_0	53	0	((6, 12), 2)
-Test_01_Level_0	53	1	(None, 0)
-Test_01_Level_0	53	2	((29, 7), 3)
-Test_01_Level_0	53	3	(None, 2)
-Test_01_Level_0	53	4	(None, 2)
-Test_01_Level_0	53	5	((8, 7), 0)
-Test_01_Level_0	53	6	((9, 7), 0)
-Test_01_Level_0	54	0	((6, 12), 2)
-Test_01_Level_0	54	1	(None, 0)
-Test_01_Level_0	54	2	((29, 7), 3)
-Test_01_Level_0	54	3	(None, 2)
-Test_01_Level_0	54	4	(None, 2)
-Test_01_Level_0	54	5	((8, 7), 0)
-Test_01_Level_0	54	6	((9, 7), 0)
-Test_01_Level_0	55	0	((6, 12), 2)
-Test_01_Level_0	55	1	(None, 0)
-Test_01_Level_0	55	2	((29, 7), 3)
-Test_01_Level_0	55	3	(None, 2)
-Test_01_Level_0	55	4	(None, 2)
-Test_01_Level_0	55	5	((8, 7), 0)
-Test_01_Level_0	55	6	((9, 7), 0)
-Test_01_Level_0	56	0	((6, 12), 2)
-Test_01_Level_0	56	1	(None, 0)
-Test_01_Level_0	56	2	((29, 7), 3)
-Test_01_Level_0	56	3	(None, 2)
-Test_01_Level_0	56	4	(None, 2)
-Test_01_Level_0	56	5	((8, 7), 0)
-Test_01_Level_0	56	6	((9, 7), 0)
-Test_01_Level_0	57	0	((7, 12), 2)
-Test_01_Level_0	57	1	(None, 0)
-Test_01_Level_0	57	2	((28, 7), 0)
-Test_01_Level_0	57	3	(None, 2)
-Test_01_Level_0	57	4	(None, 2)
-Test_01_Level_0	57	5	((8, 7), 0)
-Test_01_Level_0	57	6	((9, 7), 0)
-Test_01_Level_0	58	0	((7, 12), 2)
-Test_01_Level_0	58	1	(None, 0)
-Test_01_Level_0	58	2	((28, 7), 0)
-Test_01_Level_0	58	3	(None, 2)
-Test_01_Level_0	58	4	(None, 2)
-Test_01_Level_0	58	5	((8, 7), 0)
-Test_01_Level_0	58	6	((9, 7), 0)
-Test_01_Level_0	59	0	((7, 12), 2)
-Test_01_Level_0	59	1	(None, 0)
-Test_01_Level_0	59	2	((28, 7), 0)
-Test_01_Level_0	59	3	(None, 2)
-Test_01_Level_0	59	4	(None, 2)
-Test_01_Level_0	59	5	((8, 7), 0)
-Test_01_Level_0	59	6	((9, 7), 0)
-Test_01_Level_0	60	0	((7, 12), 2)
-Test_01_Level_0	60	1	(None, 0)
-Test_01_Level_0	60	2	((28, 7), 0)
-Test_01_Level_0	60	3	(None, 2)
-Test_01_Level_0	60	4	(None, 2)
-Test_01_Level_0	60	5	((8, 7), 0)
-Test_01_Level_0	60	6	((9, 7), 0)
-Test_01_Level_0	61	0	((8, 12), 2)
-Test_01_Level_0	61	1	(None, 0)
-Test_01_Level_0	61	2	((27, 7), 0)
-Test_01_Level_0	61	3	(None, 2)
-Test_01_Level_0	61	4	(None, 2)
-Test_01_Level_0	61	5	((8, 7), 0)
-Test_01_Level_0	61	6	((9, 7), 0)
-Test_01_Level_0	62	0	((8, 12), 2)
-Test_01_Level_0	62	1	(None, 0)
-Test_01_Level_0	62	2	((27, 7), 0)
-Test_01_Level_0	62	3	(None, 2)
-Test_01_Level_0	62	4	(None, 2)
-Test_01_Level_0	62	5	((8, 7), 0)
-Test_01_Level_0	62	6	((9, 7), 0)
-Test_01_Level_0	63	0	((8, 12), 2)
-Test_01_Level_0	63	1	(None, 0)
-Test_01_Level_0	63	2	((27, 7), 0)
-Test_01_Level_0	63	3	(None, 2)
-Test_01_Level_0	63	4	(None, 2)
-Test_01_Level_0	63	5	((8, 7), 0)
-Test_01_Level_0	63	6	((9, 7), 0)
-Test_01_Level_0	64	0	((8, 12), 2)
-Test_01_Level_0	64	1	(None, 0)
-Test_01_Level_0	64	2	((27, 7), 0)
-Test_01_Level_0	64	3	(None, 2)
-Test_01_Level_0	64	4	(None, 2)
-Test_01_Level_0	64	5	((8, 7), 0)
-Test_01_Level_0	64	6	((9, 7), 0)
-Test_01_Level_0	65	0	((9, 12), 2)
-Test_01_Level_0	65	1	((24, 12), 0)
-Test_01_Level_0	65	2	((26, 7), 0)
-Test_01_Level_0	65	3	(None, 2)
-Test_01_Level_0	65	4	(None, 2)
-Test_01_Level_0	65	5	((8, 7), 0)
-Test_01_Level_0	65	6	((9, 7), 0)
-Test_01_Level_0	66	0	((9, 12), 2)
-Test_01_Level_0	66	1	((23, 12), 0)
-Test_01_Level_0	66	2	((26, 7), 0)
-Test_01_Level_0	66	3	(None, 2)
-Test_01_Level_0	66	4	(None, 2)
-Test_01_Level_0	66	5	((8, 7), 0)
-Test_01_Level_0	66	6	((9, 7), 0)
-Test_01_Level_0	67	0	((9, 12), 2)
-Test_01_Level_0	67	1	((22, 12), 0)
-Test_01_Level_0	67	2	((26, 7), 0)
-Test_01_Level_0	67	3	(None, 2)
-Test_01_Level_0	67	4	(None, 2)
-Test_01_Level_0	67	5	((8, 7), 0)
-Test_01_Level_0	67	6	((9, 7), 0)
-Test_01_Level_0	68	0	((9, 12), 2)
-Test_01_Level_0	68	1	((21, 12), 0)
-Test_01_Level_0	68	2	((26, 7), 0)
-Test_01_Level_0	68	3	(None, 2)
-Test_01_Level_0	68	4	(None, 2)
-Test_01_Level_0	68	5	((8, 7), 0)
-Test_01_Level_0	68	6	((9, 7), 0)
-Test_01_Level_0	69	0	((10, 12), 2)
-Test_01_Level_0	69	1	((20, 12), 0)
-Test_01_Level_0	69	2	((25, 7), 0)
-Test_01_Level_0	69	3	(None, 2)
-Test_01_Level_0	69	4	(None, 2)
-Test_01_Level_0	69	5	((8, 7), 0)
-Test_01_Level_0	69	6	((9, 7), 0)
-Test_01_Level_0	70	0	((10, 12), 2)
-Test_01_Level_0	70	1	((19, 12), 0)
-Test_01_Level_0	70	2	((25, 7), 0)
-Test_01_Level_0	70	3	(None, 2)
-Test_01_Level_0	70	4	(None, 2)
-Test_01_Level_0	70	5	((8, 7), 0)
-Test_01_Level_0	70	6	((9, 7), 0)
-Test_01_Level_0	71	0	((10, 12), 2)
-Test_01_Level_0	71	1	((19, 11), 3)
-Test_01_Level_0	71	2	((25, 7), 0)
-Test_01_Level_0	71	3	(None, 2)
-Test_01_Level_0	71	4	(None, 2)
-Test_01_Level_0	71	5	((8, 7), 0)
-Test_01_Level_0	71	6	((9, 7), 0)
-Test_01_Level_0	72	0	((10, 12), 2)
-Test_01_Level_0	72	1	((18, 11), 0)
-Test_01_Level_0	72	2	((25, 7), 0)
-Test_01_Level_0	72	3	(None, 2)
-Test_01_Level_0	72	4	(None, 2)
-Test_01_Level_0	72	5	((7, 7), 0)
-Test_01_Level_0	72	6	((8, 7), 0)
-Test_01_Level_0	73	0	((11, 12), 2)
-Test_01_Level_0	73	1	((17, 11), 0)
-Test_01_Level_0	73	2	((24, 7), 0)
-Test_01_Level_0	73	3	(None, 2)
-Test_01_Level_0	73	4	(None, 2)
-Test_01_Level_0	73	5	((7, 7), 0)
-Test_01_Level_0	73	6	((8, 7), 0)
-Test_01_Level_0	74	0	((11, 12), 2)
-Test_01_Level_0	74	1	((16, 11), 0)
-Test_01_Level_0	74	2	((24, 7), 0)
-Test_01_Level_0	74	3	(None, 2)
-Test_01_Level_0	74	4	(None, 2)
-Test_01_Level_0	74	5	((7, 7), 0)
-Test_01_Level_0	74	6	((8, 7), 0)
-Test_01_Level_0	75	0	((11, 12), 2)
-Test_01_Level_0	75	1	((16, 10), 3)
-Test_01_Level_0	75	2	((24, 7), 0)
-Test_01_Level_0	75	3	(None, 2)
-Test_01_Level_0	75	4	(None, 2)
-Test_01_Level_0	75	5	((7, 7), 0)
-Test_01_Level_0	75	6	((8, 7), 0)
-Test_01_Level_0	76	0	((11, 12), 2)
-Test_01_Level_0	76	1	((16, 9), 3)
-Test_01_Level_0	76	2	((24, 7), 0)
-Test_01_Level_0	76	3	(None, 2)
-Test_01_Level_0	76	4	(None, 2)
-Test_01_Level_0	76	5	((6, 7), 0)
-Test_01_Level_0	76	6	((7, 7), 0)
-Test_01_Level_0	77	0	((12, 12), 2)
-Test_01_Level_0	77	1	((15, 9), 0)
-Test_01_Level_0	77	2	((23, 7), 0)
-Test_01_Level_0	77	3	(None, 2)
-Test_01_Level_0	77	4	(None, 2)
-Test_01_Level_0	77	5	((6, 7), 0)
-Test_01_Level_0	77	6	((7, 7), 0)
-Test_01_Level_0	78	0	((12, 12), 2)
-Test_01_Level_0	78	1	((15, 8), 3)
-Test_01_Level_0	78	2	((23, 7), 0)
-Test_01_Level_0	78	3	(None, 2)
-Test_01_Level_0	78	4	(None, 2)
-Test_01_Level_0	78	5	((6, 7), 0)
-Test_01_Level_0	78	6	((7, 7), 0)
-Test_01_Level_0	79	0	((12, 12), 2)
-Test_01_Level_0	79	1	((15, 7), 3)
-Test_01_Level_0	79	2	((23, 7), 0)
-Test_01_Level_0	79	3	(None, 2)
-Test_01_Level_0	79	4	(None, 2)
-Test_01_Level_0	79	5	((6, 7), 0)
-Test_01_Level_0	79	6	((7, 7), 0)
-Test_01_Level_0	80	0	((12, 12), 2)
-Test_01_Level_0	80	1	((14, 7), 0)
-Test_01_Level_0	80	2	((23, 7), 0)
-Test_01_Level_0	80	3	(None, 2)
-Test_01_Level_0	80	4	(None, 2)
-Test_01_Level_0	80	5	((5, 7), 0)
-Test_01_Level_0	80	6	((6, 7), 0)
-Test_01_Level_0	81	0	((13, 12), 2)
-Test_01_Level_0	81	1	((13, 7), 0)
-Test_01_Level_0	81	2	((22, 7), 0)
-Test_01_Level_0	81	3	(None, 2)
-Test_01_Level_0	81	4	(None, 2)
-Test_01_Level_0	81	5	((5, 7), 0)
-Test_01_Level_0	81	6	((6, 7), 0)
-Test_01_Level_0	82	0	((13, 12), 2)
-Test_01_Level_0	82	1	((13, 8), 1)
-Test_01_Level_0	82	2	((22, 7), 0)
-Test_01_Level_0	82	3	(None, 2)
-Test_01_Level_0	82	4	(None, 2)
-Test_01_Level_0	82	5	((5, 7), 0)
-Test_01_Level_0	82	6	((6, 7), 0)
-Test_01_Level_0	83	0	((13, 12), 2)
-Test_01_Level_0	83	1	((12, 8), 0)
-Test_01_Level_0	83	2	((22, 7), 0)
-Test_01_Level_0	83	3	(None, 2)
-Test_01_Level_0	83	4	(None, 2)
-Test_01_Level_0	83	5	((5, 7), 0)
-Test_01_Level_0	83	6	((6, 7), 0)
-Test_01_Level_0	84	0	((13, 12), 2)
-Test_01_Level_0	84	1	((11, 8), 0)
-Test_01_Level_0	84	2	((22, 7), 0)
-Test_01_Level_0	84	3	(None, 2)
-Test_01_Level_0	84	4	(None, 2)
-Test_01_Level_0	84	5	((5, 8), 1)
-Test_01_Level_0	84	6	((5, 7), 0)
-Test_01_Level_0	85	0	((14, 12), 2)
-Test_01_Level_0	85	1	(None, 0)
-Test_01_Level_0	85	2	((21, 7), 0)
-Test_01_Level_0	85	3	(None, 2)
-Test_01_Level_0	85	4	(None, 2)
-Test_01_Level_0	85	5	((5, 8), 1)
-Test_01_Level_0	85	6	((5, 7), 0)
-Test_01_Level_0	86	0	((14, 12), 2)
-Test_01_Level_0	86	1	(None, 0)
-Test_01_Level_0	86	2	((21, 7), 0)
-Test_01_Level_0	86	3	(None, 2)
-Test_01_Level_0	86	4	(None, 2)
-Test_01_Level_0	86	5	((5, 8), 1)
-Test_01_Level_0	86	6	((5, 7), 0)
-Test_01_Level_0	87	0	((14, 12), 2)
-Test_01_Level_0	87	1	(None, 0)
-Test_01_Level_0	87	2	((21, 7), 0)
-Test_01_Level_0	87	3	(None, 2)
-Test_01_Level_0	87	4	(None, 2)
-Test_01_Level_0	87	5	((5, 8), 1)
-Test_01_Level_0	87	6	((5, 7), 0)
-Test_01_Level_0	88	0	((14, 12), 2)
-Test_01_Level_0	88	1	(None, 0)
-Test_01_Level_0	88	2	((21, 7), 0)
-Test_01_Level_0	88	3	(None, 2)
-Test_01_Level_0	88	4	(None, 2)
-Test_01_Level_0	88	5	((5, 9), 1)
-Test_01_Level_0	88	6	((5, 8), 1)
-Test_01_Level_0	89	0	((15, 12), 2)
-Test_01_Level_0	89	1	(None, 0)
-Test_01_Level_0	89	2	((20, 7), 0)
-Test_01_Level_0	89	3	(None, 2)
-Test_01_Level_0	89	4	(None, 2)
-Test_01_Level_0	89	5	((5, 9), 1)
-Test_01_Level_0	89	6	((5, 8), 1)
-Test_01_Level_0	90	0	((15, 12), 2)
-Test_01_Level_0	90	1	(None, 0)
-Test_01_Level_0	90	2	((20, 7), 0)
-Test_01_Level_0	90	3	(None, 2)
-Test_01_Level_0	90	4	(None, 2)
-Test_01_Level_0	90	5	((5, 9), 1)
-Test_01_Level_0	90	6	((5, 8), 1)
-Test_01_Level_0	91	0	((15, 12), 2)
-Test_01_Level_0	91	1	(None, 0)
-Test_01_Level_0	91	2	((20, 7), 0)
-Test_01_Level_0	91	3	(None, 2)
-Test_01_Level_0	91	4	(None, 2)
-Test_01_Level_0	91	5	((5, 9), 1)
-Test_01_Level_0	91	6	((5, 8), 1)
-Test_01_Level_0	92	0	((15, 12), 2)
-Test_01_Level_0	92	1	(None, 0)
-Test_01_Level_0	92	2	((20, 7), 0)
-Test_01_Level_0	92	3	(None, 2)
-Test_01_Level_0	92	4	(None, 2)
-Test_01_Level_0	92	5	((5, 10), 1)
-Test_01_Level_0	92	6	((5, 9), 1)
-Test_01_Level_0	93	0	((16, 12), 2)
-Test_01_Level_0	93	1	(None, 0)
-Test_01_Level_0	93	2	((19, 7), 0)
-Test_01_Level_0	93	3	(None, 2)
-Test_01_Level_0	93	4	(None, 2)
-Test_01_Level_0	93	5	((5, 10), 1)
-Test_01_Level_0	93	6	((5, 9), 1)
-Test_01_Level_0	94	0	((16, 12), 2)
-Test_01_Level_0	94	1	(None, 0)
-Test_01_Level_0	94	2	((19, 7), 0)
-Test_01_Level_0	94	3	(None, 2)
-Test_01_Level_0	94	4	(None, 2)
-Test_01_Level_0	94	5	((5, 10), 1)
-Test_01_Level_0	94	6	((5, 9), 1)
-Test_01_Level_0	95	0	((16, 12), 2)
-Test_01_Level_0	95	1	(None, 0)
-Test_01_Level_0	95	2	((19, 7), 0)
-Test_01_Level_0	95	3	(None, 2)
-Test_01_Level_0	95	4	(None, 2)
-Test_01_Level_0	95	5	((5, 10), 1)
-Test_01_Level_0	95	6	((5, 9), 1)
-Test_01_Level_0	96	0	((16, 12), 2)
-Test_01_Level_0	96	1	(None, 0)
-Test_01_Level_0	96	2	((19, 7), 0)
-Test_01_Level_0	96	3	(None, 2)
-Test_01_Level_0	96	4	(None, 2)
-Test_01_Level_0	96	5	((5, 11), 1)
-Test_01_Level_0	96	6	((5, 10), 1)
-Test_01_Level_0	97	0	((17, 12), 2)
-Test_01_Level_0	97	1	(None, 0)
-Test_01_Level_0	97	2	((18, 7), 0)
-Test_01_Level_0	97	3	(None, 2)
-Test_01_Level_0	97	4	(None, 2)
-Test_01_Level_0	97	5	((5, 11), 1)
-Test_01_Level_0	97	6	((5, 10), 1)
-Test_01_Level_0	98	0	((17, 12), 2)
-Test_01_Level_0	98	1	(None, 0)
-Test_01_Level_0	98	2	((18, 7), 0)
-Test_01_Level_0	98	3	(None, 2)
-Test_01_Level_0	98	4	(None, 2)
-Test_01_Level_0	98	5	((5, 11), 1)
-Test_01_Level_0	98	6	((5, 10), 1)
-Test_01_Level_0	99	0	((17, 12), 2)
-Test_01_Level_0	99	1	(None, 0)
-Test_01_Level_0	99	2	((18, 7), 0)
-Test_01_Level_0	99	3	(None, 2)
-Test_01_Level_0	99	4	(None, 2)
-Test_01_Level_0	99	5	((5, 11), 1)
-Test_01_Level_0	99	6	((5, 10), 1)
-Test_01_Level_0	100	0	((17, 12), 2)
-Test_01_Level_0	100	1	(None, 0)
-Test_01_Level_0	100	2	((18, 7), 0)
-Test_01_Level_0	100	3	(None, 2)
-Test_01_Level_0	100	4	(None, 2)
-Test_01_Level_0	100	5	((5, 12), 1)
-Test_01_Level_0	100	6	((5, 11), 1)
-Test_01_Level_0	101	0	((18, 12), 2)
-Test_01_Level_0	101	1	(None, 0)
-Test_01_Level_0	101	2	((17, 7), 0)
-Test_01_Level_0	101	3	(None, 2)
-Test_01_Level_0	101	4	(None, 2)
-Test_01_Level_0	101	5	((5, 12), 1)
-Test_01_Level_0	101	6	((5, 11), 1)
-Test_01_Level_0	102	0	((18, 12), 2)
-Test_01_Level_0	102	1	(None, 0)
-Test_01_Level_0	102	2	((17, 7), 0)
-Test_01_Level_0	102	3	(None, 2)
-Test_01_Level_0	102	4	(None, 2)
-Test_01_Level_0	102	5	((5, 12), 1)
-Test_01_Level_0	102	6	((5, 11), 1)
-Test_01_Level_0	103	0	((18, 12), 2)
-Test_01_Level_0	103	1	(None, 0)
-Test_01_Level_0	103	2	((17, 7), 0)
-Test_01_Level_0	103	3	(None, 2)
-Test_01_Level_0	103	4	(None, 2)
-Test_01_Level_0	103	5	((5, 12), 1)
-Test_01_Level_0	103	6	((5, 11), 1)
-Test_01_Level_0	104	0	((18, 12), 2)
-Test_01_Level_0	104	1	(None, 0)
-Test_01_Level_0	104	2	((17, 7), 0)
-Test_01_Level_0	104	3	(None, 2)
-Test_01_Level_0	104	4	(None, 2)
-Test_01_Level_0	104	5	((6, 12), 2)
-Test_01_Level_0	104	6	((5, 12), 1)
-Test_01_Level_0	105	0	((19, 12), 2)
-Test_01_Level_0	105	1	(None, 0)
-Test_01_Level_0	105	2	((16, 7), 0)
-Test_01_Level_0	105	3	(None, 2)
-Test_01_Level_0	105	4	(None, 2)
-Test_01_Level_0	105	5	((6, 12), 2)
-Test_01_Level_0	105	6	((5, 12), 1)
-Test_01_Level_0	106	0	((19, 12), 2)
-Test_01_Level_0	106	1	(None, 0)
-Test_01_Level_0	106	2	((16, 7), 0)
-Test_01_Level_0	106	3	(None, 2)
-Test_01_Level_0	106	4	(None, 2)
-Test_01_Level_0	106	5	((6, 12), 2)
-Test_01_Level_0	106	6	((5, 12), 1)
-Test_01_Level_0	107	0	((19, 12), 2)
-Test_01_Level_0	107	1	(None, 0)
-Test_01_Level_0	107	2	((16, 7), 0)
-Test_01_Level_0	107	3	(None, 2)
-Test_01_Level_0	107	4	(None, 2)
-Test_01_Level_0	107	5	((6, 12), 2)
-Test_01_Level_0	107	6	((5, 12), 1)
-Test_01_Level_0	108	0	((19, 12), 2)
-Test_01_Level_0	108	1	(None, 0)
-Test_01_Level_0	108	2	((16, 7), 0)
-Test_01_Level_0	108	3	(None, 2)
-Test_01_Level_0	108	4	(None, 2)
-Test_01_Level_0	108	5	((7, 12), 2)
-Test_01_Level_0	108	6	((6, 12), 2)
-Test_01_Level_0	109	0	((20, 12), 2)
-Test_01_Level_0	109	1	(None, 0)
-Test_01_Level_0	109	2	((15, 7), 0)
-Test_01_Level_0	109	3	(None, 2)
-Test_01_Level_0	109	4	(None, 2)
-Test_01_Level_0	109	5	((7, 12), 2)
-Test_01_Level_0	109	6	((6, 12), 2)
-Test_01_Level_0	110	0	((20, 12), 2)
-Test_01_Level_0	110	1	(None, 0)
-Test_01_Level_0	110	2	((15, 7), 0)
-Test_01_Level_0	110	3	(None, 2)
-Test_01_Level_0	110	4	(None, 2)
-Test_01_Level_0	110	5	((7, 12), 2)
-Test_01_Level_0	110	6	((6, 12), 2)
-Test_01_Level_0	111	0	((20, 12), 2)
-Test_01_Level_0	111	1	(None, 0)
-Test_01_Level_0	111	2	((15, 7), 0)
-Test_01_Level_0	111	3	(None, 2)
-Test_01_Level_0	111	4	(None, 2)
-Test_01_Level_0	111	5	((7, 12), 2)
-Test_01_Level_0	111	6	((6, 12), 2)
-Test_01_Level_0	112	0	((20, 12), 2)
-Test_01_Level_0	112	1	(None, 0)
-Test_01_Level_0	112	2	((15, 7), 0)
-Test_01_Level_0	112	3	(None, 2)
-Test_01_Level_0	112	4	(None, 2)
-Test_01_Level_0	112	5	((8, 12), 2)
-Test_01_Level_0	112	6	((7, 12), 2)
-Test_01_Level_0	113	0	((21, 12), 2)
-Test_01_Level_0	113	1	(None, 0)
-Test_01_Level_0	113	2	((14, 7), 0)
-Test_01_Level_0	113	3	(None, 2)
-Test_01_Level_0	113	4	(None, 2)
-Test_01_Level_0	113	5	((8, 12), 2)
-Test_01_Level_0	113	6	((7, 12), 2)
-Test_01_Level_0	114	0	((21, 12), 2)
-Test_01_Level_0	114	1	(None, 0)
-Test_01_Level_0	114	2	((14, 7), 0)
-Test_01_Level_0	114	3	(None, 2)
-Test_01_Level_0	114	4	(None, 2)
-Test_01_Level_0	114	5	((8, 12), 2)
-Test_01_Level_0	114	6	((7, 12), 2)
-Test_01_Level_0	115	0	((21, 12), 2)
-Test_01_Level_0	115	1	(None, 0)
-Test_01_Level_0	115	2	((14, 7), 0)
-Test_01_Level_0	115	3	(None, 2)
-Test_01_Level_0	115	4	(None, 2)
-Test_01_Level_0	115	5	((8, 12), 2)
-Test_01_Level_0	115	6	((7, 12), 2)
-Test_01_Level_0	116	0	((21, 12), 2)
-Test_01_Level_0	116	1	(None, 0)
-Test_01_Level_0	116	2	((14, 7), 0)
-Test_01_Level_0	116	3	(None, 2)
-Test_01_Level_0	116	4	(None, 2)
-Test_01_Level_0	116	5	((9, 12), 2)
-Test_01_Level_0	116	6	((8, 12), 2)
-Test_01_Level_0	117	0	((21, 13), 1)
-Test_01_Level_0	117	1	(None, 0)
-Test_01_Level_0	117	2	((13, 7), 0)
-Test_01_Level_0	117	3	(None, 2)
-Test_01_Level_0	117	4	(None, 2)
-Test_01_Level_0	117	5	((9, 12), 2)
-Test_01_Level_0	117	6	((8, 12), 2)
-Test_01_Level_0	118	0	((21, 13), 1)
-Test_01_Level_0	118	1	(None, 0)
-Test_01_Level_0	118	2	((13, 7), 0)
-Test_01_Level_0	118	3	(None, 2)
-Test_01_Level_0	118	4	(None, 2)
-Test_01_Level_0	118	5	((9, 12), 2)
-Test_01_Level_0	118	6	((8, 12), 2)
-Test_01_Level_0	119	0	((21, 13), 1)
-Test_01_Level_0	119	1	(None, 0)
-Test_01_Level_0	119	2	((13, 7), 0)
-Test_01_Level_0	119	3	(None, 2)
-Test_01_Level_0	119	4	(None, 2)
-Test_01_Level_0	119	5	((9, 12), 2)
-Test_01_Level_0	119	6	((8, 12), 2)
-Test_01_Level_0	120	0	((21, 13), 1)
-Test_01_Level_0	120	1	(None, 0)
-Test_01_Level_0	120	2	((13, 7), 0)
-Test_01_Level_0	120	3	(None, 2)
-Test_01_Level_0	120	4	((24, 12), 2)
-Test_01_Level_0	120	5	((10, 12), 2)
-Test_01_Level_0	120	6	((9, 12), 2)
-Test_01_Level_0	121	0	((22, 13), 2)
-Test_01_Level_0	121	1	(None, 0)
-Test_01_Level_0	121	2	((13, 8), 1)
-Test_01_Level_0	121	3	(None, 2)
-Test_01_Level_0	121	4	((25, 12), 2)
-Test_01_Level_0	121	5	((10, 12), 2)
-Test_01_Level_0	121	6	((9, 12), 2)
-Test_01_Level_0	122	0	((22, 13), 2)
-Test_01_Level_0	122	1	(None, 0)
-Test_01_Level_0	122	2	((13, 8), 1)
-Test_01_Level_0	122	3	(None, 2)
-Test_01_Level_0	122	4	((26, 12), 2)
-Test_01_Level_0	122	5	((10, 12), 2)
-Test_01_Level_0	122	6	((9, 12), 2)
-Test_01_Level_0	123	0	((22, 13), 2)
-Test_01_Level_0	123	1	(None, 0)
-Test_01_Level_0	123	2	((13, 8), 1)
-Test_01_Level_0	123	3	(None, 2)
-Test_01_Level_0	123	4	((27, 12), 2)
-Test_01_Level_0	123	5	((10, 12), 2)
-Test_01_Level_0	123	6	((9, 12), 2)
-Test_01_Level_0	124	0	((22, 13), 2)
-Test_01_Level_0	124	1	(None, 0)
-Test_01_Level_0	124	2	((13, 8), 1)
-Test_01_Level_0	124	3	(None, 2)
-Test_01_Level_0	124	4	((28, 12), 2)
-Test_01_Level_0	124	5	((11, 12), 2)
-Test_01_Level_0	124	6	((10, 12), 2)
-Test_01_Level_0	125	0	((23, 13), 2)
-Test_01_Level_0	125	1	(None, 0)
-Test_01_Level_0	125	2	((12, 8), 0)
-Test_01_Level_0	125	3	(None, 2)
-Test_01_Level_0	125	4	((29, 12), 2)
-Test_01_Level_0	125	5	((11, 12), 2)
-Test_01_Level_0	125	6	((10, 12), 2)
-Test_01_Level_0	126	0	((23, 13), 2)
-Test_01_Level_0	126	1	(None, 0)
-Test_01_Level_0	126	2	((12, 8), 0)
-Test_01_Level_0	126	3	(None, 2)
-Test_01_Level_0	126	4	((29, 11), 3)
-Test_01_Level_0	126	5	((11, 12), 2)
-Test_01_Level_0	126	6	((10, 12), 2)
-Test_01_Level_0	127	0	((23, 13), 2)
-Test_01_Level_0	127	1	(None, 0)
-Test_01_Level_0	127	2	((12, 8), 0)
-Test_01_Level_0	127	3	(None, 2)
-Test_01_Level_0	127	4	((29, 10), 3)
-Test_01_Level_0	127	5	((11, 12), 2)
-Test_01_Level_0	127	6	((10, 12), 2)
-Test_01_Level_0	128	0	((23, 13), 2)
-Test_01_Level_0	128	1	(None, 0)
-Test_01_Level_0	128	2	((12, 8), 0)
-Test_01_Level_0	128	3	(None, 2)
-Test_01_Level_0	128	4	((29, 9), 3)
-Test_01_Level_0	128	5	((12, 12), 2)
+Test_01_Level_0	1	0	
+Test_01_Level_0	1	1	
+Test_01_Level_0	1	2	
+Test_01_Level_0	1	3	
+Test_01_Level_0	1	4	
+Test_01_Level_0	1	5	
+Test_01_Level_0	1	6	
+Test_01_Level_0	2	0	
+Test_01_Level_0	2	1	
+Test_01_Level_0	2	2	
+Test_01_Level_0	2	3	
+Test_01_Level_0	2	4	
+Test_01_Level_0	2	5	
+Test_01_Level_0	2	6	
+Test_01_Level_0	3	0	
+Test_01_Level_0	3	1	
+Test_01_Level_0	3	2	
+Test_01_Level_0	3	3	((11, 5), 3)
+Test_01_Level_0	3	4	
+Test_01_Level_0	3	5	
+Test_01_Level_0	3	6	
+Test_01_Level_0	4	0	
+Test_01_Level_0	4	1	
+Test_01_Level_0	4	2	
+Test_01_Level_0	4	3	((11, 5), 3)
+Test_01_Level_0	4	4	
+Test_01_Level_0	4	5	
+Test_01_Level_0	4	6	
+Test_01_Level_0	5	0	
+Test_01_Level_0	5	1	
+Test_01_Level_0	5	2	
+Test_01_Level_0	5	3	((11, 5), 3)
+Test_01_Level_0	5	4	
+Test_01_Level_0	5	5	
+Test_01_Level_0	5	6	
+Test_01_Level_0	6	0	
+Test_01_Level_0	6	1	
+Test_01_Level_0	6	2	
+Test_01_Level_0	6	3	((11, 5), 3)
+Test_01_Level_0	6	4	
+Test_01_Level_0	6	5	
+Test_01_Level_0	6	6	
+Test_01_Level_0	7	0	
+Test_01_Level_0	7	1	
+Test_01_Level_0	7	2	
+Test_01_Level_0	7	3	((11, 4), 3)
+Test_01_Level_0	7	4	
+Test_01_Level_0	7	5	
+Test_01_Level_0	7	6	
+Test_01_Level_0	8	0	
+Test_01_Level_0	8	1	
+Test_01_Level_0	8	2	
+Test_01_Level_0	8	3	((11, 4), 3)
+Test_01_Level_0	8	4	
+Test_01_Level_0	8	5	
+Test_01_Level_0	8	6	
+Test_01_Level_0	9	0	
+Test_01_Level_0	9	1	
+Test_01_Level_0	9	2	
+Test_01_Level_0	9	3	((11, 4), 3)
+Test_01_Level_0	9	4	
+Test_01_Level_0	9	5	
+Test_01_Level_0	9	6	
+Test_01_Level_0	10	0	
+Test_01_Level_0	10	1	
+Test_01_Level_0	10	2	
+Test_01_Level_0	10	3	((11, 4), 3)
+Test_01_Level_0	10	4	
+Test_01_Level_0	10	5	
+Test_01_Level_0	10	6	
+Test_01_Level_0	11	0	
+Test_01_Level_0	11	1	
+Test_01_Level_0	11	2	
+Test_01_Level_0	11	3	((11, 3), 3)
+Test_01_Level_0	11	4	
+Test_01_Level_0	11	5	
+Test_01_Level_0	11	6	
+Test_01_Level_0	12	0	
+Test_01_Level_0	12	1	
+Test_01_Level_0	12	2	
+Test_01_Level_0	12	3	((11, 3), 3)
+Test_01_Level_0	12	4	
+Test_01_Level_0	12	5	
+Test_01_Level_0	12	6	
+Test_01_Level_0	13	0	
+Test_01_Level_0	13	1	
+Test_01_Level_0	13	2	
+Test_01_Level_0	13	3	((11, 3), 3)
+Test_01_Level_0	13	4	
+Test_01_Level_0	13	5	
+Test_01_Level_0	13	6	
+Test_01_Level_0	14	0	
+Test_01_Level_0	14	1	
+Test_01_Level_0	14	2	
+Test_01_Level_0	14	3	((11, 3), 3)
+Test_01_Level_0	14	4	
+Test_01_Level_0	14	5	
+Test_01_Level_0	14	6	
+Test_01_Level_0	15	0	
+Test_01_Level_0	15	1	
+Test_01_Level_0	15	2	
+Test_01_Level_0	15	3	((11, 2), 3)
+Test_01_Level_0	15	4	
+Test_01_Level_0	15	5	
+Test_01_Level_0	15	6	
+Test_01_Level_0	16	0	
+Test_01_Level_0	16	1	
+Test_01_Level_0	16	2	
+Test_01_Level_0	16	3	((11, 2), 3)
+Test_01_Level_0	16	4	
+Test_01_Level_0	16	5	
+Test_01_Level_0	16	6	
+Test_01_Level_0	17	0	
+Test_01_Level_0	17	1	
+Test_01_Level_0	17	2	
+Test_01_Level_0	17	3	((11, 2), 3)
+Test_01_Level_0	17	4	
+Test_01_Level_0	17	5	
+Test_01_Level_0	17	6	
+Test_01_Level_0	18	0	
+Test_01_Level_0	18	1	
+Test_01_Level_0	18	2	
+Test_01_Level_0	18	3	((11, 2), 3)
+Test_01_Level_0	18	4	
+Test_01_Level_0	18	5	
+Test_01_Level_0	18	6	
+Test_01_Level_0	19	0	
+Test_01_Level_0	19	1	
+Test_01_Level_0	19	2	
+Test_01_Level_0	19	3	((11, 1), 3)
+Test_01_Level_0	19	4	
+Test_01_Level_0	19	5	
+Test_01_Level_0	19	6	
+Test_01_Level_0	20	0	
+Test_01_Level_0	20	1	
+Test_01_Level_0	20	2	
+Test_01_Level_0	20	3	((11, 1), 3)
+Test_01_Level_0	20	4	
+Test_01_Level_0	20	5	
+Test_01_Level_0	20	6	
+Test_01_Level_0	21	0	
+Test_01_Level_0	21	1	
+Test_01_Level_0	21	2	
+Test_01_Level_0	21	3	((11, 1), 3)
+Test_01_Level_0	21	4	
+Test_01_Level_0	21	5	
+Test_01_Level_0	21	6	
+Test_01_Level_0	22	0	
+Test_01_Level_0	22	1	
+Test_01_Level_0	22	2	
+Test_01_Level_0	22	3	((11, 1), 3)
+Test_01_Level_0	22	4	
+Test_01_Level_0	22	5	
+Test_01_Level_0	22	6	
+Test_01_Level_0	23	0	
+Test_01_Level_0	23	1	
+Test_01_Level_0	23	2	
+Test_01_Level_0	23	3	((11, 0), 3)
+Test_01_Level_0	23	4	
+Test_01_Level_0	23	5	
+Test_01_Level_0	23	6	
+Test_01_Level_0	24	0	
+Test_01_Level_0	24	1	
+Test_01_Level_0	24	2	
+Test_01_Level_0	24	3	((11, 0), 3)
+Test_01_Level_0	24	4	
+Test_01_Level_0	24	5	
+Test_01_Level_0	24	6	
+Test_01_Level_0	25	0	
+Test_01_Level_0	25	1	
+Test_01_Level_0	25	2	
+Test_01_Level_0	25	3	((11, 0), 3)
+Test_01_Level_0	25	4	
+Test_01_Level_0	25	5	
+Test_01_Level_0	25	6	
+Test_01_Level_0	26	0	
+Test_01_Level_0	26	1	
+Test_01_Level_0	26	2	
+Test_01_Level_0	26	3	((11, 0), 3)
+Test_01_Level_0	26	4	
+Test_01_Level_0	26	5	
+Test_01_Level_0	26	6	
+Test_01_Level_0	27	0	
+Test_01_Level_0	27	1	
+Test_01_Level_0	27	2	
+Test_01_Level_0	27	3	((12, 0), 2)
+Test_01_Level_0	27	4	
+Test_01_Level_0	27	5	
+Test_01_Level_0	27	6	
+Test_01_Level_0	28	0	
+Test_01_Level_0	28	1	
+Test_01_Level_0	28	2	
+Test_01_Level_0	28	3	((12, 0), 2)
+Test_01_Level_0	28	4	
+Test_01_Level_0	28	5	
+Test_01_Level_0	28	6	
+Test_01_Level_0	29	0	
+Test_01_Level_0	29	1	
+Test_01_Level_0	29	2	
+Test_01_Level_0	29	3	((12, 0), 2)
+Test_01_Level_0	29	4	
+Test_01_Level_0	29	5	
+Test_01_Level_0	29	6	
+Test_01_Level_0	30	0	
+Test_01_Level_0	30	1	
+Test_01_Level_0	30	2	
+Test_01_Level_0	30	3	((12, 0), 2)
+Test_01_Level_0	30	4	
+Test_01_Level_0	30	5	
+Test_01_Level_0	30	6	
+Test_01_Level_0	31	0	
+Test_01_Level_0	31	1	
+Test_01_Level_0	31	2	
+Test_01_Level_0	31	3	((13, 0), 2)
+Test_01_Level_0	31	4	
+Test_01_Level_0	31	5	
+Test_01_Level_0	31	6	
+Test_01_Level_0	32	0	
+Test_01_Level_0	32	1	
+Test_01_Level_0	32	2	
+Test_01_Level_0	32	3	((13, 0), 2)
+Test_01_Level_0	32	4	
+Test_01_Level_0	32	5	
+Test_01_Level_0	32	6	
+Test_01_Level_0	33	0	
+Test_01_Level_0	33	1	
+Test_01_Level_0	33	2	
+Test_01_Level_0	33	3	((13, 0), 2)
+Test_01_Level_0	33	4	
+Test_01_Level_0	33	5	
+Test_01_Level_0	33	6	
+Test_01_Level_0	34	0	
+Test_01_Level_0	34	1	
+Test_01_Level_0	34	2	
+Test_01_Level_0	34	3	((13, 0), 2)
+Test_01_Level_0	34	4	
+Test_01_Level_0	34	5	
+Test_01_Level_0	34	6	
+Test_01_Level_0	35	0	
+Test_01_Level_0	35	1	
+Test_01_Level_0	35	2	
+Test_01_Level_0	35	3	((14, 0), 2)
+Test_01_Level_0	35	4	
+Test_01_Level_0	35	5	
+Test_01_Level_0	35	6	
+Test_01_Level_0	36	0	
+Test_01_Level_0	36	1	
+Test_01_Level_0	36	2	
+Test_01_Level_0	36	3	((14, 0), 2)
+Test_01_Level_0	36	4	
+Test_01_Level_0	36	5	
+Test_01_Level_0	36	6	
+Test_01_Level_0	37	0	
+Test_01_Level_0	37	1	
+Test_01_Level_0	37	2	
+Test_01_Level_0	37	3	((14, 0), 2)
+Test_01_Level_0	37	4	
+Test_01_Level_0	37	5	
+Test_01_Level_0	37	6	
+Test_01_Level_0	38	0	
+Test_01_Level_0	38	1	
+Test_01_Level_0	38	2	
+Test_01_Level_0	38	3	((14, 0), 2)
+Test_01_Level_0	38	4	
+Test_01_Level_0	38	5	
+Test_01_Level_0	38	6	
+Test_01_Level_0	39	0	
+Test_01_Level_0	39	1	
+Test_01_Level_0	39	2	
+Test_01_Level_0	39	3	((15, 0), 2)
+Test_01_Level_0	39	4	
+Test_01_Level_0	39	5	((11, 5), 3)
+Test_01_Level_0	39	6	
+Test_01_Level_0	40	0	
+Test_01_Level_0	40	1	
+Test_01_Level_0	40	2	
+Test_01_Level_0	40	3	((15, 0), 2)
+Test_01_Level_0	40	4	
+Test_01_Level_0	40	5	((11, 4), 3)
+Test_01_Level_0	40	6	
+Test_01_Level_0	41	0	
+Test_01_Level_0	41	1	
+Test_01_Level_0	41	2	
+Test_01_Level_0	41	3	((15, 0), 2)
+Test_01_Level_0	41	4	
+Test_01_Level_0	41	5	((11, 3), 3)
+Test_01_Level_0	41	6	
+Test_01_Level_0	42	0	
+Test_01_Level_0	42	1	
+Test_01_Level_0	42	2	
+Test_01_Level_0	42	3	((15, 0), 2)
+Test_01_Level_0	42	4	
+Test_01_Level_0	42	5	((11, 2), 3)
+Test_01_Level_0	42	6	
+Test_01_Level_0	43	0	
+Test_01_Level_0	43	1	
+Test_01_Level_0	43	2	
+Test_01_Level_0	43	3	((15, 1), 1)
+Test_01_Level_0	43	4	
+Test_01_Level_0	43	5	((11, 1), 3)
+Test_01_Level_0	43	6	
+Test_01_Level_0	44	0	
+Test_01_Level_0	44	1	
+Test_01_Level_0	44	2	
+Test_01_Level_0	44	3	((15, 1), 1)
+Test_01_Level_0	44	4	
+Test_01_Level_0	44	5	((11, 0), 3)
+Test_01_Level_0	44	6	
+Test_01_Level_0	45	0	((9, 5), 1)
+Test_01_Level_0	45	1	
+Test_01_Level_0	45	2	
+Test_01_Level_0	45	3	((15, 1), 1)
+Test_01_Level_0	45	4	
+Test_01_Level_0	45	5	((12, 0), 2)
+Test_01_Level_0	45	6	
+Test_01_Level_0	46	0	((9, 5), 1)
+Test_01_Level_0	46	1	
+Test_01_Level_0	46	2	
+Test_01_Level_0	46	3	((15, 1), 1)
+Test_01_Level_0	46	4	
+Test_01_Level_0	46	5	((13, 0), 2)
+Test_01_Level_0	46	6	
+Test_01_Level_0	47	0	((9, 5), 1)
+Test_01_Level_0	47	1	
+Test_01_Level_0	47	2	
+Test_01_Level_0	47	3	((15, 2), 1)
+Test_01_Level_0	47	4	
+Test_01_Level_0	47	5	((14, 0), 2)
+Test_01_Level_0	47	6	
+Test_01_Level_0	48	0	((9, 5), 1)
+Test_01_Level_0	48	1	
+Test_01_Level_0	48	2	
+Test_01_Level_0	48	3	((15, 2), 1)
+Test_01_Level_0	48	4	
+Test_01_Level_0	48	5	((15, 0), 2)
+Test_01_Level_0	48	6	
+Test_01_Level_0	49	0	((9, 6), 1)
+Test_01_Level_0	49	1	
+Test_01_Level_0	49	2	
+Test_01_Level_0	49	3	((15, 2), 1)
+Test_01_Level_0	49	4	
+Test_01_Level_0	49	5	((15, 1), 1)
+Test_01_Level_0	49	6	
+Test_01_Level_0	50	0	((9, 6), 1)
+Test_01_Level_0	50	1	
+Test_01_Level_0	50	2	
+Test_01_Level_0	50	3	((15, 2), 1)
+Test_01_Level_0	50	4	
+Test_01_Level_0	50	5	((15, 1), 1)
+Test_01_Level_0	50	6	
+Test_01_Level_0	51	0	((9, 6), 1)
+Test_01_Level_0	51	1	
+Test_01_Level_0	51	2	
+Test_01_Level_0	51	3	((15, 3), 1)
+Test_01_Level_0	51	4	
+Test_01_Level_0	51	5	((15, 2), 1)
+Test_01_Level_0	51	6	
+Test_01_Level_0	52	0	((9, 6), 1)
+Test_01_Level_0	52	1	
+Test_01_Level_0	52	2	
+Test_01_Level_0	52	3	((15, 3), 1)
+Test_01_Level_0	52	4	
+Test_01_Level_0	52	5	((15, 2), 1)
+Test_01_Level_0	52	6	
+Test_01_Level_0	53	0	((10, 6), 2)
+Test_01_Level_0	53	1	
+Test_01_Level_0	53	2	
+Test_01_Level_0	53	3	((15, 3), 1)
+Test_01_Level_0	53	4	((9, 20), 1)
+Test_01_Level_0	53	5	((15, 2), 1)
+Test_01_Level_0	53	6	
+Test_01_Level_0	54	0	((10, 6), 2)
+Test_01_Level_0	54	1	
+Test_01_Level_0	54	2	
+Test_01_Level_0	54	3	((15, 3), 1)
+Test_01_Level_0	54	4	((9, 20), 1)
+Test_01_Level_0	54	5	((15, 2), 1)
+Test_01_Level_0	54	6	
+Test_01_Level_0	55	0	((10, 6), 2)
+Test_01_Level_0	55	1	
+Test_01_Level_0	55	2	
+Test_01_Level_0	55	3	((15, 4), 1)
+Test_01_Level_0	55	4	((9, 21), 1)
+Test_01_Level_0	55	5	((15, 3), 1)
+Test_01_Level_0	55	6	
+Test_01_Level_0	56	0	((10, 6), 2)
+Test_01_Level_0	56	1	
+Test_01_Level_0	56	2	
+Test_01_Level_0	56	3	((15, 4), 1)
+Test_01_Level_0	56	4	((9, 21), 1)
+Test_01_Level_0	56	5	((15, 3), 1)
+Test_01_Level_0	56	6	
+Test_01_Level_0	57	0	((10, 7), 1)
+Test_01_Level_0	57	1	
+Test_01_Level_0	57	2	
+Test_01_Level_0	57	3	((15, 4), 1)
+Test_01_Level_0	57	4	((9, 22), 1)
+Test_01_Level_0	57	5	((15, 3), 1)
+Test_01_Level_0	57	6	
+Test_01_Level_0	58	0	((10, 7), 1)
+Test_01_Level_0	58	1	
+Test_01_Level_0	58	2	
+Test_01_Level_0	58	3	((15, 4), 1)
+Test_01_Level_0	58	4	((9, 22), 1)
+Test_01_Level_0	58	5	((15, 3), 1)
+Test_01_Level_0	58	6	
+Test_01_Level_0	59	0	((10, 7), 1)
+Test_01_Level_0	59	1	
+Test_01_Level_0	59	2	
+Test_01_Level_0	59	3	((15, 5), 1)
+Test_01_Level_0	59	4	((9, 23), 1)
+Test_01_Level_0	59	5	((15, 4), 1)
+Test_01_Level_0	59	6	
+Test_01_Level_0	60	0	((10, 7), 1)
+Test_01_Level_0	60	1	
+Test_01_Level_0	60	2	
+Test_01_Level_0	60	3	((15, 5), 1)
+Test_01_Level_0	60	4	((9, 23), 1)
+Test_01_Level_0	60	5	((15, 4), 1)
+Test_01_Level_0	60	6	
+Test_01_Level_0	61	0	((10, 8), 1)
+Test_01_Level_0	61	1	
+Test_01_Level_0	61	2	
+Test_01_Level_0	61	3	((15, 5), 1)
+Test_01_Level_0	61	4	((9, 24), 1)
+Test_01_Level_0	61	5	((15, 4), 1)
+Test_01_Level_0	61	6	
+Test_01_Level_0	62	0	((10, 8), 1)
+Test_01_Level_0	62	1	
+Test_01_Level_0	62	2	
+Test_01_Level_0	62	3	((15, 5), 1)
+Test_01_Level_0	62	4	((9, 24), 1)
+Test_01_Level_0	62	5	((15, 4), 1)
+Test_01_Level_0	62	6	
+Test_01_Level_0	63	0	((10, 8), 1)
+Test_01_Level_0	63	1	
+Test_01_Level_0	63	2	
+Test_01_Level_0	63	3	((15, 6), 1)
+Test_01_Level_0	63	4	((9, 25), 1)
+Test_01_Level_0	63	5	((15, 5), 1)
+Test_01_Level_0	63	6	
+Test_01_Level_0	64	0	((10, 8), 1)
+Test_01_Level_0	64	1	
+Test_01_Level_0	64	2	
+Test_01_Level_0	64	3	((15, 6), 1)
+Test_01_Level_0	64	4	((9, 25), 1)
+Test_01_Level_0	64	5	((15, 5), 1)
+Test_01_Level_0	64	6	
+Test_01_Level_0	65	0	((10, 9), 1)
+Test_01_Level_0	65	1	
+Test_01_Level_0	65	2	
+Test_01_Level_0	65	3	((15, 6), 1)
+Test_01_Level_0	65	4	((10, 25), 2)
+Test_01_Level_0	65	5	((15, 5), 1)
+Test_01_Level_0	65	6	
+Test_01_Level_0	66	0	((10, 9), 1)
+Test_01_Level_0	66	1	
+Test_01_Level_0	66	2	
+Test_01_Level_0	66	3	((15, 6), 1)
+Test_01_Level_0	66	4	((10, 25), 2)
+Test_01_Level_0	66	5	((15, 5), 1)
+Test_01_Level_0	66	6	
+Test_01_Level_0	67	0	((10, 9), 1)
+Test_01_Level_0	67	1	
+Test_01_Level_0	67	2	
+Test_01_Level_0	67	3	((15, 7), 1)
+Test_01_Level_0	67	4	((11, 25), 2)
+Test_01_Level_0	67	5	((15, 6), 1)
+Test_01_Level_0	67	6	
+Test_01_Level_0	68	0	((10, 9), 1)
+Test_01_Level_0	68	1	
+Test_01_Level_0	68	2	
+Test_01_Level_0	68	3	((15, 7), 1)
+Test_01_Level_0	68	4	((11, 25), 2)
+Test_01_Level_0	68	5	((15, 6), 1)
+Test_01_Level_0	68	6	
+Test_01_Level_0	69	0	((10, 10), 1)
+Test_01_Level_0	69	1	
+Test_01_Level_0	69	2	
+Test_01_Level_0	69	3	((15, 7), 1)
+Test_01_Level_0	69	4	((12, 25), 2)
+Test_01_Level_0	69	5	((15, 6), 1)
+Test_01_Level_0	69	6	
+Test_01_Level_0	70	0	((10, 10), 1)
+Test_01_Level_0	70	1	
+Test_01_Level_0	70	2	
+Test_01_Level_0	70	3	((15, 7), 1)
+Test_01_Level_0	70	4	((12, 25), 2)
+Test_01_Level_0	70	5	((15, 6), 1)
+Test_01_Level_0	70	6	
+Test_01_Level_0	71	0	((10, 10), 1)
+Test_01_Level_0	71	1	
+Test_01_Level_0	71	2	
+Test_01_Level_0	71	3	((15, 8), 1)
+Test_01_Level_0	71	4	((13, 25), 2)
+Test_01_Level_0	71	5	((15, 7), 1)
+Test_01_Level_0	71	6	
+Test_01_Level_0	72	0	((10, 10), 1)
+Test_01_Level_0	72	1	
+Test_01_Level_0	72	2	
+Test_01_Level_0	72	3	((15, 8), 1)
+Test_01_Level_0	72	4	((13, 25), 2)
+Test_01_Level_0	72	5	((15, 7), 1)
+Test_01_Level_0	72	6	
+Test_01_Level_0	73	0	((9, 10), 0)
+Test_01_Level_0	73	1	
+Test_01_Level_0	73	2	
+Test_01_Level_0	73	3	((15, 8), 1)
+Test_01_Level_0	73	4	((13, 24), 3)
+Test_01_Level_0	73	5	((15, 7), 1)
+Test_01_Level_0	73	6	
+Test_01_Level_0	74	0	((9, 10), 0)
+Test_01_Level_0	74	1	
+Test_01_Level_0	74	2	
+Test_01_Level_0	74	3	((15, 8), 1)
+Test_01_Level_0	74	4	((13, 24), 3)
+Test_01_Level_0	74	5	((15, 7), 1)
+Test_01_Level_0	74	6	
+Test_01_Level_0	75	0	((9, 10), 0)
+Test_01_Level_0	75	1	
+Test_01_Level_0	75	2	
+Test_01_Level_0	75	3	((15, 9), 1)
+Test_01_Level_0	75	4	((13, 23), 3)
+Test_01_Level_0	75	5	((15, 8), 1)
+Test_01_Level_0	75	6	
+Test_01_Level_0	76	0	((9, 10), 0)
+Test_01_Level_0	76	1	
+Test_01_Level_0	76	2	
+Test_01_Level_0	76	3	((15, 9), 1)
+Test_01_Level_0	76	4	((13, 23), 3)
+Test_01_Level_0	76	5	((15, 8), 1)
+Test_01_Level_0	76	6	
+Test_01_Level_0	77	0	((9, 11), 1)
+Test_01_Level_0	77	1	
+Test_01_Level_0	77	2	
+Test_01_Level_0	77	3	((15, 9), 1)
+Test_01_Level_0	77	4	((13, 22), 3)
+Test_01_Level_0	77	5	((15, 8), 1)
+Test_01_Level_0	77	6	
+Test_01_Level_0	78	0	((9, 11), 1)
+Test_01_Level_0	78	1	
+Test_01_Level_0	78	2	
+Test_01_Level_0	78	3	((15, 9), 1)
+Test_01_Level_0	78	4	((13, 22), 3)
+Test_01_Level_0	78	5	((15, 8), 1)
+Test_01_Level_0	78	6	
+Test_01_Level_0	79	0	((9, 11), 1)
+Test_01_Level_0	79	1	
+Test_01_Level_0	79	2	
+Test_01_Level_0	79	3	((15, 10), 1)
+Test_01_Level_0	79	4	((13, 21), 3)
+Test_01_Level_0	79	5	((15, 9), 1)
+Test_01_Level_0	79	6	
+Test_01_Level_0	80	0	((9, 11), 1)
+Test_01_Level_0	80	1	
+Test_01_Level_0	80	2	
+Test_01_Level_0	80	3	((15, 10), 1)
+Test_01_Level_0	80	4	((13, 21), 3)
+Test_01_Level_0	80	5	((15, 9), 1)
+Test_01_Level_0	80	6	
+Test_01_Level_0	81	0	((9, 12), 1)
+Test_01_Level_0	81	1	
+Test_01_Level_0	81	2	
+Test_01_Level_0	81	3	((15, 10), 1)
+Test_01_Level_0	81	4	((13, 20), 3)
+Test_01_Level_0	81	5	((15, 9), 1)
+Test_01_Level_0	81	6	
+Test_01_Level_0	82	0	((9, 12), 1)
+Test_01_Level_0	82	1	
+Test_01_Level_0	82	2	
+Test_01_Level_0	82	3	((15, 10), 1)
+Test_01_Level_0	82	4	((13, 20), 3)
+Test_01_Level_0	82	5	((15, 9), 1)
+Test_01_Level_0	82	6	
+Test_01_Level_0	83	0	((9, 12), 1)
+Test_01_Level_0	83	1	
+Test_01_Level_0	83	2	
+Test_01_Level_0	83	3	((15, 11), 1)
+Test_01_Level_0	83	4	((13, 19), 3)
+Test_01_Level_0	83	5	((15, 10), 1)
+Test_01_Level_0	83	6	
+Test_01_Level_0	84	0	((9, 12), 1)
+Test_01_Level_0	84	1	
+Test_01_Level_0	84	2	
+Test_01_Level_0	84	3	((15, 11), 1)
+Test_01_Level_0	84	4	((13, 19), 3)
+Test_01_Level_0	84	5	((15, 10), 1)
+Test_01_Level_0	84	6	
+Test_01_Level_0	85	0	((9, 13), 1)
+Test_01_Level_0	85	1	
+Test_01_Level_0	85	2	
+Test_01_Level_0	85	3	((15, 11), 1)
+Test_01_Level_0	85	4	((13, 18), 3)
+Test_01_Level_0	85	5	((15, 10), 1)
+Test_01_Level_0	85	6	
+Test_01_Level_0	86	0	((9, 13), 1)
+Test_01_Level_0	86	1	
+Test_01_Level_0	86	2	
+Test_01_Level_0	86	3	((15, 11), 1)
+Test_01_Level_0	86	4	((13, 18), 3)
+Test_01_Level_0	86	5	((15, 10), 1)
+Test_01_Level_0	86	6	
+Test_01_Level_0	87	0	((9, 13), 1)
+Test_01_Level_0	87	1	
+Test_01_Level_0	87	2	
+Test_01_Level_0	87	3	((15, 12), 1)
+Test_01_Level_0	87	4	((13, 17), 3)
+Test_01_Level_0	87	5	((15, 11), 1)
+Test_01_Level_0	87	6	
+Test_01_Level_0	88	0	((9, 13), 1)
+Test_01_Level_0	88	1	
+Test_01_Level_0	88	2	
+Test_01_Level_0	88	3	((15, 12), 1)
+Test_01_Level_0	88	4	((13, 17), 3)
+Test_01_Level_0	88	5	((15, 11), 1)
+Test_01_Level_0	88	6	
+Test_01_Level_0	89	0	((8, 13), 0)
+Test_01_Level_0	89	1	
+Test_01_Level_0	89	2	
+Test_01_Level_0	89	3	((15, 12), 1)
+Test_01_Level_0	89	4	((13, 16), 3)
+Test_01_Level_0	89	5	((15, 11), 1)
+Test_01_Level_0	89	6	
+Test_01_Level_0	90	0	((8, 13), 0)
+Test_01_Level_0	90	1	
+Test_01_Level_0	90	2	
+Test_01_Level_0	90	3	((15, 12), 1)
+Test_01_Level_0	90	4	((13, 16), 3)
+Test_01_Level_0	90	5	((15, 11), 1)
+Test_01_Level_0	90	6	
+Test_01_Level_0	91	0	((8, 13), 0)
+Test_01_Level_0	91	1	
+Test_01_Level_0	91	2	
+Test_01_Level_0	91	3	((15, 13), 1)
+Test_01_Level_0	91	4	((13, 15), 3)
+Test_01_Level_0	91	5	((15, 12), 1)
+Test_01_Level_0	91	6	
+Test_01_Level_0	92	0	((8, 13), 0)
+Test_01_Level_0	92	1	
+Test_01_Level_0	92	2	
+Test_01_Level_0	92	3	((15, 13), 1)
+Test_01_Level_0	92	4	((13, 15), 3)
+Test_01_Level_0	92	5	((15, 12), 1)
+Test_01_Level_0	92	6	
+Test_01_Level_0	93	0	((8, 14), 1)
+Test_01_Level_0	93	1	
+Test_01_Level_0	93	2	
+Test_01_Level_0	93	3	((15, 13), 1)
+Test_01_Level_0	93	4	((13, 14), 3)
+Test_01_Level_0	93	5	((15, 12), 1)
+Test_01_Level_0	93	6	
+Test_01_Level_0	94	0	((8, 14), 1)
+Test_01_Level_0	94	1	
+Test_01_Level_0	94	2	
+Test_01_Level_0	94	3	((15, 13), 1)
+Test_01_Level_0	94	4	((13, 14), 3)
+Test_01_Level_0	94	5	((15, 12), 1)
+Test_01_Level_0	94	6	
+Test_01_Level_0	95	0	((8, 14), 1)
+Test_01_Level_0	95	1	
+Test_01_Level_0	95	2	
+Test_01_Level_0	95	3	((15, 14), 1)
+Test_01_Level_0	95	4	((12, 14), 0)
+Test_01_Level_0	95	5	((15, 13), 1)
+Test_01_Level_0	95	6	
+Test_01_Level_0	96	0	((8, 14), 1)
+Test_01_Level_0	96	1	
+Test_01_Level_0	96	2	
+Test_01_Level_0	96	3	((15, 14), 1)
+Test_01_Level_0	96	4	((12, 14), 0)
+Test_01_Level_0	96	5	((15, 13), 1)
+Test_01_Level_0	96	6	
+Test_01_Level_0	97	0	((8, 15), 1)
+Test_01_Level_0	97	1	
+Test_01_Level_0	97	2	
+Test_01_Level_0	97	3	((15, 14), 1)
+Test_01_Level_0	97	4	((12, 13), 3)
+Test_01_Level_0	97	5	((15, 13), 1)
+Test_01_Level_0	97	6	
+Test_01_Level_0	98	0	((8, 15), 1)
+Test_01_Level_0	98	1	
+Test_01_Level_0	98	2	
+Test_01_Level_0	98	3	((15, 14), 1)
+Test_01_Level_0	98	4	((12, 13), 3)
+Test_01_Level_0	98	5	((15, 13), 1)
+Test_01_Level_0	98	6	
+Test_01_Level_0	99	0	((8, 15), 1)
+Test_01_Level_0	99	1	
+Test_01_Level_0	99	2	
+Test_01_Level_0	99	3	((15, 15), 1)
+Test_01_Level_0	99	4	((12, 12), 3)
+Test_01_Level_0	99	5	((15, 14), 1)
+Test_01_Level_0	99	6	
+Test_01_Level_0	100	0	((8, 15), 1)
+Test_01_Level_0	100	1	
+Test_01_Level_0	100	2	
+Test_01_Level_0	100	3	((15, 15), 1)
+Test_01_Level_0	100	4	((12, 12), 3)
+Test_01_Level_0	100	5	((15, 14), 1)
+Test_01_Level_0	100	6	
+Test_01_Level_0	101	0	((8, 16), 1)
+Test_01_Level_0	101	1	
+Test_01_Level_0	101	2	
+Test_01_Level_0	101	3	((15, 15), 1)
+Test_01_Level_0	101	4	((11, 12), 0)
+Test_01_Level_0	101	5	((15, 14), 1)
+Test_01_Level_0	101	6	
+Test_01_Level_0	102	0	((8, 16), 1)
+Test_01_Level_0	102	1	
+Test_01_Level_0	102	2	
+Test_01_Level_0	102	3	((15, 15), 1)
+Test_01_Level_0	102	4	((11, 12), 0)
+Test_01_Level_0	102	5	((15, 14), 1)
+Test_01_Level_0	102	6	
+Test_01_Level_0	103	0	((8, 16), 1)
+Test_01_Level_0	103	1	
+Test_01_Level_0	103	2	
+Test_01_Level_0	103	3	((14, 15), 0)
+Test_01_Level_0	103	4	((11, 11), 3)
+Test_01_Level_0	103	5	((15, 15), 1)
+Test_01_Level_0	103	6	
+Test_01_Level_0	104	0	((8, 16), 1)
+Test_01_Level_0	104	1	
+Test_01_Level_0	104	2	
+Test_01_Level_0	104	3	((14, 15), 0)
+Test_01_Level_0	104	4	((11, 11), 3)
+Test_01_Level_0	104	5	((15, 15), 1)
+Test_01_Level_0	104	6	((7, 20), 3)
+Test_01_Level_0	105	0	((8, 17), 1)
+Test_01_Level_0	105	1	
+Test_01_Level_0	105	2	
+Test_01_Level_0	105	3	((14, 15), 0)
+Test_01_Level_0	105	4	((11, 10), 3)
+Test_01_Level_0	105	5	((15, 15), 1)
+Test_01_Level_0	105	6	((7, 20), 3)
+Test_01_Level_0	106	0	((8, 17), 1)
+Test_01_Level_0	106	1	
+Test_01_Level_0	106	2	
+Test_01_Level_0	106	3	((14, 15), 0)
+Test_01_Level_0	106	4	((11, 10), 3)
+Test_01_Level_0	106	5	((15, 15), 1)
+Test_01_Level_0	106	6	((7, 19), 3)
+Test_01_Level_0	107	0	((8, 17), 1)
+Test_01_Level_0	107	1	
+Test_01_Level_0	107	2	
+Test_01_Level_0	107	3	((13, 15), 0)
+Test_01_Level_0	107	4	((11, 9), 3)
+Test_01_Level_0	107	5	((14, 15), 0)
+Test_01_Level_0	107	6	((7, 19), 3)
+Test_01_Level_0	108	0	((8, 17), 1)
+Test_01_Level_0	108	1	
+Test_01_Level_0	108	2	
+Test_01_Level_0	108	3	((13, 15), 0)
+Test_01_Level_0	108	4	((11, 9), 3)
+Test_01_Level_0	108	5	((14, 15), 0)
+Test_01_Level_0	108	6	((8, 19), 2)
+Test_01_Level_0	109	0	((8, 17), 1)
+Test_01_Level_0	109	1	
+Test_01_Level_0	109	2	
+Test_01_Level_0	109	3	((13, 15), 0)
+Test_01_Level_0	109	4	((11, 8), 3)
+Test_01_Level_0	109	5	((14, 15), 0)
+Test_01_Level_0	109	6	((8, 19), 2)
+Test_01_Level_0	110	0	((8, 17), 1)
+Test_01_Level_0	110	1	
+Test_01_Level_0	110	2	
+Test_01_Level_0	110	3	((13, 15), 0)
+Test_01_Level_0	110	4	((11, 8), 3)
+Test_01_Level_0	110	5	((14, 15), 0)
+Test_01_Level_0	110	6	((8, 18), 3)
+Test_01_Level_0	111	0	((8, 17), 1)
+Test_01_Level_0	111	1	
+Test_01_Level_0	111	2	
+Test_01_Level_0	111	3	((12, 15), 0)
+Test_01_Level_0	111	4	((11, 7), 3)
+Test_01_Level_0	111	5	((13, 15), 0)
+Test_01_Level_0	111	6	((8, 18), 3)
+Test_01_Level_0	112	0	((8, 17), 1)
+Test_01_Level_0	112	1	
+Test_01_Level_0	112	2	
+Test_01_Level_0	112	3	((12, 15), 0)
+Test_01_Level_0	112	4	((11, 7), 3)
+Test_01_Level_0	112	5	((13, 15), 0)
+Test_01_Level_0	112	6	((9, 18), 2)
+Test_01_Level_0	113	0	((8, 18), 1)
+Test_01_Level_0	113	1	
+Test_01_Level_0	113	2	
+Test_01_Level_0	113	3	((12, 15), 0)
+Test_01_Level_0	113	4	((11, 6), 3)
+Test_01_Level_0	113	5	((13, 15), 0)
+Test_01_Level_0	113	6	((9, 18), 2)
+Test_01_Level_0	114	0	((8, 18), 1)
+Test_01_Level_0	114	1	
+Test_01_Level_0	114	2	
+Test_01_Level_0	114	3	((12, 15), 0)
+Test_01_Level_0	114	4	((11, 6), 3)
+Test_01_Level_0	114	5	((13, 15), 0)
+Test_01_Level_0	114	6	((9, 17), 3)
+Test_01_Level_0	115	0	((8, 18), 1)
+Test_01_Level_0	115	1	
+Test_01_Level_0	115	2	
+Test_01_Level_0	115	3	((12, 15), 0)
+Test_01_Level_0	115	4	((12, 6), 2)
+Test_01_Level_0	115	5	((13, 15), 0)
+Test_01_Level_0	115	6	((9, 17), 3)
+Test_01_Level_0	116	0	((8, 18), 1)
+Test_01_Level_0	116	1	
+Test_01_Level_0	116	2	
+Test_01_Level_0	116	3	((12, 15), 0)
+Test_01_Level_0	116	4	((12, 6), 2)
+Test_01_Level_0	116	5	((13, 15), 0)
+Test_01_Level_0	116	6	((9, 16), 3)
+Test_01_Level_0	117	0	((8, 19), 1)
+Test_01_Level_0	117	1	
+Test_01_Level_0	117	2	
+Test_01_Level_0	117	3	((12, 15), 0)
+Test_01_Level_0	117	4	
+Test_01_Level_0	117	5	((13, 15), 0)
+Test_01_Level_0	117	6	((9, 16), 3)
+Test_01_Level_0	118	0	((8, 19), 1)
+Test_01_Level_0	118	1	
+Test_01_Level_0	118	2	
+Test_01_Level_0	118	3	((12, 15), 0)
+Test_01_Level_0	118	4	
+Test_01_Level_0	118	5	((13, 15), 0)
+Test_01_Level_0	118	6	((9, 15), 3)
+Test_01_Level_0	119	0	((8, 19), 1)
+Test_01_Level_0	119	1	
+Test_01_Level_0	119	2	
+Test_01_Level_0	119	3	((12, 15), 0)
+Test_01_Level_0	119	4	
+Test_01_Level_0	119	5	((13, 15), 0)
+Test_01_Level_0	119	6	((9, 15), 3)
+Test_01_Level_0	120	0	((8, 19), 1)
+Test_01_Level_0	120	1	
+Test_01_Level_0	120	2	
+Test_01_Level_0	120	3	((12, 15), 0)
+Test_01_Level_0	120	4	
+Test_01_Level_0	120	5	((13, 15), 0)
+Test_01_Level_0	120	6	((10, 15), 2)
+Test_01_Level_0	121	0	
+Test_01_Level_0	121	1	
+Test_01_Level_0	121	2	
+Test_01_Level_0	121	3	((12, 15), 0)
+Test_01_Level_0	121	4	
+Test_01_Level_0	121	5	((13, 15), 0)
+Test_01_Level_0	121	6	((10, 15), 2)
+Test_01_Level_0	122	0	
+Test_01_Level_0	122	1	
+Test_01_Level_0	122	2	
+Test_01_Level_0	122	3	((12, 15), 0)
+Test_01_Level_0	122	4	
+Test_01_Level_0	122	5	((13, 15), 0)
+Test_01_Level_0	122	6	((10, 14), 3)
+Test_01_Level_0	123	0	
+Test_01_Level_0	123	1	
+Test_01_Level_0	123	2	
+Test_01_Level_0	123	3	((12, 15), 0)
+Test_01_Level_0	123	4	
+Test_01_Level_0	123	5	((13, 15), 0)
+Test_01_Level_0	123	6	((10, 14), 3)
+Test_01_Level_0	124	0	
+Test_01_Level_0	124	1	
+Test_01_Level_0	124	2	
+Test_01_Level_0	124	3	((12, 15), 0)
+Test_01_Level_0	124	4	
+Test_01_Level_0	124	5	((13, 15), 0)
+Test_01_Level_0	124	6	((10, 13), 3)
+Test_01_Level_0	125	0	
+Test_01_Level_0	125	1	
+Test_01_Level_0	125	2	
+Test_01_Level_0	125	3	((11, 15), 0)
+Test_01_Level_0	125	4	
+Test_01_Level_0	125	5	((12, 15), 0)
+Test_01_Level_0	125	6	((10, 13), 3)
+Test_01_Level_0	126	0	
+Test_01_Level_0	126	1	
+Test_01_Level_0	126	2	
+Test_01_Level_0	126	3	((11, 15), 0)
+Test_01_Level_0	126	4	
+Test_01_Level_0	126	5	((12, 15), 0)
+Test_01_Level_0	126	6	((10, 12), 3)
+Test_01_Level_0	127	0	
+Test_01_Level_0	127	1	
+Test_01_Level_0	127	2	
+Test_01_Level_0	127	3	((11, 15), 0)
+Test_01_Level_0	127	4	
+Test_01_Level_0	127	5	((12, 15), 0)
+Test_01_Level_0	127	6	((10, 12), 3)
+Test_01_Level_0	128	0	
+Test_01_Level_0	128	1	
+Test_01_Level_0	128	2	
+Test_01_Level_0	128	3	((11, 15), 0)
+Test_01_Level_0	128	4	
+Test_01_Level_0	128	5	((12, 15), 0)
 Test_01_Level_0	128	6	((11, 12), 2)
-Test_01_Level_0	129	0	(None, 2)
-Test_01_Level_0	129	1	(None, 0)
-Test_01_Level_0	129	2	((11, 8), 0)
-Test_01_Level_0	129	3	(None, 2)
-Test_01_Level_0	129	4	((29, 8), 3)
-Test_01_Level_0	129	5	((12, 12), 2)
+Test_01_Level_0	129	0	
+Test_01_Level_0	129	1	
+Test_01_Level_0	129	2	
+Test_01_Level_0	129	3	((10, 15), 0)
+Test_01_Level_0	129	4	
+Test_01_Level_0	129	5	((11, 15), 0)
 Test_01_Level_0	129	6	((11, 12), 2)
-Test_01_Level_0	130	0	(None, 2)
-Test_01_Level_0	130	1	(None, 0)
-Test_01_Level_0	130	2	((11, 8), 0)
-Test_01_Level_0	130	3	(None, 2)
-Test_01_Level_0	130	4	((29, 7), 3)
-Test_01_Level_0	130	5	((12, 12), 2)
-Test_01_Level_0	130	6	((11, 12), 2)
-Test_01_Level_0	131	0	(None, 2)
-Test_01_Level_0	131	1	(None, 0)
-Test_01_Level_0	131	2	((11, 8), 0)
-Test_01_Level_0	131	3	(None, 2)
-Test_01_Level_0	131	4	((28, 7), 0)
-Test_01_Level_0	131	5	((12, 12), 2)
-Test_01_Level_0	131	6	((11, 12), 2)
-Test_01_Level_0	132	0	(None, 2)
-Test_01_Level_0	132	1	(None, 0)
-Test_01_Level_0	132	2	((11, 8), 0)
-Test_01_Level_0	132	3	(None, 2)
-Test_01_Level_0	132	4	((27, 7), 0)
-Test_01_Level_0	132	5	((13, 12), 2)
-Test_01_Level_0	132	6	((12, 12), 2)
-Test_01_Level_0	133	0	(None, 2)
-Test_01_Level_0	133	1	(None, 0)
-Test_01_Level_0	133	2	(None, 0)
-Test_01_Level_0	133	3	(None, 2)
-Test_01_Level_0	133	4	((26, 7), 0)
-Test_01_Level_0	133	5	((13, 12), 2)
-Test_01_Level_0	133	6	((12, 12), 2)
-Test_01_Level_0	134	0	(None, 2)
-Test_01_Level_0	134	1	(None, 0)
-Test_01_Level_0	134	2	(None, 0)
-Test_01_Level_0	134	3	(None, 2)
-Test_01_Level_0	134	4	((25, 7), 0)
-Test_01_Level_0	134	5	((13, 12), 2)
-Test_01_Level_0	134	6	((12, 12), 2)
-Test_01_Level_0	135	0	(None, 2)
-Test_01_Level_0	135	1	(None, 0)
-Test_01_Level_0	135	2	(None, 0)
-Test_01_Level_0	135	3	(None, 2)
-Test_01_Level_0	135	4	((24, 7), 0)
-Test_01_Level_0	135	5	((13, 12), 2)
-Test_01_Level_0	135	6	((12, 12), 2)
-Test_01_Level_0	136	0	(None, 2)
-Test_01_Level_0	136	1	(None, 0)
-Test_01_Level_0	136	2	(None, 0)
-Test_01_Level_0	136	3	(None, 2)
-Test_01_Level_0	136	4	((23, 7), 0)
-Test_01_Level_0	136	5	((14, 12), 2)
-Test_01_Level_0	136	6	((13, 12), 2)
-Test_01_Level_0	137	0	(None, 2)
-Test_01_Level_0	137	1	(None, 0)
-Test_01_Level_0	137	2	(None, 0)
-Test_01_Level_0	137	3	(None, 2)
-Test_01_Level_0	137	4	((22, 7), 0)
-Test_01_Level_0	137	5	((14, 12), 2)
-Test_01_Level_0	137	6	((13, 12), 2)
-Test_01_Level_0	138	0	(None, 2)
-Test_01_Level_0	138	1	(None, 0)
-Test_01_Level_0	138	2	(None, 0)
-Test_01_Level_0	138	3	(None, 2)
-Test_01_Level_0	138	4	((21, 7), 0)
-Test_01_Level_0	138	5	((14, 12), 2)
-Test_01_Level_0	138	6	((13, 12), 2)
-Test_01_Level_0	139	0	(None, 2)
-Test_01_Level_0	139	1	(None, 0)
-Test_01_Level_0	139	2	(None, 0)
-Test_01_Level_0	139	3	(None, 2)
-Test_01_Level_0	139	4	((20, 7), 0)
-Test_01_Level_0	139	5	((14, 12), 2)
-Test_01_Level_0	139	6	((13, 12), 2)
-Test_01_Level_0	140	0	(None, 2)
-Test_01_Level_0	140	1	(None, 0)
-Test_01_Level_0	140	2	(None, 0)
-Test_01_Level_0	140	3	(None, 2)
-Test_01_Level_0	140	4	((19, 7), 0)
-Test_01_Level_0	140	5	((15, 12), 2)
-Test_01_Level_0	140	6	((14, 12), 2)
-Test_01_Level_0	141	0	(None, 2)
-Test_01_Level_0	141	1	(None, 0)
-Test_01_Level_0	141	2	(None, 0)
-Test_01_Level_0	141	3	(None, 2)
-Test_01_Level_0	141	4	((18, 7), 0)
-Test_01_Level_0	141	5	((15, 12), 2)
-Test_01_Level_0	141	6	((14, 12), 2)
-Test_01_Level_0	142	0	(None, 2)
-Test_01_Level_0	142	1	(None, 0)
-Test_01_Level_0	142	2	(None, 0)
-Test_01_Level_0	142	3	(None, 2)
-Test_01_Level_0	142	4	((17, 7), 0)
-Test_01_Level_0	142	5	((15, 12), 2)
-Test_01_Level_0	142	6	((14, 12), 2)
-Test_01_Level_0	143	0	(None, 2)
-Test_01_Level_0	143	1	(None, 0)
-Test_01_Level_0	143	2	(None, 0)
-Test_01_Level_0	143	3	(None, 2)
-Test_01_Level_0	143	4	((16, 7), 0)
-Test_01_Level_0	143	5	((15, 12), 2)
-Test_01_Level_0	143	6	((14, 12), 2)
-Test_01_Level_0	144	0	(None, 2)
-Test_01_Level_0	144	1	(None, 0)
-Test_01_Level_0	144	2	(None, 0)
-Test_01_Level_0	144	3	(None, 2)
-Test_01_Level_0	144	4	((15, 7), 0)
-Test_01_Level_0	144	5	((16, 12), 2)
-Test_01_Level_0	144	6	((15, 12), 2)
-Test_01_Level_0	145	0	(None, 2)
-Test_01_Level_0	145	1	(None, 0)
-Test_01_Level_0	145	2	(None, 0)
-Test_01_Level_0	145	3	(None, 2)
-Test_01_Level_0	145	4	((14, 7), 0)
-Test_01_Level_0	145	5	((16, 12), 2)
-Test_01_Level_0	145	6	((15, 12), 2)
-Test_01_Level_0	146	0	(None, 2)
-Test_01_Level_0	146	1	(None, 0)
-Test_01_Level_0	146	2	(None, 0)
-Test_01_Level_0	146	3	(None, 2)
-Test_01_Level_0	146	4	((13, 7), 0)
-Test_01_Level_0	146	5	((16, 12), 2)
-Test_01_Level_0	146	6	((15, 12), 2)
-Test_01_Level_0	147	0	(None, 2)
-Test_01_Level_0	147	1	(None, 0)
-Test_01_Level_0	147	2	(None, 0)
-Test_01_Level_0	147	3	(None, 2)
-Test_01_Level_0	147	4	((13, 8), 1)
-Test_01_Level_0	147	5	((16, 12), 2)
-Test_01_Level_0	147	6	((15, 12), 2)
-Test_01_Level_0	148	0	(None, 2)
-Test_01_Level_0	148	1	(None, 0)
-Test_01_Level_0	148	2	(None, 0)
-Test_01_Level_0	148	3	(None, 2)
-Test_01_Level_0	148	4	((12, 8), 0)
-Test_01_Level_0	148	5	((17, 12), 2)
-Test_01_Level_0	148	6	((16, 12), 2)
-Test_01_Level_0	149	0	(None, 2)
-Test_01_Level_0	149	1	(None, 0)
-Test_01_Level_0	149	2	(None, 0)
-Test_01_Level_0	149	3	(None, 2)
-Test_01_Level_0	149	4	((11, 8), 0)
-Test_01_Level_0	149	5	((17, 12), 2)
-Test_01_Level_0	149	6	((16, 12), 2)
-Test_01_Level_0	150	0	(None, 2)
-Test_01_Level_0	150	1	(None, 0)
-Test_01_Level_0	150	2	(None, 0)
-Test_01_Level_0	150	3	(None, 2)
-Test_01_Level_0	150	4	(None, 0)
-Test_01_Level_0	150	5	((17, 12), 2)
-Test_01_Level_0	150	6	((16, 12), 2)
-Test_01_Level_0	151	0	(None, 2)
-Test_01_Level_0	151	1	(None, 0)
-Test_01_Level_0	151	2	(None, 0)
-Test_01_Level_0	151	3	(None, 2)
-Test_01_Level_0	151	4	(None, 0)
-Test_01_Level_0	151	5	((17, 12), 2)
-Test_01_Level_0	151	6	((16, 12), 2)
-Test_01_Level_0	152	0	(None, 2)
-Test_01_Level_0	152	1	(None, 0)
-Test_01_Level_0	152	2	(None, 0)
-Test_01_Level_0	152	3	(None, 2)
-Test_01_Level_0	152	4	(None, 0)
-Test_01_Level_0	152	5	((18, 12), 2)
-Test_01_Level_0	152	6	((17, 12), 2)
-Test_01_Level_0	153	0	(None, 2)
-Test_01_Level_0	153	1	(None, 0)
-Test_01_Level_0	153	2	(None, 0)
-Test_01_Level_0	153	3	(None, 2)
-Test_01_Level_0	153	4	(None, 0)
-Test_01_Level_0	153	5	((18, 12), 2)
-Test_01_Level_0	153	6	((17, 12), 2)
-Test_01_Level_0	154	0	(None, 2)
-Test_01_Level_0	154	1	(None, 0)
-Test_01_Level_0	154	2	(None, 0)
-Test_01_Level_0	154	3	(None, 2)
-Test_01_Level_0	154	4	(None, 0)
-Test_01_Level_0	154	5	((18, 12), 2)
-Test_01_Level_0	154	6	((17, 12), 2)
-Test_01_Level_0	155	0	(None, 2)
-Test_01_Level_0	155	1	(None, 0)
-Test_01_Level_0	155	2	(None, 0)
-Test_01_Level_0	155	3	(None, 2)
-Test_01_Level_0	155	4	(None, 0)
-Test_01_Level_0	155	5	((18, 12), 2)
-Test_01_Level_0	155	6	((17, 12), 2)
-Test_01_Level_0	156	0	(None, 2)
-Test_01_Level_0	156	1	(None, 0)
-Test_01_Level_0	156	2	(None, 0)
-Test_01_Level_0	156	3	(None, 2)
-Test_01_Level_0	156	4	(None, 0)
-Test_01_Level_0	156	5	((19, 12), 2)
-Test_01_Level_0	156	6	((18, 12), 2)
-Test_01_Level_0	157	0	(None, 2)
-Test_01_Level_0	157	1	(None, 0)
-Test_01_Level_0	157	2	(None, 0)
-Test_01_Level_0	157	3	(None, 2)
-Test_01_Level_0	157	4	(None, 0)
-Test_01_Level_0	157	5	((19, 12), 2)
-Test_01_Level_0	157	6	((18, 12), 2)
-Test_01_Level_0	158	0	(None, 2)
-Test_01_Level_0	158	1	(None, 0)
-Test_01_Level_0	158	2	(None, 0)
-Test_01_Level_0	158	3	(None, 2)
-Test_01_Level_0	158	4	(None, 0)
-Test_01_Level_0	158	5	((19, 12), 2)
-Test_01_Level_0	158	6	((18, 12), 2)
-Test_01_Level_0	159	0	(None, 2)
-Test_01_Level_0	159	1	(None, 0)
-Test_01_Level_0	159	2	(None, 0)
-Test_01_Level_0	159	3	(None, 2)
-Test_01_Level_0	159	4	(None, 0)
-Test_01_Level_0	159	5	((19, 12), 2)
-Test_01_Level_0	159	6	((18, 12), 2)
-Test_01_Level_0	160	0	(None, 2)
-Test_01_Level_0	160	1	(None, 0)
-Test_01_Level_0	160	2	(None, 0)
-Test_01_Level_0	160	3	(None, 2)
-Test_01_Level_0	160	4	(None, 0)
-Test_01_Level_0	160	5	((20, 12), 2)
-Test_01_Level_0	160	6	((19, 12), 2)
-Test_01_Level_0	161	0	(None, 2)
-Test_01_Level_0	161	1	(None, 0)
-Test_01_Level_0	161	2	(None, 0)
-Test_01_Level_0	161	3	(None, 2)
-Test_01_Level_0	161	4	(None, 0)
-Test_01_Level_0	161	5	((20, 12), 2)
-Test_01_Level_0	161	6	((19, 12), 2)
-Test_01_Level_0	162	0	(None, 2)
-Test_01_Level_0	162	1	(None, 0)
-Test_01_Level_0	162	2	(None, 0)
-Test_01_Level_0	162	3	(None, 2)
-Test_01_Level_0	162	4	(None, 0)
-Test_01_Level_0	162	5	((20, 12), 2)
-Test_01_Level_0	162	6	((19, 12), 2)
-Test_01_Level_0	163	0	(None, 2)
-Test_01_Level_0	163	1	(None, 0)
-Test_01_Level_0	163	2	(None, 0)
-Test_01_Level_0	163	3	(None, 2)
-Test_01_Level_0	163	4	(None, 0)
-Test_01_Level_0	163	5	((20, 12), 2)
-Test_01_Level_0	163	6	((19, 12), 2)
-Test_01_Level_0	164	0	(None, 2)
-Test_01_Level_0	164	1	(None, 0)
-Test_01_Level_0	164	2	(None, 0)
-Test_01_Level_0	164	3	(None, 2)
-Test_01_Level_0	164	4	(None, 0)
-Test_01_Level_0	164	5	((21, 12), 2)
-Test_01_Level_0	164	6	((20, 12), 2)
-Test_01_Level_0	165	0	(None, 2)
-Test_01_Level_0	165	1	(None, 0)
-Test_01_Level_0	165	2	(None, 0)
-Test_01_Level_0	165	3	(None, 2)
-Test_01_Level_0	165	4	(None, 0)
-Test_01_Level_0	165	5	((21, 12), 2)
-Test_01_Level_0	165	6	((20, 12), 2)
-Test_01_Level_0	166	0	(None, 2)
-Test_01_Level_0	166	1	(None, 0)
-Test_01_Level_0	166	2	(None, 0)
-Test_01_Level_0	166	3	(None, 2)
-Test_01_Level_0	166	4	(None, 0)
-Test_01_Level_0	166	5	((21, 12), 2)
-Test_01_Level_0	166	6	((20, 12), 2)
-Test_01_Level_0	167	0	(None, 2)
-Test_01_Level_0	167	1	(None, 0)
-Test_01_Level_0	167	2	(None, 0)
-Test_01_Level_0	167	3	(None, 2)
-Test_01_Level_0	167	4	(None, 0)
-Test_01_Level_0	167	5	((21, 12), 2)
-Test_01_Level_0	167	6	((20, 12), 2)
-Test_01_Level_0	168	0	(None, 2)
-Test_01_Level_0	168	1	(None, 0)
-Test_01_Level_0	168	2	(None, 0)
-Test_01_Level_0	168	3	(None, 2)
-Test_01_Level_0	168	4	(None, 0)
-Test_01_Level_0	168	5	((21, 13), 1)
-Test_01_Level_0	168	6	((21, 12), 2)
-Test_01_Level_0	169	0	(None, 2)
-Test_01_Level_0	169	1	(None, 0)
-Test_01_Level_0	169	2	(None, 0)
-Test_01_Level_0	169	3	(None, 2)
-Test_01_Level_0	169	4	(None, 0)
-Test_01_Level_0	169	5	((21, 13), 1)
-Test_01_Level_0	169	6	((21, 12), 2)
-Test_01_Level_0	170	0	(None, 2)
-Test_01_Level_0	170	1	(None, 0)
-Test_01_Level_0	170	2	(None, 0)
-Test_01_Level_0	170	3	(None, 2)
-Test_01_Level_0	170	4	(None, 0)
-Test_01_Level_0	170	5	((21, 13), 1)
-Test_01_Level_0	170	6	((21, 12), 2)
-Test_01_Level_0	171	0	(None, 2)
-Test_01_Level_0	171	1	(None, 0)
-Test_01_Level_0	171	2	(None, 0)
-Test_01_Level_0	171	3	(None, 2)
-Test_01_Level_0	171	4	(None, 0)
-Test_01_Level_0	171	5	((21, 13), 1)
-Test_01_Level_0	171	6	((21, 12), 2)
-Test_01_Level_0	172	0	(None, 2)
-Test_01_Level_0	172	1	(None, 0)
-Test_01_Level_0	172	2	(None, 0)
-Test_01_Level_0	172	3	(None, 2)
-Test_01_Level_0	172	4	(None, 0)
-Test_01_Level_0	172	5	((22, 13), 2)
-Test_01_Level_0	172	6	((21, 13), 1)
-Test_01_Level_0	173	0	(None, 2)
-Test_01_Level_0	173	1	(None, 0)
-Test_01_Level_0	173	2	(None, 0)
-Test_01_Level_0	173	3	(None, 2)
-Test_01_Level_0	173	4	(None, 0)
-Test_01_Level_0	173	5	((22, 13), 2)
-Test_01_Level_0	173	6	((21, 13), 1)
-Test_01_Level_0	174	0	(None, 2)
-Test_01_Level_0	174	1	(None, 0)
-Test_01_Level_0	174	2	(None, 0)
-Test_01_Level_0	174	3	(None, 2)
-Test_01_Level_0	174	4	(None, 0)
-Test_01_Level_0	174	5	((22, 13), 2)
-Test_01_Level_0	174	6	((21, 13), 1)
-Test_01_Level_0	175	0	(None, 2)
-Test_01_Level_0	175	1	(None, 0)
-Test_01_Level_0	175	2	(None, 0)
-Test_01_Level_0	175	3	(None, 2)
-Test_01_Level_0	175	4	(None, 0)
-Test_01_Level_0	175	5	((22, 13), 2)
-Test_01_Level_0	175	6	((21, 13), 1)
-Test_01_Level_0	176	0	(None, 2)
-Test_01_Level_0	176	1	(None, 0)
-Test_01_Level_0	176	2	(None, 0)
-Test_01_Level_0	176	3	(None, 2)
-Test_01_Level_0	176	4	(None, 0)
-Test_01_Level_0	176	5	((23, 13), 2)
-Test_01_Level_0	176	6	((22, 13), 2)
-Test_01_Level_0	177	0	(None, 2)
-Test_01_Level_0	177	1	(None, 0)
-Test_01_Level_0	177	2	(None, 0)
-Test_01_Level_0	177	3	(None, 2)
-Test_01_Level_0	177	4	(None, 0)
-Test_01_Level_0	177	5	((23, 13), 2)
-Test_01_Level_0	177	6	((22, 13), 2)
-Test_01_Level_0	178	0	(None, 2)
-Test_01_Level_0	178	1	(None, 0)
-Test_01_Level_0	178	2	(None, 0)
-Test_01_Level_0	178	3	(None, 2)
-Test_01_Level_0	178	4	(None, 0)
-Test_01_Level_0	178	5	((23, 13), 2)
-Test_01_Level_0	178	6	((22, 13), 2)
-Test_01_Level_0	179	0	(None, 2)
-Test_01_Level_0	179	1	(None, 0)
-Test_01_Level_0	179	2	(None, 0)
-Test_01_Level_0	179	3	(None, 2)
-Test_01_Level_0	179	4	(None, 0)
-Test_01_Level_0	179	5	((23, 13), 2)
-Test_01_Level_0	179	6	((22, 13), 2)
-Test_01_Level_0	180	0	(None, 2)
-Test_01_Level_0	180	1	(None, 0)
-Test_01_Level_0	180	2	(None, 0)
-Test_01_Level_0	180	3	(None, 2)
-Test_01_Level_0	180	4	(None, 0)
-Test_01_Level_0	180	5	(None, 2)
-Test_01_Level_0	180	6	((23, 13), 2)
-Test_01_Level_0	181	0	(None, 2)
-Test_01_Level_0	181	1	(None, 0)
-Test_01_Level_0	181	2	(None, 0)
-Test_01_Level_0	181	3	(None, 2)
-Test_01_Level_0	181	4	(None, 0)
-Test_01_Level_0	181	5	(None, 2)
-Test_01_Level_0	181	6	((23, 13), 2)
-Test_01_Level_0	182	0	(None, 2)
-Test_01_Level_0	182	1	(None, 0)
-Test_01_Level_0	182	2	(None, 0)
-Test_01_Level_0	182	3	(None, 2)
-Test_01_Level_0	182	4	(None, 0)
-Test_01_Level_0	182	5	(None, 2)
-Test_01_Level_0	182	6	(None, 2)
+Test_01_Level_0	130	0	
+Test_01_Level_0	130	1	
+Test_01_Level_0	130	2	
+Test_01_Level_0	130	3	((10, 15), 0)
+Test_01_Level_0	130	4	
+Test_01_Level_0	130	5	((11, 15), 0)
+Test_01_Level_0	130	6	((11, 11), 3)
+Test_01_Level_0	131	0	
+Test_01_Level_0	131	1	
+Test_01_Level_0	131	2	
+Test_01_Level_0	131	3	((10, 15), 0)
+Test_01_Level_0	131	4	
+Test_01_Level_0	131	5	((11, 15), 0)
+Test_01_Level_0	131	6	((11, 11), 3)
+Test_01_Level_0	132	0	
+Test_01_Level_0	132	1	
+Test_01_Level_0	132	2	
+Test_01_Level_0	132	3	((10, 15), 0)
+Test_01_Level_0	132	4	
+Test_01_Level_0	132	5	((11, 15), 0)
+Test_01_Level_0	132	6	((11, 10), 3)
+Test_01_Level_0	133	0	
+Test_01_Level_0	133	1	
+Test_01_Level_0	133	2	
+Test_01_Level_0	133	3	((9, 15), 0)
+Test_01_Level_0	133	4	
+Test_01_Level_0	133	5	((10, 15), 0)
+Test_01_Level_0	133	6	((11, 10), 3)
+Test_01_Level_0	134	0	
+Test_01_Level_0	134	1	
+Test_01_Level_0	134	2	
+Test_01_Level_0	134	3	((9, 15), 0)
+Test_01_Level_0	134	4	
+Test_01_Level_0	134	5	((10, 15), 0)
+Test_01_Level_0	134	6	((11, 9), 3)
+Test_01_Level_0	135	0	
+Test_01_Level_0	135	1	
+Test_01_Level_0	135	2	
+Test_01_Level_0	135	3	((9, 15), 0)
+Test_01_Level_0	135	4	
+Test_01_Level_0	135	5	((10, 15), 0)
+Test_01_Level_0	135	6	((11, 9), 3)
+Test_01_Level_0	136	0	
+Test_01_Level_0	136	1	
+Test_01_Level_0	136	2	
+Test_01_Level_0	136	3	((9, 15), 0)
+Test_01_Level_0	136	4	
+Test_01_Level_0	136	5	((10, 15), 0)
+Test_01_Level_0	136	6	((11, 8), 3)
+Test_01_Level_0	137	0	
+Test_01_Level_0	137	1	
+Test_01_Level_0	137	2	
+Test_01_Level_0	137	3	((9, 16), 1)
+Test_01_Level_0	137	4	
+Test_01_Level_0	137	5	((9, 15), 0)
+Test_01_Level_0	137	6	((11, 8), 3)
+Test_01_Level_0	138	0	
+Test_01_Level_0	138	1	
+Test_01_Level_0	138	2	
+Test_01_Level_0	138	3	((9, 16), 1)
+Test_01_Level_0	138	4	
+Test_01_Level_0	138	5	((9, 15), 0)
+Test_01_Level_0	138	6	((11, 7), 3)
+Test_01_Level_0	139	0	
+Test_01_Level_0	139	1	
+Test_01_Level_0	139	2	
+Test_01_Level_0	139	3	((9, 16), 1)
+Test_01_Level_0	139	4	
+Test_01_Level_0	139	5	((9, 15), 0)
+Test_01_Level_0	139	6	((11, 7), 3)
+Test_01_Level_0	140	0	
+Test_01_Level_0	140	1	
+Test_01_Level_0	140	2	
+Test_01_Level_0	140	3	((9, 16), 1)
+Test_01_Level_0	140	4	
+Test_01_Level_0	140	5	((9, 15), 0)
+Test_01_Level_0	140	6	((11, 6), 3)
+Test_01_Level_0	141	0	
+Test_01_Level_0	141	1	
+Test_01_Level_0	141	2	
+Test_01_Level_0	141	3	((9, 17), 1)
+Test_01_Level_0	141	4	
+Test_01_Level_0	141	5	((9, 16), 1)
+Test_01_Level_0	141	6	((11, 6), 3)
+Test_01_Level_0	142	0	
+Test_01_Level_0	142	1	
+Test_01_Level_0	142	2	
+Test_01_Level_0	142	3	((9, 17), 1)
+Test_01_Level_0	142	4	
+Test_01_Level_0	142	5	((9, 16), 1)
+Test_01_Level_0	142	6	((12, 6), 2)
+Test_01_Level_0	143	0	
+Test_01_Level_0	143	1	
+Test_01_Level_0	143	2	
+Test_01_Level_0	143	3	((9, 17), 1)
+Test_01_Level_0	143	4	
+Test_01_Level_0	143	5	((9, 16), 1)
+Test_01_Level_0	143	6	((12, 6), 2)
+Test_01_Level_0	144	0	
+Test_01_Level_0	144	1	
+Test_01_Level_0	144	2	
+Test_01_Level_0	144	3	((9, 17), 1)
+Test_01_Level_0	144	4	
+Test_01_Level_0	144	5	((9, 16), 1)
+Test_01_Level_0	144	6	
+Test_01_Level_0	145	0	
+Test_01_Level_0	145	1	
+Test_01_Level_0	145	2	
+Test_01_Level_0	145	3	((9, 18), 1)
+Test_01_Level_0	145	4	
+Test_01_Level_0	145	5	((9, 17), 1)
+Test_01_Level_0	145	6	
+Test_01_Level_0	146	0	
+Test_01_Level_0	146	1	
+Test_01_Level_0	146	2	
+Test_01_Level_0	146	3	((9, 18), 1)
+Test_01_Level_0	146	4	
+Test_01_Level_0	146	5	((9, 17), 1)
+Test_01_Level_0	146	6	
+Test_01_Level_0	147	0	
+Test_01_Level_0	147	1	
+Test_01_Level_0	147	2	
+Test_01_Level_0	147	3	((9, 18), 1)
+Test_01_Level_0	147	4	
+Test_01_Level_0	147	5	((9, 17), 1)
+Test_01_Level_0	147	6	
+Test_01_Level_0	148	0	
+Test_01_Level_0	148	1	
+Test_01_Level_0	148	2	
+Test_01_Level_0	148	3	((9, 18), 1)
+Test_01_Level_0	148	4	
+Test_01_Level_0	148	5	((9, 17), 1)
+Test_01_Level_0	148	6	
+Test_01_Level_0	149	0	
+Test_01_Level_0	149	1	
+Test_01_Level_0	149	2	
+Test_01_Level_0	149	3	((9, 19), 1)
+Test_01_Level_0	149	4	
+Test_01_Level_0	149	5	((9, 18), 1)
+Test_01_Level_0	149	6	
+Test_01_Level_0	150	0	
+Test_01_Level_0	150	1	
+Test_01_Level_0	150	2	
+Test_01_Level_0	150	3	((9, 19), 1)
+Test_01_Level_0	150	4	
+Test_01_Level_0	150	5	((9, 18), 1)
+Test_01_Level_0	150	6	
+Test_01_Level_0	151	0	
+Test_01_Level_0	151	1	
+Test_01_Level_0	151	2	
+Test_01_Level_0	151	3	((9, 19), 1)
+Test_01_Level_0	151	4	
+Test_01_Level_0	151	5	((9, 18), 1)
+Test_01_Level_0	151	6	
+Test_01_Level_0	152	0	
+Test_01_Level_0	152	1	
+Test_01_Level_0	152	2	
+Test_01_Level_0	152	3	((9, 19), 1)
+Test_01_Level_0	152	4	
+Test_01_Level_0	152	5	((9, 18), 1)
+Test_01_Level_0	152	6	
+Test_01_Level_0	153	0	
+Test_01_Level_0	153	1	
+Test_01_Level_0	153	2	
+Test_01_Level_0	153	3	((10, 19), 2)
+Test_01_Level_0	153	4	
+Test_01_Level_0	153	5	((9, 19), 1)
+Test_01_Level_0	153	6	
+Test_01_Level_0	154	0	
+Test_01_Level_0	154	1	
+Test_01_Level_0	154	2	
+Test_01_Level_0	154	3	((10, 19), 2)
+Test_01_Level_0	154	4	
+Test_01_Level_0	154	5	((9, 19), 1)
+Test_01_Level_0	154	6	
+Test_01_Level_0	155	0	
+Test_01_Level_0	155	1	
+Test_01_Level_0	155	2	
+Test_01_Level_0	155	3	((10, 19), 2)
+Test_01_Level_0	155	4	
+Test_01_Level_0	155	5	((9, 19), 1)
+Test_01_Level_0	155	6	
+Test_01_Level_0	156	0	
+Test_01_Level_0	156	1	
+Test_01_Level_0	156	2	
+Test_01_Level_0	156	3	((10, 19), 2)
+Test_01_Level_0	156	4	
+Test_01_Level_0	156	5	((9, 19), 1)
+Test_01_Level_0	156	6	
+Test_01_Level_0	157	0	
+Test_01_Level_0	157	1	
+Test_01_Level_0	157	2	
+Test_01_Level_0	157	3	
+Test_01_Level_0	157	4	
+Test_01_Level_0	157	5	((10, 19), 2)
+Test_01_Level_0	157	6	
+Test_01_Level_0	158	0	
+Test_01_Level_0	158	1	
+Test_01_Level_0	158	2	((9, 20), 3)
+Test_01_Level_0	158	3	
+Test_01_Level_0	158	4	
+Test_01_Level_0	158	5	
+Test_01_Level_0	158	6	
+Test_01_Level_0	159	0	
+Test_01_Level_0	159	1	((9, 20), 1)
+Test_01_Level_0	159	2	((9, 19), 3)
+Test_01_Level_0	159	3	
+Test_01_Level_0	159	4	
+Test_01_Level_0	159	5	
+Test_01_Level_0	159	6	
+Test_01_Level_0	160	0	
+Test_01_Level_0	160	1	((9, 21), 1)
+Test_01_Level_0	160	2	((9, 18), 3)
+Test_01_Level_0	160	3	
+Test_01_Level_0	160	4	
+Test_01_Level_0	160	5	
+Test_01_Level_0	160	6	
+Test_01_Level_0	161	0	
+Test_01_Level_0	161	1	((9, 22), 1)
+Test_01_Level_0	161	2	((9, 17), 3)
+Test_01_Level_0	161	3	
+Test_01_Level_0	161	4	
+Test_01_Level_0	161	5	
+Test_01_Level_0	161	6	
+Test_01_Level_0	162	0	
+Test_01_Level_0	162	1	((9, 23), 1)
+Test_01_Level_0	162	2	((9, 16), 3)
+Test_01_Level_0	162	3	
+Test_01_Level_0	162	4	
+Test_01_Level_0	162	5	
+Test_01_Level_0	162	6	
+Test_01_Level_0	163	0	
+Test_01_Level_0	163	1	((9, 24), 1)
+Test_01_Level_0	163	2	((9, 15), 3)
+Test_01_Level_0	163	3	
+Test_01_Level_0	163	4	
+Test_01_Level_0	163	5	
+Test_01_Level_0	163	6	
+Test_01_Level_0	164	0	
+Test_01_Level_0	164	1	((9, 25), 1)
+Test_01_Level_0	164	2	((10, 15), 2)
+Test_01_Level_0	164	3	
+Test_01_Level_0	164	4	
+Test_01_Level_0	164	5	
+Test_01_Level_0	164	6	
+Test_01_Level_0	165	0	
+Test_01_Level_0	165	1	((10, 25), 2)
+Test_01_Level_0	165	2	((10, 14), 3)
+Test_01_Level_0	165	3	
+Test_01_Level_0	165	4	
+Test_01_Level_0	165	5	
+Test_01_Level_0	165	6	
+Test_01_Level_0	166	0	
+Test_01_Level_0	166	1	((11, 25), 2)
+Test_01_Level_0	166	2	((10, 13), 3)
+Test_01_Level_0	166	3	
+Test_01_Level_0	166	4	
+Test_01_Level_0	166	5	
+Test_01_Level_0	166	6	
+Test_01_Level_0	167	0	
+Test_01_Level_0	167	1	((12, 25), 2)
+Test_01_Level_0	167	2	((10, 12), 3)
+Test_01_Level_0	167	3	
+Test_01_Level_0	167	4	
+Test_01_Level_0	167	5	
+Test_01_Level_0	167	6	
+Test_01_Level_0	168	0	
+Test_01_Level_0	168	1	((13, 25), 2)
+Test_01_Level_0	168	2	((11, 12), 2)
+Test_01_Level_0	168	3	
+Test_01_Level_0	168	4	
+Test_01_Level_0	168	5	
+Test_01_Level_0	168	6	
+Test_01_Level_0	169	0	
+Test_01_Level_0	169	1	((13, 24), 3)
+Test_01_Level_0	169	2	((11, 11), 3)
+Test_01_Level_0	169	3	
+Test_01_Level_0	169	4	
+Test_01_Level_0	169	5	
+Test_01_Level_0	169	6	
+Test_01_Level_0	170	0	
+Test_01_Level_0	170	1	((13, 23), 3)
+Test_01_Level_0	170	2	((11, 10), 3)
+Test_01_Level_0	170	3	
+Test_01_Level_0	170	4	
+Test_01_Level_0	170	5	
+Test_01_Level_0	170	6	
+Test_01_Level_0	171	0	
+Test_01_Level_0	171	1	((13, 22), 3)
+Test_01_Level_0	171	2	((11, 9), 3)
+Test_01_Level_0	171	3	
+Test_01_Level_0	171	4	
+Test_01_Level_0	171	5	
+Test_01_Level_0	171	6	
+Test_01_Level_0	172	0	
+Test_01_Level_0	172	1	((13, 21), 3)
+Test_01_Level_0	172	2	((11, 8), 3)
+Test_01_Level_0	172	3	
+Test_01_Level_0	172	4	
+Test_01_Level_0	172	5	
+Test_01_Level_0	172	6	
+Test_01_Level_0	173	0	
+Test_01_Level_0	173	1	((13, 20), 3)
+Test_01_Level_0	173	2	((11, 7), 3)
+Test_01_Level_0	173	3	
+Test_01_Level_0	173	4	
+Test_01_Level_0	173	5	
+Test_01_Level_0	173	6	
+Test_01_Level_0	174	0	
+Test_01_Level_0	174	1	((13, 19), 3)
+Test_01_Level_0	174	2	((11, 6), 3)
+Test_01_Level_0	174	3	
+Test_01_Level_0	174	4	
+Test_01_Level_0	174	5	
+Test_01_Level_0	174	6	
+Test_01_Level_0	175	0	
+Test_01_Level_0	175	1	((13, 18), 3)
+Test_01_Level_0	175	2	((12, 6), 2)
+Test_01_Level_0	175	3	
+Test_01_Level_0	175	4	
+Test_01_Level_0	175	5	
+Test_01_Level_0	175	6	
+Test_01_Level_0	176	0	
+Test_01_Level_0	176	1	((13, 17), 3)
+Test_01_Level_0	176	2	
+Test_01_Level_0	176	3	
+Test_01_Level_0	176	4	
+Test_01_Level_0	176	5	
+Test_01_Level_0	176	6	
+Test_01_Level_0	177	0	
+Test_01_Level_0	177	1	((13, 16), 3)
+Test_01_Level_0	177	2	
+Test_01_Level_0	177	3	
+Test_01_Level_0	177	4	
+Test_01_Level_0	177	5	
+Test_01_Level_0	177	6	
+Test_01_Level_0	178	0	
+Test_01_Level_0	178	1	((13, 15), 3)
+Test_01_Level_0	178	2	
+Test_01_Level_0	178	3	
+Test_01_Level_0	178	4	
+Test_01_Level_0	178	5	
+Test_01_Level_0	178	6	
+Test_01_Level_0	179	0	
+Test_01_Level_0	179	1	((13, 14), 3)
+Test_01_Level_0	179	2	
+Test_01_Level_0	179	3	
+Test_01_Level_0	179	4	
+Test_01_Level_0	179	5	
+Test_01_Level_0	179	6	
+Test_01_Level_0	180	0	
+Test_01_Level_0	180	1	((12, 14), 0)
+Test_01_Level_0	180	2	
+Test_01_Level_0	180	3	
+Test_01_Level_0	180	4	
+Test_01_Level_0	180	5	
+Test_01_Level_0	180	6	
+Test_01_Level_0	181	0	
+Test_01_Level_0	181	1	((12, 13), 3)
+Test_01_Level_0	181	2	
+Test_01_Level_0	181	3	
+Test_01_Level_0	181	4	
+Test_01_Level_0	181	5	
+Test_01_Level_0	181	6	
+Test_01_Level_0	182	0	
+Test_01_Level_0	182	1	((12, 12), 3)
+Test_01_Level_0	182	2	
+Test_01_Level_0	182	3	
+Test_01_Level_0	182	4	
+Test_01_Level_0	182	5	
+Test_01_Level_0	182	6	
+Test_01_Level_0	183	0	
+Test_01_Level_0	183	1	((11, 12), 0)
+Test_01_Level_0	183	2	
+Test_01_Level_0	183	3	
+Test_01_Level_0	183	4	
+Test_01_Level_0	183	5	
+Test_01_Level_0	183	6	
+Test_01_Level_0	184	0	
+Test_01_Level_0	184	1	((11, 11), 3)
+Test_01_Level_0	184	2	
+Test_01_Level_0	184	3	
+Test_01_Level_0	184	4	
+Test_01_Level_0	184	5	
+Test_01_Level_0	184	6	
+Test_01_Level_0	185	0	
+Test_01_Level_0	185	1	((11, 10), 3)
+Test_01_Level_0	185	2	
+Test_01_Level_0	185	3	
+Test_01_Level_0	185	4	
+Test_01_Level_0	185	5	
+Test_01_Level_0	185	6	
+Test_01_Level_0	186	0	
+Test_01_Level_0	186	1	((11, 9), 3)
+Test_01_Level_0	186	2	
+Test_01_Level_0	186	3	
+Test_01_Level_0	186	4	
+Test_01_Level_0	186	5	
+Test_01_Level_0	186	6	
+Test_01_Level_0	187	0	
+Test_01_Level_0	187	1	((11, 8), 3)
+Test_01_Level_0	187	2	
+Test_01_Level_0	187	3	
+Test_01_Level_0	187	4	
+Test_01_Level_0	187	5	
+Test_01_Level_0	187	6	
+Test_01_Level_0	188	0	
+Test_01_Level_0	188	1	((11, 7), 3)
+Test_01_Level_0	188	2	
+Test_01_Level_0	188	3	
+Test_01_Level_0	188	4	
+Test_01_Level_0	188	5	
+Test_01_Level_0	188	6	
+Test_01_Level_0	189	0	
+Test_01_Level_0	189	1	((11, 6), 3)
+Test_01_Level_0	189	2	
+Test_01_Level_0	189	3	
+Test_01_Level_0	189	4	
+Test_01_Level_0	189	5	
+Test_01_Level_0	189	6	
+Test_01_Level_0	190	0	
+Test_01_Level_0	190	1	((12, 6), 2)
+Test_01_Level_0	190	2	
+Test_01_Level_0	190	3	
+Test_01_Level_0	190	4	
+Test_01_Level_0	190	5	
+Test_01_Level_0	190	6	
+Test_01_Level_0	191	0	
+Test_01_Level_0	191	1	
+Test_01_Level_0	191	2	
+Test_01_Level_0	191	3	
+Test_01_Level_0	191	4	
+Test_01_Level_0	191	5	
+Test_01_Level_0	191	6	

@@ -12,16 +12,13 @@ Collection of scenarios for [Flatland](https://github.com/flatland-association/f
 | [`scenarios`](#scenarios-randomly-generated) |
 | [`trajectories`](#Trajectories)              |
 
-
 ## competitions
 
 Contains public scenarios of Flatland competitions.
 
-
 ## Scenario generator
 
-Use the drawing tool to create grid topologies, lines and schedules to then create your own scenarios. Check out the readme file within the folder. 
-
+Use the drawing tool to create grid topologies, lines and schedules to then create your own scenarios. Check out the readme file within the folder.
 
 ## Scenario Olten
 
@@ -79,7 +76,6 @@ Only 3/10 lines open:
 |---------|----------------------|
 | v2      | Generated with 4.1.0 |
 | v1      | Generated with 4.0.6 |
-
 
 ## Scenarios (randomly generated)
 
@@ -248,10 +244,10 @@ The configurations are taken from [metadata.csv](scenarios/metadata.csv):
 
 #### Changelog
 
-| Version                                              | Description                                                                                  |
-|------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [environments_v1.zip](scenarios/environments_v1.zip) | Generated with 4.0.6                                                                         |
-| [environments_v2.zip](scenarios/environments_v2.zip) | Generated with 4.2.1                                                                         |
+| Version                                              | Description                                                                                   |
+|------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| [environments_v1.zip](scenarios/environments_v1.zip) | Generated with 4.0.6                                                                          |
+| [environments_v2.zip](scenarios/environments_v2.zip) | Generated with 4.2.1                                                                          |
 | [environments_v3.zip](scenarios/environments_v3.zip) | Generated with pre-4.2.4 ([pr](https://github.com/flatland-association/flatland-rl/pull/341)) |
 
 ## Trajectories
@@ -273,7 +269,7 @@ export PYTHONPATH=../flatland-baselines:../flatland-rl:$PWD
 python trajectories/gen_trajectories.py
 
 cd trajectories/
-VERSION="_v5"
+VERSION="_v6"
 zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip 30x30\ map -x "*.DS_Store"
 zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip malfunction_deadlock_avoidance_heuristics -x "*.DS_Store"
 ```
@@ -282,6 +278,7 @@ zip -r FLATLAND_BENCHMARK_EPISODES_FOLDER${VERSION}.zip malfunction_deadlock_avo
 
 | Version                                                                                             | Description                                                                                                                                                                                                                                               |
 |-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [FLATLAND_BENCHMARK_EPISODES_FOLDER_v6.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v6.zip) | Actions are applied at cell entry  [pr](https://github.com/flatland-association/flatland-rl/pull/501)                                                                                                                                                     |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER_v5.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v5.zip) | Re-generate with modified dla using k shortest paths.  [pr](https://github.com/flatland-association/flatland-baselines/pull/41/)                                                                                                                          |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER_v4.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v4.zip) | Re-generate with rewards, dones, infos  [pr](https://github.com/flatland-association/flatland-rl/pull/222/)                                                                                                                                               |
 | [FLATLAND_BENCHMARK_EPISODES_FOLDER_v3.zip](trajectories/FLATLAND_BENCHMARK_EPISODES_FOLDER_v3.zip) | Re-generate malfunction scenarios after bugfixing of step function [pr](https://github.com/flatland-association/flatland-rl/pull/171) / [sha](https://github.com/flatland-association/flatland-scenarios/commit/a90661093e1b7d365bc81c6bc020ac9906bb548d) |
