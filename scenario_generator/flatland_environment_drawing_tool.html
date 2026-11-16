@@ -1224,7 +1224,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                     <button class="reorder-button" data-action="move-down" data-id="${line.id}" title="Move Down" ${disableDown ? 'disabled' : ''}>▼</button>
                     <span class="list-item-name">${line.name}</span> 
                 </div>
-                <span class="list-item-details" title="${line.stationIds.map(stationLabel).join(' → ')}${startCellInfo}${endCellInfo}">${line.stationIds.map(stationLabel).join(' → ')}${startCellInfo}${endCellInfo}</span> 
+                <span class="list-item-details" title="${escapeHtml(line.stationIds.map(stationLabel).join(' → '))}${startCellInfo}${endCellInfo}">${escapeHtml(line.stationIds.map(stationLabel).join(' → '))}${startCellInfo}${endCellInfo}</span> 
                 <div class="list-item-actions"> 
                     <button data-action="test" data-id="${line.id}">Path Lengths</button> 
                     <button data-action="edit" data-id="${line.id}">Edit</button> 
@@ -1605,7 +1605,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
 
             tr.innerHTML = `
                 <td>${index + 1}</td>
-                <td>${stationLabel(stationId)}</td>
+                <td>${escapeHtml(stationLabel(stationId))}</td>
                 <td class="distance-value">-</td>
                 <td class="calculated-value travel-time-cell">-</td>
                 <td class="calculated-value arrival-time-cell">-</td>
@@ -2321,6 +2321,8 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
     function exportedStationName(id) { return stationNames[id] || String(id); }
     // How lists show a station: "3 Ziegelbrücke", or "3" without a name.
     function stationLabel(id) { return stationNames[id] ? `${id} ${stationNames[id]}` : `${id}`; }
+    // For text put into innerHTML: station names are typed by users or come from imported files.
+    function escapeHtml(text) { return String(text).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]); }
     // Drop names and areas of stations that no longer exist.
     function pruneStationMeta() {
         const ids = existingStationIds();
