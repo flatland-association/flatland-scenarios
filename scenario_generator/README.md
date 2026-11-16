@@ -232,8 +232,9 @@ you use `generate_scenario.py` to generate your scenario, do this before running
 }
 ```
 
-- **`malfunctions.scheduled`**: a train breaks down at `step` for `duration` steps. Name it by its timetable name in the tool (`train`) or by its
-  handle (`handle`, the timetable's position in the tool, from 0).
+- **`malfunctions.scheduled`**: a train breaks down at `step` (from 1 to the episode's last step) for `duration` steps. Name it by its timetable
+  name in the tool (`train`) or by its handle (`handle`, the timetable's position in the tool, from 0). A train that has already arrived, or is
+  already broken down, at `step` is skipped with a warning.
 - **`malfunctions.breakdown`** / **`malfunctions.departure`** (optional): random malfunctions,
   `{"malfunction_interval": 540, "malfunction_duration_min": 20, "malfunction_duration_max": 50}`. Leave them out for a reproducible scenario.
 - **`timetableSpecs`** (optional): generate the timetables as in `metadata.json`; without it the tool's timetables are taken as they are.

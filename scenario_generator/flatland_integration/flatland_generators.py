@@ -40,8 +40,15 @@ def stations_to_stations_links(stations: List[dict]) -> StationsLinks:
     by its name if it has one, else by its id; edges are its stopping points
     and it has no gates.
     Links are not captured yet and stay empty.
+    Two stations with the same name are refused, as one would replace the other.
     """
-    return StationsLinks(stations={station.name: station for station in (_station(s) for s in sorted(stations, key=lambda s: s['id']))}, links=[])
+    by_name: Dict[str, Station] = {}
+    for s in sorted(stations, key=lambda s: s['id']):
+        station = _station(s)
+        if station.name in by_name:
+            raise ValueError(f"Two stations are named '{station.name}'; station names must be unique.")
+        by_name[station.name] = station
+    return StationsLinks(stations=by_name, links=[])
 
 
 def _station(s: dict) -> Station:

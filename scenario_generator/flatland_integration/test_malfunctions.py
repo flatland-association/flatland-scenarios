@@ -71,3 +71,15 @@ def test_scheduled_malfunction_effects_generator_state_round_trip():
 
     assert isinstance(restored, ScheduledMalfunctionEffectsGenerator)
     assert restored.malfunctions == malfunctions
+
+
+def test_scheduled_malfunction_skipped_with_warning_if_arrived():
+    eg = ScheduledMalfunctionEffectsGenerator([ScheduledMalfunction(handle=0, step=5, duration=3)])
+    env = _env(eg)
+    env._elapsed_steps = 5
+    env.agents[0].state_machine.set_state(TrainState.DONE)
+
+    with pytest.warns(UserWarning, match="already arrived"):
+        eg.on_episode_step_start(env)
+
+    assert env.agents[0].malfunction_handler.malfunction_down_counter == 0

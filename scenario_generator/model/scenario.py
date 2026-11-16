@@ -87,7 +87,7 @@ class Scenario:
         scheduled = malfunctions.get("scheduled", None)
         if scheduled:
             self.scheduled_malfunctions = resolve_scheduled_malfunctions(
-                scheduled, [t['name'] for t in self.timetables], len(self.flatland_line['agent_positions']))
+                scheduled, [t['name'] for t in self.timetables], len(self.flatland_line['agent_positions']), self.flatland_timetable['max_episode_steps'])
 
     def print_lines(self):
         for line in self.lines:
@@ -239,12 +239,15 @@ class ScenarioBuilder:
         Each spec is `{"train": <timetable name>, "step": int, "duration": int}` or `{"handle": int, "step": int, "duration": int}`.
         Train names are resolved to agent handles on `build()`, i.e. against the final (derived) timetables.
         """
+        if scheduled_malfunction_specs is not None and not isinstance(scheduled_malfunction_specs, list):
+            raise ValueError(f"Scheduled malfunctions must be a list of specs, got {type(scheduled_malfunction_specs).__name__}.")
         self.scheduled_malfunction_specs = list(scheduled_malfunction_specs or [])
         return self
 
     def _resolve_scheduled_malfunctions(self) -> List[ScheduledMalfunction]:
         return resolve_scheduled_malfunctions(
-            self.scheduled_malfunction_specs, [t['name'] for t in self.scenario_timetables], len(self.scenario_flatland_line['agent_positions']))
+            self.scheduled_malfunction_specs, [t['name'] for t in self.scenario_timetables], len(self.scenario_flatland_line['agent_positions']),
+            self.scenario_flatland_timetable['max_episode_steps'])
 
     def rescale_timetable(self, timetable: list[dict], travel_factor: float = 1.0) -> list[dict]:
         stops = timetable['stops']
@@ -395,11 +398,13 @@ class ScenarioBuilder:
         return self
 
 
-def resolve_scheduled_malfunctions(specs: List[dict], timetable_names: List[str], num_agents: int) -> List[ScheduledMalfunction]:
+def resolve_scheduled_malfunctions(specs: List[dict], timetable_names: List[str], num_agents: int, max_episode_steps: int) -> List[ScheduledMalfunction]:
     """
     Resolve scheduled malfunction specs, each `{"train": <timetable name>, "step": int, "duration": int}` or
     `{"handle": int, "step": int, "duration": int}`, to agent handles: agent handle i is built from timetable i (see `ScenarioBuilder.add_timetable`).
     """
+    if not isinstance(specs, list):
+        raise ValueError(f"Scheduled malfunctions must be a list of specs, got {type(specs).__name__}.")
     if not specs:
         return []
     if len(timetable_names) != num_agents:
@@ -407,12 +412,14 @@ def resolve_scheduled_malfunctions(specs: List[dict], timetable_names: List[str]
     resolved = []
     for spec in specs:
         handle = _scheduled_malfunction_handle(spec, timetable_names, num_agents)
-        step, duration = _scheduled_malfunction_window(spec)
+        step, duration = _scheduled_malfunction_window(spec, max_episode_steps)
         resolved.append(ScheduledMalfunction(handle=handle, step=step, duration=duration))
     return resolved
 
 
 def _scheduled_malfunction_handle(spec: dict, timetable_names: List[str], num_agents: int) -> int:
+    if not isinstance(spec, dict):
+        raise ValueError(f"Scheduled malfunction {spec!r} must be an object with 'train' or 'handle', 'step' and 'duration'.")
     if ('train' in spec) == ('handle' in spec):
         raise ValueError(f"Scheduled malfunction {spec} must specify exactly one of 'train' or 'handle'.")
     if 'train' in spec:
@@ -422,13 +429,18 @@ def _scheduled_malfunction_handle(spec: dict, timetable_names: List[str], num_ag
             raise ValueError(f"Scheduled malfunction train '{spec['train']}' {problem}. Available trains: {timetable_names}")
         return matches[0]
     handle = spec['handle']
-    if not 0 <= handle < num_agents:
+    if not isinstance(handle, int) or not 0 <= handle < num_agents:
         raise ValueError(f"Scheduled malfunction handle {handle} out of range [0, {num_agents}).")
     return handle
 
 
-def _scheduled_malfunction_window(spec: dict) -> Tuple[int, int]:
+def _scheduled_malfunction_window(spec: dict, max_episode_steps: int) -> Tuple[int, int]:
+    missing = [key for key in ('step', 'duration') if key not in spec]
+    if missing:
+        raise ValueError(f"Scheduled malfunction {spec} misses {' and '.join(repr(key) for key in missing)}.")
     step, duration = spec['step'], spec['duration']
-    if step < 1 or duration < 1:
-        raise ValueError(f"Scheduled malfunction {spec} needs step >= 1 and duration >= 1.")
+    if not isinstance(step, int) or not isinstance(duration, int) or step < 1 or duration < 1:
+        raise ValueError(f"Scheduled malfunction {spec} needs step >= 1 and duration >= 1, both integers.")
+    if step > max_episode_steps:
+        raise ValueError(f"Scheduled malfunction {spec} starts after the episode ends (max_episode_steps {max_episode_steps}).")
     return step, duration

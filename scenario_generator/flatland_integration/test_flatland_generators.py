@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 
 from flatland.envs.grid.rail_env_grid import RailEnvTransitions
 from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
@@ -168,3 +169,10 @@ def test_rail_generator_from_grid_map_with_flat_per_cell_stations():
     assert optionals['stations_links'].stations['1'].stopping_points == [
         StoppingPoint(name='1.0', node=(0, 0)), StoppingPoint(name='1.1', node=(0, 1)), StoppingPoint(name='1.2', node=(0, 2))]
 
+
+def test_stations_to_stations_links_refuses_duplicate_names():
+    stations = [{'id': 1, 'name': 'A', 'city_position': [0, 0], 'city_orientation': 1, 'station_cells': [[[0, 0], 0]]},
+                {'id': 2, 'name': 'A', 'city_position': [0, 2], 'city_orientation': 1, 'station_cells': [[[0, 2], 0]]}]
+
+    with pytest.raises(ValueError, match="Two stations are named 'A'"):
+        stations_to_stations_links(stations)

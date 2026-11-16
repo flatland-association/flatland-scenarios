@@ -3,6 +3,7 @@ from typing import List, NamedTuple, Optional
 
 from flatland.core.effects_generator import EffectsGenerator
 from flatland.envs.malfunction_generators import MalfunctionParameters
+from flatland.envs.step_utils.states import TrainState
 
 
 def to_malfunction_parameters(specs: Optional[dict]) -> Optional[MalfunctionParameters]:
@@ -30,6 +31,7 @@ class ScheduledMalfunctionEffectsGenerator(EffectsGenerator["RailEnv"]):
     Deterministic malfunctions: agent `handle` is broken during steps [step, step + duration).
 
     Steps are counted like timetable times (`env._elapsed_steps` during the step, i.e. the first `env.step()` call is step 1).
+    A malfunction of a train that has already arrived, or is already in malfunction, is skipped with a warning.
     """
 
     def __init__(self, malfunctions: Optional[List[ScheduledMalfunction]] = None):
@@ -44,7 +46,11 @@ class ScheduledMalfunctionEffectsGenerator(EffectsGenerator["RailEnv"]):
         for m in self._malfunctions:
             if m.step != env._elapsed_steps:
                 continue
-            handler = env.agents[m.handle].malfunction_handler
+            agent = env.agents[m.handle]
+            if agent.state == TrainState.DONE:
+                warnings.warn(f"Scheduled malfunction {m} skipped: agent {m.handle} has already arrived at step {m.step}.")
+                continue
+            handler = agent.malfunction_handler
             if handler.in_malfunction:
                 warnings.warn(f"Scheduled malfunction {m} skipped: agent {m.handle} is already in malfunction at step {m.step}.")
                 continue

@@ -77,10 +77,20 @@ def test_scheduled_malfunction_train_resolved_against_derived_timetables(initial
     ({"step": 1, "duration": 1}, "exactly one"),
     ({"train": "IC 1.1", "step": 0, "duration": 1}, "step >= 1"),
     ({"train": "IC 1.1", "step": 1, "duration": 0}, "duration >= 1"),
+    ({"train": "IC 1.1", "duration": 1}, "misses 'step'"),
+    ({"train": "IC 1.1"}, "misses 'step' and 'duration'"),
+    ({"train": "IC 1.1", "step": "1", "duration": 1}, "integers"),
+    ({"train": "IC 1.1", "step": 100000, "duration": 1}, "after the episode ends"),
+    (["IC 1.1", 1, 1], "must be an object"),
 ])
 def test_invalid_scheduled_malfunctions_raise(initial_scenario, spec, message):
     with pytest.raises(ValueError, match=message):
         build_scenario_from_config(initial_scenario, {"malfunctions": {"scheduled": [spec]}})
+
+
+def test_scheduled_malfunctions_not_a_list_raise(initial_scenario):
+    with pytest.raises(ValueError, match="must be a list"):
+        build_scenario_from_config(initial_scenario, {"malfunctions": {"scheduled": {"train": "IC 1.1", "step": 1, "duration": 1}}})
 
 
 def test_ambiguous_train_name_raises(initial_scenario):
