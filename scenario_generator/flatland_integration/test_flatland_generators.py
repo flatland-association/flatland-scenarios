@@ -1,7 +1,18 @@
+import numpy as np
+
+from flatland.envs.grid.rail_env_grid import RailEnvTransitions
+from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
 from flatland.envs.stations_links import Gate, Pin, StoppingPoint
 
 from scenario_generator.flatland_integration.flatland_generators import rail_generator_from_grid_map, stations_to_agents_hints, \
-    stations_to_stations_links
+    stations_to_stations_links, group_flat_per_cell_stations
+
+H, V = 1025, 32800  # horizontal and vertical straight
+
+
+def _grid_map(grid) -> RailGridTransitionMap:
+    grid = np.array(grid, dtype=np.uint16)
+    return RailGridTransitionMap(width=grid.shape[1], height=grid.shape[0], transitions=RailEnvTransitions(), grid=grid)
 
 
 def test_stations_to_agents_hints():
@@ -123,3 +134,37 @@ def test_stations_to_agents_hints_reads_stopping_points():
                  'stopping_points': [{'name': 'A.0', 'node': [1, 3]}, {'name': 'A.1', 'node': [2, 3]}], 'edges': [[1, 3], [2, 3]], 'gates': {}}]
 
     assert stations_to_agents_hints(stations)['train_stations'] == [[((1, 3), 0), ((2, 3), 1)]]
+
+
+def test_group_flat_per_cell_stations():
+    # the flat per-cell format from before this change: one {id, r, c} entry per platform cell, in any order
+    grid_map = _grid_map([
+        [0, 0, 0, 0],
+        [H, H, H, 0],
+        [0, 0, 0, V],
+        [0, 0, 0, V],
+    ])
+    stations = [{'id': 2, 'r': 3, 'c': 3}, {'id': 1, 'r': 1, 'c': 2}, {'id': 1, 'r': 1, 'c': 0}, {'id': 2, 'r': 2, 'c': 3}, {'id': 1, 'r': 1, 'c': 1}]
+
+    assert group_flat_per_cell_stations(stations, grid_map) == [
+        {'id': 1, 'city_position': [1, 1], 'city_orientation': 1, 'station_cells': [[[1, 0], 0], [[1, 1], 1], [[1, 2], 2]]},
+        {'id': 2, 'city_position': [3, 3], 'city_orientation': 0, 'station_cells': [[[2, 3], 0], [[3, 3], 1]]},
+    ]
+
+
+def test_group_flat_per_cell_stations_keeps_other_formats():
+    stations = [{'id': 1, 'city_position': [4, 4], 'city_orientation': 1, 'station_cells': [[[4, 4], 0]]}]
+
+    assert group_flat_per_cell_stations(stations, grid_map=None) is stations
+
+
+def test_rail_generator_from_grid_map_with_flat_per_cell_stations():
+    grid_map = _grid_map([[H, H, H]])
+    stations = [{'id': 1, 'r': 0, 'c': 0}, {'id': 1, 'r': 0, 'c': 1}, {'id': 1, 'r': 0, 'c': 2}]
+
+    _, optionals = rail_generator_from_grid_map(grid_map, level_free_positions=[], stations=stations)()
+
+    assert optionals['agents_hints'] == {'city_positions': [(0, 1)], 'city_orientations': [1], 'train_stations': [[((0, 0), 0), ((0, 1), 1), ((0, 2), 2)]]}
+    assert optionals['stations_links'].stations['1'].stopping_points == [
+        StoppingPoint(name='1.0', node=(0, 0)), StoppingPoint(name='1.1', node=(0, 1)), StoppingPoint(name='1.2', node=(0, 2))]
+

@@ -1,4 +1,4 @@
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from flatland.envs.rail_grid_transition_map import RailGridTransitionMap
 from flatland.envs.stations_links import StationsLinks, Station, StoppingPoint, Gate, Pin
@@ -61,7 +61,40 @@ def _station(s: dict) -> Station:
     )
 
 
-def rail_generator_from_grid_map(grid_map: RailGridTransitionMap, level_free_positions: List[Tuple[int, int]], stations: List[dict] = None):
+def group_flat_per_cell_stations(stations: List[dict], grid_map: RailGridTransitionMap) -> List[dict]:
+    """
+    Group a station export in the flat per-cell format (one {id, r, c} entry per
+    platform cell, as the drawing tool wrote before this change) into the
+    station_cells format: one entry per station with id, city_position,
+    city_orientation and station_cells, as the tool does on export: cells in
+    row-major order, city_position the middle cell, city_orientation 1 if
+    that cell is a horizontal straight, else 0.
+    Exports in the station_cells or stations_links format are returned unchanged.
+    """
+    if not any('r' in s for s in stations):
+        return stations
+    cells_by_id: Dict[int, List[Tuple[int, int]]] = {}
+    for s in stations:
+        cells_by_id.setdefault(s['id'], []).append((s['r'], s['c']))
+    grouped = []
+    for station_id, cells in sorted(cells_by_id.items()):
+        cells.sort()
+        r, c = cells[len(cells) // 2]
+        # stations sit on straights: a horizontal straight lets a train facing east (1) continue east
+        is_horizontal = bool(grid_map.transitions.get_transition(int(grid_map.grid[r, c]), 1, 1))
+        grouped.append({
+            'id': station_id,
+            'city_position': [r, c],
+            'city_orientation': 1 if is_horizontal else 0,
+            'station_cells': [[[cell_r, cell_c], index] for index, (cell_r, cell_c) in enumerate(cells)],
+        })
+    return grouped
+
+
+def rail_generator_from_grid_map(grid_map: RailGridTransitionMap, level_free_positions: List[Tuple[int, int]], stations: Optional[List[dict]] = None):
+    if stations:
+        stations = group_flat_per_cell_stations(stations, grid_map)
+
     def rail_generator(*args, **kwargs):
         optionals = {
             "agents_hints": stations_to_agents_hints(stations) if stations else {"city_positions": {}},
