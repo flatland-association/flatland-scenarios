@@ -224,7 +224,7 @@ you use `generate_scenario.py` to generate your scenario, do this before running
 {
   "malfunctions": {
     "scheduled": [
-      {"train": "IC3", "step": 28, "duration": 12},
+      {"train": "IC 1.1", "step": 28, "duration": 12},
       {"handle": 2, "step": 40, "duration": 5}
     ]
   },
@@ -233,12 +233,14 @@ you use `generate_scenario.py` to generate your scenario, do this before running
 ```
 
 - **`malfunctions.scheduled`**: a train breaks down at `step` (from 1 to the episode's last step) for `duration` steps. Name it by its timetable
-  name in the tool (`train`) or by its handle (`handle`, the timetable's position in the tool, from 0). A train that has already arrived, or is
-  already broken down, at `step` is skipped with a warning.
+  name (`train`) or by its handle (`handle`, the timetable's position from 0: in the tool's timetables, or with `timetableSpecs` in the derived
+  ones, e.g. `IC 1.1`, `IC 1.2`, `IC 2.1`, …). A train that has already arrived, or is already broken down, at `step` is skipped with a warning.
 - **`malfunctions.breakdown`** / **`malfunctions.departure`** (optional): random malfunctions,
   `{"malfunction_interval": 540, "malfunction_duration_min": 20, "malfunction_duration_max": 50}`. Leave them out for a reproducible scenario.
+- A `malfunctions` section in the drawing tool's export is merged with the config's, key by key, the config's key winning: random malfunctions
+  there make the scenario random too, unless the config overrides them.
 - **`timetableSpecs`** (optional): generate the timetables as in `metadata.json`; without it the tool's timetables are taken as they are.
-- **`seed`** (optional).
+- **`seed`** (optional): stored with the scenario, but not applied to the environment yet.
 
 Run from the repository root:
 

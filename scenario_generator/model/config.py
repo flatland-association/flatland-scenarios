@@ -3,13 +3,16 @@ Build a single scenario from a Flatland Environment Drawing Tool export and a co
 
 {
   "timetableSpecs": {...},        # optional, same format as in metadata.json; if absent, the tool's timetables are taken unchanged
-  "malfunctions": {               # optional, overrides a "malfunctions" section in the tool export key by key
+  "malfunctions": {               # optional, merged key by key over a "malfunctions" section in the tool export (the config's key wins)
     "breakdown": {"malfunction_interval": 540, "malfunction_duration_min": 20, "malfunction_duration_max": 50},
     "departure": {"malfunction_interval": 5, "malfunction_duration_min": 2, "malfunction_duration_max": 5},
-    "scheduled": [{"train": "IC1.0", "step": 42, "duration": 10}, {"handle": 3, "step": 10, "duration": 5}]
+    "scheduled": [{"train": "IC 1.1", "step": 42, "duration": 10}, {"handle": 3, "step": 10, "duration": 5}]
   },
-  "seed": 42                      # optional
+  "seed": 42                      # optional; stored, but not applied to the env yet
 }
+
+A scheduled malfunction names its train by timetable name ("train") or by agent handle ("handle"): the position of its timetable
+in the scenario's timetables, from 0; with timetableSpecs, in the derived timetables.
 """
 import argparse
 import json
