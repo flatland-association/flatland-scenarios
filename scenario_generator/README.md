@@ -168,7 +168,9 @@ the tool's `id`, `area` and the `city_position`/`city_orientation` hints:
 ```
 
 An unnamed station is named by its id; without an area, its edges are its stopping points and it has no gates. The generated Flatland environment
-(`env.stations_links`) takes these as they are. Links between stations are not derived yet. Older exports (`station_cells`) still import.
+(`env.stations_links`) takes these as they are. Links between stations are not derived yet. Older exports (`station_cells`, the flat per-cell
+`{"id", "r", "c"}` and `[id, r, c]`) still import; an import with an entry without an integer `id` or a cell without row and column is refused
+before the current stations are cleared.
 
 `stopping_points`, `edges` and `gates` are derived from the platform cells and the area on every export, and not read back on import: the tool reads
 only `id`, `name`, `area` and the platform cells (the stopping points' nodes). Edits of the derived fields by hand are lost on a round trip through

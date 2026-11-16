@@ -2467,6 +2467,34 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         if (s.station_cells) return s.station_cells.map(([[r, c]]) => ({ r, c }));
         return [{ r: s.r, c: s.c }];
     }
+    // The stations of an import, checked before anything is cleared. An entry is a station of the grouped export
+    // (stopping_points or station_cells), a flat per-cell {id, r, c} or a triple [id, r, c].
+    function parseImportedStations(list) {
+        if (!Array.isArray(list)) throw new Error("Invalid station data format: expected a list of stations.");
+        const stations = list.map((entry, i) => {
+            const s = Array.isArray(entry) && entry.length === 3 ? { id: entry[0], r: entry[1], c: entry[2] } : entry;
+            if (!s || typeof s !== 'object' || Array.isArray(s) || !Number.isInteger(s.id)) throw new Error(`Station entry ${i + 1} is not a station with an integer id.`);
+            let cells;
+            try { cells = importedStationCells(s); } catch (error) { throw new Error(`Station #${s.id} has malformed cells.`); }
+            if (cells.some(({ r, c }) => !Number.isInteger(r) || !Number.isInteger(c))) throw new Error(`Station #${s.id} has a cell without an integer row and column.`);
+            return { id: s.id, name: s.name && s.name !== String(s.id) ? String(s.name) : null, area: s.area ? [...s.area] : null, cells };
+        });
+        return stations;
+    }
+    // Puts parsed stations on the grid with their names and areas; returns the number of platform cells applied.
+    function applyImportedStations(stations) {
+        let appliedCount = 0;
+        stations.forEach(({ id, name, area, cells }) => {
+            if (name) stationNames[id] = name;
+            if (area) stationAreas[id] = area;
+            cells.forEach(({ r, c }) => {
+                if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) {
+                    gridData[r][c].isStation = true; gridData[r][c].stationId = id; appliedCount++;
+                } else { console.warn(`Cannot apply station ID ${id} to [${r},${c}]`); }
+            });
+        });
+        return appliedCount;
+    }
     function performNameStation() {
         if (!selectedCellCoords || nameStationButton.disabled) return;
         const { r, c } = selectedCellCoords;
@@ -2681,23 +2709,11 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
     }
     function importStationsFromText() {
         try {
-            const dataToImport = JSON.parse(stationImportExportText.value);
-            if (!Array.isArray(dataToImport)) { throw new Error("Invalid station data format."); }
+            const stations = parseImportedStations(JSON.parse(stationImportExportText.value));
             gridData.forEach(row => row.forEach(cell => { cell.isStation = false; }));
             stationNames = {}; stationAreas = {};
-            let appliedCount = 0; let maxImportedId = 0;
-            dataToImport.forEach(s => {
-                const id = s.id;
-                if (id > maxImportedId) maxImportedId = id;
-                if (s.name && s.name !== String(id)) stationNames[id] = s.name;
-                if (s.area) stationAreas[id] = [...s.area];
-                const cellsToApply = importedStationCells(s);
-                cellsToApply.forEach(({ r, c }) => {
-                    if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) {
-                        gridData[r][c].isStation = true; gridData[r][c].stationId = id; appliedCount++;
-                    } else { console.warn(`Cannot apply station ID ${id} from JSON to [${r},${c}]`); }
-                });
-            });
+            const appliedCount = applyImportedStations(stations);
+            const maxImportedId = stations.reduce((max, s) => Math.max(max, s.id), 0);
             nextStationId = Math.max(nextStationId, maxImportedId + 1);
             validateGrid(); drawGrid(); updateSelectionUI(); exportAllDataToTextAreas(); saveState();
             alert(`Imported ${appliedCount} station cell(s). Existing active stations cleared first. Station IDs updated.`);
@@ -2917,6 +2933,7 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         try { 
             const data = JSON.parse(jsonString); 
             if (!data.grid || !Array.isArray(data.grid)) { throw new Error("JSON file must contain a 'grid' array."); } 
+            const importedStations = parseImportedStations(data.stations || []);
             let newRows, newCols, newCellSize; 
             if (data.gridDimensions) { 
                 newRows = data.gridDimensions.rows; 
@@ -2954,21 +2971,9 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
                     gridData[r][c].isOverpass = true; 
                 } else { console.warn(`Cannot apply overpass from JSON to [${r},${c}]`); } 
             }); 
-            let maxImportedId = 0;
-            (data.stations || []).forEach(s => {
-                const id = s.id;
-                if (id > maxImportedId) maxImportedId = id;
-                if (s.name && s.name !== String(id)) stationNames[id] = s.name;
-                if (s.area) stationAreas[id] = [...s.area];
-                const cellsToApply = importedStationCells(s);
-                cellsToApply.forEach(({ r, c }) => {
-                    if (r >= 0 && r < numRows && c >= 0 && c < numCols && (gridData[r][c].caseIndex === CI.V_STRAIGHT || gridData[r][c].caseIndex === CI.H_STRAIGHT)) {
-                        gridData[r][c].isStation = true;
-                        gridData[r][c].stationId = id;
-                    } else { console.warn(`Cannot apply station ID ${id} from JSON to [${r},${c}]`); }
-                });
-            });
-            nextStationId = data.nextStationId !== undefined ? data.nextStationId : ((data.stations || []).length > 0 ? Math.max(1, maxImportedId + 1) : 1);
+            applyImportedStations(importedStations);
+            const maxImportedId = importedStations.reduce((max, s) => Math.max(max, s.id), 0);
+            nextStationId = data.nextStationId !== undefined ? data.nextStationId : (importedStations.length > 0 ? Math.max(1, maxImportedId + 1) : 1);
             
             // Handle line properties during import
             lines = (data.lines || []).map(line => ({
