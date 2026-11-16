@@ -45,7 +45,8 @@ def build_scenario_from_config(initial_scenario: Scenario, config: dict) -> Scen
 
 def generate_scenario_from_config(initial_scenario_file_name: str, config_file_name: str, name: str, output_folder: Optional[Path] = None,
                                   create_pkl: bool = True) -> Scenario:
-    initial_scenario = Scenario.load(initial_scenario_file_name)
+    # the export's own malfunctions are merged with the config's and resolved against the final timetables in build_scenario_from_config
+    initial_scenario = Scenario.load(initial_scenario_file_name, restore_malfunctions=False)
     with open(config_file_name, 'r') as f:
         config = json.load(f)
     scenario = build_scenario_from_config(initial_scenario, config)

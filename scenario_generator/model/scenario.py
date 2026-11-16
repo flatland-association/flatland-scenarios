@@ -18,7 +18,7 @@ from flatland.envs.rail_trainrun_data_structures import Waypoint
 from flatland.envs.timetable_utils import Line, Timetable
 from scenario_generator.flatland_integration.flatland_generators import rail_generator_from_grid_map, line_generator_from_line, \
     timetable_generator_from_timetable
-from scenario_generator.flatland_integration.malfunctions import ScheduledMalfunction, ScheduledMalfunctionEffectsGenerator
+from scenario_generator.flatland_integration.malfunctions import ScheduledMalfunction, ScheduledMalfunctionEffectsGenerator, to_malfunction_parameters
 
 
 class Scenario:
@@ -65,12 +65,29 @@ class Scenario:
         self.scheduled_malfunctions: List[ScheduledMalfunction] = []
 
     @staticmethod
-    def load(file_name: str, m=None) -> "Scenario":
+    def load(file_name: str, m=None, restore_malfunctions: bool = True) -> "Scenario":
+        """
+        Load a scenario json. With `restore_malfunctions`, its "malfunctions" section, as `save` writes it, is restored: random breakdowns,
+        departure malfunctions, and scheduled malfunctions resolved against its timetables. So `to_rail_env()` of a loaded scenario
+        has the malfunctions of the scenario that was saved.
+        """
         with open(file_name + '.json' if not file_name.endswith(".json") else file_name, 'r') as f:
             data = json.load(f)
             if m is not None:
                 data = m(data)
-        return Scenario(data)
+        scenario = Scenario(data)
+        if restore_malfunctions:
+            scenario._restore_malfunctions()
+        return scenario
+
+    def _restore_malfunctions(self):
+        malfunctions = self.data.get("malfunctions", {})
+        self.malfunction_params = to_malfunction_parameters(malfunctions.get("breakdown", None))
+        self.departure_malfunction_params = to_malfunction_parameters(malfunctions.get("departure", None))
+        scheduled = malfunctions.get("scheduled", None)
+        if scheduled:
+            self.scheduled_malfunctions = resolve_scheduled_malfunctions(
+                scheduled, [t['name'] for t in self.timetables], len(self.flatland_line['agent_positions']))
 
     def print_lines(self):
         for line in self.lines:

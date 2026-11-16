@@ -134,3 +134,25 @@ def test_generate_scenario_from_config_writes_json_and_pkl(tmp_path):
         if env.agents[4].state in (TrainState.MALFUNCTION, TrainState.MALFUNCTION_OFF_MAP):
             broken_steps.append(env._elapsed_steps)
     assert broken_steps == [3, 4, 5, 6]
+
+
+def test_load_restores_malfunctions_of_a_saved_scenario(initial_scenario, tmp_path):
+    config = {
+        "timetableSpecs": {"trainCategories": {"IC": {"times": 2, "periodicity": 30}}},
+        "malfunctions": {"breakdown": BREAKDOWN, "departure": DEPARTURE, "scheduled": [{"train": "IC 2.2", "step": 42, "duration": 10}]},
+    }
+    scenario = build_scenario_from_config(initial_scenario, config)
+    scenario.save(name="experiment", folder=tmp_path)
+
+    loaded = Scenario.load(str(tmp_path / "experiment.json"))
+
+    assert loaded.malfunction_params == scenario.malfunction_params
+    assert loaded.departure_malfunction_params == scenario.departure_malfunction_params
+    assert loaded.scheduled_malfunctions == scenario.scheduled_malfunctions == [ScheduledMalfunction(handle=3, step=42, duration=10)]
+    assert Scenario.load(str(tmp_path / "experiment.json"), restore_malfunctions=False).scheduled_malfunctions == []
+
+
+def test_load_without_malfunctions_restores_none(initial_scenario):
+    assert initial_scenario.malfunction_params is None
+    assert initial_scenario.departure_malfunction_params is None
+    assert initial_scenario.scheduled_malfunctions == []

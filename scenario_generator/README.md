@@ -245,7 +245,8 @@ Run from the repository root:
 PYTHONPATH=. python -m scenario_generator.model.config drawn_environment_export.json config.json my_scenario --output-folder out
 ```
 
-This writes `out/my_scenario.json` and `out/my_scenario.pkl`. Add `--no-pkl` to write only the `.json`.
+This writes `out/my_scenario.json` and `out/my_scenario.pkl`. Add `--no-pkl` to write only the `.json`. `Scenario.load("out/my_scenario.json")`
+restores its malfunctions, so `to_rail_env()` rebuilds the environment with them.
 
 ## Generate scenario
 
