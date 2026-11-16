@@ -2468,7 +2468,8 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
         return [{ r: s.r, c: s.c }];
     }
     // The stations of an import, checked before anything is cleared. An entry is a station of the grouped export
-    // (stopping_points or station_cells), a flat per-cell {id, r, c} or a triple [id, r, c].
+    // (stopping_points or station_cells), a flat per-cell {id, r, c} or a triple [id, r, c]. The names are checked
+    // as stationNameError checks them when a station is named: no ".", and unique.
     function parseImportedStations(list) {
         if (!Array.isArray(list)) throw new Error("Invalid station data format: expected a list of stations.");
         const stations = list.map((entry, i) => {
@@ -2478,6 +2479,13 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
             try { cells = importedStationCells(s); } catch (error) { throw new Error(`Station #${s.id} has malformed cells.`); }
             if (cells.some(({ r, c }) => !Number.isInteger(r) || !Number.isInteger(c))) throw new Error(`Station #${s.id} has a cell without an integer row and column.`);
             return { id: s.id, name: s.name && s.name !== String(s.id) ? String(s.name) : null, area: s.area ? [...s.area] : null, cells };
+        });
+        const seen = {};
+        stations.forEach(({ id, name }) => {
+            const exported = name || String(id);
+            if (exported.includes('.')) throw new Error(`Station #${id}: the name "${exported}" contains ".".`);
+            if (seen[exported] !== undefined && seen[exported] !== id) throw new Error(`Stations #${seen[exported]} and #${id} are both named "${exported}".`);
+            seen[exported] = id;
         });
         return stations;
     }
@@ -2705,7 +2713,10 @@ function findContinuousPath(startR, startC, targetCellsArray, incomingEntryDir =
     function exportOverpassesToText() { const overpassCoords = []; if (gridData && gridData.length > 0) { for (let r = 0; r < numRows; r++) { for (let c = 0; c < numCols; c++) { if (gridData[r][c].isOverpass && gridData[r][c].caseIndex === CI.DIAMOND_X) { overpassCoords.push([r, c]); } } } } overpassImportExportText.value = JSON.stringify(overpassCoords, null, 2); }
     function importOverpassesFromText() { try { const coordsToImport = JSON.parse(overpassImportExportText.value); if (!Array.isArray(coordsToImport) || !coordsToImport.every(item => Array.isArray(item) && item.length === 2 && typeof item[0] === 'number' && typeof item[1] === 'number')) { throw new Error("Invalid overpass data format."); } gridData.forEach(row => row.forEach(cell => cell.isOverpass = false )); let appliedCount = 0; coordsToImport.forEach(([r, c]) => { if (r >= 0 && r < numRows && c >= 0 && c < numCols && gridData[r][c].caseIndex === CI.DIAMOND_X) { gridData[r][c].isOverpass = true; appliedCount++; } else { console.warn(`Cannot apply overpass to [${r},${c}]`); } }); validateGrid(); drawGrid(); updateSelectionUI(); saveState(); alert(`Imported ${appliedCount} overpass(es). Existing overpasses cleared first.`); } catch (error) { console.error("Overpass import failed:", error); alert("Overpass import: " + error.message); } }
     function exportStationsToText() {
-        stationImportExportText.value = JSON.stringify(gridData && gridData.length > 0 ? buildStationsExport() : [], null, 2);
+        if (!gridData || gridData.length === 0) { stationImportExportText.value = JSON.stringify([], null, 2); return; }
+        // the same check as the JSON export: clashing names would give clashing gate and pin names
+        const problems = stationMetaProblems();
+        stationImportExportText.value = problems.length > 0 ? "Fix the stations first:\n" + problems.join("\n") : JSON.stringify(buildStationsExport(), null, 2);
     }
     function importStationsFromText() {
         try {
