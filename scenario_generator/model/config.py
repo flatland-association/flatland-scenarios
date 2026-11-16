@@ -14,19 +14,10 @@ Build a single scenario from a Flatland Environment Drawing Tool export and a co
 import argparse
 import json
 from pathlib import Path
+from typing import Optional
 
-from flatland.envs.malfunction_generators import MalfunctionParameters
+from scenario_generator.flatland_integration.malfunctions import to_malfunction_parameters
 from scenario_generator.model.scenario import Scenario, ScenarioBuilder
-
-
-def to_malfunction_parameters(specs: dict | None) -> MalfunctionParameters | None:
-    if specs is None:
-        return None
-    return MalfunctionParameters(
-        min_duration=specs["malfunction_duration_min"],
-        max_duration=specs["malfunction_duration_max"],
-        malfunction_rate=1 / specs["malfunction_interval"]
-    )
 
 
 def build_scenario_from_config(initial_scenario: Scenario, config: dict) -> Scenario:
@@ -52,7 +43,7 @@ def build_scenario_from_config(initial_scenario: Scenario, config: dict) -> Scen
     return scenario
 
 
-def generate_scenario_from_config(initial_scenario_file_name: str, config_file_name: str, name: str, output_folder: Path = None,
+def generate_scenario_from_config(initial_scenario_file_name: str, config_file_name: str, name: str, output_folder: Optional[Path] = None,
                                   create_pkl: bool = True) -> Scenario:
     initial_scenario = Scenario.load(initial_scenario_file_name)
     with open(config_file_name, 'r') as f:

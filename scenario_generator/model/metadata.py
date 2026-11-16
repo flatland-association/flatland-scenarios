@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import List, Any
 
-from scenario_generator.model.config import to_malfunction_parameters
+from scenario_generator.flatland_integration.malfunctions import to_malfunction_parameters
 from scenario_generator.model.scenario import Scenario, ScenarioBuilder
 
 

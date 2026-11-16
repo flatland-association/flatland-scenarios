@@ -1,7 +1,22 @@
 import warnings
-from typing import List, NamedTuple
+from typing import List, NamedTuple, Optional
 
 from flatland.core.effects_generator import EffectsGenerator
+from flatland.envs.malfunction_generators import MalfunctionParameters
+
+
+def to_malfunction_parameters(specs: Optional[dict]) -> Optional[MalfunctionParameters]:
+    """
+    Random malfunctions from `{"malfunction_interval": int, "malfunction_duration_min": int, "malfunction_duration_max": int}`,
+    as in `config.json` and `metadata.json`; `None` for none.
+    """
+    if specs is None:
+        return None
+    return MalfunctionParameters(
+        min_duration=specs["malfunction_duration_min"],
+        max_duration=specs["malfunction_duration_max"],
+        malfunction_rate=1 / specs["malfunction_interval"]
+    )
 
 
 class ScheduledMalfunction(NamedTuple):
@@ -17,7 +32,7 @@ class ScheduledMalfunctionEffectsGenerator(EffectsGenerator["RailEnv"]):
     Steps are counted like timetable times (`env._elapsed_steps` during the step, i.e. the first `env.step()` call is step 1).
     """
 
-    def __init__(self, malfunctions: List[ScheduledMalfunction] = None):
+    def __init__(self, malfunctions: Optional[List[ScheduledMalfunction]] = None):
         super().__init__()
         self._malfunctions = [ScheduledMalfunction(*m) for m in (malfunctions or [])]
 

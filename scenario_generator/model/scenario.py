@@ -3,11 +3,11 @@ import json
 import math
 import uuid
 from pathlib import Path
-from typing import Tuple, Dict, List, Iterable
+from typing import Tuple, Dict, List, Iterable, Optional
 
 import numpy as np
 
-from flatland.core.effects_generator import make_multi_effects_generator
+from flatland.core.effects_generator import EffectsGenerator, make_multi_effects_generator
 from flatland.envs.grid.rail_env_grid import RailEnvTransitions
 from flatland.envs.malfunction_effects_generators import IntermediateStopMalfunctionEffectsGenerator
 from flatland.envs.malfunction_generators import MalfunctionParameters, ParamMalfunctionGen
@@ -115,7 +115,7 @@ class Scenario:
         )
         return timetable_generator_from_timetable(timetable)
 
-    def to_effects_generator(self):
+    def to_effects_generator(self) -> Optional[EffectsGenerator]:
         effects_generators = []
         if self.departure_malfunction_params is not None:
             effects_generators.append(IntermediateStopMalfunctionEffectsGenerator(**self.departure_malfunction_params._asdict()))
@@ -226,33 +226,8 @@ class ScenarioBuilder:
         return self
 
     def _resolve_scheduled_malfunctions(self) -> List[ScheduledMalfunction]:
-        if not self.scheduled_malfunction_specs:
-            return []
-        num_agents = len(self.scenario_flatland_line['agent_positions'])
-        # agent handle i is built from timetable i, see add_timetable
-        timetable_names = [t['name'] for t in self.scenario_timetables]
-        if len(timetable_names) != num_agents:
-            raise ValueError(f"Cannot resolve scheduled malfunctions: {len(timetable_names)} timetables but {num_agents} agents in flatlandLine.")
-
-        resolved = []
-        for spec in self.scheduled_malfunction_specs:
-            if ('train' in spec) == ('handle' in spec):
-                raise ValueError(f"Scheduled malfunction {spec} must specify exactly one of 'train' or 'handle'.")
-            if 'train' in spec:
-                matches = [i for i, name in enumerate(timetable_names) if name == spec['train']]
-                if len(matches) != 1:
-                    problem = "not found" if not matches else f"ambiguous (handles {matches})"
-                    raise ValueError(f"Scheduled malfunction train '{spec['train']}' {problem}. Available trains: {timetable_names}")
-                handle = matches[0]
-            else:
-                handle = spec['handle']
-                if not 0 <= handle < num_agents:
-                    raise ValueError(f"Scheduled malfunction handle {handle} out of range [0, {num_agents}).")
-            step, duration = spec['step'], spec['duration']
-            if step < 1 or duration < 1:
-                raise ValueError(f"Scheduled malfunction {spec} needs step >= 1 and duration >= 1.")
-            resolved.append(ScheduledMalfunction(handle=handle, step=step, duration=duration))
-        return resolved
+        return resolve_scheduled_malfunctions(
+            self.scheduled_malfunction_specs, [t['name'] for t in self.scenario_timetables], len(self.scenario_flatland_line['agent_positions']))
 
     def rescale_timetable(self, timetable: list[dict], travel_factor: float = 1.0) -> list[dict]:
         stops = timetable['stops']
@@ -401,3 +376,42 @@ class ScenarioBuilder:
     def add_seed_from_specs(self, seed=None):
         self.seed = seed
         return self
+
+
+def resolve_scheduled_malfunctions(specs: List[dict], timetable_names: List[str], num_agents: int) -> List[ScheduledMalfunction]:
+    """
+    Resolve scheduled malfunction specs, each `{"train": <timetable name>, "step": int, "duration": int}` or
+    `{"handle": int, "step": int, "duration": int}`, to agent handles: agent handle i is built from timetable i (see `ScenarioBuilder.add_timetable`).
+    """
+    if not specs:
+        return []
+    if len(timetable_names) != num_agents:
+        raise ValueError(f"Cannot resolve scheduled malfunctions: {len(timetable_names)} timetables but {num_agents} agents in flatlandLine.")
+    resolved = []
+    for spec in specs:
+        handle = _scheduled_malfunction_handle(spec, timetable_names, num_agents)
+        step, duration = _scheduled_malfunction_window(spec)
+        resolved.append(ScheduledMalfunction(handle=handle, step=step, duration=duration))
+    return resolved
+
+
+def _scheduled_malfunction_handle(spec: dict, timetable_names: List[str], num_agents: int) -> int:
+    if ('train' in spec) == ('handle' in spec):
+        raise ValueError(f"Scheduled malfunction {spec} must specify exactly one of 'train' or 'handle'.")
+    if 'train' in spec:
+        matches = [i for i, name in enumerate(timetable_names) if name == spec['train']]
+        if len(matches) != 1:
+            problem = "not found" if not matches else f"ambiguous (handles {matches})"
+            raise ValueError(f"Scheduled malfunction train '{spec['train']}' {problem}. Available trains: {timetable_names}")
+        return matches[0]
+    handle = spec['handle']
+    if not 0 <= handle < num_agents:
+        raise ValueError(f"Scheduled malfunction handle {handle} out of range [0, {num_agents}).")
+    return handle
+
+
+def _scheduled_malfunction_window(spec: dict) -> Tuple[int, int]:
+    step, duration = spec['step'], spec['duration']
+    if step < 1 or duration < 1:
+        raise ValueError(f"Scheduled malfunction {spec} needs step >= 1 and duration >= 1.")
+    return step, duration
