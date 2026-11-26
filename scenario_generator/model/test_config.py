@@ -112,6 +112,18 @@ def test_effects_generator_combines_departure_and_scheduled(initial_scenario):
     assert find_effects_generator(effects_generator, ScheduledMalfunctionEffectsGenerator).malfunctions == [ScheduledMalfunction(handle=0, step=3, duration=4)]
 
 
+def test_seed_from_config_makes_the_pkl_reproducible(tmp_path):
+    config_file = tmp_path / "config.json"
+    config_file.write_text(json.dumps({"malfunctions": {"breakdown": BREAKDOWN}, "seed": 42}))
+
+    for name in ("first", "second"):
+        generate_scenario_from_config(str(_initial_scenario_file()), str(config_file), name=name, output_folder=tmp_path, create_pkl=True)
+
+    env, _ = RailEnvPersister.load_new(str(tmp_path / "first.pkl"))
+    assert env.random_seed == 42
+    assert (tmp_path / "first.pkl").read_bytes() == (tmp_path / "second.pkl").read_bytes()
+
+
 def test_generate_scenario_from_config_writes_json_and_pkl(tmp_path):
     config = {"malfunctions": {"breakdown": BREAKDOWN, "scheduled": [{"train": "RE 1.1", "step": 3, "duration": 4}]}}
     config_file = tmp_path / "config.json"

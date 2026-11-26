@@ -134,6 +134,10 @@ class Scenario:
         height = data['gridDimensions']['rows']
 
         number_of_agents = len(data['flatlandLine']['agent_positions'])
+        # The config's seed (ScenarioBuilder.add_seed_from_specs), so rebuilding an unchanged scenario gives the same env
+        # and the same pkl. Without a seed, flatland draws one per build. The constructor needs it too: it seeds the env
+        # first, and the pkl keeps that seed in `seed_history`.
+        seed = getattr(self, 'seed', None)
 
         env = RailEnv(
             width=width,
@@ -144,9 +148,10 @@ class Scenario:
             timetable_generator=self.to_timetable_generator(),
             malfunction_generator=ParamMalfunctionGen(self.malfunction_params) if self.malfunction_params is not None else None,
             effects_generator=self.to_effects_generator(),
+            random_seed=seed,
         )
 
-        observations, info = env.reset()
+        observations, info = env.reset(random_seed=seed)
         return env, observations, info
 
     def save(self, name: str, folder: Path = None, create_pkl: bool = False):
